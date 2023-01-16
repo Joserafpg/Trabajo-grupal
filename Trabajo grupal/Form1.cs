@@ -118,29 +118,46 @@ namespace Trabajo_grupal
             }
         }
 
+        private void AbrirFormEnPanel(object Formhijo)
+        {
+            if (this.panelDesktop.Controls.Count > 0)
+                this.panelDesktop.Controls.RemoveAt(0);
+            Form fh = Formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelDesktop.Controls.Add(fh);
+            this.panelDesktop.Tag = fh;
+            fh.Show();
+        }
         private void btninventario_Click(object sender, EventArgs e)
         {
-
+            CollapseMenu();
         }
 
         private void btnclientes_Click(object sender, EventArgs e)
         {
-
+            CollapseMenu();
         }
 
         private void btnproveedores_Click(object sender, EventArgs e)
         {
-
+            CollapseMenu();
         }
 
         private void btnfacturacion_Click(object sender, EventArgs e)
         {
-
+            CollapseMenu();
+            AbrirFormEnPanel(new Facturacion());
         }
 
         private void btnpagos_Click(object sender, EventArgs e)
         {
+            CollapseMenu();
+        }
 
+        private void panelDesktop_MouseClick(object sender, MouseEventArgs e)
+        {
+            CollapseMenu();
         }
     }
 }

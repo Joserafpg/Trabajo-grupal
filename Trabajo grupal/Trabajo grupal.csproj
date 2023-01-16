@@ -52,6 +52,18 @@
     <Compile Include="Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cuentas por cobrar .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuentas por cobrar .Designer.cs">
+      <DependentUpon>Cuentas por cobrar .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cuentas por pagar .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuentas por pagar .Designer.cs">
+      <DependentUpon>Cuentas por pagar .cs</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,16 +76,34 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu inicio.Designer.cs">
+      <DependentUpon>Menu inicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuentas por cobrar .resx">
+      <DependentUpon>Cuentas por cobrar .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuentas por pagar .resx">
+      <DependentUpon>Cuentas por pagar .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion.resx">
       <DependentUpon>Facturacion.cs</DependentUpon>
@@ -81,8 +111,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu inicio.resx">
+      <DependentUpon>Menu inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

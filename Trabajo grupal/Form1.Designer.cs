@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnCobrar = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.btnpagos = new System.Windows.Forms.Button();
             this.btnfacturacion = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.panelMenu.Controls.Add(this.btnCobrar);
             this.panelMenu.Controls.Add(this.button10);
             this.panelMenu.Controls.Add(this.btnpagos);
             this.panelMenu.Controls.Add(this.btnfacturacion);
@@ -65,6 +67,24 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(230, 561);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnCobrar
+            // 
+            this.btnCobrar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCobrar.FlatAppearance.BorderSize = 0;
+            this.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCobrar.ForeColor = System.Drawing.Color.White;
+            this.btnCobrar.Image = global::Trabajo_grupal.Properties.Resources.metodo_de_pago__3_;
+            this.btnCobrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCobrar.Location = new System.Drawing.Point(0, 370);
+            this.btnCobrar.Name = "btnCobrar";
+            this.btnCobrar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCobrar.Size = new System.Drawing.Size(230, 46);
+            this.btnCobrar.TabIndex = 7;
+            this.btnCobrar.Tag = "Cuentas por cobrar";
+            this.btnCobrar.Text = "Cuentas por cobrar";
+            this.btnCobrar.UseVisualStyleBackColor = true;
+            this.btnCobrar.Click += new System.EventHandler(this.btnCobrar_Click);
             // 
             // button10
             // 
@@ -97,7 +117,7 @@
             this.btnpagos.Size = new System.Drawing.Size(230, 46);
             this.btnpagos.TabIndex = 5;
             this.btnpagos.Tag = "Cuentas por pagar";
-            this.btnpagos.Text = "Pagos";
+            this.btnpagos.Text = "Cuentas por pagar";
             this.btnpagos.UseVisualStyleBackColor = true;
             this.btnpagos.Click += new System.EventHandler(this.btnpagos_Click);
             // 
@@ -204,6 +224,7 @@
             this.btnlogoInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnlogoInicio.TabIndex = 0;
             this.btnlogoInicio.TabStop = false;
+            this.btnlogoInicio.Click += new System.EventHandler(this.btnlogoInicio_Click);
             // 
             // panelTittleBar
             // 
@@ -246,7 +267,7 @@
             // btnMaximize
             // 
             this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.btnMaximize.FlatAppearance.BorderSize = 0;
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximize.Image = global::Trabajo_grupal.Properties.Resources.expandir__3_;
@@ -319,6 +340,7 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnCobrar;
     }
 }
 

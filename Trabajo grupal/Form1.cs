@@ -1,4 +1,5 @@
-﻿using System;
+﻿using angel22mg;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp2;
 
 namespace Trabajo_grupal
 {
@@ -21,6 +23,16 @@ namespace Trabajo_grupal
             CollapseMenu();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(98, 102, 244);
+
+
+            var ms1 = new ToolTip();
+            ms1.SetToolTip(btnClose, "Cerrar");
+
+            var ms2 = new ToolTip();
+            ms2.SetToolTip(btnMaximize, "Maximizar");
+
+            var ms3 = new ToolTip();
+            ms3.SetToolTip(btnMinimize, "Minimizar");
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -144,6 +156,7 @@ namespace Trabajo_grupal
         private void btnproveedores_Click(object sender, EventArgs e)
         {
             CollapseMenu();
+            AbrirFormEnPanel(new Form2());
         }
 
         private void btnfacturacion_Click(object sender, EventArgs e)
@@ -155,11 +168,24 @@ namespace Trabajo_grupal
         private void btnpagos_Click(object sender, EventArgs e)
         {
             CollapseMenu();
+            AbrirFormEnPanel(new cuentasporpagar ());
         }
 
         private void panelDesktop_MouseClick(object sender, MouseEventArgs e)
         {
             CollapseMenu();
+        }
+
+        private void btnlogoInicio_Click(object sender, EventArgs e)
+        {
+            CollapseMenu();
+            AbrirFormEnPanel(new Menu_inicio());
+        }
+
+        private void btnCobrar_Click(object sender, EventArgs e)
+        {
+            CollapseMenu();
+            AbrirFormEnPanel(new Cuentasporcobrar());
         }
     }
 }

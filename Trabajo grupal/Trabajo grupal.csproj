@@ -161,5 +161,17 @@
   <ItemGroup>
     <None Include="Resources\metodo-de-pago %283%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_46.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_49.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

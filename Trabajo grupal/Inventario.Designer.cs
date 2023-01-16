@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -222,7 +223,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.Menu;
+            this.panel3.BackColor = System.Drawing.SystemColors.MenuBar;
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Location = new System.Drawing.Point(12, 149);
@@ -238,7 +239,7 @@
             this.button5.ForeColor = System.Drawing.Color.RoyalBlue;
             this.button5.Location = new System.Drawing.Point(4, 3);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(795, 37);
+            this.button5.Size = new System.Drawing.Size(813, 37);
             this.button5.TabIndex = 0;
             this.button5.Text = "Buscar Producto";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -246,9 +247,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(833, 13);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(836, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(31, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 

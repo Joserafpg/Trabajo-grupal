@@ -165,9 +165,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(301, 350);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.Size = new System.Drawing.Size(77, 13);
             this.label12.TabIndex = 11;
-            this.label12.Text = "label12";
+            this.label12.Text = "DEVOLUCION";
             // 
             // label11
             // 
@@ -181,20 +181,20 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(116, 378);
+            this.label10.Location = new System.Drawing.Point(105, 374);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.Size = new System.Drawing.Size(10, 13);
             this.label10.TabIndex = 9;
-            this.label10.Text = "label10";
+            this.label10.Text = "-";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(116, 350);
+            this.label9.Location = new System.Drawing.Point(72, 350);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.Size = new System.Drawing.Size(92, 13);
             this.label9.TabIndex = 8;
-            this.label9.Text = "label9";
+            this.label9.Text = "TOTAL A PAGAR";
             // 
             // label8
             // 

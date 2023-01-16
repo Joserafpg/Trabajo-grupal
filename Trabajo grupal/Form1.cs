@@ -132,6 +132,7 @@ namespace Trabajo_grupal
         private void btninventario_Click(object sender, EventArgs e)
         {
             CollapseMenu();
+            AbrirFormEnPanel(new Inventario());
         }
 
         private void btnclientes_Click(object sender, EventArgs e)

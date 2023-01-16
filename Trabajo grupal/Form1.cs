@@ -138,6 +138,7 @@ namespace Trabajo_grupal
         private void btnclientes_Click(object sender, EventArgs e)
         {
             CollapseMenu();
+            AbrirFormEnPanel(new Cliente());
         }
 
         private void btnproveedores_Click(object sender, EventArgs e)

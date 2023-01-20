@@ -306,12 +306,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1134, 561);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTittleBar);
             this.Controls.Add(this.panelMenu);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "DASHBOARD";
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

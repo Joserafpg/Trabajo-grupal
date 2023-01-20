@@ -68,7 +68,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 80);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(880, 94);
+            this.panel1.Size = new System.Drawing.Size(907, 94);
             this.panel1.TabIndex = 0;
             // 
             // label4
@@ -176,7 +176,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(12, 229);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(880, 260);
+            this.panel2.Size = new System.Drawing.Size(907, 260);
             this.panel2.TabIndex = 2;
             // 
             // label9
@@ -230,7 +230,7 @@
             this.panel3.Controls.Add(this.button5);
             this.panel3.Location = new System.Drawing.Point(12, 180);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(880, 43);
+            this.panel3.Size = new System.Drawing.Size(907, 43);
             this.panel3.TabIndex = 3;
             // 
             // pictureBox1
@@ -262,7 +262,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(627, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(228, 75);
+            this.pictureBox2.Size = new System.Drawing.Size(255, 75);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -272,7 +272,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(904, 501);
+            this.ClientSize = new System.Drawing.Size(1034, 501);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

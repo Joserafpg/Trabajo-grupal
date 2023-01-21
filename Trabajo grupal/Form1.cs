@@ -33,6 +33,27 @@ namespace Trabajo_grupal
 
             var ms3 = new ToolTip();
             ms3.SetToolTip(btnMinimize, "Minimizar");
+
+            var ms4 = new ToolTip();
+            ms4.SetToolTip(btnMenu, "Menú Vertical");
+
+            var ms5 = new ToolTip();
+            ms5.SetToolTip(btninventario, "Inventario");
+
+            var ms6 = new ToolTip();
+            ms6.SetToolTip(btnclientes, "Clientes");
+
+            var ms7 = new ToolTip();
+            ms7.SetToolTip(btnproveedores, "Proveedores");
+
+            var ms8 = new ToolTip();
+            ms8.SetToolTip(btnfacturacion, "Facturación");
+
+            var ms9 = new ToolTip();
+            ms9.SetToolTip(btnpagos, "Cuentas por pagar");
+
+            var ms10 = new ToolTip();
+            ms10.SetToolTip(btnCobrar, "Cuentas por cobrar");
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

@@ -56,6 +56,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -250,6 +251,7 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label10);
@@ -264,7 +266,7 @@
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.Location = new System.Drawing.Point(173, 443);
+            this.textBox3.Location = new System.Drawing.Point(181, 440);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 17;
@@ -307,18 +309,18 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(305, 419);
+            this.label12.Location = new System.Drawing.Point(324, 419);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 13);
+            this.label12.Size = new System.Drawing.Size(105, 13);
             this.label12.TabIndex = 11;
-            this.label12.Text = "DEVOLUCION";
+            this.label12.Text = "METODO DE PAGO";
             // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(339, 443);
+            this.label13.Location = new System.Drawing.Point(355, 440);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(10, 13);
             this.label13.TabIndex = 12;
@@ -355,6 +357,17 @@
             this.button1.TabIndex = 18;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Credito",
+            "Contado"});
+            this.comboBox1.Location = new System.Drawing.Point(325, 440);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(101, 21);
+            this.comboBox1.TabIndex = 18;
             // 
             // Facturacion
             // 
@@ -403,5 +416,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -151,7 +151,24 @@ namespace Trabajo_grupal
             }
         }
 
-        private void AbrirFormEnPanel(object Formhijo)
+
+        private void CollapseMenuClose()
+        {
+            if (this.panelMenu.Width > 200) //Collapse menu
+            {
+                panelMenu.Width = 100;
+                btnlogoInicio.Visible = false;
+                btnMenu.Dock = DockStyle.Top;
+                foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
+                {
+                    menuButton.Text = "";
+                    menuButton.ImageAlign = ContentAlignment.MiddleCenter;
+                    menuButton.Padding = new Padding(0);
+                }
+            }
+        }
+
+            private void AbrirFormEnPanel(object Formhijo)
         {
             if (this.panelDesktop.Controls.Count > 0)
                 this.panelDesktop.Controls.RemoveAt(0);
@@ -165,36 +182,41 @@ namespace Trabajo_grupal
         private void btninventario_Click(object sender, EventArgs e)
         {
             CollapseMenu();
+            CollapseMenuClose();
             AbrirFormEnPanel(new Inventario());
         }
 
         private void btnclientes_Click(object sender, EventArgs e)
         {
             CollapseMenu();
+            CollapseMenuClose();
             AbrirFormEnPanel(new Cliente());
         }
 
         private void btnproveedores_Click(object sender, EventArgs e)
         {
             CollapseMenu();
+            CollapseMenuClose();
             AbrirFormEnPanel(new Form2());
         }
 
         private void btnfacturacion_Click(object sender, EventArgs e)
         {
             CollapseMenu();
+            CollapseMenuClose();
             AbrirFormEnPanel(new Facturacion());
         }
 
         private void btnpagos_Click(object sender, EventArgs e)
         {
             CollapseMenu();
+            CollapseMenuClose();
             AbrirFormEnPanel(new cuentasporpagar ());
         }
 
         private void panelDesktop_MouseClick(object sender, MouseEventArgs e)
         {
-            CollapseMenu();
+            CollapseMenuClose();
         }
 
         private void btnlogoInicio_Click(object sender, EventArgs e)
@@ -206,6 +228,7 @@ namespace Trabajo_grupal
         private void btnCobrar_Click(object sender, EventArgs e)
         {
             CollapseMenu();
+            CollapseMenuClose();
             AbrirFormEnPanel(new Cuentasporcobrar());
         }
     }

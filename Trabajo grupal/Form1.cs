@@ -151,7 +151,6 @@ namespace Trabajo_grupal
             }
         }
 
-
         private void CollapseMenuClose()
         {
             if (this.panelMenu.Width > 200) //Collapse menu
@@ -181,35 +180,31 @@ namespace Trabajo_grupal
         }
         private void btninventario_Click(object sender, EventArgs e)
         {
-            CollapseMenu();
             CollapseMenuClose();
             AbrirFormEnPanel(new Inventario());
         }
 
         private void btnclientes_Click(object sender, EventArgs e)
         {
-            CollapseMenu();
+
             CollapseMenuClose();
             AbrirFormEnPanel(new Cliente());
         }
 
         private void btnproveedores_Click(object sender, EventArgs e)
         {
-            CollapseMenu();
             CollapseMenuClose();
             AbrirFormEnPanel(new Form2());
         }
 
         private void btnfacturacion_Click(object sender, EventArgs e)
         {
-            CollapseMenu();
             CollapseMenuClose();
             AbrirFormEnPanel(new Facturacion());
         }
 
         private void btnpagos_Click(object sender, EventArgs e)
         {
-            CollapseMenu();
             CollapseMenuClose();
             AbrirFormEnPanel(new cuentasporpagar ());
         }
@@ -227,7 +222,6 @@ namespace Trabajo_grupal
 
         private void btnCobrar_Click(object sender, EventArgs e)
         {
-            CollapseMenu();
             CollapseMenuClose();
             AbrirFormEnPanel(new Cuentasporcobrar());
         }

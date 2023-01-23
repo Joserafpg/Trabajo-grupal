@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,6 +76,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1034, 501);
             this.panel5.TabIndex = 3;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(791, 440);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(177, 48);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Todas las facturas";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label14
             // 
@@ -321,7 +331,7 @@
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.BackColor = System.Drawing.Color.LightGreen;
-            this.button3.Location = new System.Drawing.Point(772, 290);
+            this.button3.Location = new System.Drawing.Point(791, 275);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(177, 76);
             this.button3.TabIndex = 20;
@@ -332,7 +342,7 @@
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.Location = new System.Drawing.Point(772, 202);
+            this.button2.Location = new System.Drawing.Point(791, 187);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(177, 76);
             this.button2.TabIndex = 19;
@@ -342,21 +352,12 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(772, 116);
+            this.button1.Location = new System.Drawing.Point(791, 101);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(177, 76);
             this.button1.TabIndex = 18;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(837, 29);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // Facturacion
             // 

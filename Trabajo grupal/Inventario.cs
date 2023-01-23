@@ -34,7 +34,8 @@ namespace Trabajo_grupal
 
         private void agregar_Click(object sender, EventArgs e)
         {
-
+            NuevoInventario frm = new NuevoInventario();
+            frm.Show();
         }
     }
 }

@@ -16,5 +16,10 @@ namespace Trabajo_grupal
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

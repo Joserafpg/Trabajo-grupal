@@ -197,5 +197,23 @@
   <ItemGroup>
     <None Include="Resources\metodo-de-pago %283%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-mas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\escoba %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\escoba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\escoba %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busqueda-de-lupa.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

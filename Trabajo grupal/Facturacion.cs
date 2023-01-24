@@ -23,5 +23,11 @@ namespace Trabajo_grupal
             Sub_Menú_Facturacion frm = new Sub_Menú_Facturacion();
             frm.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Login_Form frm = new Login_Form();
+            frm.Show();
+        }
     }
 }

@@ -21,5 +21,20 @@ namespace Trabajo_grupal
         {
             this.Close();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NuevoInventario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -225,5 +225,11 @@ namespace Trabajo_grupal
             CollapseMenuClose();
             AbrirFormEnPanel(new Cuentasporcobrar());
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Login_Form frm = new Login_Form();
+            frm.Show();
+        }
     }
 }

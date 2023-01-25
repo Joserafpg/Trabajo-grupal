@@ -54,9 +54,9 @@
             this.PrecioCompra,
             this.PrecioVenta,
             this.Cantidad});
-            this.dataGridView1.Location = new System.Drawing.Point(79, 140);
+            this.dataGridView1.Location = new System.Drawing.Point(79, 121);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(842, 339);
+            this.dataGridView1.Size = new System.Drawing.Size(842, 368);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -102,12 +102,16 @@
             // 
             // agregar
             // 
-            this.agregar.Location = new System.Drawing.Point(698, 97);
+            this.agregar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.agregar.Location = new System.Drawing.Point(79, 42);
             this.agregar.Name = "agregar";
-            this.agregar.Size = new System.Drawing.Size(75, 23);
+            this.agregar.Size = new System.Drawing.Size(128, 52);
             this.agregar.TabIndex = 1;
             this.agregar.Text = "Agregar Nuevo Inventario";
-            this.agregar.UseVisualStyleBackColor = true;
+            this.agregar.UseVisualStyleBackColor = false;
             this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
             // Inventario

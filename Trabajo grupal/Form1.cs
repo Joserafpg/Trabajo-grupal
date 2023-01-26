@@ -56,6 +56,7 @@ namespace Trabajo_grupal
             ms10.SetToolTip(btnCobrar, "Cuentas por cobrar");
         }
 
+        /*Metodo ReleaseCapture*/
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -122,6 +123,7 @@ namespace Trabajo_grupal
             CollapseMenu();
         }
 
+        /*Metodo CollapseMenu*/
         private void CollapseMenu()
         {
             if (this.panelMenu.Width > 200) //Collapse menu

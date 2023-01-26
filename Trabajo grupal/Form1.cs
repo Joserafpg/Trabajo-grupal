@@ -126,7 +126,7 @@ namespace Trabajo_grupal
         /*Metodo CollapseMenu*/
         private void CollapseMenu()
         {
-            if (this.panelMenu.Width > 200) //Collapse menu
+            if (this.panelMenu.Width > 200) 
             {
                 panelMenu.Width = 100;
                 btnlogoInicio.Visible = false;
@@ -153,9 +153,10 @@ namespace Trabajo_grupal
             }
         }
 
+        //Metodo para cerrar el menu desplegable//
         private void CollapseMenuClose()
         {
-            if (this.panelMenu.Width > 200) //Collapse menu
+            if (this.panelMenu.Width > 200) 
             {
                 panelMenu.Width = 100;
                 btnlogoInicio.Visible = false;
@@ -169,7 +170,8 @@ namespace Trabajo_grupal
             }
         }
 
-            private void AbrirFormEnPanel(object Formhijo)
+        //Metodo Abrir Formulario en el panel//
+        private void AbrirFormEnPanel(object Formhijo)
         {
             if (this.panelDesktop.Controls.Count > 0)
                 this.panelDesktop.Controls.RemoveAt(0);
@@ -182,25 +184,28 @@ namespace Trabajo_grupal
         }
         private void btninventario_Click(object sender, EventArgs e)
         {
+            label1.Text = "Inventario";
             CollapseMenuClose();
             AbrirFormEnPanel(new Inventario());
         }
 
         private void btnclientes_Click(object sender, EventArgs e)
         {
-
+            label1.Text = "Clientes";
             CollapseMenuClose();
             AbrirFormEnPanel(new Cliente());
         }
 
         private void btnproveedores_Click(object sender, EventArgs e)
         {
+            label1.Text = "Proveedores";
             CollapseMenuClose();
             AbrirFormEnPanel(new Form2());
         }
 
         private void btnfacturacion_Click(object sender, EventArgs e)
         {
+            label1.Text = "Facturacion";
             CollapseMenuClose();
             AbrirFormEnPanel(new Facturacion());
         }
@@ -218,6 +223,7 @@ namespace Trabajo_grupal
 
         private void btnlogoInicio_Click(object sender, EventArgs e)
         {
+            label1.Text = "DASHBOARD";
             CollapseMenu();
             AbrirFormEnPanel(new Menu_inicio());
         }

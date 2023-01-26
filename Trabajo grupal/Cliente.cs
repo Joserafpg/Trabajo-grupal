@@ -36,5 +36,10 @@ namespace Trabajo_grupal
         {
 
         }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

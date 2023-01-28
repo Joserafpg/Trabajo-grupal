@@ -80,7 +80,7 @@
             this.btnCobrar.Name = "btnCobrar";
             this.btnCobrar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCobrar.Size = new System.Drawing.Size(230, 46);
-            this.btnCobrar.TabIndex = 7;
+            this.btnCobrar.TabIndex = 6;
             this.btnCobrar.Tag = "Cuentas por cobrar";
             this.btnCobrar.Text = "Cuentas por cobrar";
             this.btnCobrar.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button10.Size = new System.Drawing.Size(230, 46);
-            this.button10.TabIndex = 6;
+            this.button10.TabIndex = 7;
             this.button10.Tag = "Salir";
             this.button10.Text = "Salir";
             this.button10.UseVisualStyleBackColor = true;

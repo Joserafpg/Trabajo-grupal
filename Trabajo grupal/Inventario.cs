@@ -37,5 +37,23 @@ namespace Trabajo_grupal
             NuevoInventario frm = new NuevoInventario();
             frm.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ModificarInventario frm = new ModificarInventario();
+            frm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ProductosBajoInventario frm = new ProductosBajoInventario();
+            frm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EliminarInventario frm = new EliminarInventario();
+            frm.Show();
+        }
     }
 }

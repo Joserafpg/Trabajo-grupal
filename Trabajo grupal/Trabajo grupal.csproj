@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClasesDropDown\DropDownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClasesDropDown\MenuRenderer.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +110,7 @@
     <Compile Include="Menu inicio.Designer.cs">
       <DependentUpon>Menu inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClasesDropDown\MenuColorTable.cs" />
     <Compile Include="ModificarInventario.cs">
       <SubType>Form</SubType>
     </Compile>

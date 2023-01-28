@@ -50,10 +50,7 @@ namespace Trabajo_grupal
             ms8.SetToolTip(btnfacturacion, "Facturación");
 
             var ms9 = new ToolTip();
-            ms9.SetToolTip(btnpagos, "Cuentas por pagar");
-
-            var ms10 = new ToolTip();
-            ms10.SetToolTip(btnCobrar, "Cuentas por cobrar");
+            ms9.SetToolTip(btnpagos, "Cuentas");
         }
 
         /*Metodo ReleaseCapture*/
@@ -170,8 +167,25 @@ namespace Trabajo_grupal
             }
         }
 
-        //Metodo Abrir Formulario en el panel//
-        private void AbrirFormEnPanel(object Formhijo)
+        /*Metodo CollapseMenuOpen*/
+        private void CollapseMenuOpen()
+        {
+            if (this.panelMenu.Width > 99)
+            {
+                panelMenu.Width = 230;
+                btnlogoInicio.Visible = true;
+                btnMenu.Dock = DockStyle.None;
+                foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
+                {
+                    menuButton.Text = "   " + menuButton.Tag.ToString();
+                    menuButton.ImageAlign = ContentAlignment.MiddleLeft;
+                    menuButton.Padding = new Padding(10, 0, 0, 0);
+                }
+            }
+        }
+
+            //Metodo Abrir Formulario en el panel//
+            private void AbrirFormEnPanel(object Formhijo)
         {
             if (this.panelDesktop.Controls.Count > 0)
                 this.panelDesktop.Controls.RemoveAt(0);
@@ -212,13 +226,13 @@ namespace Trabajo_grupal
 
         private void btnpagos_Click(object sender, EventArgs e)
         {
-            CollapseMenuClose();
-            AbrirFormEnPanel(new cuentasporpagar ());
+            CollapseMenuOpen();
+            dropDownMenu1.Show(btnpagos,btnpagos.Width, 0);
         }
 
         private void panelDesktop_MouseClick(object sender, MouseEventArgs e)
         {
-            CollapseMenuClose();
+            
         }
 
         private void btnlogoInicio_Click(object sender, EventArgs e)
@@ -228,16 +242,22 @@ namespace Trabajo_grupal
             AbrirFormEnPanel(new Menu_inicio());
         }
 
-        private void btnCobrar_Click(object sender, EventArgs e)
-        {
-            CollapseMenuClose();
-            AbrirFormEnPanel(new Cuentasporcobrar());
-        }
-
         private void button10_Click(object sender, EventArgs e)
         {
             Login_Form frm = new Login_Form();
             frm.Show();
+        }
+
+        private void cuentasPorPagarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new cuentasporpagar());
+            CollapseMenuClose();
+        }
+
+        private void cuentasPorCobrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Cuentasporcobrar());
+            CollapseMenuClose();
         }
     }
 }

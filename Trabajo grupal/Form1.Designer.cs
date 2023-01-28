@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnCobrar = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.btnpagos = new System.Windows.Forms.Button();
             this.btnfacturacion = new System.Windows.Forms.Button();
@@ -45,16 +45,19 @@
             this.btnMaximize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.dropDownMenu1 = new Trabajo_grupal.ClasesDropDown.DropDownMenu(this.components);
+            this.cuentasPorPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuentasPorCobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnlogoInicio)).BeginInit();
             this.panelTittleBar.SuspendLayout();
+            this.dropDownMenu1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.panelMenu.Controls.Add(this.btnCobrar);
             this.panelMenu.Controls.Add(this.button10);
             this.panelMenu.Controls.Add(this.btnpagos);
             this.panelMenu.Controls.Add(this.btnfacturacion);
@@ -67,24 +70,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(230, 561);
             this.panelMenu.TabIndex = 0;
-            // 
-            // btnCobrar
-            // 
-            this.btnCobrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCobrar.FlatAppearance.BorderSize = 0;
-            this.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCobrar.ForeColor = System.Drawing.Color.White;
-            this.btnCobrar.Image = global::Trabajo_grupal.Properties.Resources.metodo_de_pago__3_;
-            this.btnCobrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCobrar.Location = new System.Drawing.Point(0, 370);
-            this.btnCobrar.Name = "btnCobrar";
-            this.btnCobrar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCobrar.Size = new System.Drawing.Size(230, 46);
-            this.btnCobrar.TabIndex = 6;
-            this.btnCobrar.Tag = "Cuentas por cobrar";
-            this.btnCobrar.Text = "Cuentas por cobrar";
-            this.btnCobrar.UseVisualStyleBackColor = true;
-            this.btnCobrar.Click += new System.EventHandler(this.btnCobrar_Click);
             // 
             // button10
             // 
@@ -118,7 +103,7 @@
             this.btnpagos.Size = new System.Drawing.Size(230, 46);
             this.btnpagos.TabIndex = 5;
             this.btnpagos.Tag = "Cuentas por pagar";
-            this.btnpagos.Text = "Cuentas por pagar";
+            this.btnpagos.Text = "Cuentas ";
             this.btnpagos.UseVisualStyleBackColor = true;
             this.btnpagos.Click += new System.EventHandler(this.btnpagos_Click);
             // 
@@ -302,6 +287,36 @@
             this.panelDesktop.TabIndex = 2;
             this.panelDesktop.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDesktop_MouseClick);
             // 
+            // dropDownMenu1
+            // 
+            this.dropDownMenu1.IsMainMenu = false;
+            this.dropDownMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cuentasPorPagarToolStripMenuItem,
+            this.cuentasPorCobrarToolStripMenuItem});
+            this.dropDownMenu1.MenuItemHeight = 25;
+            this.dropDownMenu1.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.dropDownMenu1.Name = "dropDownMenu1";
+            this.dropDownMenu1.PrimaryColor = System.Drawing.Color.Empty;
+            this.dropDownMenu1.Size = new System.Drawing.Size(181, 70);
+            // 
+            // cuentasPorPagarToolStripMenuItem
+            // 
+            this.cuentasPorPagarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.cuentasPorPagarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.cuentasPorPagarToolStripMenuItem.Name = "cuentasPorPagarToolStripMenuItem";
+            this.cuentasPorPagarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cuentasPorPagarToolStripMenuItem.Text = "Cuentas por pagar";
+            this.cuentasPorPagarToolStripMenuItem.Click += new System.EventHandler(this.cuentasPorPagarToolStripMenuItem_Click);
+            // 
+            // cuentasPorCobrarToolStripMenuItem
+            // 
+            this.cuentasPorCobrarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.cuentasPorCobrarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.cuentasPorCobrarToolStripMenuItem.Name = "cuentasPorCobrarToolStripMenuItem";
+            this.cuentasPorCobrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cuentasPorCobrarToolStripMenuItem.Text = "Cuentas por cobrar";
+            this.cuentasPorCobrarToolStripMenuItem.Click += new System.EventHandler(this.cuentasPorCobrarToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,6 +334,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnlogoInicio)).EndInit();
             this.panelTittleBar.ResumeLayout(false);
             this.panelTittleBar.PerformLayout();
+            this.dropDownMenu1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -341,7 +357,9 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button btnCobrar;
+        private ClasesDropDown.DropDownMenu dropDownMenu1;
+        private System.Windows.Forms.ToolStripMenuItem cuentasPorPagarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuentasPorCobrarToolStripMenuItem;
     }
 }
 

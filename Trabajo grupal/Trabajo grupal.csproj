@@ -64,6 +64,12 @@
     <Compile Include="Cuentas por pagar .Designer.cs">
       <DependentUpon>Cuentas por pagar .cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarInventario.Designer.cs">
+      <DependentUpon>EliminarInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,11 +106,23 @@
     <Compile Include="Menu inicio.Designer.cs">
       <DependentUpon>Menu inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarInventario.Designer.cs">
+      <DependentUpon>ModificarInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="NuevoInventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NuevoInventario.Designer.cs">
       <DependentUpon>NuevoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductosBajoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductosBajoInventario.Designer.cs">
+      <DependentUpon>ProductosBajoInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

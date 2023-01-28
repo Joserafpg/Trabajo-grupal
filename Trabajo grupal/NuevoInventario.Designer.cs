@@ -45,11 +45,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.label9);
@@ -68,7 +70,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(12, 21);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(767, 417);
+            this.groupBox1.Size = new System.Drawing.Size(753, 456);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Nueva Mercancia";
@@ -90,7 +92,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 232);
+            this.label9.Location = new System.Drawing.Point(6, 227);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 22);
             this.label9.TabIndex = 18;
@@ -98,7 +100,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(209, 310);
+            this.textBox2.Location = new System.Drawing.Point(209, 316);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(121, 31);
             this.textBox2.TabIndex = 13;
@@ -113,7 +115,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 279);
+            this.label7.Location = new System.Drawing.Point(6, 273);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(142, 22);
             this.label7.TabIndex = 11;
@@ -140,8 +142,12 @@
             "Denim Crudo",
             "Denim Algodon serge",
             "Denim Organico",
-            "Denim Orillo"});
-            this.comboBox3.Location = new System.Drawing.Point(209, 224);
+            "Denim Orillo",
+            "",
+            "Grande",
+            "Mediano",
+            "Pequeño"});
+            this.comboBox3.Location = new System.Drawing.Point(209, 130);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 30);
             this.comboBox3.TabIndex = 9;
@@ -157,7 +163,7 @@
             "Gris",
             "Caqui",
             "Verde "});
-            this.comboBox2.Location = new System.Drawing.Point(209, 130);
+            this.comboBox2.Location = new System.Drawing.Point(209, 224);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 30);
             this.comboBox2.TabIndex = 8;
@@ -198,9 +204,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 22);
+            this.label3.Size = new System.Drawing.Size(46, 22);
             this.label3.TabIndex = 2;
-            this.label3.Text = "TipoTela";
+            this.label3.Text = "Tipo";
             // 
             // label1
             // 
@@ -218,7 +224,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::Trabajo_grupal.Properties.Resources.cerrar__3_;
-            this.btnClose.Location = new System.Drawing.Point(755, 0);
+            this.btnClose.Location = new System.Drawing.Point(771, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(45, 25);
             this.btnClose.TabIndex = 3;
@@ -230,16 +236,26 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 25);
+            this.panel1.Size = new System.Drawing.Size(816, 25);
             this.panel1.TabIndex = 4;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(459, 270);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 56);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // NuevoInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(816, 489);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
@@ -272,5 +288,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }

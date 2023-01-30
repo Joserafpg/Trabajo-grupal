@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxCustom1 = new Trabajo_grupal.TextBoxCustom.TextBoxCustom();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rjButton1 = new Trabajo_grupal.RJButton.RJButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxCustom1 = new Trabajo_grupal.TextBoxCustom.TextBoxCustom();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,6 +58,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(372, 535);
             this.panel1.TabIndex = 1;
+            // 
+            // textBoxCustom1
+            // 
+            this.textBoxCustom1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.textBoxCustom1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.textBoxCustom1.BorderSize = 2;
+            this.textBoxCustom1.Location = new System.Drawing.Point(56, 444);
+            this.textBoxCustom1.Multiline = false;
+            this.textBoxCustom1.Name = "textBoxCustom1";
+            this.textBoxCustom1.Padding = new System.Windows.Forms.Padding(7);
+            this.textBoxCustom1.PasswordChar = true;
+            this.textBoxCustom1.Size = new System.Drawing.Size(250, 28);
+            this.textBoxCustom1.TabIndex = 6;
+            this.textBoxCustom1.Texts = "";
+            this.textBoxCustom1.UnderlinedStyle = false;
             // 
             // panel2
             // 
@@ -159,21 +174,6 @@
             this.label3.Size = new System.Drawing.Size(315, 37);
             this.label3.TabIndex = 4;
             this.label3.Text = "Welecome Back!!!";
-            // 
-            // textBoxCustom1
-            // 
-            this.textBoxCustom1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.textBoxCustom1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.textBoxCustom1.BorderSize = 2;
-            this.textBoxCustom1.Location = new System.Drawing.Point(56, 444);
-            this.textBoxCustom1.Multiline = false;
-            this.textBoxCustom1.Name = "textBoxCustom1";
-            this.textBoxCustom1.Padding = new System.Windows.Forms.Padding(7);
-            this.textBoxCustom1.PasswordChar = true;
-            this.textBoxCustom1.Size = new System.Drawing.Size(250, 28);
-            this.textBoxCustom1.TabIndex = 6;
-            this.textBoxCustom1.Texts = "";
-            this.textBoxCustom1.UnderlinedStyle = false;
             // 
             // Login_Form
             // 

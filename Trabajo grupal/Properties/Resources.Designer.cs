@@ -133,6 +133,16 @@ namespace Trabajo_grupal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cruzar {
+            get {
+                object obj = ResourceManager.GetObject("cruzar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap escoba {
             get {
                 object obj = ResourceManager.GetObject("escoba", resourceCulture);
@@ -196,6 +206,16 @@ namespace Trabajo_grupal.Properties {
         internal static System.Drawing.Bitmap factura__1_ {
             get {
                 object obj = ResourceManager.GetObject("factura (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap garrapata {
+            get {
+                object obj = ResourceManager.GetObject("garrapata", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

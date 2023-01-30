@@ -41,14 +41,14 @@ namespace Trabajo_grupal.ClasesDropDown
         protected override void OnRenderItemText(ToolStripItemTextRenderEventArgs e)
         {
             base.OnRenderItemText(e);
-            e.Item.ForeColor = e.Item.Selected ? Color.Black : textColor;
+            e.Item.ForeColor = e.Item.Selected ? Color.White : textColor;
         }
         protected override void OnRenderArrow(ToolStripArrowRenderEventArgs e)
         {
             //Fields
             var graph = e.Graphics;
             var arrowSize = new Size(5, 12);
-            var arrowColor = e.Item.Selected ? Color.Black : primaryColor;
+            var arrowColor = e.Item.Selected ? Color.White : primaryColor;
             var rect = new Rectangle(e.ArrowRectangle.Location.X, (e.ArrowRectangle.Height - arrowSize.Height) / 2,
                 arrowSize.Width, arrowSize.Height);
             using (GraphicsPath path = new GraphicsPath())

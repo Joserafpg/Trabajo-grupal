@@ -252,12 +252,14 @@ namespace Trabajo_grupal
         {
             AbrirFormEnPanel(new cuentasporpagar());
             CollapseMenuClose();
+            label1.Text = "Cuentas por pagar";
         }
 
         private void cuentasPorCobrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new Cuentasporcobrar());
             CollapseMenuClose();
+            label1.Text = "Cuentas por cobrar";
         }
     }
 }

@@ -102,7 +102,7 @@
             this.btnpagos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnpagos.Size = new System.Drawing.Size(230, 46);
             this.btnpagos.TabIndex = 5;
-            this.btnpagos.Tag = "Cuentas por pagar";
+            this.btnpagos.Tag = "Cuentas";
             this.btnpagos.Text = "Cuentas ";
             this.btnpagos.UseVisualStyleBackColor = true;
             this.btnpagos.Click += new System.EventHandler(this.btnpagos_Click);
@@ -297,14 +297,14 @@
             this.dropDownMenu1.MenuItemTextColor = System.Drawing.Color.Empty;
             this.dropDownMenu1.Name = "dropDownMenu1";
             this.dropDownMenu1.PrimaryColor = System.Drawing.Color.Empty;
-            this.dropDownMenu1.Size = new System.Drawing.Size(181, 70);
+            this.dropDownMenu1.Size = new System.Drawing.Size(176, 48);
             // 
             // cuentasPorPagarToolStripMenuItem
             // 
             this.cuentasPorPagarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.cuentasPorPagarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.cuentasPorPagarToolStripMenuItem.Name = "cuentasPorPagarToolStripMenuItem";
-            this.cuentasPorPagarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cuentasPorPagarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.cuentasPorPagarToolStripMenuItem.Text = "Cuentas por pagar";
             this.cuentasPorPagarToolStripMenuItem.Click += new System.EventHandler(this.cuentasPorPagarToolStripMenuItem_Click);
             // 
@@ -313,7 +313,7 @@
             this.cuentasPorCobrarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.cuentasPorCobrarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.cuentasPorCobrarToolStripMenuItem.Name = "cuentasPorCobrarToolStripMenuItem";
-            this.cuentasPorCobrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cuentasPorCobrarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.cuentasPorCobrarToolStripMenuItem.Text = "Cuentas por cobrar";
             this.cuentasPorCobrarToolStripMenuItem.Click += new System.EventHandler(this.cuentasPorCobrarToolStripMenuItem_Click);
             // 

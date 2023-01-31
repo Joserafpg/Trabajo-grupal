@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +74,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Nueva Mercancia";
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(457, 256);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 56);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
@@ -239,16 +249,6 @@
             this.panel1.Size = new System.Drawing.Size(816, 25);
             this.panel1.TabIndex = 4;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(459, 270);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 56);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // NuevoInventario
             // 

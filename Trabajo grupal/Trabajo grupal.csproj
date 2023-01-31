@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjustesInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjustesInventario.Designer.cs">
+      <DependentUpon>AjustesInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClasesDropDown\DropDownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     <Compile Include="TextBoxCustom\TextBoxCustom.Designer.cs">
       <DependentUpon>TextBoxCustom.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AjustesInventario.resx">
+      <DependentUpon>AjustesInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoInventario.resx">
       <DependentUpon>NuevoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductosBajoInventario.resx">
+      <DependentUpon>ProductosBajoInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -55,5 +55,10 @@ namespace Trabajo_grupal
             EliminarInventario frm = new EliminarInventario();
             frm.Show();
         }
+
+        private void Ajustes_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

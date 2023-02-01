@@ -236,7 +236,9 @@
             "Hilos",
             "Agujas",
             "Tela",
-            "Zippers"});
+            "Zippers",
+            "Pantalones cortos",
+            "Pantalones largos"});
             this.comboBox1.Location = new System.Drawing.Point(36, 113);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(198, 25);

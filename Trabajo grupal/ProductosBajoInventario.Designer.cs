@@ -34,10 +34,10 @@
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InvMinimo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +55,7 @@
             this.Departamento});
             this.dataGridView1.Location = new System.Drawing.Point(9, 122);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(648, 316);
+            this.dataGridView1.Size = new System.Drawing.Size(643, 310);
             this.dataGridView1.TabIndex = 0;
             // 
             // Codigo
@@ -82,6 +82,11 @@
             // 
             this.InvMinimo.HeaderText = "Inv.Minimo";
             this.InvMinimo.Name = "InvMinimo";
+            // 
+            // Departamento
+            // 
+            this.Departamento.HeaderText = "Departamento";
+            this.Departamento.Name = "Departamento";
             // 
             // label1
             // 
@@ -114,11 +119,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "A continuacion se muestra un listado de productos que estan  debajo del inventari" +
     "o minimo\r\n";
-            // 
-            // Departamento
-            // 
-            this.Departamento.HeaderText = "Departamento";
-            this.Departamento.Name = "Departamento";
             // 
             // ProductosBajoInventario
             // 

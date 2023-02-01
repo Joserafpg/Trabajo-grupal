@@ -170,6 +170,9 @@
     <EmbeddedResource Include="Cuentas por pagar .resx">
       <DependentUpon>Cuentas por pagar .cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EliminarInventario.resx">
+      <DependentUpon>EliminarInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Facturacion.resx">
       <DependentUpon>Facturacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu inicio.resx">
       <DependentUpon>Menu inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarInventario.resx">
+      <DependentUpon>ModificarInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoInventario.resx">
       <DependentUpon>NuevoInventario.cs</DependentUpon>

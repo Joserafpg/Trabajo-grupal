@@ -58,7 +58,8 @@ namespace Trabajo_grupal
 
         private void Ajustes_Click(object sender, EventArgs e)
         {
-            
+            AjustesInventario frm = new AjustesInventario();
+            frm.Show();
         }
     }
 }

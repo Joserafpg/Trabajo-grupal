@@ -32,5 +32,12 @@ namespace Trabajo_grupal
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            NuevoInventario frm = new NuevoInventario();
+            frm.Show();
+        }
     }
 }

@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace Trabajo_grupal
 {
-    public partial class Facturacion : Form
+    public partial class InventarioPantalones : Form
     {
-        public Facturacion()
+        public InventarioPantalones()
         {
             InitializeComponent();
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Sub_Menú_Facturacion frm = new Sub_Menú_Facturacion();
-            frm.Show();
-        }
-
-        
     }
 }

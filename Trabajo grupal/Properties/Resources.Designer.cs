@@ -133,6 +133,16 @@ namespace Trabajo_grupal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap configuracion {
+            get {
+                object obj = ResourceManager.GetObject("configuracion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cruzar {
             get {
                 object obj = ResourceManager.GetObject("cruzar", resourceCulture);
@@ -256,6 +266,16 @@ namespace Trabajo_grupal.Properties {
         internal static System.Drawing.Bitmap image1 {
             get {
                 object obj = ResourceManager.GetObject("image1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iniciar_sesion {
+            get {
+                object obj = ResourceManager.GetObject("iniciar-sesion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

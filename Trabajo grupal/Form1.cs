@@ -1,4 +1,5 @@
 ﻿using angel22mg;
+using proveedores;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +10,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp2;
 
 namespace Trabajo_grupal
 {
@@ -44,13 +44,13 @@ namespace Trabajo_grupal
             ms6.SetToolTip(btnclientes, "Clientes");
 
             var ms7 = new ToolTip();
-            ms7.SetToolTip(btnproveedores, "Proveedores");
+            ms7.SetToolTip(btnfacturacion, "Facturación");
 
             var ms8 = new ToolTip();
-            ms8.SetToolTip(btnfacturacion, "Facturación");
+            ms8.SetToolTip(btnpagos, "Cuentas");
 
             var ms9 = new ToolTip();
-            ms9.SetToolTip(btnpagos, "Cuentas");
+            ms9.SetToolTip(button1, "Configuracion");
         }
 
         /*Metodo ReleaseCapture*/
@@ -214,7 +214,7 @@ namespace Trabajo_grupal
         {
             label1.Text = "Proveedores";
             CollapseMenuClose();
-            AbrirFormEnPanel(new Form2());
+            AbrirFormEnPanel(new Configuracion());
         }
 
         private void btnfacturacion_Click(object sender, EventArgs e)
@@ -260,6 +260,13 @@ namespace Trabajo_grupal
             AbrirFormEnPanel(new Cuentasporcobrar());
             CollapseMenuClose();
             label1.Text = "Cuentas por cobrar";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label1.Text = "Configuracion";
+            CollapseMenuClose();
+            AbrirFormEnPanel(new Configuracion());
         }
     }
 }

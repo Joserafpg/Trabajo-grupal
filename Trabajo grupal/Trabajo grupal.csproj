@@ -92,11 +92,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="FormPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="FormPermisos.Designer.cs">
+      <DependentUpon>FormPermisos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formulario clientes 2.cs">
       <SubType>Form</SubType>
@@ -109,6 +109,12 @@
     </Compile>
     <Compile Include="Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioPantalones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventarioPantalones.Designer.cs">
+      <DependentUpon>InventarioPantalones.cs</DependentUpon>
     </Compile>
     <Compile Include="Login Form.cs">
       <SubType>Form</SubType>
@@ -135,6 +141,12 @@
     <Compile Include="NuevoInventario.Designer.cs">
       <DependentUpon>NuevoInventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Permisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permisos.Designer.cs">
+      <DependentUpon>Permisos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductosBajoInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +155,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Configuracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion.designer.cs">
+      <DependentUpon>Configuracion.cs</DependentUpon>
+    </Compile>
     <Compile Include="RJButton\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -179,14 +197,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="FormPermisos.resx">
+      <DependentUpon>FormPermisos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario clientes 2.resx">
       <DependentUpon>Formulario clientes 2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventarioPantalones.resx">
+      <DependentUpon>InventarioPantalones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login Form.resx">
       <DependentUpon>Login Form.cs</DependentUpon>
@@ -200,6 +221,9 @@
     <EmbeddedResource Include="NuevoInventario.resx">
       <DependentUpon>NuevoInventario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Permisos.resx">
+      <DependentUpon>Permisos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductosBajoInventario.resx">
       <DependentUpon>ProductosBajoInventario.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +231,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion.resx">
+      <DependentUpon>Configuracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sub Menú Facturacion.resx">
       <DependentUpon>Sub Menú Facturacion.cs</DependentUpon>
@@ -315,6 +342,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cruzar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iniciar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuracion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -41,5 +41,11 @@ namespace Trabajo_grupal
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Formulario_clientes_2 frm = new Formulario_clientes_2();
+            frm.Show();
+        }
     }
 }

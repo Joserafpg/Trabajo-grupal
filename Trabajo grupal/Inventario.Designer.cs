@@ -252,7 +252,7 @@
             this.agregar.Name = "agregar";
             this.agregar.Size = new System.Drawing.Size(198, 33);
             this.agregar.TabIndex = 1;
-            this.agregar.Text = "Agregar Nuevo Mercancia";
+            this.agregar.Text = "Agregar Nueva Mercancia";
             this.agregar.UseVisualStyleBackColor = false;
             this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 

@@ -47,7 +47,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(35, 40);
+            this.groupBox1.Location = new System.Drawing.Point(23, 38);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(954, 419);
             this.groupBox1.TabIndex = 1;

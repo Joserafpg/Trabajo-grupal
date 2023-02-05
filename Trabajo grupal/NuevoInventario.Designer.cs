@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -47,8 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,6 +81,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Nueva Mercancia";
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(246, 62);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(257, 31);
+            this.textBox5.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(43, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 22);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Codigo";
+            // 
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -90,6 +106,7 @@
             this.button2.TabIndex = 22;
             this.button2.Text = "Deshacer";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -266,22 +283,6 @@
             this.panel1.Size = new System.Drawing.Size(816, 25);
             this.panel1.TabIndex = 4;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 22);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Codigo";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(246, 62);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(257, 31);
-            this.textBox5.TabIndex = 24;
             // 
             // NuevoInventario
             // 

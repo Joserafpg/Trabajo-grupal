@@ -181,7 +181,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NuevoUsuario";
             this.Text = "Permisos";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NuevoUsuario_FormClosed);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

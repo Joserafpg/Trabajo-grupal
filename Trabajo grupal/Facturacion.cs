@@ -23,6 +23,16 @@ namespace Trabajo_grupal
             frm.Show();
         }
 
-        
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormMetodo frm = new FormMetodo();
+            frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProductoFacturaNew frm = new ProductoFacturaNew();
+            frm.Show();
+        }
     }
 }

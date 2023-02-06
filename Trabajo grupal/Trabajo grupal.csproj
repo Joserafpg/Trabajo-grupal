@@ -93,6 +93,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMetodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMetodo.Designer.cs">
+      <DependentUpon>FormMetodo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,12 @@
     <Compile Include="NuevoUsuario.Designer.cs">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductoFacturaNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductoFacturaNew.Designer.cs">
+      <DependentUpon>ProductoFacturaNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductosBajoInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +210,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMetodo.resx">
+      <DependentUpon>FormMetodo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPermisos.resx">
       <DependentUpon>FormPermisos.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductoFacturaNew.resx">
+      <DependentUpon>ProductoFacturaNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductosBajoInventario.resx">
       <DependentUpon>ProductosBajoInventario.cs</DependentUpon>

@@ -44,7 +44,7 @@ namespace Trabajo_grupal
             ms6.SetToolTip(btnclientes, "Clientes");
 
             var ms7 = new ToolTip();
-            ms7.SetToolTip(btnfacturacion, "Facturación");
+            ms7.SetToolTip(btnfacturacion, "Ventas");
 
             var ms8 = new ToolTip();
             ms8.SetToolTip(btnpagos, "Cuentas");
@@ -100,14 +100,7 @@ namespace Trabajo_grupal
 
         private void btnMaximize_Click(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -219,7 +212,7 @@ namespace Trabajo_grupal
 
         private void btnfacturacion_Click(object sender, EventArgs e)
         {
-            label1.Text = "Facturacion";
+            label1.Text = "Ventas";
             CollapseMenuClose();
             AbrirFormEnPanel(new Facturacion());
         }

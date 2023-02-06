@@ -30,29 +30,29 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelTittleBar = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelDesktop = new System.Windows.Forms.Panel();
-            this.dropDownMenu1 = new Trabajo_grupal.ClasesDropDown.DropDownMenu(this.components);
-            this.cuentasPorPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cuentasPorCobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnMaximize = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.btnpagos = new System.Windows.Forms.Button();
             this.btnfacturacion = new System.Windows.Forms.Button();
             this.btnclientes = new System.Windows.Forms.Button();
             this.btninventario = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnlogoInicio = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panelTittleBar = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnMaximize = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.dropDownMenu1 = new Trabajo_grupal.ClasesDropDown.DropDownMenu(this.components);
+            this.cuentasPorPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuentasPorCobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnlogoInicio)).BeginInit();
             this.panelTittleBar.SuspendLayout();
             this.dropDownMenu1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnlogoInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -71,120 +71,23 @@
             this.panelMenu.Size = new System.Drawing.Size(230, 561);
             this.panelMenu.TabIndex = 0;
             // 
-            // panel1
+            // button1
             // 
-            this.panel1.Controls.Add(this.btnMenu);
-            this.panel1.Controls.Add(this.btnlogoInicio);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 140);
-            this.panel1.TabIndex = 0;
-            // 
-            // panelTittleBar
-            // 
-            this.panelTittleBar.BackColor = System.Drawing.Color.White;
-            this.panelTittleBar.Controls.Add(this.label1);
-            this.panelTittleBar.Controls.Add(this.btnMinimize);
-            this.panelTittleBar.Controls.Add(this.btnMaximize);
-            this.panelTittleBar.Controls.Add(this.btnClose);
-            this.panelTittleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTittleBar.Location = new System.Drawing.Point(230, 0);
-            this.panelTittleBar.Name = "panelTittleBar";
-            this.panelTittleBar.Size = new System.Drawing.Size(904, 60);
-            this.panelTittleBar.TabIndex = 1;
-            this.panelTittleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTittleBar_MouseDown);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 25);
-            this.label1.TabIndex = 5;
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(230, 60);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(904, 501);
-            this.panelDesktop.TabIndex = 2;
-            this.panelDesktop.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDesktop_MouseClick);
-            // 
-            // dropDownMenu1
-            // 
-            this.dropDownMenu1.IsMainMenu = false;
-            this.dropDownMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cuentasPorPagarToolStripMenuItem,
-            this.cuentasPorCobrarToolStripMenuItem});
-            this.dropDownMenu1.MenuItemHeight = 25;
-            this.dropDownMenu1.MenuItemTextColor = System.Drawing.Color.Empty;
-            this.dropDownMenu1.Name = "dropDownMenu1";
-            this.dropDownMenu1.PrimaryColor = System.Drawing.Color.Empty;
-            this.dropDownMenu1.Size = new System.Drawing.Size(176, 48);
-            // 
-            // cuentasPorPagarToolStripMenuItem
-            // 
-            this.cuentasPorPagarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.cuentasPorPagarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.cuentasPorPagarToolStripMenuItem.Name = "cuentasPorPagarToolStripMenuItem";
-            this.cuentasPorPagarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.cuentasPorPagarToolStripMenuItem.Text = "Cuentas por pagar";
-            this.cuentasPorPagarToolStripMenuItem.Click += new System.EventHandler(this.cuentasPorPagarToolStripMenuItem_Click);
-            // 
-            // cuentasPorCobrarToolStripMenuItem
-            // 
-            this.cuentasPorCobrarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.cuentasPorCobrarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.cuentasPorCobrarToolStripMenuItem.Name = "cuentasPorCobrarToolStripMenuItem";
-            this.cuentasPorCobrarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.cuentasPorCobrarToolStripMenuItem.Text = "Cuentas por cobrar";
-            this.cuentasPorCobrarToolStripMenuItem.Click += new System.EventHandler(this.cuentasPorCobrarToolStripMenuItem_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Image = global::Trabajo_grupal.Properties.Resources.menos;
-            this.btnMinimize.Location = new System.Drawing.Point(769, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(45, 25);
-            this.btnMinimize.TabIndex = 4;
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.btnMaximize.FlatAppearance.BorderSize = 0;
-            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.Image = global::Trabajo_grupal.Properties.Resources.expandir__3_;
-            this.btnMaximize.Location = new System.Drawing.Point(814, 0);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(45, 25);
-            this.btnMaximize.TabIndex = 3;
-            this.btnMaximize.UseVisualStyleBackColor = false;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(74)))), ((int)(((byte)(130)))));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::Trabajo_grupal.Properties.Resources.cerrar__3_;
-            this.btnClose.Location = new System.Drawing.Point(859, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(45, 25);
-            this.btnClose.TabIndex = 2;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Trabajo_grupal.Properties.Resources.configuracion;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 324);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(230, 46);
+            this.button1.TabIndex = 8;
+            this.button1.Tag = "Configuracion";
+            this.button1.Text = "Configuracion";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button10
             // 
@@ -235,8 +138,8 @@
             this.btnfacturacion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnfacturacion.Size = new System.Drawing.Size(230, 46);
             this.btnfacturacion.TabIndex = 3;
-            this.btnfacturacion.Tag = "Facturacion";
-            this.btnfacturacion.Text = "Facturacion";
+            this.btnfacturacion.Tag = "Ventas";
+            this.btnfacturacion.Text = "Ventas";
             this.btnfacturacion.UseVisualStyleBackColor = true;
             this.btnfacturacion.Click += new System.EventHandler(this.btnfacturacion_Click);
             // 
@@ -276,6 +179,16 @@
             this.btninventario.UseVisualStyleBackColor = true;
             this.btninventario.Click += new System.EventHandler(this.btninventario_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnMenu);
+            this.panel1.Controls.Add(this.btnlogoInicio);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(230, 140);
+            this.panel1.TabIndex = 0;
+            // 
             // btnMenu
             // 
             this.btnMenu.FlatAppearance.BorderSize = 0;
@@ -299,23 +212,110 @@
             this.btnlogoInicio.TabStop = false;
             this.btnlogoInicio.Click += new System.EventHandler(this.btnlogoInicio_Click);
             // 
-            // button1
+            // panelTittleBar
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Trabajo_grupal.Properties.Resources.configuracion;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 324);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(230, 46);
-            this.button1.TabIndex = 8;
-            this.button1.Tag = "Configuracion";
-            this.button1.Text = "Configuracion";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.panelTittleBar.BackColor = System.Drawing.Color.White;
+            this.panelTittleBar.Controls.Add(this.label1);
+            this.panelTittleBar.Controls.Add(this.btnMinimize);
+            this.panelTittleBar.Controls.Add(this.btnMaximize);
+            this.panelTittleBar.Controls.Add(this.btnClose);
+            this.panelTittleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTittleBar.Location = new System.Drawing.Point(230, 0);
+            this.panelTittleBar.Name = "panelTittleBar";
+            this.panelTittleBar.Size = new System.Drawing.Size(904, 60);
+            this.panelTittleBar.TabIndex = 1;
+            this.panelTittleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTittleBar_MouseDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(26, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 25);
+            this.label1.TabIndex = 5;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Image = global::Trabajo_grupal.Properties.Resources.menos;
+            this.btnMinimize.Location = new System.Drawing.Point(769, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(45, 25);
+            this.btnMinimize.TabIndex = 4;
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnMaximize
+            // 
+            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.btnMaximize.FlatAppearance.BorderSize = 0;
+            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximize.Image = global::Trabajo_grupal.Properties.Resources.expandir__3_;
+            this.btnMaximize.Location = new System.Drawing.Point(814, 0);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(45, 25);
+            this.btnMaximize.TabIndex = 3;
+            this.btnMaximize.UseVisualStyleBackColor = false;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(74)))), ((int)(((byte)(130)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::Trabajo_grupal.Properties.Resources.cerrar__3_;
+            this.btnClose.Location = new System.Drawing.Point(859, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(45, 25);
+            this.btnClose.TabIndex = 2;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(230, 60);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(904, 501);
+            this.panelDesktop.TabIndex = 2;
+            this.panelDesktop.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDesktop_MouseClick);
+            // 
+            // dropDownMenu1
+            // 
+            this.dropDownMenu1.IsMainMenu = false;
+            this.dropDownMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cuentasPorPagarToolStripMenuItem,
+            this.cuentasPorCobrarToolStripMenuItem});
+            this.dropDownMenu1.MenuItemHeight = 25;
+            this.dropDownMenu1.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.dropDownMenu1.Name = "dropDownMenu1";
+            this.dropDownMenu1.PrimaryColor = System.Drawing.Color.Empty;
+            this.dropDownMenu1.Size = new System.Drawing.Size(176, 48);
+            // 
+            // cuentasPorPagarToolStripMenuItem
+            // 
+            this.cuentasPorPagarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.cuentasPorPagarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.cuentasPorPagarToolStripMenuItem.Name = "cuentasPorPagarToolStripMenuItem";
+            this.cuentasPorPagarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.cuentasPorPagarToolStripMenuItem.Text = "Cuentas por pagar";
+            this.cuentasPorPagarToolStripMenuItem.Click += new System.EventHandler(this.cuentasPorPagarToolStripMenuItem_Click);
+            // 
+            // cuentasPorCobrarToolStripMenuItem
+            // 
+            this.cuentasPorCobrarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.cuentasPorCobrarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.cuentasPorCobrarToolStripMenuItem.Name = "cuentasPorCobrarToolStripMenuItem";
+            this.cuentasPorCobrarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.cuentasPorCobrarToolStripMenuItem.Text = "Cuentas por cobrar";
+            this.cuentasPorCobrarToolStripMenuItem.Click += new System.EventHandler(this.cuentasPorCobrarToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -327,14 +327,14 @@
             this.Controls.Add(this.panelTittleBar);
             this.Controls.Add(this.panelMenu);
             this.Name = "Form1";
-            this.Text = "DASHBOARD";
+            this.Text = "GESTJEANS";
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnlogoInicio)).EndInit();
             this.panelTittleBar.ResumeLayout(false);
             this.panelTittleBar.PerformLayout();
             this.dropDownMenu1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnlogoInicio)).EndInit();
             this.ResumeLayout(false);
 
         }

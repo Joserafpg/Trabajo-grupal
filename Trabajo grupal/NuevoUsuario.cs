@@ -47,12 +47,5 @@ namespace Trabajo_grupal
             textBox1.Clear();
             textBox2.Clear();
         }
-
-        private void NuevoUsuario_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            FormPermisos form2 = Application.OpenForms["Form2"] as FormPermisos;
-            if (form2 != null)
-                form2.Close();
-        }
     }
 }

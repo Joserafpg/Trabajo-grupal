@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -141,11 +142,11 @@
     <Compile Include="NuevoInventario.Designer.cs">
       <DependentUpon>NuevoInventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Permisos.cs">
+    <Compile Include="NuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Permisos.Designer.cs">
-      <DependentUpon>Permisos.cs</DependentUpon>
+    <Compile Include="NuevoUsuario.Designer.cs">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductosBajoInventario.cs">
       <SubType>Form</SubType>
@@ -221,8 +222,8 @@
     <EmbeddedResource Include="NuevoInventario.resx">
       <DependentUpon>NuevoInventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Permisos.resx">
-      <DependentUpon>Permisos.cs</DependentUpon>
+    <EmbeddedResource Include="NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductosBajoInventario.resx">
       <DependentUpon>ProductosBajoInventario.cs</DependentUpon>

@@ -53,6 +53,8 @@ namespace Trabajo_grupal
             ms9.SetToolTip(button1, "Configuracion");
         }
 
+        Facturacion form2 = new Facturacion();
+
         /*Metodo ReleaseCapture*/
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -178,7 +180,7 @@ namespace Trabajo_grupal
         }
 
             //Metodo Abrir Formulario en el panel//
-            private void AbrirFormEnPanel(object Formhijo)
+            public void AbrirFormEnPanel(object Formhijo)
         {
             if (this.panelDesktop.Controls.Count > 0)
                 this.panelDesktop.Controls.RemoveAt(0);

@@ -18,6 +18,41 @@ namespace Trabajo_grupal
             InitializeComponent();
         }
 
+        private void checkBoxAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxAdmin.Checked)
+            {
+                checkBox1.Checked = true;
+                checkBox2.Checked = true;
+                checkBox3.Checked = true;
+                checkBox4.Checked = true;
+                checkBox5.Checked = true;
+                checkBox6.Checked = true;
+                checkBox7.Checked = true;
+                checkBox8.Checked = true;
+                checkBox9.Checked = true;
+                checkBox10.Checked = true;
+                checkBox11.Checked = true;
+                checkBox12.Checked = true;
+            }
+            else
+            {
+                checkBox1.Checked = false;
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+                checkBox4.Checked = false;
+                checkBox5.Checked = false;
+                checkBox6.Checked = false;
+                checkBox7.Checked = false;
+                checkBox8.Checked = false;
+                checkBox9.Checked = false;
+                checkBox10.Checked = false;
+                checkBox11.Checked = false;
+                checkBox12.Checked = false;
+            }
+        }
+
+
         /*Metodo ReleaseCapture*/
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

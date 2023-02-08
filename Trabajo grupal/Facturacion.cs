@@ -20,19 +20,23 @@ namespace Trabajo_grupal
         private void button4_Click(object sender, EventArgs e)
         {
             Sub_Menú_Facturacion frm = new Sub_Menú_Facturacion();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             FormMetodo frm = new FormMetodo();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             ProductoFacturaNew frm = new ProductoFacturaNew();
-            frm.Show();
+            frm.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
         }
     }
 }

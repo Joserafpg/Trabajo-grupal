@@ -32,18 +32,20 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -52,7 +54,6 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.panel5.Controls.Add(this.button5);
             this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.panel1);
@@ -90,6 +91,9 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -100,6 +104,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(482, 485);
             this.panel1.TabIndex = 21;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(253, 66);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 31;
             // 
             // textBox2
             // 
@@ -135,39 +146,10 @@
             this.dataGridView1.Size = new System.Drawing.Size(422, 148);
             this.dataGridView1.TabIndex = 16;
             // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 68;
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.HeaderText = "Producto";
-            this.NombreProducto.Name = "NombreProducto";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.Width = 80;
-            // 
-            // CantidadProducto
-            // 
-            this.CantidadProducto.HeaderText = "Cantidad";
-            this.CantidadProducto.Name = "CantidadProducto";
-            this.CantidadProducto.Width = 60;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.Width = 70;
-            // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(353, 315);
+            this.button1.Location = new System.Drawing.Point(31, 315);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 25);
             this.button1.TabIndex = 18;
@@ -204,15 +186,54 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button5
+            // label3
             // 
-            this.button5.Location = new System.Drawing.Point(791, 25);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(387, 319);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 22);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "......";
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 68;
+            // 
+            // NombreProducto
+            // 
+            this.NombreProducto.HeaderText = "Producto";
+            this.NombreProducto.Name = "NombreProducto";
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.Width = 80;
+            // 
+            // CantidadProducto
+            // 
+            this.CantidadProducto.HeaderText = "Cantidad";
+            this.CantidadProducto.Name = "CantidadProducto";
+            this.CantidadProducto.Width = 60;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.Width = 73;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(343, 324);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 16);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Total";
             // 
             // Facturacion
             // 
@@ -241,13 +262,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label1;
     }
 }

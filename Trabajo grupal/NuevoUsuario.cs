@@ -47,5 +47,11 @@ namespace Trabajo_grupal
             textBox1.Clear();
             textBox2.Clear();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Usuarios frm = new Usuarios();
+            frm.Show();
+        }
     }
 }

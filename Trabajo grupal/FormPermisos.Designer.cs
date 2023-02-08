@@ -33,6 +33,7 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxCaja = new System.Windows.Forms.CheckBox();
             this.checkBoxCustom = new System.Windows.Forms.CheckBox();
             this.checkBoxAdmin = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.checkBoxCaja = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -132,6 +132,17 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Permisos";
+            // 
+            // checkBoxCaja
+            // 
+            this.checkBoxCaja.AutoSize = true;
+            this.checkBoxCaja.Location = new System.Drawing.Point(628, 359);
+            this.checkBoxCaja.Name = "checkBoxCaja";
+            this.checkBoxCaja.Size = new System.Drawing.Size(81, 25);
+            this.checkBoxCaja.TabIndex = 20;
+            this.checkBoxCaja.Text = "Cajero";
+            this.checkBoxCaja.UseVisualStyleBackColor = true;
+            this.checkBoxCaja.CheckedChanged += new System.EventHandler(this.checkBoxCaja_CheckedChanged);
             // 
             // checkBoxCustom
             // 
@@ -336,16 +347,6 @@
             this.btnClose.TabIndex = 5;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // checkBoxCaja
-            // 
-            this.checkBoxCaja.AutoSize = true;
-            this.checkBoxCaja.Location = new System.Drawing.Point(628, 359);
-            this.checkBoxCaja.Name = "checkBoxCaja";
-            this.checkBoxCaja.Size = new System.Drawing.Size(81, 25);
-            this.checkBoxCaja.TabIndex = 20;
-            this.checkBoxCaja.Text = "Cajero";
-            this.checkBoxCaja.UseVisualStyleBackColor = true;
             // 
             // FormPermisos
             // 

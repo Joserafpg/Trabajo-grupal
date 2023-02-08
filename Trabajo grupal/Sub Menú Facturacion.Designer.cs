@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID_Factura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prod_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PREC_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ID_Factura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prod_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PREC_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,56 +54,16 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Factura,
             this.ID_CLIENTE,
-            this.NombreCliente,
             this.Prod_Nombre,
             this.Descripcion,
             this.PREC_PRODUCTO,
             this.Cantidad,
-            this.SubTotal});
+            this.SubTotal,
+            this.Fecha});
             this.dataGridView1.Location = new System.Drawing.Point(44, 114);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(841, 300);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // ID_Factura
-            // 
-            this.ID_Factura.HeaderText = "ID Factura";
-            this.ID_Factura.Name = "ID_Factura";
-            // 
-            // ID_CLIENTE
-            // 
-            this.ID_CLIENTE.HeaderText = "ID Cliente";
-            this.ID_CLIENTE.Name = "ID_CLIENTE";
-            // 
-            // NombreCliente
-            // 
-            this.NombreCliente.HeaderText = "Nombre Cliente";
-            this.NombreCliente.Name = "NombreCliente";
-            // 
-            // Prod_Nombre
-            // 
-            this.Prod_Nombre.HeaderText = "Producto";
-            this.Prod_Nombre.Name = "Prod_Nombre";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            // 
-            // PREC_PRODUCTO
-            // 
-            this.PREC_PRODUCTO.HeaderText = "Precio Producto";
-            this.PREC_PRODUCTO.Name = "PREC_PRODUCTO";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.HeaderText = "Total";
-            this.SubTotal.Name = "SubTotal";
             // 
             // label1
             // 
@@ -159,6 +119,46 @@
             this.panel1.TabIndex = 6;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
+            // ID_Factura
+            // 
+            this.ID_Factura.HeaderText = "ID Factura";
+            this.ID_Factura.Name = "ID_Factura";
+            // 
+            // ID_CLIENTE
+            // 
+            this.ID_CLIENTE.HeaderText = "ID Cliente";
+            this.ID_CLIENTE.Name = "ID_CLIENTE";
+            // 
+            // Prod_Nombre
+            // 
+            this.Prod_Nombre.HeaderText = "Producto";
+            this.Prod_Nombre.Name = "Prod_Nombre";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            // 
+            // PREC_PRODUCTO
+            // 
+            this.PREC_PRODUCTO.HeaderText = "Precio Producto";
+            this.PREC_PRODUCTO.Name = "PREC_PRODUCTO";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.HeaderText = "Total";
+            this.SubTotal.Name = "SubTotal";
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
             // Sub_Menú_Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,16 +184,16 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Factura;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_CLIENTE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prod_Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn PREC_PRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
     }
 }

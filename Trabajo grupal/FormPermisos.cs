@@ -152,5 +152,69 @@ namespace Trabajo_grupal
                 checkBoxCustom.Checked = true;
             }
         }
+
+        private int _counter2 = 0;
+        private bool _execute2 = true;
+
+        private void checkBoxCaja_CheckedChanged(object sender, EventArgs e)
+        {
+            if (_execute2)
+            {
+                if (checkBoxCaja.Checked)
+                {
+                    checkBox2.Checked = true;
+                    checkBox5.Checked = true;
+                    checkBox7.Checked = true;
+                }
+                else
+                {
+                    checkBox2.Checked = false;
+                    checkBox5.Checked = false;
+                    checkBox7.Checked = false;
+                }
+            }
+        }
+        private void chkCaja_CheckedChanged(object sender, EventArgs e)
+        {
+            _counter2 = 0;
+            if (!checkBox2.Checked)
+            {
+                _counter2++;
+            }
+            if (!checkBox5.Checked)
+            {
+                _counter2++;
+            }
+            if (!checkBox7.Checked)
+            {
+                _counter2++;
+            }
+
+            if (_counter2 >= 0)
+            {
+                _execute2 = false;
+                checkBoxAdmin.Checked = false;
+                _execute2 = false;
+                checkBoxCustom.Checked = false;
+                _execute2 = true;
+                checkBoxCaja.Checked = true;
+            }
+            else
+            {
+                checkBoxCaja.Checked = false;
+            }
+
+            if (_counter2 <= 0)
+            {
+                _execute2 = false;
+                checkBoxAdmin.Checked = true;
+                _execute2 = true;
+                checkBoxCustom.Checked = false;
+            }
+            else
+            {
+                checkBoxCustom.Checked = true;
+            }
+        }
     }
 }

@@ -31,5 +31,10 @@ namespace Trabajo_grupal
             txtBox5.Clear();
             txtBox6.Clear();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -121,12 +121,12 @@
             // 
             // ID_Factura
             // 
-            this.ID_Factura.HeaderText = "ID Factura";
+            this.ID_Factura.HeaderText = "NO Factura";
             this.ID_Factura.Name = "ID_Factura";
             // 
             // ID_CLIENTE
             // 
-            this.ID_CLIENTE.HeaderText = "ID Cliente";
+            this.ID_CLIENTE.HeaderText = "NO Cliente";
             this.ID_CLIENTE.Name = "ID_CLIENTE";
             // 
             // Prod_Nombre

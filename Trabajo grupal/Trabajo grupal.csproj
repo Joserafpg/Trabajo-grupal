@@ -81,6 +81,12 @@
     <Compile Include="EliminarInventario.Designer.cs">
       <DependentUpon>EliminarInventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarUsuarios.Designer.cs">
+      <DependentUpon>EliminarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,12 @@
     </Compile>
     <Compile Include="ModificarInventario.Designer.cs">
       <DependentUpon>ModificarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarUsuario.Designer.cs">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="NuevoInventario.cs">
       <SubType>Form</SubType>
@@ -210,6 +222,9 @@
     <EmbeddedResource Include="EliminarInventario.resx">
       <DependentUpon>EliminarInventario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EliminarUsuarios.resx">
+      <DependentUpon>EliminarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Facturacion.resx">
       <DependentUpon>Facturacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarInventario.resx">
       <DependentUpon>ModificarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarUsuario.resx">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoInventario.resx">
       <DependentUpon>NuevoInventario.cs</DependentUpon>

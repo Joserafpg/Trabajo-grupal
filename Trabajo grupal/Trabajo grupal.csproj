@@ -63,7 +63,7 @@
     <Compile Include="Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Conexion.cs" />
+    <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Cuentas por cobrar .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,7 +167,7 @@
     <Compile Include="NuevoUsuario.Designer.cs">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Permisos.cs" />
+    <Compile Include="Clases\Permisos.cs" />
     <Compile Include="ProductoFacturaNew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,7 +209,7 @@
     <Compile Include="Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsuariosDAL.cs" />
+    <Compile Include="Clases\UsuariosDAL.cs" />
     <EmbeddedResource Include="AjustesInventario.resx">
       <DependentUpon>AjustesInventario.cs</DependentUpon>
     </EmbeddedResource>

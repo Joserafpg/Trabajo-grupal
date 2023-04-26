@@ -229,7 +229,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NuevoUsuario";
             this.Text = "Permisos";
-            this.Load += new System.EventHandler(this.NuevoUsuario_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

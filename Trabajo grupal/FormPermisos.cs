@@ -54,9 +54,10 @@ namespace Trabajo_grupal
                     checkBox7.Checked = true;
                     checkBox8.Checked = true;
                     checkBox9.Checked = true;
-                    checkBox10.Checked = true;
-                    checkBox11.Checked = true;
-                    checkBox12.Checked = true;
+                    agregaruser.Checked = true;
+                    consultaruser.Checked = true;
+                    eliminaruser.Checked = true;
+                    modificaruser.Checked = true;
                 }
                 else
                 {
@@ -69,9 +70,10 @@ namespace Trabajo_grupal
                     checkBox7.Checked = false;
                     checkBox8.Checked = false;
                     checkBox9.Checked = false;
-                    checkBox10.Checked = false;
-                    checkBox11.Checked = false;
-                    checkBox12.Checked = false;
+                    agregaruser.Checked = false;
+                    consultaruser.Checked = false;
+                    eliminaruser.Checked = false;
+                    modificaruser.Checked = false;
                 }
             }
         }
@@ -115,15 +117,15 @@ namespace Trabajo_grupal
             {
                 _counter++;
             }
-            if (!checkBox10.Checked)
+            if (!agregaruser.Checked)
             {
                 _counter++;
             }
-            if (!checkBox11.Checked)
+            if (!consultaruser.Checked)
             {
                 _counter++;
             }
-            if (!checkBox12.Checked)
+            if (!eliminaruser.Checked)
             {
                 _counter++;
             }

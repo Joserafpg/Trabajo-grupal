@@ -53,5 +53,10 @@ namespace Trabajo_grupal
             Usuarios frm = new Usuarios();
             frm.Show();
         }
+
+        private void NuevoUsuario_Load(object sender, EventArgs e)
+        {
+            btnusuarios.Enabled = Permisos.AgregarUSER;
+        }
     }
 }

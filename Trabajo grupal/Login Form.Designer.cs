@@ -83,6 +83,7 @@
             this.rjButton1.Text = "Iniciar sesion";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // label1
             // 

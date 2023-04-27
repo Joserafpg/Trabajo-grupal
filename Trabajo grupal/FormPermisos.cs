@@ -43,17 +43,17 @@ namespace Trabajo_grupal
         {
             if (_execute)
             {
-                if (checkBoxAdmin.Checked)
+                if (chAdmin.Checked)
                 {
-                    checkBox1.Checked = true;
-                    checkBox2.Checked = true;
+                    chagregarmercancia.Checked = true;
+                    checonsultar.Checked = true;
                     checkBox3.Checked = true;
-                    checkBox4.Checked = true;
-                    checkBox5.Checked = true;
-                    checkBox6.Checked = true;
-                    checkBox7.Checked = true;
-                    checkBox8.Checked = true;
-                    checkBox9.Checked = true;
+                    chagregarclientes.Checked = true;
+                    chmodificarclientes.Checked = true;
+                    cheliminarclientes.Checked = true;
+                    chagregarfactura.Checked = true;
+                    chconsultarfactura.Checked = true;
+                    chmodificarfacttura.Checked = true;
                     agregaruser.Checked = true;
                     consultaruser.Checked = true;
                     eliminaruser.Checked = true;
@@ -61,15 +61,15 @@ namespace Trabajo_grupal
                 }
                 else
                 {
-                    checkBox1.Checked = false;
-                    checkBox2.Checked = false;
+                    chagregarmercancia.Checked = false;
+                    checonsultar.Checked = false;
                     checkBox3.Checked = false;
-                    checkBox4.Checked = false;
-                    checkBox5.Checked = false;
-                    checkBox6.Checked = false;
-                    checkBox7.Checked = false;
-                    checkBox8.Checked = false;
-                    checkBox9.Checked = false;
+                    chagregarclientes.Checked = false;
+                    chmodificarclientes.Checked = false;
+                    cheliminarclientes.Checked = false;
+                    chagregarfactura.Checked = false;
+                    chconsultarfactura.Checked = false;
+                    chmodificarfacttura.Checked = false;
                     agregaruser.Checked = false;
                     consultaruser.Checked = false;
                     eliminaruser.Checked = false;
@@ -81,11 +81,11 @@ namespace Trabajo_grupal
         private void chkPrincipal_CheckedChanged(object sender, EventArgs e)
         {
             _counter = 0;
-            if (!checkBox1.Checked)
+            if (!chagregarmercancia.Checked)
             {
                 _counter++;
             }
-            if (!checkBox2.Checked)
+            if (!checonsultar.Checked)
             {
                 _counter++;
             }
@@ -93,27 +93,27 @@ namespace Trabajo_grupal
             {
                 _counter++;
             }
-            if (!checkBox4.Checked)
+            if (!chagregarclientes.Checked)
             {
                 _counter++;
             }
-            if (!checkBox5.Checked)
+            if (!chmodificarclientes.Checked)
             {
                 _counter++;
             }
-            if (!checkBox6.Checked)
+            if (!cheliminarclientes.Checked)
             {
                 _counter++;
             }
-            if (!checkBox7.Checked)
+            if (!chagregarfactura.Checked)
             {
                 _counter++;
             }
-            if (!checkBox8.Checked)
+            if (!chconsultarfactura.Checked)
             {
                 _counter++;
             }
-            if (!checkBox9.Checked)
+            if (!chmodificarfacttura.Checked)
             {
                 _counter++;
             }
@@ -133,25 +133,25 @@ namespace Trabajo_grupal
             if (_counter >= 0)
             {
                 _execute = false;
-                checkBoxAdmin.Checked = false;
+                chAdmin.Checked = false;
                 _execute = true;
-                checkBoxCustom.Checked = true;
+                chCustom.Checked = true;
             }
             else
             {
-                checkBoxCustom.Checked = false;
+                chCustom.Checked = false;
             }
 
             if (_counter <= 0)
             {
                 _execute = false;
-                checkBoxAdmin.Checked = true;
+                chAdmin.Checked = true;
                 _execute = true;
-                checkBoxCustom.Checked = false;
+                chCustom.Checked = false;
             }
             else
             {
-                checkBoxCustom.Checked = true;
+                chCustom.Checked = true;
             }
         }
 
@@ -162,32 +162,32 @@ namespace Trabajo_grupal
         {
             if (_execute2)
             {
-                if (checkBoxCaja.Checked)
+                if (chCajero.Checked)
                 {
-                    checkBox2.Checked = true;
-                    checkBox5.Checked = true;
-                    checkBox7.Checked = true;
+                    checonsultar.Checked = true;
+                    chmodificarclientes.Checked = true;
+                    chagregarfactura.Checked = true;
                 }
                 else
                 {
-                    checkBox2.Checked = false;
-                    checkBox5.Checked = false;
-                    checkBox7.Checked = false;
+                    checonsultar.Checked = false;
+                    chmodificarclientes.Checked = false;
+                    chagregarfactura.Checked = false;
                 }
             }
         }
         private void chkCaja_CheckedChanged(object sender, EventArgs e)
         {
             _counter2 = 0;
-            if (!checkBox2.Checked)
+            if (!checonsultar.Checked)
             {
                 _counter2++;
             }
-            if (!checkBox5.Checked)
+            if (!chmodificarclientes.Checked)
             {
                 _counter2++;
             }
-            if (!checkBox7.Checked)
+            if (!chagregarfactura.Checked)
             {
                 _counter2++;
             }
@@ -195,27 +195,27 @@ namespace Trabajo_grupal
             if (_counter2 >= 0)
             {
                 _execute2 = false;
-                checkBoxAdmin.Checked = false;
+                chAdmin.Checked = false;
                 _execute2 = false;
-                checkBoxCustom.Checked = false;
+                chCustom.Checked = false;
                 _execute2 = true;
-                checkBoxCaja.Checked = true;
+                chCajero.Checked = true;
             }
             else
             {
-                checkBoxCaja.Checked = false;
+                chCajero.Checked = false;
             }
 
             if (_counter2 <= 0)
             {
                 _execute2 = false;
-                checkBoxAdmin.Checked = true;
+                chAdmin.Checked = true;
                 _execute2 = true;
-                checkBoxCustom.Checked = false;
+                chCustom.Checked = false;
             }
             else
             {
-                checkBoxCustom.Checked = true;
+                chCustom.Checked = true;
             }
         }
     }

@@ -12,9 +12,30 @@ namespace Trabajo_grupal
         {
         }
 
+        //Permisos para el formulario NuevoUsuario
         public static bool AgregarUSER { set; get; }
         public static bool ModificarUSER { set; get; }
         public static bool ConsultarUSER { set; get; }
         public static bool EliminarUSER { set; get; }
+
+
+        //Permisos para el formulario Inventario
+        public static bool AgregarINVENTARIO  { set; get; }
+        public static bool ModificarINVENTARIO{ set; get; }
+        public static bool ConsultarINVENTARIO  { set; get; }
+        public static bool EliminarINVENTARIO { set; get; }
+
+        //Permisos para el formulario Clientes 
+        public static bool AgregarCLIENTES  { set; get; }
+        public static bool ModificarCLIENTES  { set; get; }
+        public static bool ConsultarCLIENTES  { set; get; }
+        public static bool EliminarCLIENTES  { set; get; }
+
+        //Permisos para el formulario Facturas
+         public static bool AgregarFACTURA  { set; get; }
+        public static bool ModificarFACTURA { set; get; }
+        public static bool ConsultarFACTURA  { set; get; }
+        public static bool EliminarFACTURA  { set; get; }
+
     }
 }

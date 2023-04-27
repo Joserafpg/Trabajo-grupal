@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.chagregarmercancia = new System.Windows.Forms.CheckBox();
+            this.checonsultar = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cheliminarfactura = new System.Windows.Forms.CheckBox();
+            this.cheliminarmercancia = new System.Windows.Forms.CheckBox();
             this.modificaruser = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBoxCaja = new System.Windows.Forms.CheckBox();
-            this.checkBoxCustom = new System.Windows.Forms.CheckBox();
-            this.checkBoxAdmin = new System.Windows.Forms.CheckBox();
+            this.chconsultarclientes = new System.Windows.Forms.CheckBox();
+            this.chCajero = new System.Windows.Forms.CheckBox();
+            this.chCustom = new System.Windows.Forms.CheckBox();
+            this.chAdmin = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,44 +47,42 @@
             this.agregaruser = new System.Windows.Forms.CheckBox();
             this.consultaruser = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.chmodificarfacttura = new System.Windows.Forms.CheckBox();
+            this.chagregarfactura = new System.Windows.Forms.CheckBox();
+            this.chconsultarfactura = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.chagregarclientes = new System.Windows.Forms.CheckBox();
+            this.chmodificarclientes = new System.Windows.Forms.CheckBox();
+            this.cheliminarclientes = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // checkBox1
+            // chagregarmercancia
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.checkBox1.Location = new System.Drawing.Point(42, 105);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(162, 23);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Agregar mercancia";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
+            this.chagregarmercancia.AutoSize = true;
+            this.chagregarmercancia.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.chagregarmercancia.Location = new System.Drawing.Point(38, 105);
+            this.chagregarmercancia.Name = "chagregarmercancia";
+            this.chagregarmercancia.Size = new System.Drawing.Size(162, 23);
+            this.chagregarmercancia.TabIndex = 0;
+            this.chagregarmercancia.Text = "Agregar mercancia";
+            this.chagregarmercancia.UseVisualStyleBackColor = true;
+            this.chagregarmercancia.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
             // 
-            // checkBox2
+            // checonsultar
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.checkBox2.Location = new System.Drawing.Point(39, 147);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(205, 23);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Ver reportes de existencia";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
+            this.checonsultar.AutoSize = true;
+            this.checonsultar.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.checonsultar.Location = new System.Drawing.Point(39, 147);
+            this.checonsultar.Name = "checonsultar";
+            this.checonsultar.Size = new System.Drawing.Size(205, 23);
+            this.checonsultar.TabIndex = 1;
+            this.checonsultar.Text = "Ver reportes de existencia";
+            this.checonsultar.UseVisualStyleBackColor = true;
+            this.checonsultar.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -107,13 +107,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox11);
-            this.groupBox1.Controls.Add(this.checkBox10);
+            this.groupBox1.Controls.Add(this.cheliminarfactura);
+            this.groupBox1.Controls.Add(this.cheliminarmercancia);
             this.groupBox1.Controls.Add(this.modificaruser);
-            this.groupBox1.Controls.Add(this.checkBox13);
-            this.groupBox1.Controls.Add(this.checkBoxCaja);
-            this.groupBox1.Controls.Add(this.checkBoxCustom);
-            this.groupBox1.Controls.Add(this.checkBoxAdmin);
+            this.groupBox1.Controls.Add(this.chconsultarclientes);
+            this.groupBox1.Controls.Add(this.chCajero);
+            this.groupBox1.Controls.Add(this.chCustom);
+            this.groupBox1.Controls.Add(this.chAdmin);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label5);
@@ -121,17 +121,17 @@
             this.groupBox1.Controls.Add(this.agregaruser);
             this.groupBox1.Controls.Add(this.consultaruser);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.checkBox9);
-            this.groupBox1.Controls.Add(this.checkBox7);
-            this.groupBox1.Controls.Add(this.checkBox8);
+            this.groupBox1.Controls.Add(this.chmodificarfacttura);
+            this.groupBox1.Controls.Add(this.chagregarfactura);
+            this.groupBox1.Controls.Add(this.chconsultarfactura);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox5);
-            this.groupBox1.Controls.Add(this.checkBox6);
+            this.groupBox1.Controls.Add(this.chagregarclientes);
+            this.groupBox1.Controls.Add(this.chmodificarclientes);
+            this.groupBox1.Controls.Add(this.cheliminarclientes);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.checkBox2);
+            this.groupBox1.Controls.Add(this.chagregarmercancia);
+            this.groupBox1.Controls.Add(this.checonsultar);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(33, 32);
@@ -140,6 +140,28 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Permisos";
+            // 
+            // cheliminarfactura
+            // 
+            this.cheliminarfactura.AutoSize = true;
+            this.cheliminarfactura.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cheliminarfactura.Location = new System.Drawing.Point(454, 232);
+            this.cheliminarfactura.Name = "cheliminarfactura";
+            this.cheliminarfactura.Size = new System.Drawing.Size(140, 23);
+            this.cheliminarfactura.TabIndex = 24;
+            this.cheliminarfactura.Text = "Eliminar factura ";
+            this.cheliminarfactura.UseVisualStyleBackColor = true;
+            // 
+            // cheliminarmercancia
+            // 
+            this.cheliminarmercancia.AutoSize = true;
+            this.cheliminarmercancia.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cheliminarmercancia.Location = new System.Drawing.Point(43, 229);
+            this.cheliminarmercancia.Name = "cheliminarmercancia";
+            this.cheliminarmercancia.Size = new System.Drawing.Size(161, 23);
+            this.cheliminarmercancia.TabIndex = 23;
+            this.cheliminarmercancia.Text = "Eliminar mercancia";
+            this.cheliminarmercancia.UseVisualStyleBackColor = true;
             // 
             // modificaruser
             // 
@@ -152,48 +174,48 @@
             this.modificaruser.Text = "Modificar";
             this.modificaruser.UseVisualStyleBackColor = true;
             // 
-            // checkBox13
+            // chconsultarclientes
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.checkBox13.Location = new System.Drawing.Point(277, 232);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(93, 23);
-            this.checkBox13.TabIndex = 21;
-            this.checkBox13.Text = "Consultar";
-            this.checkBox13.UseVisualStyleBackColor = true;
+            this.chconsultarclientes.AutoSize = true;
+            this.chconsultarclientes.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.chconsultarclientes.Location = new System.Drawing.Point(277, 232);
+            this.chconsultarclientes.Name = "chconsultarclientes";
+            this.chconsultarclientes.Size = new System.Drawing.Size(93, 23);
+            this.chconsultarclientes.TabIndex = 21;
+            this.chconsultarclientes.Text = "Consultar";
+            this.chconsultarclientes.UseVisualStyleBackColor = true;
             // 
-            // checkBoxCaja
+            // chCajero
             // 
-            this.checkBoxCaja.AutoSize = true;
-            this.checkBoxCaja.Location = new System.Drawing.Point(584, 368);
-            this.checkBoxCaja.Name = "checkBoxCaja";
-            this.checkBoxCaja.Size = new System.Drawing.Size(81, 25);
-            this.checkBoxCaja.TabIndex = 20;
-            this.checkBoxCaja.Text = "Cajero";
-            this.checkBoxCaja.UseVisualStyleBackColor = true;
-            this.checkBoxCaja.CheckedChanged += new System.EventHandler(this.checkBoxCaja_CheckedChanged);
+            this.chCajero.AutoSize = true;
+            this.chCajero.Location = new System.Drawing.Point(584, 368);
+            this.chCajero.Name = "chCajero";
+            this.chCajero.Size = new System.Drawing.Size(81, 25);
+            this.chCajero.TabIndex = 20;
+            this.chCajero.Text = "Cajero";
+            this.chCajero.UseVisualStyleBackColor = true;
+            this.chCajero.CheckedChanged += new System.EventHandler(this.checkBoxCaja_CheckedChanged);
             // 
-            // checkBoxCustom
+            // chCustom
             // 
-            this.checkBoxCustom.AutoSize = true;
-            this.checkBoxCustom.Location = new System.Drawing.Point(584, 327);
-            this.checkBoxCustom.Name = "checkBoxCustom";
-            this.checkBoxCustom.Size = new System.Drawing.Size(135, 25);
-            this.checkBoxCustom.TabIndex = 19;
-            this.checkBoxCustom.Text = "Personalizado";
-            this.checkBoxCustom.UseVisualStyleBackColor = true;
+            this.chCustom.AutoSize = true;
+            this.chCustom.Location = new System.Drawing.Point(584, 327);
+            this.chCustom.Name = "chCustom";
+            this.chCustom.Size = new System.Drawing.Size(135, 25);
+            this.chCustom.TabIndex = 19;
+            this.chCustom.Text = "Personalizado";
+            this.chCustom.UseVisualStyleBackColor = true;
             // 
-            // checkBoxAdmin
+            // chAdmin
             // 
-            this.checkBoxAdmin.AutoSize = true;
-            this.checkBoxAdmin.Location = new System.Drawing.Point(584, 285);
-            this.checkBoxAdmin.Name = "checkBoxAdmin";
-            this.checkBoxAdmin.Size = new System.Drawing.Size(81, 25);
-            this.checkBoxAdmin.TabIndex = 18;
-            this.checkBoxAdmin.Text = "Admin";
-            this.checkBoxAdmin.UseVisualStyleBackColor = true;
-            this.checkBoxAdmin.CheckedChanged += new System.EventHandler(this.checkBoxAdmin_CheckedChanged);
+            this.chAdmin.AutoSize = true;
+            this.chAdmin.Location = new System.Drawing.Point(584, 285);
+            this.chAdmin.Name = "chAdmin";
+            this.chAdmin.Size = new System.Drawing.Size(81, 25);
+            this.chAdmin.TabIndex = 18;
+            this.chAdmin.Text = "Admin";
+            this.chAdmin.UseVisualStyleBackColor = true;
+            this.chAdmin.CheckedChanged += new System.EventHandler(this.checkBoxAdmin_CheckedChanged);
             // 
             // button2
             // 
@@ -273,40 +295,41 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Facturas";
             // 
-            // checkBox9
+            // chmodificarfacttura
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.checkBox9.Location = new System.Drawing.Point(454, 193);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(15, 14);
-            this.checkBox9.TabIndex = 10;
-            this.checkBox9.UseVisualStyleBackColor = true;
-            this.checkBox9.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
+            this.chmodificarfacttura.AutoSize = true;
+            this.chmodificarfacttura.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.chmodificarfacttura.Location = new System.Drawing.Point(454, 193);
+            this.chmodificarfacttura.Name = "chmodificarfacttura";
+            this.chmodificarfacttura.Size = new System.Drawing.Size(152, 23);
+            this.chmodificarfacttura.TabIndex = 10;
+            this.chmodificarfacttura.Text = "Modificar factura ";
+            this.chmodificarfacttura.UseVisualStyleBackColor = true;
+            this.chmodificarfacttura.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
             // 
-            // checkBox7
+            // chagregarfactura
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.checkBox7.Location = new System.Drawing.Point(454, 105);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(86, 23);
-            this.checkBox7.TabIndex = 8;
-            this.checkBox7.Text = "Facturar";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
+            this.chagregarfactura.AutoSize = true;
+            this.chagregarfactura.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.chagregarfactura.Location = new System.Drawing.Point(454, 105);
+            this.chagregarfactura.Name = "chagregarfactura";
+            this.chagregarfactura.Size = new System.Drawing.Size(86, 23);
+            this.chagregarfactura.TabIndex = 8;
+            this.chagregarfactura.Text = "Facturar";
+            this.chagregarfactura.UseVisualStyleBackColor = true;
+            this.chagregarfactura.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
             // 
-            // checkBox8
+            // chconsultarfactura
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.checkBox8.Location = new System.Drawing.Point(454, 147);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(196, 23);
-            this.checkBox8.TabIndex = 9;
-            this.checkBox8.Text = "Reportes de facturación";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            this.checkBox8.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
+            this.chconsultarfactura.AutoSize = true;
+            this.chconsultarfactura.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.chconsultarfactura.Location = new System.Drawing.Point(454, 147);
+            this.chconsultarfactura.Name = "chconsultarfactura";
+            this.chconsultarfactura.Size = new System.Drawing.Size(152, 23);
+            this.chconsultarfactura.TabIndex = 9;
+            this.chconsultarfactura.Text = "Consultar factura ";
+            this.chconsultarfactura.UseVisualStyleBackColor = true;
+            this.chconsultarfactura.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
             // 
             // label2
             // 
@@ -317,41 +340,41 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Clientes";
             // 
-            // checkBox4
+            // chagregarclientes
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.checkBox4.Location = new System.Drawing.Point(276, 105);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(82, 23);
-            this.checkBox4.TabIndex = 6;
-            this.checkBox4.Text = "Agregar";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
+            this.chagregarclientes.AutoSize = true;
+            this.chagregarclientes.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.chagregarclientes.Location = new System.Drawing.Point(276, 105);
+            this.chagregarclientes.Name = "chagregarclientes";
+            this.chagregarclientes.Size = new System.Drawing.Size(82, 23);
+            this.chagregarclientes.TabIndex = 6;
+            this.chagregarclientes.Text = "Agregar";
+            this.chagregarclientes.UseVisualStyleBackColor = true;
+            this.chagregarclientes.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
             // 
-            // checkBox5
+            // chmodificarclientes
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.checkBox5.Location = new System.Drawing.Point(276, 147);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(93, 23);
-            this.checkBox5.TabIndex = 4;
-            this.checkBox5.Text = "Modificar";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
+            this.chmodificarclientes.AutoSize = true;
+            this.chmodificarclientes.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.chmodificarclientes.Location = new System.Drawing.Point(276, 147);
+            this.chmodificarclientes.Name = "chmodificarclientes";
+            this.chmodificarclientes.Size = new System.Drawing.Size(93, 23);
+            this.chmodificarclientes.TabIndex = 4;
+            this.chmodificarclientes.Text = "Modificar";
+            this.chmodificarclientes.UseVisualStyleBackColor = true;
+            this.chmodificarclientes.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
             // 
-            // checkBox6
+            // cheliminarclientes
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.checkBox6.Location = new System.Drawing.Point(276, 193);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(81, 23);
-            this.checkBox6.TabIndex = 5;
-            this.checkBox6.Text = "Eliminar";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
+            this.cheliminarclientes.AutoSize = true;
+            this.cheliminarclientes.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cheliminarclientes.Location = new System.Drawing.Point(276, 193);
+            this.cheliminarclientes.Name = "cheliminarclientes";
+            this.cheliminarclientes.Size = new System.Drawing.Size(81, 23);
+            this.cheliminarclientes.TabIndex = 5;
+            this.cheliminarclientes.Text = "Eliminar";
+            this.cheliminarclientes.UseVisualStyleBackColor = true;
+            this.cheliminarclientes.CheckedChanged += new System.EventHandler(this.chkPrincipal_CheckedChanged);
             // 
             // panel1
             // 
@@ -377,28 +400,6 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.checkBox10.Location = new System.Drawing.Point(43, 229);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(161, 23);
-            this.checkBox10.TabIndex = 23;
-            this.checkBox10.Text = "Eliminar mercancia";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.checkBox11.Location = new System.Drawing.Point(454, 232);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(111, 23);
-            this.checkBox11.TabIndex = 24;
-            this.checkBox11.Text = "checkBox11";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
             // FormPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,8 +420,8 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox chagregarmercancia;
+        private System.Windows.Forms.CheckBox checonsultar;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -429,23 +430,23 @@
         private System.Windows.Forms.CheckBox agregaruser;
         private System.Windows.Forms.CheckBox consultaruser;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox chmodificarfacttura;
+        private System.Windows.Forms.CheckBox chagregarfactura;
+        private System.Windows.Forms.CheckBox chconsultarfactura;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox chagregarclientes;
+        private System.Windows.Forms.CheckBox chmodificarclientes;
+        private System.Windows.Forms.CheckBox cheliminarclientes;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.CheckBox checkBoxAdmin;
-        private System.Windows.Forms.CheckBox checkBoxCustom;
-        private System.Windows.Forms.CheckBox checkBoxCaja;
+        private System.Windows.Forms.CheckBox chAdmin;
+        private System.Windows.Forms.CheckBox chCustom;
+        private System.Windows.Forms.CheckBox chCajero;
         private System.Windows.Forms.CheckBox modificaruser;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox chconsultarclientes;
+        private System.Windows.Forms.CheckBox cheliminarfactura;
+        private System.Windows.Forms.CheckBox cheliminarmercancia;
     }
 }

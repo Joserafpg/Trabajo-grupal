@@ -26,8 +26,8 @@ namespace Trabajo_grupal
         public static bool EliminarINVENTARIO { set; get; }
 
         //Permisos para el formulario Clientes 
-        public static bool AgregarCLIENTES  { set; get; }
-        public static bool ModificarCLIENTES  { set; get; }
+        public static bool AgregarCLIENTE  { set; get; }
+        public static bool ModificSarCLIENTES  { set; get; }
         public static bool ConsultarCLIENTES  { set; get; }
         public static bool EliminarCLIENTES  { set; get; }
 

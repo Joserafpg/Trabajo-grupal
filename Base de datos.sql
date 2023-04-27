@@ -12,4 +12,23 @@ AgregarUSER bit,
 ModificarUSER bit,
 EliminarUSER bit,
 ConsultarUSER bit,
+
+/*Permisos para el formulario Facturas*/
+AgregarFACTURA bit, 
+ModificarFACTURA bit,
+ConsultarFACTURA bit,
+EliminarFACTURA bit,
+
+/*Permisos para el formulario Clientes*/
+AgregarCLIENTE bit,
+ModificSarCLIENTES bit,
+ConsultarCLIENTES bit,
+EliminarCLIENTES bit, 
+
+/*Permisos para el formulario Inventario*/
+AgregarINVENTARIO bit,
+AgregarINVENTARIO bit,
+ConsultarINVENTARIO bit, 
+EliminarINVENTARI bit,
+
 )

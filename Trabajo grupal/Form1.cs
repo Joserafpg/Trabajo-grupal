@@ -66,35 +66,7 @@ namespace Trabajo_grupal
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        protected override void WndProc(ref Message m)
-        {
-            const int WM_NCCALCSIZE = 0x0083;
-            if (m.Msg == WM_NCCALCSIZE && m.WParam.ToInt32() == 1)
-            {
-                return;
-            }
-            base.WndProc(ref m);
-        }
-
-        private void Form1_Resize(object sender, EventArgs e)
-        {
-            AdjustForm();
-        }
-
-        private void AdjustForm()
-        {
-            switch (this.WindowState)
-            {
-                case FormWindowState.Maximized:
-                    this.Padding = new Padding(8, 8, 8, 0);
-                    break;
-                case FormWindowState.Normal:
-                    if (this.Padding.Top != borderSize)
-                        this.Padding = new Padding(borderSize);
-                    break;
-            }
-        }
-
+       
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -102,7 +74,7 @@ namespace Trabajo_grupal
 
         private void btnMaximize_Click(object sender, EventArgs e)
         {
-            
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -241,6 +213,7 @@ namespace Trabajo_grupal
         {
             Login_Form frm = new Login_Form();
             frm.Show();
+            this.Close();
         }
 
         private void cuentasPorPagarToolStripMenuItem_Click(object sender, EventArgs e)

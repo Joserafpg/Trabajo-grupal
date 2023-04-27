@@ -20,22 +20,22 @@ namespace Trabajo_grupal
 
 
         //Permisos para el formulario Inventario
-        public static bool AgregarINVENTARIO  { set; get; }
-        public static bool ModificarINVENTARIO{ set; get; }
-        public static bool ConsultarINVENTARIO  { set; get; }
+        public static bool AgregarINVENTARIO { set; get; }
+        public static bool ModificarINVENTARIO { set; get; }
+        public static bool ConsultarINVENTARIO { set; get; }
         public static bool EliminarINVENTARIO { set; get; }
 
         //Permisos para el formulario Clientes 
-        public static bool AgregarCLIENTE  { set; get; }
-        public static bool ModificSarCLIENTES  { set; get; }
-        public static bool ConsultarCLIENTES  { set; get; }
-        public static bool EliminarCLIENTES  { set; get; }
+        public static bool AgregarCLIENTE { set; get; }
+        public static bool ModificSarCLIENTES { set; get; }
+        public static bool ConsultarCLIENTES { set; get; }
+        public static bool EliminarCLIENTES { set; get; }
 
         //Permisos para el formulario Facturas
-         public static bool AgregarFACTURA  { set; get; }
+        public static bool AgregarFACTURA { set; get; }
         public static bool ModificarFACTURA { set; get; }
-        public static bool ConsultarFACTURA  { set; get; }
-        public static bool EliminarFACTURA  { set; get; }
+        public static bool ConsultarFACTURA { set; get; }
+        public static bool EliminarFACTURA { set; get; }
 
     }
 }

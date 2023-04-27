@@ -326,9 +326,9 @@
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTittleBar);
             this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "GESTJEANS";
-            this.Resize += new System.EventHandler(this.Form1_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnlogoInicio)).EndInit();

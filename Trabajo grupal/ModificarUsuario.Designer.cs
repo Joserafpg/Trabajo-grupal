@@ -68,7 +68,7 @@
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(233, 122);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 27);
+            this.textBox1.Size = new System.Drawing.Size(200, 27);
             this.textBox1.TabIndex = 4;
             // 
             // label1

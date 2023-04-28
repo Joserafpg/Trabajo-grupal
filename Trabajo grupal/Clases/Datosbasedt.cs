@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Trabajo_grupal.Clases
 {
-    class Datosbasedt
+    public class Datosbasedt
     {
         public static int agregar(Datosget pget)
         {
@@ -26,11 +26,5 @@ namespace Trabajo_grupal.Clases
 
 
         }
-
-
-
-
-
-
     }
 }

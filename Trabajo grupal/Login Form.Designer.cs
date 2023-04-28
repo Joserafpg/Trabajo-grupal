@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtcontraseña = new System.Windows.Forms.TextBox();
+            this.txtusuario = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rjButton1 = new Trabajo_grupal.RJButton.RJButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,8 +38,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtusuario = new System.Windows.Forms.TextBox();
-            this.txtcontraseña = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,6 +56,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(372, 535);
             this.panel1.TabIndex = 1;
+            // 
+            // txtcontraseña
+            // 
+            this.txtcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcontraseña.Location = new System.Drawing.Point(56, 247);
+            this.txtcontraseña.Name = "txtcontraseña";
+            this.txtcontraseña.PasswordChar = '*';
+            this.txtcontraseña.Size = new System.Drawing.Size(239, 26);
+            this.txtcontraseña.TabIndex = 7;
+            // 
+            // txtusuario
+            // 
+            this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtusuario.Location = new System.Drawing.Point(56, 202);
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.Size = new System.Drawing.Size(239, 26);
+            this.txtusuario.TabIndex = 6;
             // 
             // panel2
             // 
@@ -142,22 +159,6 @@
             this.label3.Size = new System.Drawing.Size(315, 37);
             this.label3.TabIndex = 4;
             this.label3.Text = "Welecome Back!!!";
-            // 
-            // txtusuario
-            // 
-            this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusuario.Location = new System.Drawing.Point(56, 202);
-            this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(239, 26);
-            this.txtusuario.TabIndex = 6;
-            // 
-            // txtcontraseña
-            // 
-            this.txtcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontraseña.Location = new System.Drawing.Point(56, 247);
-            this.txtcontraseña.Name = "txtcontraseña";
-            this.txtcontraseña.Size = new System.Drawing.Size(239, 26);
-            this.txtcontraseña.TabIndex = 7;
             // 
             // Login_Form
             // 

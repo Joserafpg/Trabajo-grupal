@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Trabajo_grupal.Clases
 {
-  public  class Datosget
-  {
+    public class Datosget
+    {
         public int Codigo { get; set; }
         public string Nombre_Mercancia { get; set; }
         public string Descripcion { get; set; }
@@ -20,10 +20,5 @@ namespace Trabajo_grupal.Clases
         public SByte Precio_PorMayor { get; set; }
 
 
-  }
-
-   
-
-
-
+    }
 }

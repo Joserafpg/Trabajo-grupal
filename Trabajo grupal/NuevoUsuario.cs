@@ -44,8 +44,8 @@ namespace Trabajo_grupal
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
+            txtusuario.Clear();
+            txtcontraseña.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)

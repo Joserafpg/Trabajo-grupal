@@ -426,9 +426,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox eliminaruser;
-        private System.Windows.Forms.CheckBox agregaruser;
-        private System.Windows.Forms.CheckBox consultaruser;
+        public System.Windows.Forms.CheckBox eliminaruser;
+        public System.Windows.Forms.CheckBox agregaruser;
+        public System.Windows.Forms.CheckBox consultaruser;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chmodificarfacttura;
         private System.Windows.Forms.CheckBox chagregarfactura;
@@ -444,7 +444,7 @@
         private System.Windows.Forms.CheckBox chAdmin;
         private System.Windows.Forms.CheckBox chCustom;
         private System.Windows.Forms.CheckBox chCajero;
-        private System.Windows.Forms.CheckBox modificaruser;
+        public System.Windows.Forms.CheckBox modificaruser;
         private System.Windows.Forms.CheckBox chconsultarclientes;
         private System.Windows.Forms.CheckBox cheliminarfactura;
         private System.Windows.Forms.CheckBox cheliminarmercancia;

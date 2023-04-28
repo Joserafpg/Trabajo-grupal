@@ -261,7 +261,6 @@
             this.btnMaximize.Size = new System.Drawing.Size(45, 25);
             this.btnMaximize.TabIndex = 3;
             this.btnMaximize.UseVisualStyleBackColor = false;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
             // 
             // btnClose
             // 
@@ -329,6 +328,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "GESTJEANS";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnlogoInicio)).EndInit();

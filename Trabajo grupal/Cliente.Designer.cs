@@ -37,20 +37,24 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtapellido = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.btneliminar = new System.Windows.Forms.Button();
+            this.btnmodificar = new System.Windows.Forms.Button();
+            this.btnagregar = new System.Windows.Forms.Button();
+            this.btnbuscar = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.btnbuscar);
+            this.panel1.Controls.Add(this.btnagregar);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -59,10 +63,10 @@
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.txtapellido);
+            this.panel1.Controls.Add(this.txtnombre);
+            this.panel1.Controls.Add(this.btneliminar);
+            this.panel1.Controls.Add(this.btnmodificar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -145,67 +149,85 @@
             this.textBox4.Size = new System.Drawing.Size(254, 20);
             this.textBox4.TabIndex = 13;
             // 
-            // textBox3
+            // txtapellido
             // 
-            this.textBox3.Location = new System.Drawing.Point(262, 181);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(254, 20);
-            this.textBox3.TabIndex = 12;
+            this.txtapellido.Location = new System.Drawing.Point(262, 181);
+            this.txtapellido.Name = "txtapellido";
+            this.txtapellido.Size = new System.Drawing.Size(254, 20);
+            this.txtapellido.TabIndex = 12;
             // 
-            // textBox2
+            // txtnombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(262, 134);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(254, 20);
-            this.textBox2.TabIndex = 11;
+            this.txtnombre.Location = new System.Drawing.Point(262, 134);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(254, 20);
+            this.txtnombre.TabIndex = 11;
             // 
-            // button6
+            // btneliminar
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(667, 261);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(200, 70);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Eliminar";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btneliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btneliminar.FlatAppearance.BorderSize = 0;
+            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneliminar.Location = new System.Drawing.Point(667, 261);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(200, 70);
+            this.btneliminar.TabIndex = 10;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnmodificar
             // 
-            this.button5.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(667, 173);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 70);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Modificar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnmodificar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnmodificar.FlatAppearance.BorderSize = 0;
+            this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmodificar.Location = new System.Drawing.Point(667, 173);
+            this.btnmodificar.Name = "btnmodificar";
+            this.btnmodificar.Size = new System.Drawing.Size(200, 70);
+            this.btnmodificar.TabIndex = 9;
+            this.btnmodificar.Text = "Modificar";
+            this.btnmodificar.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnagregar
             // 
-            this.button1.BackColor = System.Drawing.Color.LightGreen;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(667, 85);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 70);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnagregar.BackColor = System.Drawing.Color.LightGreen;
+            this.btnagregar.FlatAppearance.BorderSize = 0;
+            this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnagregar.Location = new System.Drawing.Point(667, 85);
+            this.btnagregar.Name = "btnagregar";
+            this.btnagregar.Size = new System.Drawing.Size(200, 70);
+            this.btnagregar.TabIndex = 21;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnbuscar
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(667, 350);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 70);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnbuscar.BackColor = System.Drawing.Color.White;
+            this.btnbuscar.FlatAppearance.BorderSize = 0;
+            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscar.Location = new System.Drawing.Point(667, 350);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(200, 70);
+            this.btnbuscar.TabIndex = 22;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(262, 350);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(254, 20);
+            this.dateTimePicker1.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(164, 350);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 42);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Fecha de \r\nIngreso";
             // 
             // Cliente
             // 
@@ -225,19 +247,21 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btneliminar;
+        private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtapellido;
+        private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnbuscar;
+        private System.Windows.Forms.Button btnagregar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

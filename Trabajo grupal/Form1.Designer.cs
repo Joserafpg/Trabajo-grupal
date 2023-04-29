@@ -57,7 +57,7 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(90)))), ((int)(((byte)(244)))));
             this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.button10);
             this.panelMenu.Controls.Add(this.btnpagos);
@@ -214,7 +214,7 @@
             // 
             // panelTittleBar
             // 
-            this.panelTittleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.panelTittleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(90)))), ((int)(((byte)(244)))));
             this.panelTittleBar.Controls.Add(this.label1);
             this.panelTittleBar.Controls.Add(this.btnMinimize);
             this.panelTittleBar.Controls.Add(this.btnMaximize);

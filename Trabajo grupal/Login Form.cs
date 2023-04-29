@@ -32,11 +32,6 @@ namespace Trabajo_grupal
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void rjButton1_Click(object sender, EventArgs e)
         {
             if (txtusuario.Text.Equals(""))
@@ -109,6 +104,17 @@ namespace Trabajo_grupal
             }
 
             Conexion.cerrarcon();
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

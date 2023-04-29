@@ -114,12 +114,6 @@
     <Compile Include="FormPermisos.Designer.cs">
       <DependentUpon>FormPermisos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulario clientes 2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formulario clientes 2.Designer.cs">
-      <DependentUpon>Formulario clientes 2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,9 +235,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPermisos.resx">
       <DependentUpon>FormPermisos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formulario clientes 2.resx">
-      <DependentUpon>Formulario clientes 2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>

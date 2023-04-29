@@ -16,11 +16,5 @@ namespace Trabajo_grupal
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Formulario_clientes_2 frm = new Formulario_clientes_2();
-            frm.Show();
-        }
     }
 }

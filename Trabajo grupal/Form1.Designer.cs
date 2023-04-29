@@ -214,7 +214,7 @@
             // 
             // panelTittleBar
             // 
-            this.panelTittleBar.BackColor = System.Drawing.Color.White;
+            this.panelTittleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.panelTittleBar.Controls.Add(this.label1);
             this.panelTittleBar.Controls.Add(this.btnMinimize);
             this.panelTittleBar.Controls.Add(this.btnMaximize);
@@ -230,6 +230,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(26, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 25);

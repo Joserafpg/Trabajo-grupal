@@ -179,7 +179,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(627, 95);
+            this.label1.Location = new System.Drawing.Point(597, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 21);
             this.label1.TabIndex = 14;
@@ -190,7 +190,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Trabajo_grupal.Properties.Resources.iniciar_sesion;
-            this.button3.Location = new System.Drawing.Point(633, 26);
+            this.button3.Location = new System.Drawing.Point(603, 26);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(60, 60);
             this.button3.TabIndex = 13;

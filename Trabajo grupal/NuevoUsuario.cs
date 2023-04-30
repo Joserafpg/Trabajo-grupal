@@ -42,7 +42,18 @@ namespace Trabajo_grupal
             chagregarmercancia.Checked = false;
             checonsultar.Checked = false;
             checkBox3.Checked = false;
-            cheliminarmercancia
+            cheliminarmercancia.Checked = false;
+            chagregarclientes.Checked = false;
+            chmodificarclientes.Checked = false;
+            cheliminarclientes.Checked = false;
+            chconsultarclientes.Checked = false;
+            chagregarfactura.Checked = false;
+            chmodificarfacttura.Checked = false;
+            chconsultarfactura.Checked = false;
+            cheliminarfactura.Checked = false;
+            agregaruser.Checked = false;
+            consultaruser.Checked = false;
+            modificaruser.Checked = false;
         }
 
         private void NuevoUsuario_Load(object sender, EventArgs e)
@@ -75,8 +86,8 @@ namespace Trabajo_grupal
 
         private void button2_Click(object sender, EventArgs e)
         {
-            txtusuario.Clear();
-            txtcontraseña.Clear();
+            Limpiar();
+            RejuegoON();
         }
 
         private void button4_Click(object sender, EventArgs e)

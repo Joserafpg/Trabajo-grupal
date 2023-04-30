@@ -383,16 +383,6 @@ namespace Trabajo_grupal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rectangulo_horizontal {
-            get {
-                object obj = ResourceManager.GetObject("rectangulo-horizontal", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap usuario__2_ {
             get {
                 object obj = ResourceManager.GetObject("usuario (2)", resourceCulture);

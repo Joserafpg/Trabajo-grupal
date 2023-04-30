@@ -53,5 +53,20 @@ namespace Trabajo_grupal
             Usuarios frm = new Usuarios();
             frm.Show();
         }
+
+        private void NuevoUsuario_Load(object sender, EventArgs e)
+        {
+            formpermiso.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            formpermiso.Visible = true;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            formpermiso.Visible = false;
+        }
     }
 }

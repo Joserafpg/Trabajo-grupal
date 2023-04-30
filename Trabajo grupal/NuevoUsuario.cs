@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Trabajo_grupal
 {
@@ -17,6 +18,36 @@ namespace Trabajo_grupal
         public NuevoUsuario()
         {
             InitializeComponent();
+        }
+
+        void RejuegoON()
+        {
+            btnguardar.Visible = false;
+            btnchange.Visible = true;
+            formpermiso.Visible = false;
+        }
+
+        void RejuegoOFF()
+        {
+            btnguardar.Visible = true;
+            btnchange.Visible = false;
+            formpermiso.Visible = true;
+        }
+
+        void Limpiar()
+        {
+            txtempleado.ResetText();
+            txtusuario.Clear();
+            txtcontraseña.Clear();
+            chagregarmercancia.Checked = false;
+            checonsultar.Checked = false;
+            checkBox3.Checked = false;
+            cheliminarmercancia
+        }
+
+        private void NuevoUsuario_Load(object sender, EventArgs e)
+        {
+            formpermiso.Visible = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -53,20 +84,34 @@ namespace Trabajo_grupal
             Usuarios frm = new Usuarios();
             frm.Show();
         }
-
-        private void NuevoUsuario_Load(object sender, EventArgs e)
-        {
-            formpermiso.Visible = false;
-        }
-
+                
         private void button1_Click(object sender, EventArgs e)
         {
-            formpermiso.Visible = true;
+            if (txtempleado.Text == "" || txtusuario.Text == "" || txtcontraseña.Text == "")
+            {
+                MessageBox.Show("Por favor, llene todos los campos.");
+            }
+            else
+            {
+                RejuegoOFF();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            formpermiso.Visible = false;
+            if (txtempleado.Text == "" || txtusuario.Text == "" || txtcontraseña.Text == "")
+            {
+                MessageBox.Show("Por favor, llene todos los campos.");
+            }
+            else
+            {
+                RejuegoOFF();
+            }
+        }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            RejuegoON();
         }
     }
 }

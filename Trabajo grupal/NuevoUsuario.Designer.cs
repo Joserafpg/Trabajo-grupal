@@ -43,7 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnchange = new System.Windows.Forms.Button();
             this.formpermiso = new System.Windows.Forms.Panel();
             this.cheliminarfactura = new System.Windows.Forms.CheckBox();
             this.cheliminarmercancia = new System.Windows.Forms.CheckBox();
@@ -68,6 +68,7 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.chagregarmercancia = new System.Windows.Forms.CheckBox();
             this.checonsultar = new System.Windows.Forms.CheckBox();
+            this.btnguardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.formpermiso.SuspendLayout();
@@ -139,7 +140,6 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.formpermiso);
             this.groupBox1.Controls.Add(this.txtempleado);
             this.groupBox1.Controls.Add(this.label5);
@@ -151,6 +151,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtusuario);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.btnchange);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(29, 52);
@@ -235,20 +236,21 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnchange
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(148, 267);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 51);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnchange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnchange.ForeColor = System.Drawing.Color.White;
+            this.btnchange.Location = new System.Drawing.Point(148, 270);
+            this.btnchange.Name = "btnchange";
+            this.btnchange.Size = new System.Drawing.Size(169, 51);
+            this.btnchange.TabIndex = 11;
+            this.btnchange.Text = "Aceptar";
+            this.btnchange.UseVisualStyleBackColor = true;
+            this.btnchange.Click += new System.EventHandler(this.button1_Click);
             // 
             // formpermiso
             // 
+            this.formpermiso.Controls.Add(this.btnguardar);
             this.formpermiso.Controls.Add(this.cheliminarfactura);
             this.formpermiso.Controls.Add(this.cheliminarmercancia);
             this.formpermiso.Controls.Add(this.modificaruser);
@@ -520,6 +522,18 @@
             this.checonsultar.Text = "Ver reportes de existencia";
             this.checonsultar.UseVisualStyleBackColor = true;
             // 
+            // btnguardar
+            // 
+            this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnguardar.ForeColor = System.Drawing.Color.White;
+            this.btnguardar.Location = new System.Drawing.Point(142, 244);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(169, 51);
+            this.btnguardar.TabIndex = 19;
+            this.btnguardar.Text = "Aceptar";
+            this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            // 
             // NuevoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,7 +566,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnchange;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
@@ -583,5 +597,6 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox chagregarmercancia;
         private System.Windows.Forms.CheckBox checonsultar;
+        private System.Windows.Forms.Button btnguardar;
     }
 }

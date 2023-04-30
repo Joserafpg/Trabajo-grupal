@@ -88,6 +88,7 @@ namespace Trabajo_grupal
         {
             Limpiar();
             RejuegoON();
+            groupBox1.Text = "Agregar Nuevo Usuario";
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -102,9 +103,16 @@ namespace Trabajo_grupal
             {
                 MessageBox.Show("Por favor, llene todos los campos.");
             }
+
+            else if (txtusuario.Text.Length < 4 || txtcontraseña.Text.Length < 4)
+            {
+                MessageBox.Show("El usuario debe tener al menos " + 4 + " caracteres.");
+            }
+
             else
             {
                 RejuegoOFF();
+                groupBox1.Text = "Permisos";
             }
         }
 
@@ -123,6 +131,19 @@ namespace Trabajo_grupal
         private void btnguardar_Click(object sender, EventArgs e)
         {
             RejuegoON();
+        }
+
+        private void txtusuario_TextChanged(object sender, EventArgs e)
+        {
+            int maxLength = 10; // El máximo de caracteres permitidos
+            int minLength = 4; // El mínimo de caracteres permitidos
+
+            if (txtusuario.Text.Length > maxLength)
+            {
+                txtusuario.Text = txtusuario.Text.Substring(0, maxLength);
+                txtusuario.SelectionStart = maxLength;
+                txtusuario.SelectionLength = 0;
+            }
         }
     }
 }

@@ -40,8 +40,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnusuarios = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnchange = new System.Windows.Forms.Button();
             this.formpermiso = new System.Windows.Forms.Panel();
@@ -105,6 +103,7 @@
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(244, 27);
             this.txtusuario.TabIndex = 8;
+            this.txtusuario.TextChanged += new System.EventHandler(this.txtusuario_TextChanged);
             // 
             // label2
             // 
@@ -145,8 +144,6 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnusuarios);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.txtcontraseña);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtusuario);
@@ -203,27 +200,6 @@
             this.btnusuarios.UseVisualStyleBackColor = true;
             this.btnusuarios.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(597, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 21);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Permisos";
-            // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::Trabajo_grupal.Properties.Resources.iniciar_sesion;
-            this.button3.Location = new System.Drawing.Point(603, 26);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 60);
-            this.button3.TabIndex = 13;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -240,7 +216,7 @@
             // 
             this.btnchange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnchange.ForeColor = System.Drawing.Color.White;
-            this.btnchange.Location = new System.Drawing.Point(148, 270);
+            this.btnchange.Location = new System.Drawing.Point(148, 267);
             this.btnchange.Name = "btnchange";
             this.btnchange.Size = new System.Drawing.Size(169, 51);
             this.btnchange.TabIndex = 11;
@@ -306,7 +282,7 @@
             // 
             this.modificaruser.AutoSize = true;
             this.modificaruser.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.modificaruser.Location = new System.Drawing.Point(569, 192);
+            this.modificaruser.Location = new System.Drawing.Point(569, 182);
             this.modificaruser.Name = "modificaruser";
             this.modificaruser.Size = new System.Drawing.Size(93, 23);
             this.modificaruser.TabIndex = 45;
@@ -327,7 +303,7 @@
             // chCajero
             // 
             this.chCajero.AutoSize = true;
-            this.chCajero.Location = new System.Drawing.Point(540, 306);
+            this.chCajero.Location = new System.Drawing.Point(540, 285);
             this.chCajero.Name = "chCajero";
             this.chCajero.Size = new System.Drawing.Size(81, 25);
             this.chCajero.TabIndex = 43;
@@ -337,7 +313,7 @@
             // chCustom
             // 
             this.chCustom.AutoSize = true;
-            this.chCustom.Location = new System.Drawing.Point(540, 265);
+            this.chCustom.Location = new System.Drawing.Point(540, 254);
             this.chCustom.Name = "chCustom";
             this.chCustom.Size = new System.Drawing.Size(135, 25);
             this.chCustom.TabIndex = 42;
@@ -357,7 +333,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(566, 23);
+            this.label6.Location = new System.Drawing.Point(565, 17);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 21);
             this.label6.TabIndex = 40;
@@ -367,7 +343,7 @@
             // 
             this.eliminaruser.AutoSize = true;
             this.eliminaruser.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.eliminaruser.Location = new System.Drawing.Point(569, 153);
+            this.eliminaruser.Location = new System.Drawing.Point(569, 147);
             this.eliminaruser.Name = "eliminaruser";
             this.eliminaruser.Size = new System.Drawing.Size(81, 23);
             this.eliminaruser.TabIndex = 39;
@@ -378,7 +354,7 @@
             // 
             this.agregaruser.AutoSize = true;
             this.agregaruser.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.agregaruser.Location = new System.Drawing.Point(569, 65);
+            this.agregaruser.Location = new System.Drawing.Point(568, 59);
             this.agregaruser.Name = "agregaruser";
             this.agregaruser.Size = new System.Drawing.Size(82, 23);
             this.agregaruser.TabIndex = 37;
@@ -389,7 +365,7 @@
             // 
             this.consultaruser.AutoSize = true;
             this.consultaruser.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.consultaruser.Location = new System.Drawing.Point(569, 107);
+            this.consultaruser.Location = new System.Drawing.Point(568, 101);
             this.consultaruser.Name = "consultaruser";
             this.consultaruser.Size = new System.Drawing.Size(93, 23);
             this.consultaruser.TabIndex = 38;
@@ -526,7 +502,7 @@
             // 
             this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnguardar.ForeColor = System.Drawing.Color.White;
-            this.btnguardar.Location = new System.Drawing.Point(142, 244);
+            this.btnguardar.Location = new System.Drawing.Point(145, 244);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(169, 51);
             this.btnguardar.TabIndex = 19;
@@ -567,8 +543,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnchange;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnusuarios;
         private System.Windows.Forms.Label label5;

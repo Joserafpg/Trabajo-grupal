@@ -105,11 +105,11 @@ namespace Trabajo_grupal
                 MessageBox.Show("Por favor, llene todos los campos.");
             }
 
-            else if (txtusuario.Text.Length < 4 )
+            else if (txtusuario.Text.Length < 4)
             {
                 MessageBox.Show("El usuario debe tener al menos " + 4 + " caracteres.");
             }
-            
+
             else if (txtcontraseña.Text.Length < 4)
             {
                 MessageBox.Show("La contraseña debe tener al menos " + 4 + " caracteres.");
@@ -118,7 +118,6 @@ namespace Trabajo_grupal
             else
             {
                 RejuegoOFF();
-                Limpiar();
                 groupBox1.Text = "Permisos";
             }
         }
@@ -147,6 +146,7 @@ namespace Trabajo_grupal
 
             RejuegoON();
             groupBox1.Text = "Agregar Nuevo Usuario";
+            Limpiar();
         }
 
         private void txtusuario_TextChanged(object sender, EventArgs e)

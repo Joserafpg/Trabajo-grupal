@@ -41,7 +41,7 @@ namespace Trabajo_grupal
             txtcontraseña.Clear();
             chagregarmercancia.Checked = false;
             checonsultar.Checked = false;
-            checkBox3.Checked = false;
+            chmodificarinventario.Checked = false;
             cheliminarmercancia.Checked = false;
             chagregarclientes.Checked = false;
             chmodificarclientes.Checked = false;
@@ -96,7 +96,7 @@ namespace Trabajo_grupal
             Usuarios frm = new Usuarios();
             frm.Show();
         }
-                
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (txtempleado.Text == "" || txtusuario.Text == "" || txtcontraseña.Text == "")
@@ -136,13 +136,65 @@ namespace Trabajo_grupal
         private void txtusuario_TextChanged(object sender, EventArgs e)
         {
             int maxLength = 10; // El máximo de caracteres permitidos
-            int minLength = 4; // El mínimo de caracteres permitidos
-
+            
             if (txtusuario.Text.Length > maxLength)
             {
                 txtusuario.Text = txtusuario.Text.Substring(0, maxLength);
                 txtusuario.SelectionStart = maxLength;
                 txtusuario.SelectionLength = 0;
+            }
+        }
+
+        private int _counter = 0;
+        private bool _execute = true;
+        private void chAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+            if (_execute)
+            {
+                if (chAdmin.Checked)
+                {
+                    chagregarmercancia.Checked = true;
+                    checonsultar.Checked = true;
+                    chmodificarinventario.Checked = true;
+                    cheliminarmercancia.Checked = true;
+
+                    chagregarclientes.Checked = true;
+                    chconsultarclientes.Checked = true;
+                    chmodificarclientes.Checked = true;
+                    cheliminarclientes.Checked = true;
+
+                    chagregarfactura.Checked = true;
+                    chconsultarfactura.Checked = true;
+                    chmodificarfacttura.Checked = true;
+                    cheliminarfactura.Checked = true;
+
+                    agregaruser.Checked = true;
+                    consultaruser.Checked = true;
+                    eliminaruser.Checked = true;
+                    modificaruser.Checked = true;
+                }
+                else
+                {
+                    chagregarmercancia.Checked = false;
+                    checonsultar.Checked = false;
+                    chmodificarinventario.Checked = false;
+                    cheliminarmercancia.Checked = false;
+
+                    chagregarclientes.Checked = false;
+                    chconsultarclientes.Checked = false;
+                    chmodificarclientes.Checked = false;
+                    cheliminarclientes.Checked = false;
+
+                    chagregarfactura.Checked = false;
+                    chconsultarfactura.Checked = false;
+                    chmodificarfacttura.Checked = false;
+                    cheliminarfactura.Checked = false;
+
+                    agregaruser.Checked = false;
+                    consultaruser.Checked = false;
+                    eliminaruser.Checked = false;
+                    modificaruser.Checked = false;
+                }
             }
         }
     }

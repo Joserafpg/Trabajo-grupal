@@ -48,7 +48,6 @@ AgregarINVENTARIO bit,
 ModificarINVENTARIO bit,
 ConsultarINVENTARIO bit, 
 EliminarINVENTARIO bit,
-
 )
 
 /*Tabla Clientes*/

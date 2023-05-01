@@ -8,17 +8,25 @@ namespace Trabajo_grupal.Clases
 {
     public class DatosgetClientes
     {
-        public int Codigo { get; set; }
-        public string Nombre_Mercancia { get; set; }
-        public string Descripcion { get; set; }
-        public string Tipo_Producto { get; set; }
-        public int Cantidad { get; set; }
-        public int Inv_Minimo { get; set; }
-        public string Color_Producto { get; set; }
-        public SByte Precio_Compra { get; set; }
-        public SByte Precio_Venta { get; set; }
-        public SByte Precio_PorMayor { get; set; }
+        public Int64 Codigo { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
+        public string Correo { get; set; }
+        public DateTime Fecha_Ingreso { get; set; }
 
+        public DatosgetClientes() { }
 
+        public DatosgetClientes(Int64 pCodigo, string pNombre, string pApellido, string pDireccion, string pTelefono, string pCorreo, DateTime pFecha_Ingreso)
+        {
+            this.Codigo = pCodigo;
+            this.Nombre = pNombre;
+            this.Apellido = pApellido;
+            this.Direccion = pDireccion;
+            this.Telefono = pTelefono;
+            this.Correo = pCorreo;
+            this.Fecha_Ingreso = pFecha_Ingreso;
+        }
     }
 }

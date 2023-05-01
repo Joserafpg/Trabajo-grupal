@@ -51,7 +51,18 @@ EliminarINVENTARI bit,
 
 )
 
+/*Tabla Clientes*/
+create table Clientes(
+ID_Cliente int IDENTITY (1,1) NOT NULL PRIMARY KEY,
+Nombre Varchar(15),
+Apellido Varchar (50),
+Direccion Varchar (50),
+Telefono Varchar (50),
+Correo varchar (30),
+Fecha_de_ingreso datetime
+)
 
 
 
-drop table Usuarios
+
+drop table Clientes

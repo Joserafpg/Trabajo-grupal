@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtfech = new System.Windows.Forms.DateTimePicker();
             this.btnbuscar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -38,9 +38,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txTelefono = new System.Windows.Forms.TextBox();
+            this.txtdireccion = new System.Windows.Forms.TextBox();
             this.txtapellido = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.btneliminar = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.txtfech);
             this.panel1.Controls.Add(this.btnbuscar);
             this.panel1.Controls.Add(this.btnagregar);
             this.panel1.Controls.Add(this.label6);
@@ -60,9 +60,9 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtCorreo);
+            this.panel1.Controls.Add(this.txTelefono);
+            this.panel1.Controls.Add(this.txtdireccion);
             this.panel1.Controls.Add(this.txtapellido);
             this.panel1.Controls.Add(this.txtnombre);
             this.panel1.Controls.Add(this.btneliminar);
@@ -84,12 +84,12 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Fecha de \r\nIngreso";
             // 
-            // dateTimePicker1
+            // txtfech
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(262, 343);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(254, 20);
-            this.dateTimePicker1.TabIndex = 23;
+            this.txtfech.Location = new System.Drawing.Point(262, 343);
+            this.txtfech.Name = "txtfech";
+            this.txtfech.Size = new System.Drawing.Size(254, 20);
+            this.txtfech.TabIndex = 23;
             // 
             // btnbuscar
             // 
@@ -171,26 +171,26 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Nombre";
             // 
-            // textBox6
+            // txtCorreo
             // 
-            this.textBox6.Location = new System.Drawing.Point(262, 304);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(254, 20);
-            this.textBox6.TabIndex = 15;
+            this.txtCorreo.Location = new System.Drawing.Point(262, 304);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(254, 20);
+            this.txtCorreo.TabIndex = 15;
             // 
-            // textBox5
+            // txTelefono
             // 
-            this.textBox5.Location = new System.Drawing.Point(262, 265);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(254, 20);
-            this.textBox5.TabIndex = 14;
+            this.txTelefono.Location = new System.Drawing.Point(262, 265);
+            this.txTelefono.Name = "txTelefono";
+            this.txTelefono.Size = new System.Drawing.Size(254, 20);
+            this.txTelefono.TabIndex = 14;
             // 
-            // textBox4
+            // txtdireccion
             // 
-            this.textBox4.Location = new System.Drawing.Point(262, 215);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(254, 20);
-            this.textBox4.TabIndex = 13;
+            this.txtdireccion.Location = new System.Drawing.Point(262, 215);
+            this.txtdireccion.Name = "txtdireccion";
+            this.txtdireccion.Size = new System.Drawing.Size(254, 20);
+            this.txtdireccion.TabIndex = 13;
             // 
             // txtapellido
             // 
@@ -251,9 +251,9 @@
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.TextBox txTelefono;
+        private System.Windows.Forms.TextBox txtdireccion;
         private System.Windows.Forms.TextBox txtapellido;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label6;
@@ -263,6 +263,6 @@
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker txtfech;
     }
 }

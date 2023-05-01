@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabajo_grupal.Clases;
 
 namespace Trabajo_grupal
 {
@@ -20,14 +21,15 @@ namespace Trabajo_grupal
         private void btnagregar_Click(object sender, EventArgs e)
         {
 
-            Datosget Cliente = new Datosget();
-            Cliente.Cedula = txtcedula.Text;
-            Alumno.Nombre = txtNombre.Text;
-            Alumno.Telefono = txtTelefono.Text;
-            Alumno.Direccion = txtDireccion.Text;
-            Alumno.Fecha_Nac = txtFech.Value;
+            DatosgetClientes Clientes = new DatosgetClientes();
+            Clientes.Nombre = txtnombre.Text;
+            Clientes.Apellido = txtapellido.Text;
+            Clientes.Direccion = txtdireccion.Text;
+            Clientes.Telefono = txTelefono.Text;
+            Clientes.Correo = txtCorreo.Text;
+            Clientes.Fecha_Ingreso = txtfech.Value;
 
-            int resultado = Datosbasedt.Agregar(Alumno);
+            int resultado = Datosbasedt.Agregar(Clientes);
 
             if (resultado > 0)
             {
@@ -40,5 +42,5 @@ namespace Trabajo_grupal
             }
         }
     }
-    }
+    
 }

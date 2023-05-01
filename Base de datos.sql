@@ -61,6 +61,20 @@ Correo varchar (30),
 Fecha_de_ingreso datetime
 )
 
+/*Tabla NuevoInventario*/
+create table NuevoInventario(
+Codigo int IDENTITY NOT NULL PRIMARY KEY,
+Nombre_Mercancia Varchar (50),
+Descripcion Varchar (50),
+Tipo_Producto Varchar (50),
+Cantidad int,
+Inv_Minimo int,
+Color_Producto Varchar (50),
+Precio_Compra money,
+Precio_Venta money,
+Precio_PorMayor money
+)
+
 
 select * from Usuarios
 

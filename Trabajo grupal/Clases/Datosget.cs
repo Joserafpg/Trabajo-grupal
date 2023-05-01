@@ -19,6 +19,24 @@ namespace Trabajo_grupal.Clases
         public SByte Precio_Venta { get; set; }
         public SByte Precio_PorMayor { get; set; }
 
+        public Datosget() { }
+
+        public Datosget(int pCodigo, string pNombre_Mercancia, string pDescripcion, string pTipo_Producto,  int pCantidad, int pInv_Minimo, string pColor_Producto,SByte Precio_Compra, SByte Precio_Venta, SByte Precio_PorMayor)
+        {
+            this.Codigo = pCodigo;
+            this.Nombre_Mercancia = pNombre_Mercancia;
+            this.Descripcion = pDescripcion;
+            this.Tipo_Producto = pTipo_Producto;
+            this.Cantidad = pCantidad;
+            this.Inv_Minimo = pInv_Minimo;
+            this.Color_Producto = pColor_Producto;
+            this.Precio_Compra = Precio_Compra;
+            this.Precio_Venta = Precio_Venta;
+            this.Precio_PorMayor = Precio_PorMayor;
+
+
+        }
+
 
     }
 }

@@ -21,25 +21,7 @@ namespace Trabajo_grupal
         private void btnagregar_Click(object sender, EventArgs e)
         {
 
-            DatosgetClientes Clientes = new DatosgetClientes();
-            Clientes.Nombre = txtnombre.Text;
-            Clientes.Apellido = txtapellido.Text;
-            Clientes.Direccion = txtdireccion.Text;
-            Clientes.Telefono = txTelefono.Text;
-            Clientes.Correo = txtCorreo.Text;
-            Clientes.Fecha_Ingreso = txtfech.Value;
-
-            int resultado = Datosbasedt.Agregar(Clientes);
-
-            if (resultado > 0)
-            {
-                MessageBox.Show("Datos Guardados Corerectamente", "Datos Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            else
-            {
-                MessageBox.Show("No se pudieron guardar los datos", "Error al guardar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+            
         }
     }
     

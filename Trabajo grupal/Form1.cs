@@ -74,16 +74,7 @@ namespace Trabajo_grupal
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            btninventario.Visible = Permisos.FormInventario;
-            btnclientes.Visible = Permisos.FormCliente;
-            btnfacturacion.Visible = Permisos.FormFacturas;
-            btnfacturacion.Visible = Permisos.FormFacturas;
-
-            btnpagos.Visible = Permisos.FormCuentasPagar;
-            btnpagos.Visible = Permisos.FormCuentasxCobrar;
-
-            cuentasPorPagarToolStripMenuItem.Visible = Permisos.FormCuentasPagar;
-            cuentasPorCobrarToolStripMenuItem.Visible = Permisos.FormCuentasxCobrar;
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Trabajo_grupal
 {
@@ -130,13 +131,19 @@ namespace Trabajo_grupal
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            RejuegoON();
+            if (txtcontraseña.Text == txtcontraseña.Text)
+                if (UsuariosDAL.CrearCuentas(txtempleado.Text, txtusuario.Text, txtcontraseña.Text, agregaruser.Checked, modificaruser.Checked, eliminaruser.Checked, consultaruser.Checked, agregarcobros.Checked, modificarcobros.Checked, consultarcobros.Checked, eliminarcobros.Checked, agregarpagos.Checked, modificarpagos.Checked, consultarpagos.Checked, eliminarpagos.Checked, chagregarfactura.Checked, chmodificarfacttura.Checked, chconsultarfactura.Checked, cheliminarfactura.Checked, chagregarclientes.Checked, chmodificarclientes.Checked, chconsultarclientes.Checked, cheliminarclientes.Checked, chagregarmercancia.Checked, chmodificarinventario.Checked, checonsultar.Checked, cheliminarmercancia.Checked) > 0)
+                {
+                    MessageBox.Show("Cuenta creada con exito");
+                }
+                else
+                    MessageBox.Show("Nose pudo crear la cuenta"); RejuegoON();
         }
 
         private void txtusuario_TextChanged(object sender, EventArgs e)
         {
             int maxLength = 10; // El máximo de caracteres permitidos
-            
+
             if (txtusuario.Text.Length > maxLength)
             {
                 txtusuario.Text = txtusuario.Text.Substring(0, maxLength);
@@ -195,6 +202,106 @@ namespace Trabajo_grupal
                     eliminaruser.Checked = false;
                     modificaruser.Checked = false;
                 }
+            }
+        }
+
+        private void chkPrincipal_CheckedChanged(object sender, EventArgs e)
+        {
+            _counter = 0;
+            if (!chagregarmercancia.Checked)
+            {
+                _counter++;
+            }
+            if (!checonsultar.Checked)
+            {
+                _counter++;
+            }
+            if (!chmodificarinventario.Checked)
+            {
+                _counter++;
+            }
+            if (!cheliminarmercancia.Checked)
+            {
+                _counter++;
+            }
+
+
+            if (!chagregarclientes.Checked)
+            {
+                _counter++;
+            }
+            if (!chconsultarclientes.Checked)
+            {
+                _counter++;
+            }
+            if (!chmodificarclientes.Checked)
+            {
+                _counter++;
+            }
+            if (!cheliminarclientes.Checked)
+            {
+                _counter++;
+            }
+
+
+            if (!chagregarfactura.Checked)
+            {
+                _counter++;
+            }
+            if (!chconsultarfactura.Checked)
+            {
+                _counter++;
+            }
+            if (!chmodificarfacttura.Checked)
+            {
+                _counter++;
+            }
+            if (!cheliminarfactura.Checked)
+            {
+                _counter++;
+            }
+
+
+            if (!agregaruser.Checked)
+            {
+                _counter++;
+            }
+            if (!consultaruser.Checked)
+            {
+                _counter++;
+            }
+            if (!eliminaruser.Checked)
+            {
+                _counter++;
+            }
+            if (!modificaruser.Checked)
+            {
+                _counter++;
+            }
+
+
+            if (_counter >= 0)
+            {
+                _execute = false;
+                chAdmin.Checked = false;
+                _execute = true;
+                chCustom.Checked = true;
+            }
+            else
+            {
+                chCustom.Checked = false;
+            }
+
+            if (_counter <= 0)
+            {
+                _execute = false;
+                chAdmin.Checked = true;
+                _execute = true;
+                chCustom.Checked = false;
+            }
+            else
+            {
+                chCustom.Checked = true;
             }
         }
     }

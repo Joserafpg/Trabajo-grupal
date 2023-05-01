@@ -1,4 +1,4 @@
-# Trabajo-grupal
+# GestJeans
 
 GestJeans is a management software designed for a pants factory that allows them to keep a complete record of their production and sales processes. 
 With GestJeans, the factory can handle all the activities related to the production of pants, from the acquisition of raw materials to the delivery 

@@ -10,7 +10,7 @@ namespace Trabajo_grupal
 {
     public class Conexion
     {
-        private static SqlConnection Conn = new SqlConnection("Data source = DESKTOP-NDDA7LS; Initial Catalog=Proyecto_Grupal; Integrated Security=True");
+        private static SqlConnection Conn = new SqlConnection("Data source = DESKTOP-Q57G3E7; Initial Catalog=Proyecto_Grupal; Integrated Security=True");
 
         public static SqlConnection ObtenerConexion()
         {

@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="ClasesDropDown\MenuRenderer.cs" />
     <Compile Include="Clases\Datosbasedt.cs" />
+    <Compile Include="Clases\DatosgetClientes.cs" />
     <Compile Include="Clases\Datosget.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>

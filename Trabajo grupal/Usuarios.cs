@@ -21,22 +21,5 @@ namespace Trabajo_grupal
         {
             this.Close();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ModificarUsuario frm = new ModificarUsuario();
-            frm.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ModificarUsuario frm = new ModificarUsuario();
-            frm.Show();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

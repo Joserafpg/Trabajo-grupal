@@ -105,14 +105,20 @@ namespace Trabajo_grupal
                 MessageBox.Show("Por favor, llene todos los campos.");
             }
 
-            else if (txtusuario.Text.Length < 4 || txtcontraseña.Text.Length < 4)
+            else if (txtusuario.Text.Length < 4 )
             {
                 MessageBox.Show("El usuario debe tener al menos " + 4 + " caracteres.");
+            }
+            
+            else if (txtcontraseña.Text.Length < 4)
+            {
+                MessageBox.Show("La contraseña debe tener al menos " + 4 + " caracteres.");
             }
 
             else
             {
                 RejuegoOFF();
+                Limpiar();
                 groupBox1.Text = "Permisos";
             }
         }
@@ -137,7 +143,10 @@ namespace Trabajo_grupal
                     MessageBox.Show("Cuenta creada con exito");
                 }
                 else
-                    MessageBox.Show("Nose pudo crear la cuenta"); RejuegoON();
+                    MessageBox.Show("Nose pudo crear la cuenta");
+
+            RejuegoON();
+            groupBox1.Text = "Agregar Nuevo Usuario";
         }
 
         private void txtusuario_TextChanged(object sender, EventArgs e)
@@ -202,106 +211,6 @@ namespace Trabajo_grupal
                     eliminaruser.Checked = false;
                     modificaruser.Checked = false;
                 }
-            }
-        }
-
-        private void chkPrincipal_CheckedChanged(object sender, EventArgs e)
-        {
-            _counter = 0;
-            if (!chagregarmercancia.Checked)
-            {
-                _counter++;
-            }
-            if (!checonsultar.Checked)
-            {
-                _counter++;
-            }
-            if (!chmodificarinventario.Checked)
-            {
-                _counter++;
-            }
-            if (!cheliminarmercancia.Checked)
-            {
-                _counter++;
-            }
-
-
-            if (!chagregarclientes.Checked)
-            {
-                _counter++;
-            }
-            if (!chconsultarclientes.Checked)
-            {
-                _counter++;
-            }
-            if (!chmodificarclientes.Checked)
-            {
-                _counter++;
-            }
-            if (!cheliminarclientes.Checked)
-            {
-                _counter++;
-            }
-
-
-            if (!chagregarfactura.Checked)
-            {
-                _counter++;
-            }
-            if (!chconsultarfactura.Checked)
-            {
-                _counter++;
-            }
-            if (!chmodificarfacttura.Checked)
-            {
-                _counter++;
-            }
-            if (!cheliminarfactura.Checked)
-            {
-                _counter++;
-            }
-
-
-            if (!agregaruser.Checked)
-            {
-                _counter++;
-            }
-            if (!consultaruser.Checked)
-            {
-                _counter++;
-            }
-            if (!eliminaruser.Checked)
-            {
-                _counter++;
-            }
-            if (!modificaruser.Checked)
-            {
-                _counter++;
-            }
-
-
-            if (_counter >= 0)
-            {
-                _execute = false;
-                chAdmin.Checked = false;
-                _execute = true;
-                chCustom.Checked = true;
-            }
-            else
-            {
-                chCustom.Checked = false;
-            }
-
-            if (_counter <= 0)
-            {
-                _execute = false;
-                chAdmin.Checked = true;
-                _execute = true;
-                chCustom.Checked = false;
-            }
-            else
-            {
-                chCustom.Checked = true;
             }
         }
     }

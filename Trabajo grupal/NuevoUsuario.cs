@@ -95,7 +95,7 @@ namespace Trabajo_grupal
                 chformfacturas.Checked = false;
             }
         }
-        
+
         void CheckboxUsuarios()
         {
             if (agregaruser.Checked || consultaruser.Checked || modificaruser.Checked || eliminaruser.Checked)
@@ -108,7 +108,7 @@ namespace Trabajo_grupal
                 chformusuarios.Checked = false;
             }
         }
-        
+
         void CheckboxCuentasPagar()
         {
             if (agregarpagos.Checked || consultarpagos.Checked || modificarpagos.Checked || eliminarpagos.Checked)
@@ -121,7 +121,7 @@ namespace Trabajo_grupal
                 chformpagar.Checked = false;
             }
         }
-        
+
         void CheckboxCuentasCobra()
         {
             if (agregarcobros.Checked || consultarcobros.Checked || modificarcobros.Checked || eliminarcobros.Checked)
@@ -215,7 +215,7 @@ namespace Trabajo_grupal
         private void btnguardar_Click(object sender, EventArgs e)
         {
             if (txtcontraseña.Text == txtcontraseña.Text)
-                if (UsuariosDAL.CrearCuentas(txtempleado.Text, txtusuario.Text, txtcontraseña.Text, agregaruser.Checked, modificaruser.Checked, eliminaruser.Checked, consultaruser.Checked, agregarcobros.Checked, modificarcobros.Checked, consultarcobros.Checked, eliminarcobros.Checked, agregarpagos.Checked, modificarpagos.Checked, consultarpagos.Checked, eliminarpagos.Checked, chagregarfactura.Checked, chmodificarfacttura.Checked, chconsultarfactura.Checked, cheliminarfactura.Checked, chagregarclientes.Checked, chmodificarclientes.Checked, chconsultarclientes.Checked, cheliminarclientes.Checked, chagregarmercancia.Checked, chmodificarinventario.Checked, checonsultar.Checked, cheliminarmercancia.Checked) > 0)
+                if (UsuariosDAL.CrearCuentas(txtempleado.Text, txtusuario.Text, txtcontraseña.Text, agregaruser.Checked, modificaruser.Checked, eliminaruser.Checked, consultaruser.Checked, agregarcobros.Checked, modificarcobros.Checked, consultarcobros.Checked, eliminarcobros.Checked, agregarpagos.Checked, modificarpagos.Checked, consultarpagos.Checked, eliminarpagos.Checked, chagregarfactura.Checked, chmodificarfacttura.Checked, chconsultarfactura.Checked, cheliminarfactura.Checked, chagregarclientes.Checked, chmodificarclientes.Checked, chconsultarclientes.Checked, cheliminarclientes.Checked, chagregarmercancia.Checked, chmodificarinventario.Checked, checonsultar.Checked, cheliminarmercancia.Checked, chformusuarios.Checked, chformcobrar.Checked, chformpagar.Checked, chformfacturas.Checked, chformcliente.Checked, chforminventario.Checked) > 0)
                 {
                     MessageBox.Show("Cuenta creada con exito");
                 }

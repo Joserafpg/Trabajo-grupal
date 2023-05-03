@@ -237,7 +237,6 @@
             // chformcobrar
             // 
             this.chformcobrar.AutoSize = true;
-            this.chformcobrar.Enabled = false;
             this.chformcobrar.Location = new System.Drawing.Point(668, 230);
             this.chformcobrar.Name = "chformcobrar";
             this.chformcobrar.Size = new System.Drawing.Size(119, 25);
@@ -248,7 +247,6 @@
             // chformpagar
             // 
             this.chformpagar.AutoSize = true;
-            this.chformpagar.Enabled = false;
             this.chformpagar.Location = new System.Drawing.Point(668, 108);
             this.chformpagar.Name = "chformpagar";
             this.chformpagar.Size = new System.Drawing.Size(116, 25);
@@ -259,7 +257,6 @@
             // chformusuarios
             // 
             this.chformusuarios.AutoSize = true;
-            this.chformusuarios.Enabled = false;
             this.chformusuarios.Location = new System.Drawing.Point(535, 202);
             this.chformusuarios.Name = "chformusuarios";
             this.chformusuarios.Size = new System.Drawing.Size(129, 25);
@@ -270,7 +267,6 @@
             // chformfacturas
             // 
             this.chformfacturas.AutoSize = true;
-            this.chformfacturas.Enabled = false;
             this.chformfacturas.Location = new System.Drawing.Point(373, 202);
             this.chformfacturas.Name = "chformfacturas";
             this.chformfacturas.Size = new System.Drawing.Size(130, 25);
@@ -281,7 +277,6 @@
             // chformcliente
             // 
             this.chformcliente.AutoSize = true;
-            this.chformcliente.Enabled = false;
             this.chformcliente.Location = new System.Drawing.Point(242, 202);
             this.chformcliente.Name = "chformcliente";
             this.chformcliente.Size = new System.Drawing.Size(129, 25);
@@ -292,7 +287,6 @@
             // chforminventario
             // 
             this.chforminventario.AutoSize = true;
-            this.chforminventario.Enabled = false;
             this.chforminventario.Location = new System.Drawing.Point(16, 202);
             this.chforminventario.Name = "chforminventario";
             this.chforminventario.Size = new System.Drawing.Size(148, 25);

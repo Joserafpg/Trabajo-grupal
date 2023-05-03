@@ -30,7 +30,7 @@ namespace Trabajo_grupal
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String query = "select Id_Usuario, Empleado, Usuario, Contraseña, AgregarUSER, ModificarUSER, EliminarUSER, ConsultarUSER, AgregarCuentasCobrar, ModificarCuentascobrar, ConsultarCuentasCobrar, EliminarCuentasCobrar, AgregarCuentasPagar, ModificarCuentasPagar, ConsultarCuentasPagar, EliminarCuentasPagar, AgregarFACTURA, ModificarFACTURA, ConsultarFACTURA, EliminarFACTURA, AgregarCLIENTE, ModificSarCLIENTES, ConsultarCLIENTES, EliminarCLIENTES, AgregarINVENTARIO, ModificarINVENTARIO, ConsultarINVENTARIO, EliminarINVENTARIO from Usuarios where ";
+            String query = "select * from Usuarios where ";
 
             if (btnbuscar.Text != "")
             {

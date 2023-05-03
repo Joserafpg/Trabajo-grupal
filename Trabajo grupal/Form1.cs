@@ -66,7 +66,7 @@ namespace Trabajo_grupal
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-       
+
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -74,44 +74,6 @@ namespace Trabajo_grupal
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Permisos para el inventario//
-            btninventario.Enabled = Permisos.AgregarINVENTARIO;
-            btninventario.Enabled = Permisos.ModificarINVENTARIO;
-            btninventario.Enabled = Permisos.ConsultarINVENTARIO;
-            btninventario.Enabled = Permisos.EliminarFACTURA;
-
-            //Permisos para el clientes//
-            btnclientes.Enabled = Permisos.AgregarCLIENTE;
-            btnclientes.Enabled = Permisos.ModificSarCLIENTES;
-            btnclientes.Enabled = Permisos.ConsultarCLIENTES;
-            btnclientes.Enabled = Permisos.EliminarCLIENTES;
-
-            //Permisos para el factura//
-            btnfacturacion.Enabled = Permisos.AgregarFACTURA;
-            btnfacturacion.Enabled = Permisos.ModificarFACTURA;
-            btnfacturacion.Enabled = Permisos.ConsultarFACTURA;
-            btnfacturacion.Enabled = Permisos.EliminarFACTURA;
-
-            //Permisos para las cuentas x cobrar/pagar //
-            btnpagos.Enabled = Permisos.AgregarCuentasPagar;
-            btnpagos.Enabled = Permisos.ModificarCuentasPagar;
-            btnpagos.Enabled = Permisos.ConsultarCuentasPagar;
-            btnpagos.Enabled = Permisos.EliminarCuentasPagar;
-
-            btnpagos.Enabled = Permisos.AgregarCuentasCobrar;
-            btnpagos.Enabled = Permisos.ModificarCuentasCobrar;
-            btnpagos.Enabled = Permisos.ConsultarCuentasCobrar;
-            btnpagos.Enabled = Permisos.EliminarCuentasCobrar;
-
-            cuentasPorPagarToolStripMenuItem.Enabled = Permisos.AgregarCuentasPagar;
-            cuentasPorPagarToolStripMenuItem.Enabled = Permisos.ModificarCuentasPagar;
-            cuentasPorPagarToolStripMenuItem.Enabled = Permisos.ConsultarCuentasPagar;
-            cuentasPorPagarToolStripMenuItem.Enabled = Permisos.EliminarCuentasPagar;
-
-            cuentasPorCobrarToolStripMenuItem.Enabled = Permisos.AgregarCuentasCobrar;
-            cuentasPorCobrarToolStripMenuItem.Enabled = Permisos.ModificarCuentasCobrar;
-            cuentasPorCobrarToolStripMenuItem.Enabled = Permisos.ConsultarCuentasCobrar;
-            cuentasPorCobrarToolStripMenuItem.Enabled = Permisos.EliminarCuentasCobrar;
 
         }
 
@@ -128,7 +90,7 @@ namespace Trabajo_grupal
         /*Metodo CollapseMenu*/
         private void CollapseMenu()
         {
-            if (this.panelMenu.Width > 200) 
+            if (this.panelMenu.Width > 200)
             {
                 panelMenu.Width = 100;
                 btnlogoInicio.Visible = false;
@@ -158,7 +120,7 @@ namespace Trabajo_grupal
         //Metodo para cerrar el menu desplegable//
         private void CollapseMenuClose()
         {
-            if (this.panelMenu.Width > 200) 
+            if (this.panelMenu.Width > 200)
             {
                 panelMenu.Width = 100;
                 btnlogoInicio.Visible = false;
@@ -189,8 +151,8 @@ namespace Trabajo_grupal
             }
         }
 
-            //Metodo Abrir Formulario en el panel//
-            public void AbrirFormEnPanel(object Formhijo)
+        //Metodo Abrir Formulario en el panel//
+        public void AbrirFormEnPanel(object Formhijo)
         {
             if (this.panelDesktop.Controls.Count > 0)
                 this.panelDesktop.Controls.RemoveAt(0);
@@ -232,12 +194,12 @@ namespace Trabajo_grupal
         private void btnpagos_Click(object sender, EventArgs e)
         {
             CollapseMenuOpen();
-            dropDownMenu1.Show(btnpagos,btnpagos.Width, 0);
+            dropDownMenu1.Show(btnpagos, btnpagos.Width, 0);
         }
 
         private void panelDesktop_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
         }
 
         private void btnlogoInicio_Click(object sender, EventArgs e)

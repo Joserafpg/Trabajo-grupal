@@ -71,9 +71,9 @@ namespace Trabajo_grupal.Clases
                     pNuevoInventario.Cantidad = reader.GetInt32(4);
                     pNuevoInventario.Inv_Minimo = reader.GetInt32(5);
                     pNuevoInventario.Color_Producto = reader.GetString(6);
-                    pNuevoInventario.Precio_Compra = 
-                    pNuevoInventario.Precio_Venta = 
-                    pNuevoInventario.Precio_PorMayor = 
+                    pNuevoInventario.Precio_Compra = reader.GetString(7);
+                    pNuevoInventario.Precio_Venta = reader.GetString(8);
+                    pNuevoInventario.Precio_PorMayor = reader.GetString(9);
 
 
                     lista.Add(pNuevoInventario);
@@ -83,7 +83,7 @@ namespace Trabajo_grupal.Clases
             }
 
         }
-        public static Datosget ObtenerAlumnos(Int64 pId)
+        public static Datosget ObtenerNuevoInventario(Int64 pId)
         {
             Conexion.opoencon();
             {
@@ -100,9 +100,9 @@ namespace Trabajo_grupal.Clases
                     pNuevoInventario.Cantidad = reader.GetInt32(4);
                     pNuevoInventario.Inv_Minimo = reader.GetInt32(5);
                     pNuevoInventario.Color_Producto = reader.GetString(6);
-                    pNuevoInventario.Precio_Compra =
-                    pNuevoInventario.Precio_Venta =
-                    pNuevoInventario.Precio_PorMayor = 
+                    pNuevoInventario.Precio_Compra = reader.GetString(7);
+                    pNuevoInventario.Precio_Venta = reader.GetString(8);
+                    pNuevoInventario.Precio_PorMayor = reader.GetString(9);
 
                 }
                 Conexion.cerrarcon();

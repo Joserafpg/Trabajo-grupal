@@ -15,13 +15,13 @@ namespace Trabajo_grupal.Clases
         public int Cantidad { get; set; }
         public int Inv_Minimo { get; set; }
         public string Color_Producto { get; set; }
-        public SByte Precio_Compra { get; set; }
-        public SByte Precio_Venta { get; set; }
-        public SByte Precio_PorMayor { get; set; }
+        public string Precio_Compra { get; set; }
+        public string Precio_Venta { get; set; }
+        public string Precio_PorMayor { get; set; }
 
         public Datosget() { }
 
-        public Datosget(int pCodigo, string pNombre_Mercancia, string pDescripcion, string pTipo_Producto,  int pCantidad, int pInv_Minimo, string pColor_Producto,SByte Precio_Compra, SByte Precio_Venta, SByte Precio_PorMayor)
+        public Datosget(int pCodigo, string pNombre_Mercancia, string pDescripcion, string pTipo_Producto,  int pCantidad, int pInv_Minimo, string pColor_Producto, string Precio_Compra, string Precio_Venta, string Precio_PorMayor)
         {
             this.Codigo = pCodigo;
             this.Nombre_Mercancia = pNombre_Mercancia;

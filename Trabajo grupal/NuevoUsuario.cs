@@ -60,6 +60,18 @@ namespace Trabajo_grupal
         private void NuevoUsuario_Load(object sender, EventArgs e)
         {
             formpermiso.Visible = false;
+
+            if (chagregarmercancia.Checked || checonsultar.Checked || chmodificarinventario.Checked || cheliminarmercancia.Checked)
+            {
+                // Si al menos uno está marcado, marcar el checkbox maestro
+                chforminventario.Checked = true;
+            }
+            else
+            {
+                // Si no hay ninguno marcado, desmarcar el checkbox maestro
+                chforminventario.Checked = false;
+            }
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -211,6 +223,65 @@ namespace Trabajo_grupal
                     eliminaruser.Checked = false;
                     modificaruser.Checked = false;
                 }
+            }
+        }
+
+        private void cheliminarmercancia_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chagregarmercancia.Checked || checonsultar.Checked || chmodificarinventario.Checked || cheliminarmercancia.Checked)
+            {
+                // Si al menos uno está marcado, marcar el checkbox maestro
+                chforminventario.Checked = true;
+            }
+            else
+            {
+                // Si no hay ninguno marcado, desmarcar el checkbox maestro
+                chforminventario.Checked = false;
+            }
+        }
+
+        private void chmodificarinventario_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (chagregarmercancia.Checked || checonsultar.Checked || chmodificarinventario.Checked || cheliminarmercancia.Checked)
+            {
+                // Si al menos uno está marcado, marcar el checkbox maestro
+                chforminventario.Checked = true;
+            }
+            else
+            {
+                // Si no hay ninguno marcado, desmarcar el checkbox maestro
+                chforminventario.Checked = false;
+            }
+
+        }
+
+        private void checonsultar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chagregarmercancia.Checked || checonsultar.Checked || chmodificarinventario.Checked || cheliminarmercancia.Checked)
+            {
+                // Si al menos uno está marcado, marcar el checkbox maestro
+                chforminventario.Checked = true;
+            }
+            else
+            {
+                // Si no hay ninguno marcado, desmarcar el checkbox maestro
+                chforminventario.Checked = false;
+            }
+        }
+
+        private void chagregarmercancia_CheckedChanged(object sender, EventArgs e)
+        {
+            // Verificar si al menos un checkbox está marcado
+            if (chagregarmercancia.Checked || checonsultar.Checked || chmodificarinventario.Checked || cheliminarmercancia.Checked)
+            {
+                // Si al menos uno está marcado, marcar el checkbox maestro
+                chforminventario.Checked = true;
+            }
+            else
+            {
+                // Si no hay ninguno marcado, desmarcar el checkbox maestro
+                chforminventario.Checked = false;
             }
         }
     }

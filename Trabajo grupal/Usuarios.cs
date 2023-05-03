@@ -25,7 +25,7 @@ namespace Trabajo_grupal
 
         private void Usuarios_Load(object sender, EventArgs e)
         {
-
+            btnbuscar.PerformClick();
         }
 
         private void button1_Click(object sender, EventArgs e)

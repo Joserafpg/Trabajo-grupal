@@ -38,6 +38,20 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.formpermiso = new System.Windows.Forms.Panel();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.chforminventario = new System.Windows.Forms.CheckBox();
+            this.consultarcobros = new System.Windows.Forms.CheckBox();
+            this.eliminarcobros = new System.Windows.Forms.CheckBox();
+            this.modificarcobros = new System.Windows.Forms.CheckBox();
+            this.agregarcobros = new System.Windows.Forms.CheckBox();
+            this.consultarpagos = new System.Windows.Forms.CheckBox();
+            this.eliminarpagos = new System.Windows.Forms.CheckBox();
+            this.modificarpagos = new System.Windows.Forms.CheckBox();
+            this.agregarpagos = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnguardar = new System.Windows.Forms.Button();
@@ -69,14 +83,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnusuarios = new System.Windows.Forms.Button();
             this.btnchange = new System.Windows.Forms.Button();
-            this.consultarpagos = new System.Windows.Forms.CheckBox();
-            this.eliminarpagos = new System.Windows.Forms.CheckBox();
-            this.modificarpagos = new System.Windows.Forms.CheckBox();
-            this.agregarpagos = new System.Windows.Forms.CheckBox();
-            this.consultarcobros = new System.Windows.Forms.CheckBox();
-            this.eliminarcobros = new System.Windows.Forms.CheckBox();
-            this.modificarcobros = new System.Windows.Forms.CheckBox();
-            this.agregarcobros = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.formpermiso.SuspendLayout();
@@ -182,6 +188,12 @@
             // 
             // formpermiso
             // 
+            this.formpermiso.Controls.Add(this.checkBox6);
+            this.formpermiso.Controls.Add(this.checkBox5);
+            this.formpermiso.Controls.Add(this.checkBox4);
+            this.formpermiso.Controls.Add(this.checkBox3);
+            this.formpermiso.Controls.Add(this.checkBox2);
+            this.formpermiso.Controls.Add(this.chforminventario);
             this.formpermiso.Controls.Add(this.consultarcobros);
             this.formpermiso.Controls.Add(this.eliminarcobros);
             this.formpermiso.Controls.Add(this.modificarcobros);
@@ -221,6 +233,154 @@
             this.formpermiso.Name = "formpermiso";
             this.formpermiso.Size = new System.Drawing.Size(845, 364);
             this.formpermiso.TabIndex = 12;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(668, 230);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(119, 25);
+            this.checkBox6.TabIndex = 74;
+            this.checkBox6.Text = "Formcobrar";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(668, 108);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(116, 25);
+            this.checkBox5.TabIndex = 73;
+            this.checkBox5.Text = "Formpagar";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(535, 202);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(129, 25);
+            this.checkBox4.TabIndex = 72;
+            this.checkBox4.Text = "FormUsuarios";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(373, 202);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(130, 25);
+            this.checkBox3.TabIndex = 71;
+            this.checkBox3.Text = "FomFacturas";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(242, 202);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(129, 25);
+            this.checkBox2.TabIndex = 70;
+            this.checkBox2.Text = "FormClientes";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // chforminventario
+            // 
+            this.chforminventario.AutoSize = true;
+            this.chforminventario.Location = new System.Drawing.Point(16, 202);
+            this.chforminventario.Name = "chforminventario";
+            this.chforminventario.Size = new System.Drawing.Size(148, 25);
+            this.chforminventario.TabIndex = 69;
+            this.chforminventario.Text = "FormInventario";
+            this.chforminventario.UseVisualStyleBackColor = true;
+            // 
+            // consultarcobros
+            // 
+            this.consultarcobros.AutoSize = true;
+            this.consultarcobros.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.consultarcobros.Location = new System.Drawing.Point(751, 172);
+            this.consultarcobros.Name = "consultarcobros";
+            this.consultarcobros.Size = new System.Drawing.Size(93, 23);
+            this.consultarcobros.TabIndex = 68;
+            this.consultarcobros.Text = "Consultar";
+            this.consultarcobros.UseVisualStyleBackColor = true;
+            // 
+            // eliminarcobros
+            // 
+            this.eliminarcobros.AutoSize = true;
+            this.eliminarcobros.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.eliminarcobros.Location = new System.Drawing.Point(764, 202);
+            this.eliminarcobros.Name = "eliminarcobros";
+            this.eliminarcobros.Size = new System.Drawing.Size(81, 23);
+            this.eliminarcobros.TabIndex = 67;
+            this.eliminarcobros.Text = "Eliminar";
+            this.eliminarcobros.UseVisualStyleBackColor = true;
+            // 
+            // modificarcobros
+            // 
+            this.modificarcobros.AutoSize = true;
+            this.modificarcobros.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.modificarcobros.Location = new System.Drawing.Point(668, 201);
+            this.modificarcobros.Name = "modificarcobros";
+            this.modificarcobros.Size = new System.Drawing.Size(93, 23);
+            this.modificarcobros.TabIndex = 66;
+            this.modificarcobros.Text = "Modificar";
+            this.modificarcobros.UseVisualStyleBackColor = true;
+            // 
+            // agregarcobros
+            // 
+            this.agregarcobros.AutoSize = true;
+            this.agregarcobros.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.agregarcobros.Location = new System.Drawing.Point(668, 172);
+            this.agregarcobros.Name = "agregarcobros";
+            this.agregarcobros.Size = new System.Drawing.Size(82, 23);
+            this.agregarcobros.TabIndex = 65;
+            this.agregarcobros.Text = "Agregar";
+            this.agregarcobros.UseVisualStyleBackColor = true;
+            // 
+            // consultarpagos
+            // 
+            this.consultarpagos.AutoSize = true;
+            this.consultarpagos.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.consultarpagos.Location = new System.Drawing.Point(751, 54);
+            this.consultarpagos.Name = "consultarpagos";
+            this.consultarpagos.Size = new System.Drawing.Size(93, 23);
+            this.consultarpagos.TabIndex = 64;
+            this.consultarpagos.Text = "Consultar";
+            this.consultarpagos.UseVisualStyleBackColor = true;
+            // 
+            // eliminarpagos
+            // 
+            this.eliminarpagos.AutoSize = true;
+            this.eliminarpagos.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.eliminarpagos.Location = new System.Drawing.Point(764, 84);
+            this.eliminarpagos.Name = "eliminarpagos";
+            this.eliminarpagos.Size = new System.Drawing.Size(81, 23);
+            this.eliminarpagos.TabIndex = 63;
+            this.eliminarpagos.Text = "Eliminar";
+            this.eliminarpagos.UseVisualStyleBackColor = true;
+            // 
+            // modificarpagos
+            // 
+            this.modificarpagos.AutoSize = true;
+            this.modificarpagos.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.modificarpagos.Location = new System.Drawing.Point(668, 83);
+            this.modificarpagos.Name = "modificarpagos";
+            this.modificarpagos.Size = new System.Drawing.Size(93, 23);
+            this.modificarpagos.TabIndex = 62;
+            this.modificarpagos.Text = "Modificar";
+            this.modificarpagos.UseVisualStyleBackColor = true;
+            // 
+            // agregarpagos
+            // 
+            this.agregarpagos.AutoSize = true;
+            this.agregarpagos.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.agregarpagos.Location = new System.Drawing.Point(668, 54);
+            this.agregarpagos.Name = "agregarpagos";
+            this.agregarpagos.Size = new System.Drawing.Size(82, 23);
+            this.agregarpagos.TabIndex = 61;
+            this.agregarpagos.Text = "Agregar";
+            this.agregarpagos.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -273,12 +433,13 @@
             this.cheliminarmercancia.TabIndex = 46;
             this.cheliminarmercancia.Text = "Eliminar mercancia";
             this.cheliminarmercancia.UseVisualStyleBackColor = true;
+            this.cheliminarmercancia.CheckedChanged += new System.EventHandler(this.cheliminarmercancia_CheckedChanged);
             // 
             // modificaruser
             // 
             this.modificaruser.AutoSize = true;
             this.modificaruser.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.modificaruser.Location = new System.Drawing.Point(550, 134);
+            this.modificaruser.Location = new System.Drawing.Point(535, 134);
             this.modificaruser.Name = "modificaruser";
             this.modificaruser.Size = new System.Drawing.Size(93, 23);
             this.modificaruser.TabIndex = 45;
@@ -330,7 +491,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(547, 17);
+            this.label6.Location = new System.Drawing.Point(532, 17);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 21);
             this.label6.TabIndex = 40;
@@ -340,7 +501,7 @@
             // 
             this.eliminaruser.AutoSize = true;
             this.eliminaruser.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.eliminaruser.Location = new System.Drawing.Point(551, 172);
+            this.eliminaruser.Location = new System.Drawing.Point(536, 172);
             this.eliminaruser.Name = "eliminaruser";
             this.eliminaruser.Size = new System.Drawing.Size(81, 23);
             this.eliminaruser.TabIndex = 39;
@@ -351,7 +512,7 @@
             // 
             this.agregaruser.AutoSize = true;
             this.agregaruser.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.agregaruser.Location = new System.Drawing.Point(550, 59);
+            this.agregaruser.Location = new System.Drawing.Point(535, 59);
             this.agregaruser.Name = "agregaruser";
             this.agregaruser.Size = new System.Drawing.Size(82, 23);
             this.agregaruser.TabIndex = 37;
@@ -362,7 +523,7 @@
             // 
             this.consultaruser.AutoSize = true;
             this.consultaruser.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.consultaruser.Location = new System.Drawing.Point(550, 96);
+            this.consultaruser.Location = new System.Drawing.Point(535, 96);
             this.consultaruser.Name = "consultaruser";
             this.consultaruser.Size = new System.Drawing.Size(93, 23);
             this.consultaruser.TabIndex = 38;
@@ -430,6 +591,7 @@
             this.chagregarclientes.TabIndex = 31;
             this.chagregarclientes.Text = "Agregar";
             this.chagregarclientes.UseVisualStyleBackColor = true;
+            this.chagregarclientes.CheckedChanged += new System.EventHandler(this.chagregarclientes_CheckedChanged);
             // 
             // chmodificarclientes
             // 
@@ -472,6 +634,7 @@
             this.chmodificarinventario.TabIndex = 27;
             this.chmodificarinventario.Text = "Modificar inventario";
             this.chmodificarinventario.UseVisualStyleBackColor = true;
+            this.chmodificarinventario.CheckedChanged += new System.EventHandler(this.chmodificarinventario_CheckedChanged);
             // 
             // chagregarmercancia
             // 
@@ -483,6 +646,7 @@
             this.chagregarmercancia.TabIndex = 25;
             this.chagregarmercancia.Text = "Agregar mercancia";
             this.chagregarmercancia.UseVisualStyleBackColor = true;
+            this.chagregarmercancia.CheckedChanged += new System.EventHandler(this.chagregarmercancia_CheckedChanged);
             // 
             // checonsultar
             // 
@@ -494,6 +658,7 @@
             this.checonsultar.TabIndex = 26;
             this.checonsultar.Text = "Ver reportes de existencia";
             this.checonsultar.UseVisualStyleBackColor = true;
+            this.checonsultar.CheckedChanged += new System.EventHandler(this.checonsultar_CheckedChanged);
             // 
             // txtempleado
             // 
@@ -548,94 +713,6 @@
             this.btnchange.Text = "Aceptar";
             this.btnchange.UseVisualStyleBackColor = true;
             this.btnchange.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // consultarpagos
-            // 
-            this.consultarpagos.AutoSize = true;
-            this.consultarpagos.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.consultarpagos.Location = new System.Drawing.Point(751, 54);
-            this.consultarpagos.Name = "consultarpagos";
-            this.consultarpagos.Size = new System.Drawing.Size(93, 23);
-            this.consultarpagos.TabIndex = 64;
-            this.consultarpagos.Text = "Consultar";
-            this.consultarpagos.UseVisualStyleBackColor = true;
-            // 
-            // eliminarpagos
-            // 
-            this.eliminarpagos.AutoSize = true;
-            this.eliminarpagos.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.eliminarpagos.Location = new System.Drawing.Point(764, 84);
-            this.eliminarpagos.Name = "eliminarpagos";
-            this.eliminarpagos.Size = new System.Drawing.Size(81, 23);
-            this.eliminarpagos.TabIndex = 63;
-            this.eliminarpagos.Text = "Eliminar";
-            this.eliminarpagos.UseVisualStyleBackColor = true;
-            // 
-            // modificarpagos
-            // 
-            this.modificarpagos.AutoSize = true;
-            this.modificarpagos.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.modificarpagos.Location = new System.Drawing.Point(668, 83);
-            this.modificarpagos.Name = "modificarpagos";
-            this.modificarpagos.Size = new System.Drawing.Size(93, 23);
-            this.modificarpagos.TabIndex = 62;
-            this.modificarpagos.Text = "Modificar";
-            this.modificarpagos.UseVisualStyleBackColor = true;
-            // 
-            // agregarpagos
-            // 
-            this.agregarpagos.AutoSize = true;
-            this.agregarpagos.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.agregarpagos.Location = new System.Drawing.Point(668, 54);
-            this.agregarpagos.Name = "agregarpagos";
-            this.agregarpagos.Size = new System.Drawing.Size(82, 23);
-            this.agregarpagos.TabIndex = 61;
-            this.agregarpagos.Text = "Agregar";
-            this.agregarpagos.UseVisualStyleBackColor = true;
-            // 
-            // consultarcobros
-            // 
-            this.consultarcobros.AutoSize = true;
-            this.consultarcobros.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.consultarcobros.Location = new System.Drawing.Point(751, 172);
-            this.consultarcobros.Name = "consultarcobros";
-            this.consultarcobros.Size = new System.Drawing.Size(93, 23);
-            this.consultarcobros.TabIndex = 68;
-            this.consultarcobros.Text = "Consultar";
-            this.consultarcobros.UseVisualStyleBackColor = true;
-            // 
-            // eliminarcobros
-            // 
-            this.eliminarcobros.AutoSize = true;
-            this.eliminarcobros.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.eliminarcobros.Location = new System.Drawing.Point(764, 202);
-            this.eliminarcobros.Name = "eliminarcobros";
-            this.eliminarcobros.Size = new System.Drawing.Size(81, 23);
-            this.eliminarcobros.TabIndex = 67;
-            this.eliminarcobros.Text = "Eliminar";
-            this.eliminarcobros.UseVisualStyleBackColor = true;
-            // 
-            // modificarcobros
-            // 
-            this.modificarcobros.AutoSize = true;
-            this.modificarcobros.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.modificarcobros.Location = new System.Drawing.Point(668, 201);
-            this.modificarcobros.Name = "modificarcobros";
-            this.modificarcobros.Size = new System.Drawing.Size(93, 23);
-            this.modificarcobros.TabIndex = 66;
-            this.modificarcobros.Text = "Modificar";
-            this.modificarcobros.UseVisualStyleBackColor = true;
-            // 
-            // agregarcobros
-            // 
-            this.agregarcobros.AutoSize = true;
-            this.agregarcobros.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.agregarcobros.Location = new System.Drawing.Point(668, 172);
-            this.agregarcobros.Name = "agregarcobros";
-            this.agregarcobros.Size = new System.Drawing.Size(82, 23);
-            this.agregarcobros.TabIndex = 65;
-            this.agregarcobros.Text = "Agregar";
-            this.agregarcobros.UseVisualStyleBackColor = true;
             // 
             // NuevoUsuario
             // 
@@ -709,5 +786,11 @@
         private System.Windows.Forms.CheckBox eliminarpagos;
         private System.Windows.Forms.CheckBox modificarpagos;
         private System.Windows.Forms.CheckBox agregarpagos;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox chforminventario;
     }
 }

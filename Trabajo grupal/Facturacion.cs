@@ -42,6 +42,8 @@ namespace Trabajo_grupal
             btnagregarmanual.Enabled = Permisos.AgregarFACTURA;
 
             btnconsultar.Enabled = Permisos.ConsultarFACTURA;
+            btnconsultar.Enabled = Permisos.ModificarFACTURA;
+            btnconsultar.Enabled = Permisos.EliminarFACTURA;
         }
     }
 }

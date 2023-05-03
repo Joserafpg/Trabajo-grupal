@@ -57,21 +57,34 @@ namespace Trabajo_grupal
             modificaruser.Checked = false;
         }
 
+        void CheckboxInventario()
+        {
+            if (chagregarmercancia.Checked || checonsultar.Checked || chmodificarinventario.Checked || cheliminarmercancia.Checked)
+            {
+                chforminventario.Checked = true;
+            }
+
+            else
+            {
+                chforminventario.Checked = false;
+            }
+        }
+        void CheckboxClientes()
+        {
+            if (chagregarclientes.Checked || chconsultarclientes.Checked || chmodificarclientes.Checked || cheliminarclientes.Checked)
+            {
+                chformcliente.Checked = true;
+            }
+
+            else
+            {
+                chformcliente.Checked = false;
+            }
+        }
+
         private void NuevoUsuario_Load(object sender, EventArgs e)
         {
             formpermiso.Visible = false;
-
-            if (chagregarmercancia.Checked || checonsultar.Checked || chmodificarinventario.Checked || cheliminarmercancia.Checked)
-            {
-                // Si al menos uno está marcado, marcar el checkbox maestro
-                chforminventario.Checked = true;
-            }
-            else
-            {
-                // Si no hay ninguno marcado, desmarcar el checkbox maestro
-                chforminventario.Checked = false;
-            }
-
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -228,61 +241,70 @@ namespace Trabajo_grupal
 
         private void cheliminarmercancia_CheckedChanged(object sender, EventArgs e)
         {
-            if (chagregarmercancia.Checked || checonsultar.Checked || chmodificarinventario.Checked || cheliminarmercancia.Checked)
-            {
-                // Si al menos uno está marcado, marcar el checkbox maestro
-                chforminventario.Checked = true;
-            }
-            else
-            {
-                // Si no hay ninguno marcado, desmarcar el checkbox maestro
-                chforminventario.Checked = false;
-            }
+            CheckboxInventario();
         }
 
         private void chmodificarinventario_CheckedChanged(object sender, EventArgs e)
         {
-
-            if (chagregarmercancia.Checked || checonsultar.Checked || chmodificarinventario.Checked || cheliminarmercancia.Checked)
-            {
-                // Si al menos uno está marcado, marcar el checkbox maestro
-                chforminventario.Checked = true;
-            }
-            else
-            {
-                // Si no hay ninguno marcado, desmarcar el checkbox maestro
-                chforminventario.Checked = false;
-            }
-
+            CheckboxInventario();
         }
 
         private void checonsultar_CheckedChanged(object sender, EventArgs e)
         {
-            if (chagregarmercancia.Checked || checonsultar.Checked || chmodificarinventario.Checked || cheliminarmercancia.Checked)
-            {
-                // Si al menos uno está marcado, marcar el checkbox maestro
-                chforminventario.Checked = true;
-            }
-            else
-            {
-                // Si no hay ninguno marcado, desmarcar el checkbox maestro
-                chforminventario.Checked = false;
-            }
+            CheckboxInventario();
         }
 
         private void chagregarmercancia_CheckedChanged(object sender, EventArgs e)
         {
-            // Verificar si al menos un checkbox está marcado
-            if (chagregarmercancia.Checked || checonsultar.Checked || chmodificarinventario.Checked || cheliminarmercancia.Checked)
+            CheckboxInventario();
+        }
+
+        private void chagregarclientes_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxClientes();
+        }
+
+        private void chconsultarclientes_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxClientes();
+        }
+
+        private void chmodificarclientes_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxClientes();
+        }
+
+        private void cheliminarclientes_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxClientes();
+        }
+
+        private void chagregarfactura_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chagregarfactura.Checked || chconsultarfactura.Checked || chmodificarfacttura.Checked || cheliminarfactura.Checked)
             {
-                // Si al menos uno está marcado, marcar el checkbox maestro
-                chforminventario.Checked = true;
+                chformfacturas.Checked = true;
             }
+
             else
             {
-                // Si no hay ninguno marcado, desmarcar el checkbox maestro
-                chforminventario.Checked = false;
+                chformfacturas.Checked = false;
             }
+        }
+
+        private void chconsultarfactura_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void chmodificarfacttura_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cheliminarfactura_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

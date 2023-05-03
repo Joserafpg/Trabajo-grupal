@@ -38,11 +38,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.formpermiso = new System.Windows.Forms.Panel();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.chformcobrar = new System.Windows.Forms.CheckBox();
+            this.chformpagar = new System.Windows.Forms.CheckBox();
+            this.chformusuarios = new System.Windows.Forms.CheckBox();
+            this.chformfacturas = new System.Windows.Forms.CheckBox();
+            this.chformcliente = new System.Windows.Forms.CheckBox();
             this.chforminventario = new System.Windows.Forms.CheckBox();
             this.consultarcobros = new System.Windows.Forms.CheckBox();
             this.eliminarcobros = new System.Windows.Forms.CheckBox();
@@ -188,11 +188,11 @@
             // 
             // formpermiso
             // 
-            this.formpermiso.Controls.Add(this.checkBox6);
-            this.formpermiso.Controls.Add(this.checkBox5);
-            this.formpermiso.Controls.Add(this.checkBox4);
-            this.formpermiso.Controls.Add(this.checkBox3);
-            this.formpermiso.Controls.Add(this.checkBox2);
+            this.formpermiso.Controls.Add(this.chformcobrar);
+            this.formpermiso.Controls.Add(this.chformpagar);
+            this.formpermiso.Controls.Add(this.chformusuarios);
+            this.formpermiso.Controls.Add(this.chformfacturas);
+            this.formpermiso.Controls.Add(this.chformcliente);
             this.formpermiso.Controls.Add(this.chforminventario);
             this.formpermiso.Controls.Add(this.consultarcobros);
             this.formpermiso.Controls.Add(this.eliminarcobros);
@@ -234,55 +234,55 @@
             this.formpermiso.Size = new System.Drawing.Size(845, 364);
             this.formpermiso.TabIndex = 12;
             // 
-            // checkBox6
+            // chformcobrar
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(668, 230);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(119, 25);
-            this.checkBox6.TabIndex = 74;
-            this.checkBox6.Text = "Formcobrar";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.chformcobrar.AutoSize = true;
+            this.chformcobrar.Location = new System.Drawing.Point(668, 230);
+            this.chformcobrar.Name = "chformcobrar";
+            this.chformcobrar.Size = new System.Drawing.Size(119, 25);
+            this.chformcobrar.TabIndex = 74;
+            this.chformcobrar.Text = "Formcobrar";
+            this.chformcobrar.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // chformpagar
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(668, 108);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(116, 25);
-            this.checkBox5.TabIndex = 73;
-            this.checkBox5.Text = "Formpagar";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chformpagar.AutoSize = true;
+            this.chformpagar.Location = new System.Drawing.Point(668, 108);
+            this.chformpagar.Name = "chformpagar";
+            this.chformpagar.Size = new System.Drawing.Size(116, 25);
+            this.chformpagar.TabIndex = 73;
+            this.chformpagar.Text = "Formpagar";
+            this.chformpagar.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // chformusuarios
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(535, 202);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(129, 25);
-            this.checkBox4.TabIndex = 72;
-            this.checkBox4.Text = "FormUsuarios";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chformusuarios.AutoSize = true;
+            this.chformusuarios.Location = new System.Drawing.Point(535, 202);
+            this.chformusuarios.Name = "chformusuarios";
+            this.chformusuarios.Size = new System.Drawing.Size(129, 25);
+            this.chformusuarios.TabIndex = 72;
+            this.chformusuarios.Text = "FormUsuarios";
+            this.chformusuarios.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // chformfacturas
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(373, 202);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(130, 25);
-            this.checkBox3.TabIndex = 71;
-            this.checkBox3.Text = "FomFacturas";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chformfacturas.AutoSize = true;
+            this.chformfacturas.Location = new System.Drawing.Point(373, 202);
+            this.chformfacturas.Name = "chformfacturas";
+            this.chformfacturas.Size = new System.Drawing.Size(130, 25);
+            this.chformfacturas.TabIndex = 71;
+            this.chformfacturas.Text = "FomFacturas";
+            this.chformfacturas.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chformcliente
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(242, 202);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(129, 25);
-            this.checkBox2.TabIndex = 70;
-            this.checkBox2.Text = "FormClientes";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chformcliente.AutoSize = true;
+            this.chformcliente.Location = new System.Drawing.Point(242, 202);
+            this.chformcliente.Name = "chformcliente";
+            this.chformcliente.Size = new System.Drawing.Size(129, 25);
+            this.chformcliente.TabIndex = 70;
+            this.chformcliente.Text = "FormClientes";
+            this.chformcliente.UseVisualStyleBackColor = true;
             // 
             // chforminventario
             // 
@@ -422,6 +422,7 @@
             this.cheliminarfactura.TabIndex = 47;
             this.cheliminarfactura.Text = "Eliminar factura ";
             this.cheliminarfactura.UseVisualStyleBackColor = true;
+            this.cheliminarfactura.CheckedChanged += new System.EventHandler(this.cheliminarfactura_CheckedChanged);
             // 
             // cheliminarmercancia
             // 
@@ -456,6 +457,7 @@
             this.chconsultarclientes.TabIndex = 44;
             this.chconsultarclientes.Text = "Consultar";
             this.chconsultarclientes.UseVisualStyleBackColor = true;
+            this.chconsultarclientes.CheckedChanged += new System.EventHandler(this.chconsultarclientes_CheckedChanged);
             // 
             // chCajero
             // 
@@ -549,6 +551,7 @@
             this.chmodificarfacttura.TabIndex = 35;
             this.chmodificarfacttura.Text = "Modificar factura ";
             this.chmodificarfacttura.UseVisualStyleBackColor = true;
+            this.chmodificarfacttura.CheckedChanged += new System.EventHandler(this.chmodificarfacttura_CheckedChanged);
             // 
             // chagregarfactura
             // 
@@ -560,6 +563,7 @@
             this.chagregarfactura.TabIndex = 33;
             this.chagregarfactura.Text = "Facturar";
             this.chagregarfactura.UseVisualStyleBackColor = true;
+            this.chagregarfactura.CheckedChanged += new System.EventHandler(this.chagregarfactura_CheckedChanged);
             // 
             // chconsultarfactura
             // 
@@ -571,6 +575,7 @@
             this.chconsultarfactura.TabIndex = 34;
             this.chconsultarfactura.Text = "Consultar factura ";
             this.chconsultarfactura.UseVisualStyleBackColor = true;
+            this.chconsultarfactura.CheckedChanged += new System.EventHandler(this.chconsultarfactura_CheckedChanged);
             // 
             // label8
             // 
@@ -603,6 +608,7 @@
             this.chmodificarclientes.TabIndex = 29;
             this.chmodificarclientes.Text = "Modificar";
             this.chmodificarclientes.UseVisualStyleBackColor = true;
+            this.chmodificarclientes.CheckedChanged += new System.EventHandler(this.chmodificarclientes_CheckedChanged);
             // 
             // cheliminarclientes
             // 
@@ -614,6 +620,7 @@
             this.cheliminarclientes.TabIndex = 30;
             this.cheliminarclientes.Text = "Eliminar";
             this.cheliminarclientes.UseVisualStyleBackColor = true;
+            this.cheliminarclientes.CheckedChanged += new System.EventHandler(this.cheliminarclientes_CheckedChanged);
             // 
             // label9
             // 
@@ -786,11 +793,11 @@
         private System.Windows.Forms.CheckBox eliminarpagos;
         private System.Windows.Forms.CheckBox modificarpagos;
         private System.Windows.Forms.CheckBox agregarpagos;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox chformcobrar;
+        private System.Windows.Forms.CheckBox chformpagar;
+        private System.Windows.Forms.CheckBox chformusuarios;
+        private System.Windows.Forms.CheckBox chformfacturas;
+        private System.Windows.Forms.CheckBox chformcliente;
         private System.Windows.Forms.CheckBox chforminventario;
     }
 }

@@ -69,6 +69,7 @@ namespace Trabajo_grupal
                 chforminventario.Checked = false;
             }
         }
+
         void CheckboxClientes()
         {
             if (chagregarclientes.Checked || chconsultarclientes.Checked || chmodificarclientes.Checked || cheliminarclientes.Checked)
@@ -79,6 +80,58 @@ namespace Trabajo_grupal
             else
             {
                 chformcliente.Checked = false;
+            }
+        }
+
+        void CheckboxFactura()
+        {
+            if (chagregarfactura.Checked || chconsultarfactura.Checked || chmodificarfacttura.Checked || cheliminarfactura.Checked)
+            {
+                chformfacturas.Checked = true;
+            }
+
+            else
+            {
+                chformfacturas.Checked = false;
+            }
+        }
+        
+        void CheckboxUsuarios()
+        {
+            if (agregaruser.Checked || consultaruser.Checked || modificaruser.Checked || eliminaruser.Checked)
+            {
+                chformusuarios.Checked = true;
+            }
+
+            else
+            {
+                chformusuarios.Checked = false;
+            }
+        }
+        
+        void CheckboxCuentasPagar()
+        {
+            if (agregarpagos.Checked || consultarpagos.Checked || modificarpagos.Checked || eliminarpagos.Checked)
+            {
+                chformpagar.Checked = true;
+            }
+
+            else
+            {
+                chformpagar.Checked = false;
+            }
+        }
+        
+        void CheckboxCuentasCobra()
+        {
+            if (agregarcobros.Checked || consultarcobros.Checked || modificarcobros.Checked || eliminarcobros.Checked)
+            {
+                chformcobrar.Checked = true;
+            }
+
+            else
+            {
+                chformcobrar.Checked = false;
             }
         }
 
@@ -281,30 +334,82 @@ namespace Trabajo_grupal
 
         private void chagregarfactura_CheckedChanged(object sender, EventArgs e)
         {
-            if (chagregarfactura.Checked || chconsultarfactura.Checked || chmodificarfacttura.Checked || cheliminarfactura.Checked)
-            {
-                chformfacturas.Checked = true;
-            }
-
-            else
-            {
-                chformfacturas.Checked = false;
-            }
+            CheckboxFactura();
         }
 
         private void chconsultarfactura_CheckedChanged(object sender, EventArgs e)
         {
-            
+            CheckboxFactura();
         }
 
         private void chmodificarfacttura_CheckedChanged(object sender, EventArgs e)
         {
-
+            CheckboxFactura();
         }
 
         private void cheliminarfactura_CheckedChanged(object sender, EventArgs e)
         {
+            CheckboxFactura();
+        }
 
+        private void agregaruser_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxUsuarios();
+        }
+
+        private void consultaruser_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxUsuarios();
+        }
+
+        private void modificaruser_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxUsuarios();
+        }
+
+        private void eliminaruser_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxUsuarios();
+        }
+
+        private void agregarpagos_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxCuentasPagar();
+        }
+
+        private void modificarpagos_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxCuentasPagar();
+        }
+
+        private void eliminarpagos_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxCuentasPagar();
+        }
+
+        private void consultarpagos_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxCuentasPagar();
+        }
+
+        private void agregarcobros_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxCuentasCobra();
+        }
+
+        private void consultarcobros_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxCuentasCobra();
+        }
+
+        private void modificarcobros_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxCuentasCobra();
+        }
+
+        private void eliminarcobros_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckboxCuentasCobra();
         }
     }
 }

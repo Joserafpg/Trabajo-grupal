@@ -237,6 +237,7 @@
             // chformcobrar
             // 
             this.chformcobrar.AutoSize = true;
+            this.chformcobrar.Enabled = false;
             this.chformcobrar.Location = new System.Drawing.Point(668, 230);
             this.chformcobrar.Name = "chformcobrar";
             this.chformcobrar.Size = new System.Drawing.Size(119, 25);
@@ -247,6 +248,7 @@
             // chformpagar
             // 
             this.chformpagar.AutoSize = true;
+            this.chformpagar.Enabled = false;
             this.chformpagar.Location = new System.Drawing.Point(668, 108);
             this.chformpagar.Name = "chformpagar";
             this.chformpagar.Size = new System.Drawing.Size(116, 25);
@@ -257,6 +259,7 @@
             // chformusuarios
             // 
             this.chformusuarios.AutoSize = true;
+            this.chformusuarios.Enabled = false;
             this.chformusuarios.Location = new System.Drawing.Point(535, 202);
             this.chformusuarios.Name = "chformusuarios";
             this.chformusuarios.Size = new System.Drawing.Size(129, 25);
@@ -267,6 +270,7 @@
             // chformfacturas
             // 
             this.chformfacturas.AutoSize = true;
+            this.chformfacturas.Enabled = false;
             this.chformfacturas.Location = new System.Drawing.Point(373, 202);
             this.chformfacturas.Name = "chformfacturas";
             this.chformfacturas.Size = new System.Drawing.Size(130, 25);
@@ -277,6 +281,7 @@
             // chformcliente
             // 
             this.chformcliente.AutoSize = true;
+            this.chformcliente.Enabled = false;
             this.chformcliente.Location = new System.Drawing.Point(242, 202);
             this.chformcliente.Name = "chformcliente";
             this.chformcliente.Size = new System.Drawing.Size(129, 25);
@@ -287,6 +292,7 @@
             // chforminventario
             // 
             this.chforminventario.AutoSize = true;
+            this.chforminventario.Enabled = false;
             this.chforminventario.Location = new System.Drawing.Point(16, 202);
             this.chforminventario.Name = "chforminventario";
             this.chforminventario.Size = new System.Drawing.Size(148, 25);
@@ -304,6 +310,7 @@
             this.consultarcobros.TabIndex = 68;
             this.consultarcobros.Text = "Consultar";
             this.consultarcobros.UseVisualStyleBackColor = true;
+            this.consultarcobros.CheckedChanged += new System.EventHandler(this.consultarcobros_CheckedChanged);
             // 
             // eliminarcobros
             // 
@@ -315,6 +322,7 @@
             this.eliminarcobros.TabIndex = 67;
             this.eliminarcobros.Text = "Eliminar";
             this.eliminarcobros.UseVisualStyleBackColor = true;
+            this.eliminarcobros.CheckedChanged += new System.EventHandler(this.eliminarcobros_CheckedChanged);
             // 
             // modificarcobros
             // 
@@ -326,6 +334,7 @@
             this.modificarcobros.TabIndex = 66;
             this.modificarcobros.Text = "Modificar";
             this.modificarcobros.UseVisualStyleBackColor = true;
+            this.modificarcobros.CheckedChanged += new System.EventHandler(this.modificarcobros_CheckedChanged);
             // 
             // agregarcobros
             // 
@@ -337,6 +346,7 @@
             this.agregarcobros.TabIndex = 65;
             this.agregarcobros.Text = "Agregar";
             this.agregarcobros.UseVisualStyleBackColor = true;
+            this.agregarcobros.CheckedChanged += new System.EventHandler(this.agregarcobros_CheckedChanged);
             // 
             // consultarpagos
             // 
@@ -348,6 +358,7 @@
             this.consultarpagos.TabIndex = 64;
             this.consultarpagos.Text = "Consultar";
             this.consultarpagos.UseVisualStyleBackColor = true;
+            this.consultarpagos.CheckedChanged += new System.EventHandler(this.consultarpagos_CheckedChanged);
             // 
             // eliminarpagos
             // 
@@ -359,6 +370,7 @@
             this.eliminarpagos.TabIndex = 63;
             this.eliminarpagos.Text = "Eliminar";
             this.eliminarpagos.UseVisualStyleBackColor = true;
+            this.eliminarpagos.CheckedChanged += new System.EventHandler(this.eliminarpagos_CheckedChanged);
             // 
             // modificarpagos
             // 
@@ -370,6 +382,7 @@
             this.modificarpagos.TabIndex = 62;
             this.modificarpagos.Text = "Modificar";
             this.modificarpagos.UseVisualStyleBackColor = true;
+            this.modificarpagos.CheckedChanged += new System.EventHandler(this.modificarpagos_CheckedChanged);
             // 
             // agregarpagos
             // 
@@ -381,6 +394,7 @@
             this.agregarpagos.TabIndex = 61;
             this.agregarpagos.Text = "Agregar";
             this.agregarpagos.UseVisualStyleBackColor = true;
+            this.agregarpagos.CheckedChanged += new System.EventHandler(this.agregarpagos_CheckedChanged);
             // 
             // label10
             // 
@@ -446,6 +460,7 @@
             this.modificaruser.TabIndex = 45;
             this.modificaruser.Text = "Modificar";
             this.modificaruser.UseVisualStyleBackColor = true;
+            this.modificaruser.CheckedChanged += new System.EventHandler(this.modificaruser_CheckedChanged);
             // 
             // chconsultarclientes
             // 
@@ -509,6 +524,7 @@
             this.eliminaruser.TabIndex = 39;
             this.eliminaruser.Text = "Eliminar";
             this.eliminaruser.UseVisualStyleBackColor = true;
+            this.eliminaruser.CheckedChanged += new System.EventHandler(this.eliminaruser_CheckedChanged);
             // 
             // agregaruser
             // 
@@ -520,6 +536,7 @@
             this.agregaruser.TabIndex = 37;
             this.agregaruser.Text = "Agregar";
             this.agregaruser.UseVisualStyleBackColor = true;
+            this.agregaruser.CheckedChanged += new System.EventHandler(this.agregaruser_CheckedChanged);
             // 
             // consultaruser
             // 
@@ -531,6 +548,7 @@
             this.consultaruser.TabIndex = 38;
             this.consultaruser.Text = "Consultar";
             this.consultaruser.UseVisualStyleBackColor = true;
+            this.consultaruser.CheckedChanged += new System.EventHandler(this.consultaruser_CheckedChanged);
             // 
             // label7
             // 

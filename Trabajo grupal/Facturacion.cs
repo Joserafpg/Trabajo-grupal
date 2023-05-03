@@ -35,8 +35,11 @@ namespace Trabajo_grupal
             frm.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Facturacion_Load(object sender, EventArgs e)
         {
+            btnfacturar.Enabled = Permisos.AgregarFACTURA;
+            btndeshacer.Enabled = Permisos.AgregarFACTURA;
+            btnagregarmanual.Enabled = Permisos.AgregarFACTURA;
         }
     }
 }

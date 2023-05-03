@@ -32,20 +32,20 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnagregarmanual = new System.Windows.Forms.Button();
+            this.btndeshacer = new System.Windows.Forms.Button();
+            this.btnfacturar = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -97,13 +97,33 @@
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnagregarmanual);
+            this.panel1.Controls.Add(this.btndeshacer);
+            this.panel1.Controls.Add(this.btnfacturar);
             this.panel1.Location = new System.Drawing.Point(270, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(482, 485);
             this.panel1.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(343, 324);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 16);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Total";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(387, 319);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 22);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "......";
             // 
             // dateTimePicker1
             // 
@@ -146,56 +166,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(422, 148);
             this.dataGridView1.TabIndex = 16;
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(31, 315);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 25);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(61, 373);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 50);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.LightGreen;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(242, 373);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(175, 50);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Facturar";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(387, 319);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 22);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "......";
-            // 
             // Codigo
             // 
             this.Codigo.HeaderText = "Codigo";
@@ -225,15 +195,45 @@
             this.Total.Name = "Total";
             this.Total.Width = 73;
             // 
-            // label1
+            // btnagregarmanual
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(343, 324);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 16);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Total";
+            this.btnagregarmanual.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnagregarmanual.Location = new System.Drawing.Point(31, 315);
+            this.btnagregarmanual.Name = "btnagregarmanual";
+            this.btnagregarmanual.Size = new System.Drawing.Size(100, 25);
+            this.btnagregarmanual.TabIndex = 18;
+            this.btnagregarmanual.Text = "Agregar";
+            this.btnagregarmanual.UseVisualStyleBackColor = true;
+            this.btnagregarmanual.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btndeshacer
+            // 
+            this.btndeshacer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btndeshacer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btndeshacer.FlatAppearance.BorderSize = 0;
+            this.btndeshacer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndeshacer.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btndeshacer.Location = new System.Drawing.Point(61, 373);
+            this.btndeshacer.Name = "btndeshacer";
+            this.btndeshacer.Size = new System.Drawing.Size(175, 50);
+            this.btndeshacer.TabIndex = 19;
+            this.btndeshacer.Text = "Eliminar";
+            this.btndeshacer.UseVisualStyleBackColor = false;
+            // 
+            // btnfacturar
+            // 
+            this.btnfacturar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnfacturar.BackColor = System.Drawing.Color.LightGreen;
+            this.btnfacturar.FlatAppearance.BorderSize = 0;
+            this.btnfacturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnfacturar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnfacturar.Location = new System.Drawing.Point(242, 373);
+            this.btnfacturar.Name = "btnfacturar";
+            this.btnfacturar.Size = new System.Drawing.Size(175, 50);
+            this.btnfacturar.TabIndex = 20;
+            this.btnfacturar.Text = "Facturar";
+            this.btnfacturar.UseVisualStyleBackColor = false;
+            this.btnfacturar.Click += new System.EventHandler(this.button3_Click);
             // 
             // Facturacion
             // 
@@ -244,6 +244,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Facturacion";
             this.Text = "Facturacion";
+            this.Load += new System.EventHandler(this.Facturacion_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -257,12 +258,12 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btndeshacer;
+        private System.Windows.Forms.Button btnagregarmanual;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnfacturar;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;

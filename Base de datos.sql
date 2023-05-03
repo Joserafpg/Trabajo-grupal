@@ -70,9 +70,22 @@ Tipo_Producto Varchar (50),
 Cantidad int,
 Inv_Minimo int,
 Color_Producto Varchar (50),
-Precio_Compra money,
-Precio_Venta money,
-Precio_PorMayor money
+Precio_Compra varchar (50),
+Precio_Venta varchar (50),
+Precio_PorMayor varchar (50)
+)
+
+/*tabla InvPantalones*/
+
+create table InvPantalones(
+Codigo int IDENTITY NOT NULL PRIMARY KEY,
+Nombre_Producto Varchar (50),
+Descripcion Varchar (50),
+Cantidad int,
+Inv_Minimo int,
+Mercancia_Utilizada varchar (50),
+Precio_Venta varchar (50),
+Precio_PorMayor varchar (50)
 )
 
 

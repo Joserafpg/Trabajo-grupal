@@ -17,6 +17,7 @@ ConsultarUSER bit,
 
 /*Permisos para el formulario Cuentas x cobrar*/
 
+
 AgregarCuentasCobrar bit, 
 ModificarCuentascobrar bit,
 ConsultarCuentasCobrar bit,
@@ -44,10 +45,18 @@ ConsultarCLIENTES bit,
 EliminarCLIENTES bit, 
 
 /*Permisos para el formulario Inventario*/
+
 AgregarINVENTARIO bit,
 ModificarINVENTARIO bit,
 ConsultarINVENTARIO bit, 
 EliminarINVENTARIO bit,
+
+FormUser bit,
+FormCuentasCobrar bit,
+FormCuentasPagar bit,
+FormFactura bit,
+FormCliente bit,
+FormInventario bit
 )
 
 /*Tabla Clientes*/

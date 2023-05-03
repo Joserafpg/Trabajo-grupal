@@ -74,7 +74,34 @@ namespace Trabajo_grupal
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            btninventario.Enabled = Permisos.AgregarINVENTARIO;
+            btninventario.Enabled = Permisos.ModificarINVENTARIO;
+            btninventario.Enabled = Permisos.ConsultarINVENTARIO;
+            btninventario.Enabled = Permisos.EliminarFACTURA;
+
+            btnclientes.Enabled = Permisos.AgregarCLIENTE;
+            btnclientes.Enabled = Permisos.ModificSarCLIENTES;
+            btnclientes.Enabled = Permisos.ConsultarCLIENTES;
+            btnclientes.Enabled = Permisos.EliminarCLIENTES;
+
+            btnfacturacion.Enabled = Permisos.AgregarFACTURA;
+            btnfacturacion.Enabled = Permisos.ModificarFACTURA;
+            btnfacturacion.Enabled = Permisos.ConsultarFACTURA;
+            btnfacturacion.Enabled = Permisos.EliminarFACTURA;
+
+            btnpagos.Enabled = Permisos.AgregarCuentasPagar;
+            btnpagos.Enabled = Permisos.ModificarCuentasPagar;
+            btnpagos.Enabled = Permisos.ConsultarCuentasPagar;
+            btnpagos.Enabled = Permisos.EliminarCuentasPagar;
+
+            btnpagos.Enabled = Permisos.AgregarCuentasCobrar;
+            btnpagos.Enabled = Permisos.ModificarCuentasCobrar;
+            btnpagos.Enabled = Permisos.ConsultarCuentasCobrar;
+            btnpagos.Enabled = Permisos.EliminarCuentasCobrar;
+
+            cuentasPorPagarToolStripMenuItem.Enabled = Permisos.AgregarCuentasPagar;
+
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)

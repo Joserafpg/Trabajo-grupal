@@ -243,6 +243,7 @@
             this.chformcobrar.TabIndex = 74;
             this.chformcobrar.Text = "Formcobrar";
             this.chformcobrar.UseVisualStyleBackColor = true;
+            this.chformcobrar.Visible = false;
             // 
             // chformpagar
             // 
@@ -253,6 +254,7 @@
             this.chformpagar.TabIndex = 73;
             this.chformpagar.Text = "Formpagar";
             this.chformpagar.UseVisualStyleBackColor = true;
+            this.chformpagar.Visible = false;
             // 
             // chformusuarios
             // 
@@ -263,6 +265,7 @@
             this.chformusuarios.TabIndex = 72;
             this.chformusuarios.Text = "FormUsuarios";
             this.chformusuarios.UseVisualStyleBackColor = true;
+            this.chformusuarios.Visible = false;
             // 
             // chformfacturas
             // 
@@ -273,6 +276,7 @@
             this.chformfacturas.TabIndex = 71;
             this.chformfacturas.Text = "FomFacturas";
             this.chformfacturas.UseVisualStyleBackColor = true;
+            this.chformfacturas.Visible = false;
             // 
             // chformcliente
             // 
@@ -283,6 +287,7 @@
             this.chformcliente.TabIndex = 70;
             this.chformcliente.Text = "FormClientes";
             this.chformcliente.UseVisualStyleBackColor = true;
+            this.chformcliente.Visible = false;
             // 
             // chforminventario
             // 
@@ -293,6 +298,7 @@
             this.chforminventario.TabIndex = 69;
             this.chforminventario.Text = "FormInventario";
             this.chforminventario.UseVisualStyleBackColor = true;
+            this.chforminventario.Visible = false;
             // 
             // consultarcobros
             // 

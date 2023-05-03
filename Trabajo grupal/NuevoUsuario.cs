@@ -55,6 +55,15 @@ namespace Trabajo_grupal
             agregaruser.Checked = false;
             consultaruser.Checked = false;
             modificaruser.Checked = false;
+            eliminaruser.Checked = false;
+            agregarcobros.Checked = false;
+            modificarcobros.Checked = false;
+            consultarcobros.Checked = false;
+            eliminarcobros.Checked = false;
+            agregarpagos.Checked = false;
+            modificarpagos.Checked = false;
+            consultarpagos.Checked = false;
+            eliminarpagos.Checked = false;
         }
 
         void CheckboxInventario()
@@ -266,7 +275,18 @@ namespace Trabajo_grupal
                     consultaruser.Checked = true;
                     eliminaruser.Checked = true;
                     modificaruser.Checked = true;
+
+                    agregarcobros.Checked = true;
+                    modificarcobros.Checked = true;
+                    consultarcobros.Checked = true;
+                    eliminarcobros.Checked = true;
+
+                    agregarpagos.Checked = true;
+                    modificarpagos.Checked = true;
+                    consultarpagos.Checked = true;
+                    eliminarpagos.Checked = true;
                 }
+
                 else
                 {
                     chagregarmercancia.Checked = false;
@@ -288,6 +308,16 @@ namespace Trabajo_grupal
                     consultaruser.Checked = false;
                     eliminaruser.Checked = false;
                     modificaruser.Checked = false;
+
+                    agregarcobros.Checked = false;
+                    modificarcobros.Checked = false;
+                    consultarcobros.Checked = false;
+                    eliminarcobros.Checked = false;
+
+                    agregarpagos.Checked = false;
+                    modificarpagos.Checked = false;
+                    consultarpagos.Checked = false;
+                    eliminarpagos.Checked = false;
                 }
             }
         }

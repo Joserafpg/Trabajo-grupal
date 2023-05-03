@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnconsultar = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.panel5.Controls.Add(this.button4);
+            this.panel5.Controls.Add(this.btnconsultar);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -63,16 +63,16 @@
             this.panel5.Size = new System.Drawing.Size(1034, 501);
             this.panel5.TabIndex = 3;
             // 
-            // button4
+            // btnconsultar
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.Location = new System.Drawing.Point(791, 411);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(175, 50);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Todas las facturas";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnconsultar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnconsultar.Location = new System.Drawing.Point(791, 411);
+            this.btnconsultar.Name = "btnconsultar";
+            this.btnconsultar.Size = new System.Drawing.Size(175, 50);
+            this.btnconsultar.TabIndex = 22;
+            this.btnconsultar.Text = "Todas las facturas";
+            this.btnconsultar.UseVisualStyleBackColor = true;
+            this.btnconsultar.Click += new System.EventHandler(this.button4_Click);
             // 
             // label14
             // 
@@ -262,7 +262,7 @@
         private System.Windows.Forms.Button btnagregarmanual;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnconsultar;
         private System.Windows.Forms.Button btnfacturar;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

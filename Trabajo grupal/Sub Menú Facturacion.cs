@@ -33,5 +33,11 @@ namespace Trabajo_grupal
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void Sub_Menú_Facturacion_Load(object sender, EventArgs e)
+        {
+            btnModificar.Enabled = Permisos.ModificarFACTURA;
+            btneliminar.Enabled = Permisos.EliminarFACTURA;
+        }
     }
 }

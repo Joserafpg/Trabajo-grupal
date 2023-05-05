@@ -74,9 +74,7 @@ Tipo_Producto Varchar (50),
 Cantidad int,
 Inv_Minimo int,
 Color_Producto Varchar (50),
-Precio_Compra varchar (50),
-Precio_Venta varchar (50),
-Precio_PorMayor varchar (50)
+Precio_Compra varchar (50)
 )
 
 

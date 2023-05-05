@@ -60,6 +60,7 @@
     <Compile Include="Clases\Datosbasedt.cs" />
     <Compile Include="Clases\DatosgetClientes.cs" />
     <Compile Include="Clases\Datosget.cs" />
+    <Compile Include="Clases\DatosgetInv.Minimo.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>

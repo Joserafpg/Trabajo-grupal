@@ -33,7 +33,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,14 +45,25 @@
             this.btnagregarmanual = new System.Windows.Forms.Button();
             this.btndeshacer = new System.Windows.Forms.Button();
             this.btnfacturar = new System.Windows.Forms.Button();
+            this.PPago = new System.Windows.Forms.Panel();
+            this.txtcambio = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtdinero = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btncredito = new System.Windows.Forms.Button();
+            this.btnefectivo = new System.Windows.Forms.Button();
+            this.txttotal = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.PPago.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.panel5.Controls.Add(this.PPago);
             this.panel5.Controls.Add(this.btnconsultar);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.panel1);
@@ -91,8 +101,8 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txttotal);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label5);
@@ -114,16 +124,6 @@
             this.label1.Size = new System.Drawing.Size(38, 16);
             this.label1.TabIndex = 33;
             this.label1.Text = "Total";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(387, 319);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 22);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "......";
             // 
             // dateTimePicker1
             // 
@@ -235,6 +235,111 @@
             this.btnfacturar.UseVisualStyleBackColor = false;
             this.btnfacturar.Click += new System.EventHandler(this.button3_Click);
             // 
+            // PPago
+            // 
+            this.PPago.Controls.Add(this.btnefectivo);
+            this.PPago.Controls.Add(this.btncredito);
+            this.PPago.Controls.Add(this.button1);
+            this.PPago.Controls.Add(this.txtcambio);
+            this.PPago.Controls.Add(this.label4);
+            this.PPago.Controls.Add(this.label6);
+            this.PPago.Controls.Add(this.txtdinero);
+            this.PPago.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PPago.Location = new System.Drawing.Point(0, 0);
+            this.PPago.Name = "PPago";
+            this.PPago.Size = new System.Drawing.Size(1034, 501);
+            this.PPago.TabIndex = 34;
+            // 
+            // txtcambio
+            // 
+            this.txtcambio.AutoSize = true;
+            this.txtcambio.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcambio.ForeColor = System.Drawing.Color.White;
+            this.txtcambio.Location = new System.Drawing.Point(463, 259);
+            this.txtcambio.Name = "txtcambio";
+            this.txtcambio.Size = new System.Drawing.Size(25, 24);
+            this.txtcambio.TabIndex = 16;
+            this.txtcambio.Text = "...";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(330, 209);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(116, 24);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Pagó con:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(330, 259);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 24);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Su cambio:";
+            // 
+            // txtdinero
+            // 
+            this.txtdinero.Location = new System.Drawing.Point(467, 209);
+            this.txtdinero.Name = "txtdinero";
+            this.txtdinero.Size = new System.Drawing.Size(185, 20);
+            this.txtdinero.TabIndex = 13;
+            this.txtdinero.TextChanged += new System.EventHandler(this.txtdinero_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.LightGreen;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(781, 341);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 50);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Facturar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btncredito
+            // 
+            this.btncredito.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btncredito.BackColor = System.Drawing.Color.LightGreen;
+            this.btncredito.FlatAppearance.BorderSize = 0;
+            this.btncredito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncredito.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btncredito.Location = new System.Drawing.Point(12, 40);
+            this.btncredito.Name = "btncredito";
+            this.btncredito.Size = new System.Drawing.Size(175, 50);
+            this.btncredito.TabIndex = 22;
+            this.btncredito.Text = "Credito";
+            this.btncredito.UseVisualStyleBackColor = false;
+            // 
+            // btnefectivo
+            // 
+            this.btnefectivo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnefectivo.BackColor = System.Drawing.Color.LightGreen;
+            this.btnefectivo.FlatAppearance.BorderSize = 0;
+            this.btnefectivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnefectivo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnefectivo.Location = new System.Drawing.Point(207, 40);
+            this.btnefectivo.Name = "btnefectivo";
+            this.btnefectivo.Size = new System.Drawing.Size(175, 50);
+            this.btnefectivo.TabIndex = 23;
+            this.btnefectivo.Text = "Efectivo";
+            this.btnefectivo.UseVisualStyleBackColor = false;
+            // 
+            // txttotal
+            // 
+            this.txttotal.Location = new System.Drawing.Point(388, 324);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.Size = new System.Drawing.Size(65, 20);
+            this.txttotal.TabIndex = 35;
+            // 
             // Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,6 +355,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.PPago.ResumeLayout(false);
+            this.PPago.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -266,12 +373,20 @@
         private System.Windows.Forms.Button btnfacturar;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel PPago;
+        private System.Windows.Forms.Label txtcambio;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtdinero;
+        private System.Windows.Forms.Button btnefectivo;
+        private System.Windows.Forms.Button btncredito;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txttotal;
     }
 }

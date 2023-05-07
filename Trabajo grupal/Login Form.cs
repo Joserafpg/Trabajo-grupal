@@ -100,6 +100,7 @@ namespace Trabajo_grupal
                 principal.Visible = true;
                 Visible = false;
             }
+
             else
             {
                 MessageBox.Show(" Usuario o contraseña Incorrecto");

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Trabajo_grupal
 {
@@ -17,6 +18,16 @@ namespace Trabajo_grupal
             InitializeComponent();
         }
 
+        void FacturarCredito()
+        {
+            
+        }
+        
+        void FacturarEfectivo()
+        {
+            PPago.Visible = true;
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
             Sub_Menú_Facturacion frm = new Sub_Menú_Facturacion();
@@ -25,8 +36,7 @@ namespace Trabajo_grupal
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FormMetodo frm = new FormMetodo();
-            frm.ShowDialog();
+            FacturarEfectivo();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,6 +47,8 @@ namespace Trabajo_grupal
 
         private void Facturacion_Load(object sender, EventArgs e)
         {
+            PPago.Visible = false;
+
             btnfacturar.Enabled = Permisos.AgregarFACTURA;
             btndeshacer.Enabled = Permisos.AgregarFACTURA;
             btnagregarmanual.Enabled = Permisos.AgregarFACTURA;
@@ -44,6 +56,22 @@ namespace Trabajo_grupal
             btnconsultar.Enabled = Permisos.ConsultarFACTURA;
             btnconsultar.Enabled = Permisos.ModificarFACTURA;
             btnconsultar.Enabled = Permisos.EliminarFACTURA;
+        }
+
+        private void txtdinero_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtdinero.Text, out int valorTextBox))
+            {
+                // Obtén el valor actual del Label y conviértelo en un número
+                if (int.TryParse(txttotal.Text, out int valorLabel))
+                {
+                    // Resta el valor del TextBox del valor del Label
+                    int resultado = valorTextBox - valorLabel;
+
+                    // Actualiza el texto del Label con el nuevo valor
+                    txtcambio.Text = resultado.ToString();
+                }
+            }
         }
     }
 }

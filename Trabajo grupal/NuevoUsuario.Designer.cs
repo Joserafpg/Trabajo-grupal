@@ -83,6 +83,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnusuarios = new System.Windows.Forms.Button();
             this.btnchange = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.formpermiso.SuspendLayout();
@@ -188,6 +189,7 @@
             // 
             // formpermiso
             // 
+            this.formpermiso.Controls.Add(this.button1);
             this.formpermiso.Controls.Add(this.chformcobrar);
             this.formpermiso.Controls.Add(this.chformpagar);
             this.formpermiso.Controls.Add(this.chformusuarios);
@@ -739,6 +741,17 @@
             this.btnchange.UseVisualStyleBackColor = true;
             this.btnchange.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(142, 301);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(169, 51);
+            this.button1.TabIndex = 75;
+            this.button1.Text = "Modificar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // NuevoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -817,5 +830,6 @@
         private System.Windows.Forms.CheckBox chformfacturas;
         private System.Windows.Forms.CheckBox chformcliente;
         private System.Windows.Forms.CheckBox chforminventario;
+        private System.Windows.Forms.Button button1;
     }
 }

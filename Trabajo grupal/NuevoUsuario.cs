@@ -228,6 +228,7 @@ namespace Trabajo_grupal
                 {
                     MessageBox.Show("Cuenta creada con exito");
                 }
+
                 else
                     MessageBox.Show("Nose pudo crear la cuenta");
 

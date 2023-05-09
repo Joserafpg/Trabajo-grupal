@@ -45,6 +45,7 @@ namespace Trabajo_grupal
             txttotal.Clear();
             FacturarCreditoOFF();
             FacturarEfectivoOFF();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -61,13 +62,14 @@ namespace Trabajo_grupal
         private void button1_Click(object sender, EventArgs e)
         {
             ProductoFacturaNew frm = new ProductoFacturaNew();
-            frm.ShowDialog();
+            frm.Show();
         }
 
         private void Facturacion_Load(object sender, EventArgs e)
         {
             PPago.Visible = false;
             pcredito.Visible = false;
+            btnefectivo.Visible = false;
 
             btnfacturar.Enabled = Permisos.AgregarFACTURA;
             btndeshacer.Enabled = Permisos.AgregarFACTURA;
@@ -102,11 +104,15 @@ namespace Trabajo_grupal
         private void btncredito_Click(object sender, EventArgs e)
         {
             FacturarCredito();
+            btncredito.Visible = false;
+            btnefectivo.Visible = true;
         }
 
         private void btnefectivo_Click(object sender, EventArgs e)
         {
             FacturarCreditoOFF();
+            btncredito.Visible = true;
+            btnefectivo.Visible = false;
         }
     }
 }

@@ -30,6 +30,19 @@
         {
             this.panel5 = new System.Windows.Forms.Panel();
             this.PPago = new System.Windows.Forms.Panel();
+            this.pcredito = new System.Windows.Forms.Panel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.labelmontoapagar = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.btnefectivo = new System.Windows.Forms.Button();
             this.btncredito = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -54,30 +67,16 @@
             this.btnagregarmanual = new System.Windows.Forms.Button();
             this.btndeshacer = new System.Windows.Forms.Button();
             this.btnfacturar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pcredito = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelmontoapagar = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.panel5.SuspendLayout();
             this.PPago.SuspendLayout();
+            this.pcredito.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.pcredito.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.panel5.Controls.Add(this.PPago);
             this.panel5.Controls.Add(this.btnconsultar);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.panel1);
@@ -98,11 +97,148 @@
             this.PPago.Controls.Add(this.label4);
             this.PPago.Controls.Add(this.label6);
             this.PPago.Controls.Add(this.txtdinero);
-            this.PPago.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PPago.Location = new System.Drawing.Point(0, 0);
+            this.PPago.Location = new System.Drawing.Point(478, 3);
             this.PPago.Name = "PPago";
             this.PPago.Size = new System.Drawing.Size(1034, 501);
             this.PPago.TabIndex = 34;
+            // 
+            // pcredito
+            // 
+            this.pcredito.Controls.Add(this.dateTimePicker2);
+            this.pcredito.Controls.Add(this.label8);
+            this.pcredito.Controls.Add(this.checkBox3);
+            this.pcredito.Controls.Add(this.checkBox2);
+            this.pcredito.Controls.Add(this.checkBox1);
+            this.pcredito.Controls.Add(this.textBox1);
+            this.pcredito.Controls.Add(this.label7);
+            this.pcredito.Controls.Add(this.labelmontoapagar);
+            this.pcredito.Controls.Add(this.label3);
+            this.pcredito.Controls.Add(this.comboBox1);
+            this.pcredito.Controls.Add(this.label2);
+            this.pcredito.Location = new System.Drawing.Point(0, 106);
+            this.pcredito.Name = "pcredito";
+            this.pcredito.Size = new System.Drawing.Size(724, 395);
+            this.pcredito.TabIndex = 26;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(229, 221);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(202, 20);
+            this.dateTimePicker2.TabIndex = 10;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(145, 218);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 42);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Fecha \r\n\r\n";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(618, 169);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(61, 25);
+            this.checkBox3.TabIndex = 8;
+            this.checkBox3.Text = "Dias";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(536, 168);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(76, 25);
+            this.checkBox2.TabIndex = 7;
+            this.checkBox2.Text = "Meses";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(455, 169);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(68, 25);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.Text = "Años";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(229, 169);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(202, 20);
+            this.textBox1.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(144, 169);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 21);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Tiempo";
+            // 
+            // labelmontoapagar
+            // 
+            this.labelmontoapagar.AutoSize = true;
+            this.labelmontoapagar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelmontoapagar.ForeColor = System.Drawing.Color.White;
+            this.labelmontoapagar.Location = new System.Drawing.Point(285, 284);
+            this.labelmontoapagar.Name = "labelmontoapagar";
+            this.labelmontoapagar.Size = new System.Drawing.Size(22, 21);
+            this.labelmontoapagar.TabIndex = 3;
+            this.labelmontoapagar.Text = "...";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(145, 284);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(134, 21);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Monto a pagar:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(229, 125);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(201, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(145, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 21);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Cliente";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(818, 411);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // btnefectivo
             // 
@@ -217,6 +353,7 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.PPago);
             this.panel1.Controls.Add(this.txttotal);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dateTimePicker1);
@@ -358,144 +495,6 @@
             this.btnfacturar.UseVisualStyleBackColor = false;
             this.btnfacturar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(818, 411);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // pcredito
-            // 
-            this.pcredito.Controls.Add(this.dateTimePicker2);
-            this.pcredito.Controls.Add(this.label8);
-            this.pcredito.Controls.Add(this.checkBox3);
-            this.pcredito.Controls.Add(this.checkBox2);
-            this.pcredito.Controls.Add(this.checkBox1);
-            this.pcredito.Controls.Add(this.textBox1);
-            this.pcredito.Controls.Add(this.label7);
-            this.pcredito.Controls.Add(this.labelmontoapagar);
-            this.pcredito.Controls.Add(this.label3);
-            this.pcredito.Controls.Add(this.comboBox1);
-            this.pcredito.Controls.Add(this.label2);
-            this.pcredito.Location = new System.Drawing.Point(0, 106);
-            this.pcredito.Name = "pcredito";
-            this.pcredito.Size = new System.Drawing.Size(724, 395);
-            this.pcredito.TabIndex = 26;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(145, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Cliente";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(229, 125);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(201, 21);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(145, 284);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Monto a pagar:";
-            // 
-            // labelmontoapagar
-            // 
-            this.labelmontoapagar.AutoSize = true;
-            this.labelmontoapagar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelmontoapagar.ForeColor = System.Drawing.Color.White;
-            this.labelmontoapagar.Location = new System.Drawing.Point(285, 284);
-            this.labelmontoapagar.Name = "labelmontoapagar";
-            this.labelmontoapagar.Size = new System.Drawing.Size(22, 21);
-            this.labelmontoapagar.TabIndex = 3;
-            this.labelmontoapagar.Text = "...";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(144, 169);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 21);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Tiempo";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(229, 169);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 20);
-            this.textBox1.TabIndex = 5;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(455, 169);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(68, 25);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Años";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(536, 168);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(76, 25);
-            this.checkBox2.TabIndex = 7;
-            this.checkBox2.Text = "Meses";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(618, 169);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(61, 25);
-            this.checkBox3.TabIndex = 8;
-            this.checkBox3.Text = "Dias";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(145, 218);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 42);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Fecha \r\n\r\n";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(229, 221);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(202, 20);
-            this.dateTimePicker2.TabIndex = 10;
-            // 
             // Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -510,11 +509,11 @@
             this.panel5.PerformLayout();
             this.PPago.ResumeLayout(false);
             this.PPago.PerformLayout();
+            this.pcredito.ResumeLayout(false);
+            this.pcredito.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.pcredito.ResumeLayout(false);
-            this.pcredito.PerformLayout();
             this.ResumeLayout(false);
 
         }

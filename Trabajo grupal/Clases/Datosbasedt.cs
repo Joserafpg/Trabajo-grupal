@@ -32,8 +32,8 @@ namespace Trabajo_grupal.Clases
             int retorno = 0;
             Conexion.opoencon();
             {
-                SqlCommand comando = new SqlCommand(string.Format("Update NuevoInventario set Nombre_Mercancia ='{0}', Descripcion='{1}',Tipo_Producto='{2}', Cantidad='{3}',Inv_Minimo='{4}', Color_Producto ='{5}', Precio_Compra ='{6}' where Codigo={7}",
-                     pNuevoInventario.Codigo, pNuevoInventario.Nombre_Mercancia, pNuevoInventario.Descripcion, pNuevoInventario.Tipo_Producto, pNuevoInventario.Cantidad, pNuevoInventario.Inv_Minimo,
+                SqlCommand comando = new SqlCommand(string.Format("Update NuevoInventario set Nombre_Mercancia ='{0}', Descripcion='{1}',Tipo_Producto='{2}',Docenas='{3}', Unidad='{4}',Lotes='{5}' ,Cantidad='{6}',Inv_Minimo='{7}', Color_Producto ='{8}', Precio_Compra ='{9}' where Codigo={10}",
+                     pNuevoInventario.Codigo, pNuevoInventario.Nombre_Mercancia, pNuevoInventario.Descripcion, pNuevoInventario.Tipo_Producto, pNuevoInventario.Docenas, pNuevoInventario.Unidad,pNuevoInventario.Lotes, pNuevoInventario.Cantidad, pNuevoInventario.Inv_Minimo,
                      pNuevoInventario.Color_Producto, pNuevoInventario.Precio_Compra), Conexion.ObtenerConexion());
                 retorno = comando.ExecuteNonQuery();
             }
@@ -57,22 +57,25 @@ namespace Trabajo_grupal.Clases
             {
 
                 SqlCommand comando = new SqlCommand(String.Format(
-                    "SELECT  Nombre_Mercancia, Descripcion, Tipo_Producto, Cantidad, Inv_Minimo, Color_Producto, Precio_Compra FROM NuevoInventario  where Codigo like '%{0}%'", pNombre_Mercancia, Codigo), Conexion.ObtenerConexion());
+                    "SELECT  Nombre_Mercancia, Descripcion, Tipo_Producto,Docenas, Unidad, Lotes, Cantidad, Inv_Minimo, Color_Producto, Precio_Compra FROM NuevoInventario  where Codigo like '%{0}%'", pNombre_Mercancia, Codigo), Conexion.ObtenerConexion());
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
                     Datosget pNuevoInventario = new Datosget();
-                    
+
 
                     pNuevoInventario.Codigo = reader.GetInt32(0);
                     pNuevoInventario.Nombre_Mercancia = reader.GetString(1);
                     pNuevoInventario.Descripcion = reader.GetString(2);
                     pNuevoInventario.Tipo_Producto = reader.GetString(3);
-                    pNuevoInventario.Cantidad = reader.GetInt32(4);
-                    pNuevoInventario.Inv_Minimo = reader.GetInt32(5);
-                    pNuevoInventario.Color_Producto = reader.GetString(6);
-                    pNuevoInventario.Precio_Compra = reader.GetString(7);
-                   
+                    pNuevoInventario.Docenas = reader.GetString(4);
+                    pNuevoInventario.Unidad = reader.GetString(5);
+                    pNuevoInventario.Lotes = reader.GetString(6);
+                    pNuevoInventario.Cantidad = reader.GetInt32(7);
+                    pNuevoInventario.Inv_Minimo = reader.GetInt32(8);
+                    pNuevoInventario.Color_Producto = reader.GetString(9);
+                    pNuevoInventario.Precio_Compra = reader.GetString(10);
+
 
 
                     lista.Add(pNuevoInventario);
@@ -88,7 +91,7 @@ namespace Trabajo_grupal.Clases
             {
                 Datosget pNuevoInventario = new Datosget();
                 SqlCommand comando = new SqlCommand(String.Format(
-                    "Select Nombre_Mercancia, Descripcion, Tipo_Producto, Cantidad, Inv_Minimo, Color_Producto, Precio_Compra FROM NuevoInventario  where Codigo={0}", pId), Conexion.ObtenerConexion());
+                    "Select Nombre_Mercancia, Descripcion, Tipo_Producto, Docenas, Unidad, Lotes, Cantidad, Inv_Minimo, Color_Producto, Precio_Compra FROM NuevoInventario  where Codigo={0}", pId), Conexion.ObtenerConexion());
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
@@ -96,10 +99,13 @@ namespace Trabajo_grupal.Clases
                     pNuevoInventario.Nombre_Mercancia = reader.GetString(1);
                     pNuevoInventario.Descripcion = reader.GetString(2);
                     pNuevoInventario.Tipo_Producto = reader.GetString(3);
-                    pNuevoInventario.Cantidad = reader.GetInt32(4);
-                    pNuevoInventario.Inv_Minimo = reader.GetInt32(5);
-                    pNuevoInventario.Color_Producto = reader.GetString(6);
-                    pNuevoInventario.Precio_Compra = reader.GetString(7);
+                    pNuevoInventario.Docenas = reader.GetString(4);
+                    pNuevoInventario.Unidad = reader.GetString(5);
+                    pNuevoInventario.Lotes = reader.GetString(6);
+                    pNuevoInventario.Cantidad = reader.GetInt32(7);
+                    pNuevoInventario.Inv_Minimo = reader.GetInt32(8);
+                    pNuevoInventario.Color_Producto = reader.GetString(9);
+                    pNuevoInventario.Precio_Compra = reader.GetString(10);
                     
 
                 }

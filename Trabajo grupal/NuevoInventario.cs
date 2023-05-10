@@ -8,6 +8,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
+using Trabajo_grupal.Clases;
 
 namespace Trabajo_grupal
 {
@@ -50,12 +52,50 @@ namespace Trabajo_grupal
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
-            comboBox1.Refresh();
-            comboBox2.Refresh();
-            comboBox3.Refresh();
+            txtpreciocompra.Clear();
+            txtcantidad.Clear();
+            txtcodigo.Clear();
+            CBNom.Refresh();
+            CBcolor.Refresh();
+            CBtipodep.Refresh();
+            txtDescripcion.Refresh();
+            txtInvMinimo.Refresh();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Datosget datosget = new Datosget();
+
+
+   
+
+            datosget.Codigo = txtcodigo.Text;
+            datosget.Nombre_Mercancia = CBNom.Text;
+            datosget.Descripcion = txtDescripcion.Text;
+            datosget.Tipo_Producto = CBtipodep.Text;
+            datosget.Docenas = chDocenas.Text;
+            datosget.Unidad = chUnidad.Text;
+            datosget.Lotes = chlotes.Text;
+            datosget.Cantidad = txtcantidad.Text;
+            datosget.Inv_Minimo = txtInvMinimo.Text;  
+            datosget.Color_Producto = CBcolor.Text;
+            datosget.Precio_Compra = txtpreciocompra.Text;
+
+            int resultado = Datosbasedt.agregar(datosget);
+
+
+            if (resultado > 0)
+            {
+
+                MessageBox.Show("Datos de Materia Prima Guardados Correctamente", "Datos Guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
+            else
+            {
+                MessageBox.Show(" No se Pudieron Guardar Datos de Materia Prima ", "Error al Guardar ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
     }
 }

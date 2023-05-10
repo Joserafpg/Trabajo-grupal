@@ -29,13 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtBox6 = new System.Windows.Forms.TextBox();
-            this.txtBox5 = new System.Windows.Forms.TextBox();
-            this.txtbox4 = new System.Windows.Forms.TextBox();
-            this.txtbox2 = new System.Windows.Forms.TextBox();
-            this.txtbox3 = new System.Windows.Forms.TextBox();
+            this.txtpreciopormayor = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtprecioventa = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btndeshacer = new System.Windows.Forms.Button();
+            this.btnguardar = new System.Windows.Forms.Button();
+            this.txtMercanciaUtilizada = new System.Windows.Forms.TextBox();
+            this.txtinvminimo = new System.Windows.Forms.TextBox();
+            this.txtcantidad = new System.Windows.Forms.TextBox();
+            this.txtNombreProducto = new System.Windows.Forms.TextBox();
+            this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.txtboxcodigo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,27 +49,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtpreciopormayor);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtprecioventa);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.txtBox6);
-            this.groupBox1.Controls.Add(this.txtBox5);
-            this.groupBox1.Controls.Add(this.txtbox4);
-            this.groupBox1.Controls.Add(this.txtbox2);
-            this.groupBox1.Controls.Add(this.txtbox3);
+            this.groupBox1.Controls.Add(this.btndeshacer);
+            this.groupBox1.Controls.Add(this.btnguardar);
+            this.groupBox1.Controls.Add(this.txtMercanciaUtilizada);
+            this.groupBox1.Controls.Add(this.txtinvminimo);
+            this.groupBox1.Controls.Add(this.txtcantidad);
+            this.groupBox1.Controls.Add(this.txtNombreProducto);
+            this.groupBox1.Controls.Add(this.txtdescripcion);
             this.groupBox1.Controls.Add(this.txtboxcodigo);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -83,64 +83,97 @@
             this.groupBox1.Text = "Inventario Pantalones";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button2
+            // txtpreciopormayor
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(546, 167);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 64);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Deshacer";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.txtpreciopormayor.Location = new System.Drawing.Point(258, 429);
+            this.txtpreciopormayor.Name = "txtpreciopormayor";
+            this.txtpreciopormayor.Size = new System.Drawing.Size(249, 27);
+            this.txtpreciopormayor.TabIndex = 17;
             // 
-            // button1
+            // label8
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(546, 243);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 64);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(56, 432);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(158, 21);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Precio al por mayor";
             // 
-            // txtBox6
+            // txtprecioventa
             // 
-            this.txtBox6.Location = new System.Drawing.Point(258, 306);
-            this.txtBox6.Multiline = true;
-            this.txtBox6.Name = "txtBox6";
-            this.txtBox6.Size = new System.Drawing.Size(249, 59);
-            this.txtBox6.TabIndex = 11;
+            this.txtprecioventa.Location = new System.Drawing.Point(258, 385);
+            this.txtprecioventa.Name = "txtprecioventa";
+            this.txtprecioventa.Size = new System.Drawing.Size(249, 27);
+            this.txtprecioventa.TabIndex = 15;
             // 
-            // txtBox5
+            // label7
             // 
-            this.txtBox5.Location = new System.Drawing.Point(258, 262);
-            this.txtBox5.Name = "txtBox5";
-            this.txtBox5.Size = new System.Drawing.Size(249, 27);
-            this.txtBox5.TabIndex = 10;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(56, 388);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 21);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Precio Venta";
             // 
-            // txtbox4
+            // btndeshacer
             // 
-            this.txtbox4.Location = new System.Drawing.Point(258, 216);
-            this.txtbox4.Name = "txtbox4";
-            this.txtbox4.Size = new System.Drawing.Size(249, 27);
-            this.txtbox4.TabIndex = 9;
+            this.btndeshacer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndeshacer.Location = new System.Drawing.Point(546, 167);
+            this.btndeshacer.Name = "btndeshacer";
+            this.btndeshacer.Size = new System.Drawing.Size(153, 64);
+            this.btndeshacer.TabIndex = 13;
+            this.btndeshacer.Text = "Deshacer";
+            this.btndeshacer.UseVisualStyleBackColor = true;
+            this.btndeshacer.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txtbox2
+            // btnguardar
             // 
-            this.txtbox2.Location = new System.Drawing.Point(258, 90);
-            this.txtbox2.Name = "txtbox2";
-            this.txtbox2.Size = new System.Drawing.Size(249, 27);
-            this.txtbox2.TabIndex = 8;
+            this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnguardar.Location = new System.Drawing.Point(546, 243);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(153, 64);
+            this.btnguardar.TabIndex = 12;
+            this.btnguardar.Text = "Guardar";
+            this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtbox3
+            // txtMercanciaUtilizada
             // 
-            this.txtbox3.Location = new System.Drawing.Point(258, 136);
-            this.txtbox3.Multiline = true;
-            this.txtbox3.Name = "txtbox3";
-            this.txtbox3.Size = new System.Drawing.Size(249, 61);
-            this.txtbox3.TabIndex = 7;
-            this.txtbox3.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtMercanciaUtilizada.Location = new System.Drawing.Point(258, 306);
+            this.txtMercanciaUtilizada.Multiline = true;
+            this.txtMercanciaUtilizada.Name = "txtMercanciaUtilizada";
+            this.txtMercanciaUtilizada.Size = new System.Drawing.Size(249, 59);
+            this.txtMercanciaUtilizada.TabIndex = 11;
+            // 
+            // txtinvminimo
+            // 
+            this.txtinvminimo.Location = new System.Drawing.Point(258, 262);
+            this.txtinvminimo.Name = "txtinvminimo";
+            this.txtinvminimo.Size = new System.Drawing.Size(249, 27);
+            this.txtinvminimo.TabIndex = 10;
+            // 
+            // txtcantidad
+            // 
+            this.txtcantidad.Location = new System.Drawing.Point(258, 216);
+            this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.Size = new System.Drawing.Size(249, 27);
+            this.txtcantidad.TabIndex = 9;
+            // 
+            // txtNombreProducto
+            // 
+            this.txtNombreProducto.Location = new System.Drawing.Point(258, 90);
+            this.txtNombreProducto.Name = "txtNombreProducto";
+            this.txtNombreProducto.Size = new System.Drawing.Size(249, 27);
+            this.txtNombreProducto.TabIndex = 8;
+            // 
+            // txtdescripcion
+            // 
+            this.txtdescripcion.Location = new System.Drawing.Point(258, 136);
+            this.txtdescripcion.Multiline = true;
+            this.txtdescripcion.Name = "txtdescripcion";
+            this.txtdescripcion.Size = new System.Drawing.Size(249, 61);
+            this.txtdescripcion.TabIndex = 7;
+            this.txtdescripcion.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtboxcodigo
             // 
@@ -225,38 +258,6 @@
             this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(258, 385);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(249, 27);
-            this.textBox1.TabIndex = 15;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(56, 388);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 21);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Precio Venta";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(258, 429);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(249, 27);
-            this.textBox2.TabIndex = 17;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(56, 432);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(158, 21);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Precio al por mayor";
-            // 
             // InventarioPantalones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,19 +285,19 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtBox6;
-        private System.Windows.Forms.TextBox txtBox5;
-        private System.Windows.Forms.TextBox txtbox4;
-        private System.Windows.Forms.TextBox txtbox2;
-        private System.Windows.Forms.TextBox txtbox3;
+        private System.Windows.Forms.Button btnguardar;
+        private System.Windows.Forms.TextBox txtMercanciaUtilizada;
+        private System.Windows.Forms.TextBox txtinvminimo;
+        private System.Windows.Forms.TextBox txtcantidad;
+        private System.Windows.Forms.TextBox txtNombreProducto;
+        private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.TextBox txtboxcodigo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btndeshacer;
+        private System.Windows.Forms.TextBox txtprecioventa;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtpreciopormayor;
         private System.Windows.Forms.Label label8;
     }
 }

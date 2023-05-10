@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtInvMinimo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.chlotes = new System.Windows.Forms.RadioButton();
+            this.chUnidad = new System.Windows.Forms.RadioButton();
+            this.chDocenas = new System.Windows.Forms.RadioButton();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btndeshacer = new System.Windows.Forms.Button();
+            this.btnguardar = new System.Windows.Forms.Button();
+            this.txtcantidad = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtpreciocompra = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CBtipodep = new System.Windows.Forms.ComboBox();
+            this.CBcolor = new System.Windows.Forms.ComboBox();
+            this.CBNom = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,23 +57,23 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.txtInvMinimo);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.chlotes);
+            this.groupBox1.Controls.Add(this.chUnidad);
+            this.groupBox1.Controls.Add(this.chDocenas);
+            this.groupBox1.Controls.Add(this.txtcodigo);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.btndeshacer);
+            this.groupBox1.Controls.Add(this.btnguardar);
+            this.groupBox1.Controls.Add(this.txtcantidad);
+            this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtpreciocompra);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.CBtipodep);
+            this.groupBox1.Controls.Add(this.CBcolor);
+            this.groupBox1.Controls.Add(this.CBNom);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -87,12 +87,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Nueva Mercancia";
             // 
-            // textBox7
+            // txtInvMinimo
             // 
-            this.textBox7.Location = new System.Drawing.Point(300, 342);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(257, 31);
-            this.textBox7.TabIndex = 31;
+            this.txtInvMinimo.Location = new System.Drawing.Point(300, 342);
+            this.txtInvMinimo.Name = "txtInvMinimo";
+            this.txtInvMinimo.Size = new System.Drawing.Size(257, 31);
+            this.txtInvMinimo.TabIndex = 31;
             // 
             // label10
             // 
@@ -103,45 +103,45 @@
             this.label10.TabIndex = 30;
             this.label10.Text = "Inv.Minimo";
             // 
-            // radioButton3
+            // chlotes
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(439, 257);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(75, 26);
-            this.radioButton3.TabIndex = 29;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Lotes";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.chlotes.AutoSize = true;
+            this.chlotes.Location = new System.Drawing.Point(439, 257);
+            this.chlotes.Name = "chlotes";
+            this.chlotes.Size = new System.Drawing.Size(75, 26);
+            this.chlotes.TabIndex = 29;
+            this.chlotes.TabStop = true;
+            this.chlotes.Text = "Lotes";
+            this.chlotes.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // chUnidad
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(320, 257);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(94, 26);
-            this.radioButton2.TabIndex = 28;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Unidad";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.chUnidad.AutoSize = true;
+            this.chUnidad.Location = new System.Drawing.Point(320, 257);
+            this.chUnidad.Name = "chUnidad";
+            this.chUnidad.Size = new System.Drawing.Size(94, 26);
+            this.chUnidad.TabIndex = 28;
+            this.chUnidad.TabStop = true;
+            this.chUnidad.Text = "Unidad";
+            this.chUnidad.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // chDocenas
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(170, 257);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(110, 26);
-            this.radioButton1.TabIndex = 27;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Docenas";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.chDocenas.AutoSize = true;
+            this.chDocenas.Location = new System.Drawing.Point(170, 257);
+            this.chDocenas.Name = "chDocenas";
+            this.chDocenas.Size = new System.Drawing.Size(110, 26);
+            this.chDocenas.TabIndex = 27;
+            this.chDocenas.TabStop = true;
+            this.chDocenas.Text = "Docenas";
+            this.chDocenas.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // txtcodigo
             // 
-            this.textBox5.Location = new System.Drawing.Point(300, 38);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(257, 31);
-            this.textBox5.TabIndex = 24;
+            this.txtcodigo.Location = new System.Drawing.Point(300, 38);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(257, 31);
+            this.txtcodigo.TabIndex = 24;
             // 
             // label2
             // 
@@ -152,41 +152,42 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Codigo";
             // 
-            // button2
+            // btndeshacer
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(602, 238);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 56);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Deshacer";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btndeshacer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndeshacer.Location = new System.Drawing.Point(602, 238);
+            this.btndeshacer.Name = "btndeshacer";
+            this.btndeshacer.Size = new System.Drawing.Size(180, 56);
+            this.btndeshacer.TabIndex = 22;
+            this.btndeshacer.Text = "Deshacer";
+            this.btndeshacer.UseVisualStyleBackColor = true;
+            this.btndeshacer.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnguardar
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(602, 311);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 56);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnguardar.Location = new System.Drawing.Point(602, 311);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(180, 56);
+            this.btnguardar.TabIndex = 21;
+            this.btnguardar.Text = "Guardar";
+            this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox4
+            // txtcantidad
             // 
-            this.textBox4.Location = new System.Drawing.Point(300, 289);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(257, 31);
-            this.textBox4.TabIndex = 20;
+            this.txtcantidad.Location = new System.Drawing.Point(300, 289);
+            this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.Size = new System.Drawing.Size(257, 31);
+            this.txtcantidad.TabIndex = 20;
             // 
-            // textBox3
+            // txtDescripcion
             // 
-            this.textBox3.Location = new System.Drawing.Point(300, 128);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(257, 71);
-            this.textBox3.TabIndex = 19;
+            this.txtDescripcion.Location = new System.Drawing.Point(300, 128);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(257, 71);
+            this.txtDescripcion.TabIndex = 19;
             // 
             // label9
             // 
@@ -197,12 +198,12 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Color de Producto";
             // 
-            // textBox1
+            // txtpreciocompra
             // 
-            this.textBox1.Location = new System.Drawing.Point(300, 440);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 31);
-            this.textBox1.TabIndex = 12;
+            this.txtpreciocompra.Location = new System.Drawing.Point(300, 440);
+            this.txtpreciocompra.Name = "txtpreciocompra";
+            this.txtpreciocompra.Size = new System.Drawing.Size(257, 31);
+            this.txtpreciocompra.TabIndex = 12;
             // 
             // label7
             // 
@@ -213,10 +214,10 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "PrecioCompra";
             // 
-            // comboBox3
+            // CBtipodep
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.CBtipodep.FormattingEnabled = true;
+            this.CBtipodep.Items.AddRange(new object[] {
             "Lana",
             "Piel",
             "Denim Poliester",
@@ -229,15 +230,15 @@
             "Grande",
             "Mediano",
             "Pequeño"});
-            this.comboBox3.Location = new System.Drawing.Point(300, 217);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(257, 30);
-            this.comboBox3.TabIndex = 9;
+            this.CBtipodep.Location = new System.Drawing.Point(300, 217);
+            this.CBtipodep.Name = "CBtipodep";
+            this.CBtipodep.Size = new System.Drawing.Size(257, 30);
+            this.CBtipodep.TabIndex = 9;
             // 
-            // comboBox2
+            // CBcolor
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.CBcolor.FormattingEnabled = true;
+            this.CBcolor.Items.AddRange(new object[] {
             "Rojo",
             "Azul",
             "Negro",
@@ -245,23 +246,23 @@
             "Gris",
             "Caqui",
             "Verde "});
-            this.comboBox2.Location = new System.Drawing.Point(300, 391);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(257, 30);
-            this.comboBox2.TabIndex = 8;
+            this.CBcolor.Location = new System.Drawing.Point(300, 391);
+            this.CBcolor.Name = "CBcolor";
+            this.CBcolor.Size = new System.Drawing.Size(257, 30);
+            this.CBcolor.TabIndex = 8;
             // 
-            // comboBox1
+            // CBNom
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CBNom.FormattingEnabled = true;
+            this.CBNom.Items.AddRange(new object[] {
             "Zipper",
             "Botones",
             "Agujas",
             "Hilo"});
-            this.comboBox1.Location = new System.Drawing.Point(300, 82);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(257, 30);
-            this.comboBox1.TabIndex = 7;
+            this.CBNom.Location = new System.Drawing.Point(300, 82);
+            this.CBNom.Name = "CBNom";
+            this.CBNom.Size = new System.Drawing.Size(257, 30);
+            this.CBNom.TabIndex = 7;
             // 
             // label5
             // 
@@ -345,27 +346,27 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CBtipodep;
+        private System.Windows.Forms.ComboBox CBcolor;
+        private System.Windows.Forms.ComboBox CBNom;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtpreciocompra;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtcantidad;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button btnguardar;
+        private System.Windows.Forms.Button btndeshacer;
+        private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtInvMinimo;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton chlotes;
+        private System.Windows.Forms.RadioButton chUnidad;
+        private System.Windows.Forms.RadioButton chDocenas;
     }
 }

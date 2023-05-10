@@ -46,7 +46,6 @@ namespace Trabajo_grupal
 
         public static int Eliminar(int pId)
         {
-
             {
                 int retorno = 0;
                 Conexion.opoencon();

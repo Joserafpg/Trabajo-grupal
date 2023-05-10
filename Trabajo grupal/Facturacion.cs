@@ -99,6 +99,9 @@ namespace Trabajo_grupal
         private void button3_Click_1(object sender, EventArgs e)
         {
             Limpiar();
+            btncredito.Visible = true;
+            btnefectivo.Visible = false;
+
         }
 
         private void btncredito_Click(object sender, EventArgs e)

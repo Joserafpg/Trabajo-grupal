@@ -13,31 +13,26 @@ AgregarUSER bit,
 ModificarUSER bit,
 EliminarUSER bit,
 ConsultarUSER bit,
-
 /*Permisos para el formulario Cuentas x cobrar*/
 AgregarCuentasCobrar bit, 
 ModificarCuentascobrar bit,
 ConsultarCuentasCobrar bit,
 EliminarCuentasCobrar bit,
-
 /*Permisos para el formulario Cuentas x pagar*/
 AgregarCuentasPagar bit, 
 ModificarCuentasPagar bit,
 ConsultarCuentasPagar bit,
 EliminarCuentasPagar bit,
-
 /*Permisos para el formulario Facturas*/
 AgregarFACTURA bit, 
 ModificarFACTURA bit,
 ConsultarFACTURA bit,
 EliminarFACTURA bit,
-
 /*Permisos para el formulario Clientes*/
 AgregarCLIENTE bit,
 ModificSarCLIENTES bit,
 ConsultarCLIENTES bit,
 EliminarCLIENTES bit, 
-
 /*Permisos para el formulario Inventario*/
 AgregarINVENTARIO bit,
 ModificarINVENTARIO bit,
@@ -71,6 +66,9 @@ Codigo int IDENTITY NOT NULL PRIMARY KEY,
 Nombre_Mercancia Varchar (50),
 Descripcion Varchar (50),
 Tipo_Producto Varchar (50),
+Docenas bit,
+Unidad bit,
+Lotes bit,
 Cantidad int,
 Inv_Minimo int,
 Color_Producto Varchar (50),
@@ -94,3 +92,5 @@ Precio_PorMayor varchar (50)
 select * from Usuarios
 
 drop table Usuarios
+
+drop database Proyecto_Grupal

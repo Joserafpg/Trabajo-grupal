@@ -77,6 +77,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.panel5.Controls.Add(this.PPago);
             this.panel5.Controls.Add(this.btnconsultar);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.panel1);
@@ -97,7 +98,8 @@
             this.PPago.Controls.Add(this.label4);
             this.PPago.Controls.Add(this.label6);
             this.PPago.Controls.Add(this.txtdinero);
-            this.PPago.Location = new System.Drawing.Point(478, 3);
+            this.PPago.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PPago.Location = new System.Drawing.Point(0, 0);
             this.PPago.Name = "PPago";
             this.PPago.Size = new System.Drawing.Size(1034, 501);
             this.PPago.TabIndex = 34;
@@ -115,14 +117,14 @@
             this.pcredito.Controls.Add(this.label3);
             this.pcredito.Controls.Add(this.comboBox1);
             this.pcredito.Controls.Add(this.label2);
-            this.pcredito.Location = new System.Drawing.Point(0, 106);
+            this.pcredito.Location = new System.Drawing.Point(0, 105);
             this.pcredito.Name = "pcredito";
             this.pcredito.Size = new System.Drawing.Size(724, 395);
             this.pcredito.TabIndex = 26;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(229, 221);
+            this.dateTimePicker2.Location = new System.Drawing.Point(229, 182);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(202, 20);
             this.dateTimePicker2.TabIndex = 10;
@@ -130,11 +132,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(145, 218);
+            this.label8.Location = new System.Drawing.Point(145, 179);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 42);
+            this.label8.Size = new System.Drawing.Size(73, 44);
             this.label8.TabIndex = 9;
             this.label8.Text = "Fecha \r\n\r\n";
             // 
@@ -142,7 +144,7 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(618, 169);
+            this.checkBox3.Location = new System.Drawing.Point(618, 130);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(61, 25);
             this.checkBox3.TabIndex = 8;
@@ -153,7 +155,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(536, 168);
+            this.checkBox2.Location = new System.Drawing.Point(536, 129);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(76, 25);
             this.checkBox2.TabIndex = 7;
@@ -164,7 +166,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(455, 169);
+            this.checkBox1.Location = new System.Drawing.Point(455, 130);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(68, 25);
             this.checkBox1.TabIndex = 6;
@@ -173,7 +175,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(229, 169);
+            this.textBox1.Location = new System.Drawing.Point(229, 130);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(202, 20);
             this.textBox1.TabIndex = 5;
@@ -181,11 +183,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(144, 169);
+            this.label7.Location = new System.Drawing.Point(144, 130);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 21);
+            this.label7.Size = new System.Drawing.Size(75, 22);
             this.label7.TabIndex = 4;
             this.label7.Text = "Tiempo";
             // 
@@ -194,7 +196,7 @@
             this.labelmontoapagar.AutoSize = true;
             this.labelmontoapagar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelmontoapagar.ForeColor = System.Drawing.Color.White;
-            this.labelmontoapagar.Location = new System.Drawing.Point(285, 284);
+            this.labelmontoapagar.Location = new System.Drawing.Point(307, 246);
             this.labelmontoapagar.Name = "labelmontoapagar";
             this.labelmontoapagar.Size = new System.Drawing.Size(22, 21);
             this.labelmontoapagar.TabIndex = 3;
@@ -203,18 +205,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(145, 284);
+            this.label3.Location = new System.Drawing.Point(145, 245);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 21);
+            this.label3.Size = new System.Drawing.Size(156, 22);
             this.label3.TabIndex = 2;
             this.label3.Text = "Monto a pagar:";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(229, 125);
+            this.comboBox1.Location = new System.Drawing.Point(229, 86);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(201, 21);
             this.comboBox1.TabIndex = 1;
@@ -222,11 +224,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(145, 126);
+            this.label2.Location = new System.Drawing.Point(145, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 21);
+            this.label2.Size = new System.Drawing.Size(74, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cliente";
             // 
@@ -247,7 +249,7 @@
             this.btnefectivo.FlatAppearance.BorderSize = 0;
             this.btnefectivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnefectivo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnefectivo.Location = new System.Drawing.Point(207, 40);
+            this.btnefectivo.Location = new System.Drawing.Point(12, 40);
             this.btnefectivo.Name = "btnefectivo";
             this.btnefectivo.Size = new System.Drawing.Size(175, 50);
             this.btnefectivo.TabIndex = 23;
@@ -287,33 +289,33 @@
             // txtcambio
             // 
             this.txtcambio.AutoSize = true;
-            this.txtcambio.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcambio.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcambio.ForeColor = System.Drawing.Color.White;
             this.txtcambio.Location = new System.Drawing.Point(463, 259);
             this.txtcambio.Name = "txtcambio";
-            this.txtcambio.Size = new System.Drawing.Size(25, 24);
+            this.txtcambio.Size = new System.Drawing.Size(25, 22);
             this.txtcambio.TabIndex = 16;
             this.txtcambio.Text = "...";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(330, 209);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 24);
+            this.label4.Size = new System.Drawing.Size(105, 22);
             this.label4.TabIndex = 14;
             this.label4.Text = "Pagó con:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(330, 259);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 24);
+            this.label6.Size = new System.Drawing.Size(111, 22);
             this.label6.TabIndex = 15;
             this.label6.Text = "Su cambio:";
             // 
@@ -353,7 +355,6 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.PPago);
             this.panel1.Controls.Add(this.txttotal);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dateTimePicker1);

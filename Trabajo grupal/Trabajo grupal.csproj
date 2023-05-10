@@ -80,6 +80,7 @@
     <Compile Include="Cuentas por pagar .Designer.cs">
       <DependentUpon>Cuentas por pagar .cs</DependentUpon>
     </Compile>
+    <Compile Include="DatosbaseCliente.cs" />
     <Compile Include="EliminarInventario.cs">
       <SubType>Form</SubType>
     </Compile>

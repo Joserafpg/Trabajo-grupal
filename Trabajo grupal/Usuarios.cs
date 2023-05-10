@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabajo_grupal.Clases;
 
 namespace Trabajo_grupal
 {
@@ -44,6 +45,11 @@ namespace Trabajo_grupal
             da.Fill(ds);
             dtgdatos.DataSource = ds.Tables[0];
             Conexion.cerrarcon();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

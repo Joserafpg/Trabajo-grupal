@@ -161,7 +161,6 @@
             this.btndeshacer.TabIndex = 22;
             this.btndeshacer.Text = "Deshacer";
             this.btndeshacer.UseVisualStyleBackColor = true;
-            this.btndeshacer.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnguardar
             // 
@@ -172,7 +171,6 @@
             this.btnguardar.TabIndex = 21;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
-            this.btnguardar.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtcantidad
             // 
@@ -335,7 +333,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NuevoInventario";
             this.Text = "NuevoInventario";
-            this.Load += new System.EventHandler(this.NuevoInventario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

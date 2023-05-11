@@ -58,8 +58,10 @@
     </Compile>
     <Compile Include="ClasesDropDown\MenuRenderer.cs" />
     <Compile Include="Clases\Datosbasedt.cs" />
+    <Compile Include="Clases\DatosbaseEmpleados.cs" />
     <Compile Include="Clases\DatosgetClientes.cs" />
     <Compile Include="Clases\Datosget.cs" />
+    <Compile Include="Clases\DatosgetEmpleados.cs" />
     <Compile Include="Clases\DatosgetInv.Minimo.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
@@ -92,6 +94,12 @@
     </Compile>
     <Compile Include="EliminarUsuarios.Designer.cs">
       <DependentUpon>EliminarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion.cs">
       <SubType>Form</SubType>
@@ -220,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarUsuarios.resx">
       <DependentUpon>EliminarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion.resx">
       <DependentUpon>Facturacion.cs</DependentUpon>
@@ -390,6 +401,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cerrar %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleados %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

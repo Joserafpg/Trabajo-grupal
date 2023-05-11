@@ -89,8 +89,22 @@ Precio_PorMayor varchar (50)
 )
 
 
+/*Tabla Empleados*/
+create table Empleados(
+Id_Empleados int IDENTITY (1,1) NOT NULL PRIMARY KEY,
+Nombre_Completo varchar (50),
+Cedula varchar (50),
+Telefono varchar (20),
+Direccion varchar (50),
+Correo varchar (50),
+Fecha_de_nacimiento datetimeoffset,
+Fecha_de_ingreso datetime,
+Sueldo int,
+)
+
+
 select * from Usuarios
 
-drop table Usuarios
+drop table Clientes
 
 drop database Proyecto_Grupal

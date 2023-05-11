@@ -48,6 +48,7 @@
             this.dropDownMenu1 = new Trabajo_grupal.ClasesDropDown.DropDownMenu(this.components);
             this.cuentasPorPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasPorCobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnlogoInicio)).BeginInit();
@@ -58,6 +59,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(90)))), ((int)(((byte)(244)))));
+            this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.button10);
             this.panelMenu.Controls.Add(this.btnpagos);
@@ -73,13 +75,12 @@
             // 
             // button1
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::Trabajo_grupal.Properties.Resources.configuracion;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 324);
+            this.button1.Location = new System.Drawing.Point(0, 371);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(230, 46);
@@ -109,13 +110,12 @@
             // 
             // btnpagos
             // 
-            this.btnpagos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnpagos.FlatAppearance.BorderSize = 0;
             this.btnpagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnpagos.ForeColor = System.Drawing.Color.White;
             this.btnpagos.Image = global::Trabajo_grupal.Properties.Resources.metodo_de_pago__3_;
             this.btnpagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnpagos.Location = new System.Drawing.Point(0, 278);
+            this.btnpagos.Location = new System.Drawing.Point(0, 325);
             this.btnpagos.Name = "btnpagos";
             this.btnpagos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnpagos.Size = new System.Drawing.Size(230, 46);
@@ -127,13 +127,12 @@
             // 
             // btnfacturacion
             // 
-            this.btnfacturacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnfacturacion.FlatAppearance.BorderSize = 0;
             this.btnfacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnfacturacion.ForeColor = System.Drawing.Color.White;
             this.btnfacturacion.Image = global::Trabajo_grupal.Properties.Resources.factura__1_;
             this.btnfacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnfacturacion.Location = new System.Drawing.Point(0, 232);
+            this.btnfacturacion.Location = new System.Drawing.Point(0, 279);
             this.btnfacturacion.Name = "btnfacturacion";
             this.btnfacturacion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnfacturacion.Size = new System.Drawing.Size(230, 46);
@@ -317,6 +316,23 @@
             this.cuentasPorCobrarToolStripMenuItem.Text = "Cuentas por cobrar";
             this.cuentasPorCobrarToolStripMenuItem.Click += new System.EventHandler(this.cuentasPorCobrarToolStripMenuItem_Click);
             // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::Trabajo_grupal.Properties.Resources.empleados__1_;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 232);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(230, 46);
+            this.button2.TabIndex = 3;
+            this.button2.Tag = "Empleados";
+            this.button2.Text = "Empleados";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,6 +377,7 @@
         private System.Windows.Forms.ToolStripMenuItem cuentasPorPagarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuentasPorCobrarToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

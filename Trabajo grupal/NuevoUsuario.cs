@@ -215,6 +215,7 @@ namespace Trabajo_grupal
             {
                 MessageBox.Show("Por favor, llene todos los campos.");
             }
+
             else
             {
                 RejuegoOFF();

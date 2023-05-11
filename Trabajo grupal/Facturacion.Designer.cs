@@ -33,9 +33,9 @@
             this.pcredito = new System.Windows.Forms.Panel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chdias = new System.Windows.Forms.CheckBox();
+            this.chmeses = new System.Windows.Forms.CheckBox();
+            this.chaños = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.labelmontoapagar = new System.Windows.Forms.Label();
@@ -108,9 +108,9 @@
             // 
             this.pcredito.Controls.Add(this.dateTimePicker2);
             this.pcredito.Controls.Add(this.label8);
-            this.pcredito.Controls.Add(this.checkBox3);
-            this.pcredito.Controls.Add(this.checkBox2);
-            this.pcredito.Controls.Add(this.checkBox1);
+            this.pcredito.Controls.Add(this.chdias);
+            this.pcredito.Controls.Add(this.chmeses);
+            this.pcredito.Controls.Add(this.chaños);
             this.pcredito.Controls.Add(this.textBox1);
             this.pcredito.Controls.Add(this.label7);
             this.pcredito.Controls.Add(this.labelmontoapagar);
@@ -140,38 +140,38 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "Fecha \r\n\r\n";
             // 
-            // checkBox3
+            // chdias
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(618, 130);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(61, 25);
-            this.checkBox3.TabIndex = 8;
-            this.checkBox3.Text = "Dias";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chdias.AutoSize = true;
+            this.chdias.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chdias.Location = new System.Drawing.Point(618, 130);
+            this.chdias.Name = "chdias";
+            this.chdias.Size = new System.Drawing.Size(61, 25);
+            this.chdias.TabIndex = 8;
+            this.chdias.Text = "Dias";
+            this.chdias.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chmeses
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(536, 129);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(76, 25);
-            this.checkBox2.TabIndex = 7;
-            this.checkBox2.Text = "Meses";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chmeses.AutoSize = true;
+            this.chmeses.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chmeses.Location = new System.Drawing.Point(536, 129);
+            this.chmeses.Name = "chmeses";
+            this.chmeses.Size = new System.Drawing.Size(76, 25);
+            this.chmeses.TabIndex = 7;
+            this.chmeses.Text = "Meses";
+            this.chmeses.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chaños
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(455, 130);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(68, 25);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Años";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chaños.AutoSize = true;
+            this.chaños.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chaños.Location = new System.Drawing.Point(455, 130);
+            this.chaños.Name = "chaños";
+            this.chaños.Size = new System.Drawing.Size(68, 25);
+            this.chaños.TabIndex = 6;
+            this.chaños.Text = "Años";
+            this.chaños.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -550,9 +550,9 @@
         private System.Windows.Forms.Panel pcredito;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chdias;
+        private System.Windows.Forms.CheckBox chmeses;
+        private System.Windows.Forms.CheckBox chaños;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label labelmontoapagar;

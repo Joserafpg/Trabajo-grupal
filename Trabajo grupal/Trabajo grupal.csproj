@@ -53,6 +53,12 @@
     <Compile Include="AjustesInventario.Designer.cs">
       <DependentUpon>AjustesInventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuscarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarClientes.Designer.cs">
+      <DependentUpon>BuscarClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClasesDropDown\DropDownMenu.cs">
       <SubType>Component</SubType>
     </Compile>

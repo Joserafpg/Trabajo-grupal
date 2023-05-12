@@ -55,6 +55,37 @@ namespace Trabajo_grupal
                 return retorno;
 
             }
+
+        }
+
+
+        public static List<DatosgetClientes> BuscarClientes(string pNombre, string pTelefono)
+        {
+            List<DatosgetClientes> lista = new List<DatosgetClientes>();
+            Conexion.opoencon();
+            {
+
+                SqlCommand comando = new SqlCommand(String.Format(
+               "SELECT Codigo,Cedula, Nombre, APellido, Telefono, Direccion, Correo,Fecha_IngresoFROM  where codigo like '%{0}%' and telefono like '%{1}%' ", pNombre, pTelefono),
+                    Conexion.ObtenerConexion());
+
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    DatosgetClientes pClientes = new DatosgetClientes();
+                    pClientes.Codigo = Convert.ToInt64(reader.GetValue(0));
+                    pClientes.Nombre = reader.GetString(1);
+                    pClientes.Apellido = reader.GetString(2);
+                    pClientes.Direccion = reader.GetString(3);
+                    pClientes.Telefono = reader.GetString(4);
+                    pClientes.Correo = reader.GetString(5);
+                    pClientes.Fecha_Ingreso = Convert.ToDateTime(reader.GetValue(6));
+
+                    lista.Add(pClientes);
+                }
+                Conexion.cerrarcon();
+                return lista;
+            }
         }
     }
 }

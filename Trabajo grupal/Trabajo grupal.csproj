@@ -221,6 +221,9 @@
     <EmbeddedResource Include="AjustesInventario.resx">
       <DependentUpon>AjustesInventario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BuscarClientes.resx">
+      <DependentUpon>BuscarClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>

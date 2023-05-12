@@ -105,25 +105,9 @@ namespace Trabajo_grupal
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
-            Consultar pBuscar = new Consultar();
-            pBuscar.ShowDialog();
-            if (pBuscar.ALumnoSeleccionado != null)
-            {
-                AlumnoActual = pBuscar.ALumnoSeleccionado;
-                txtcedula.Text = pBuscar.ALumnoSeleccionado.Cedula;
-                txtNombre.Text = pBuscar.ALumnoSeleccionado.Nombre;
-                txtTelefono.Text = pBuscar.ALumnoSeleccionado.Telefono;
-                txtDireccion.Text = pBuscar.ALumnoSeleccionado.Direccion;
-                txtFech.Value = pBuscar.ALumnoSeleccionado.Fecha_Nac;
-
-                btnAgregar.Enabled = false;
-                btnModificar.Enabled = true;
-                btnEliminar.Enabled = true;
-
-            }
+            
         }
     }
-    
 }
 
 

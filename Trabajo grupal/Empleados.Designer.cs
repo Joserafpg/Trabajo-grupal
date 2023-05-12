@@ -45,9 +45,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtpingreso = new System.Windows.Forms.DateTimePicker();
             this.panelsueldo = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtsueldo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtsfs = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtafp = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panelsueldo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -212,7 +216,11 @@
             // 
             // panelsueldo
             // 
-            this.panelsueldo.Controls.Add(this.textBox1);
+            this.panelsueldo.Controls.Add(this.txtafp);
+            this.panelsueldo.Controls.Add(this.label10);
+            this.panelsueldo.Controls.Add(this.txtsfs);
+            this.panelsueldo.Controls.Add(this.label9);
+            this.panelsueldo.Controls.Add(this.txtsueldo);
             this.panelsueldo.Controls.Add(this.label7);
             this.panelsueldo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelsueldo.Location = new System.Drawing.Point(0, 0);
@@ -220,12 +228,13 @@
             this.panelsueldo.Size = new System.Drawing.Size(544, 462);
             this.panelsueldo.TabIndex = 43;
             // 
-            // textBox1
+            // txtsueldo
             // 
-            this.textBox1.Location = new System.Drawing.Point(157, 127);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
-            this.textBox1.TabIndex = 34;
+            this.txtsueldo.Location = new System.Drawing.Point(157, 127);
+            this.txtsueldo.Name = "txtsueldo";
+            this.txtsueldo.Size = new System.Drawing.Size(155, 20);
+            this.txtsueldo.TabIndex = 34;
+            this.txtsueldo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label7
             // 
@@ -248,6 +257,42 @@
             this.label8.Size = new System.Drawing.Size(217, 24);
             this.label8.TabIndex = 44;
             this.label8.Text = "Agregar empleados";
+            // 
+            // txtsfs
+            // 
+            this.txtsfs.Location = new System.Drawing.Point(157, 180);
+            this.txtsfs.Name = "txtsfs";
+            this.txtsfs.Size = new System.Drawing.Size(155, 20);
+            this.txtsfs.TabIndex = 36;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(79, 179);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 21);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "SFS";
+            // 
+            // txtafp
+            // 
+            this.txtafp.Location = new System.Drawing.Point(157, 225);
+            this.txtafp.Name = "txtafp";
+            this.txtafp.Size = new System.Drawing.Size(155, 20);
+            this.txtafp.TabIndex = 38;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(79, 224);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 21);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "AFP";
             // 
             // Empleados
             // 
@@ -303,8 +348,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpingreso;
         private System.Windows.Forms.Panel panelsueldo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtsueldo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtafp;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtsfs;
+        private System.Windows.Forms.Label label9;
     }
 }

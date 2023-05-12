@@ -21,5 +21,10 @@ namespace Trabajo_grupal
         {
             panelsueldo.Visible = false;
         }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

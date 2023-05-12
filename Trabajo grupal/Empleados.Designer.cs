@@ -45,8 +45,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtpingreso = new System.Windows.Forms.DateTimePicker();
             this.panelsueldo = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panelsueldo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,6 +92,7 @@
             this.btnagregar.TabIndex = 37;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = false;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // label6
             // 
@@ -215,8 +217,15 @@
             this.panelsueldo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelsueldo.Location = new System.Drawing.Point(0, 0);
             this.panelsueldo.Name = "panelsueldo";
-            this.panelsueldo.Size = new System.Drawing.Size(535, 462);
+            this.panelsueldo.Size = new System.Drawing.Size(544, 462);
             this.panelsueldo.TabIndex = 43;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(157, 127);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(155, 20);
+            this.textBox1.TabIndex = 34;
             // 
             // label7
             // 
@@ -229,12 +238,16 @@
             this.label7.TabIndex = 33;
             this.label7.Text = "Sueldo";
             // 
-            // textBox1
+            // label8
             // 
-            this.textBox1.Location = new System.Drawing.Point(157, 127);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
-            this.textBox1.TabIndex = 34;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(79, 31);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(217, 24);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "Agregar empleados";
             // 
             // Empleados
             // 
@@ -259,6 +272,7 @@
             this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnmodificar);
+            this.Controls.Add(this.label8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Empleados";
             this.Text = "Empleados";
@@ -291,5 +305,6 @@
         private System.Windows.Forms.Panel panelsueldo;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -177,24 +177,18 @@ namespace Trabajo_grupal
             AbrirFormEnPanel(new Cliente());
         }
 
-        private void btnproveedores_Click(object sender, EventArgs e)
-        {
-            label1.Text = "Proveedores";
-            CollapseMenuClose();
-            AbrirFormEnPanel(new Configuracion());
-        }
-
         private void btnfacturacion_Click(object sender, EventArgs e)
         {
-            label1.Text = "Ventas";
+            label1.Text = "Empleados";
             CollapseMenuClose();
-            AbrirFormEnPanel(new Facturacion());
+            AbrirFormEnPanel(new Empleados());
         }
 
         private void btnpagos_Click(object sender, EventArgs e)
         {
-            CollapseMenuOpen();
-            dropDownMenu1.Show(btnpagos, btnpagos.Width, 0);
+            label1.Text = "Ventas";
+            CollapseMenuClose();
+            AbrirFormEnPanel(new Facturacion());
         }
 
         private void panelDesktop_MouseClick(object sender, MouseEventArgs e)
@@ -231,6 +225,12 @@ namespace Trabajo_grupal
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            CollapseMenuOpen();
+            dropDownMenu1.Show(btnpagos, btnpagos.Width, 0);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             label1.Text = "Configuracion";
             CollapseMenuClose();

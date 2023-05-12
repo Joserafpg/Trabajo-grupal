@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.btnpagos = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.dropDownMenu1 = new Trabajo_grupal.ClasesDropDown.DropDownMenu(this.components);
             this.cuentasPorPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasPorCobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button2 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnlogoInicio)).BeginInit();
@@ -73,20 +73,39 @@
             this.panelMenu.Size = new System.Drawing.Size(230, 561);
             this.panelMenu.TabIndex = 0;
             // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::Trabajo_grupal.Properties.Resources.configuracion;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 370);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(230, 46);
+            this.button2.TabIndex = 3;
+            this.button2.Tag = "Configuracion";
+            this.button2.Text = "Configuracion";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button1
             // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Trabajo_grupal.Properties.Resources.configuracion;
+            this.button1.Image = global::Trabajo_grupal.Properties.Resources.metodo_de_pago__3_;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 371);
+            this.button1.Location = new System.Drawing.Point(0, 324);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(230, 46);
             this.button1.TabIndex = 8;
-            this.button1.Tag = "Configuracion";
-            this.button1.Text = "Configuracion";
+            this.button1.Tag = "Cuentas";
+            this.button1.Text = "Cuentas";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -110,35 +129,37 @@
             // 
             // btnpagos
             // 
+            this.btnpagos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnpagos.FlatAppearance.BorderSize = 0;
             this.btnpagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnpagos.ForeColor = System.Drawing.Color.White;
-            this.btnpagos.Image = global::Trabajo_grupal.Properties.Resources.metodo_de_pago__3_;
+            this.btnpagos.Image = global::Trabajo_grupal.Properties.Resources.factura__1_;
             this.btnpagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnpagos.Location = new System.Drawing.Point(0, 325);
+            this.btnpagos.Location = new System.Drawing.Point(0, 278);
             this.btnpagos.Name = "btnpagos";
             this.btnpagos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnpagos.Size = new System.Drawing.Size(230, 46);
             this.btnpagos.TabIndex = 4;
-            this.btnpagos.Tag = "Cuentas";
-            this.btnpagos.Text = "Cuentas ";
+            this.btnpagos.Tag = "Ventas";
+            this.btnpagos.Text = "Ventas";
             this.btnpagos.UseVisualStyleBackColor = true;
             this.btnpagos.Click += new System.EventHandler(this.btnpagos_Click);
             // 
             // btnfacturacion
             // 
+            this.btnfacturacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnfacturacion.FlatAppearance.BorderSize = 0;
             this.btnfacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnfacturacion.ForeColor = System.Drawing.Color.White;
-            this.btnfacturacion.Image = global::Trabajo_grupal.Properties.Resources.factura__1_;
+            this.btnfacturacion.Image = global::Trabajo_grupal.Properties.Resources.empleados__1_;
             this.btnfacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnfacturacion.Location = new System.Drawing.Point(0, 279);
+            this.btnfacturacion.Location = new System.Drawing.Point(0, 232);
             this.btnfacturacion.Name = "btnfacturacion";
             this.btnfacturacion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnfacturacion.Size = new System.Drawing.Size(230, 46);
             this.btnfacturacion.TabIndex = 3;
-            this.btnfacturacion.Tag = "Ventas";
-            this.btnfacturacion.Text = "Ventas";
+            this.btnfacturacion.Tag = "Empleados";
+            this.btnfacturacion.Text = "Empleados";
             this.btnfacturacion.UseVisualStyleBackColor = true;
             this.btnfacturacion.Click += new System.EventHandler(this.btnfacturacion_Click);
             // 
@@ -315,23 +336,6 @@
             this.cuentasPorCobrarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.cuentasPorCobrarToolStripMenuItem.Text = "Cuentas por cobrar";
             this.cuentasPorCobrarToolStripMenuItem.Click += new System.EventHandler(this.cuentasPorCobrarToolStripMenuItem_Click);
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Trabajo_grupal.Properties.Resources.empleados__1_;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 232);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(230, 46);
-            this.button2.TabIndex = 3;
-            this.button2.Tag = "Empleados";
-            this.button2.Text = "Empleados";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

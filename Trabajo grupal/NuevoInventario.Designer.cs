@@ -171,6 +171,7 @@
             this.btnguardar.TabIndex = 21;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // txtcantidad
             // 

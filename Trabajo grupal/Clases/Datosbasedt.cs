@@ -15,9 +15,9 @@ namespace Trabajo_grupal.Clases
             int retorno = 0;
 
             Conexion.opoencon();
-            SqlCommand comando = new SqlCommand(string.Format(" insert into NuevoInventario (Codigo, Nombre_Mercancia, Descripcion, Tipo_Producto, Cantidad, Inv_Minimo, Color_Producto, Precio_Comprar) " +
-                "values ('{0}','{1}','{2}','{3}','{4}', '{5}','{6}','{7}')",
-                    pget.Codigo, pget.Nombre_Mercancia, pget.Descripcion, pget.Tipo_Producto, pget.Cantidad, pget.Inv_Minimo,pget.Color_Producto, pget.Precio_Compra), Conexion.ObtenerConexion());
+            SqlCommand comando = new SqlCommand(string.Format(" insert into NuevoInventario (Codigo, Nombre_Mercancia, Descripcion, Tipo_Producto,Docenas, Unidad, Lotes, Cantidad, Inv_Minimo, Color_Producto, Precio_Comprar) " +
+                "values ('{0}','{1}','{2}','{3}','{4}', '{5}','{6}','{7}','{8}','{9}','{10}')",
+                    pget.Codigo, pget.Nombre_Mercancia, pget.Descripcion, pget.Tipo_Producto, pget.Docenas, pget.Unidad, pget.Lotes, pget.Cantidad, pget.Inv_Minimo,pget.Color_Producto, pget.Precio_Compra), Conexion.ObtenerConexion());
 
             retorno = comando.ExecuteNonQuery();
             Conexion.cerrarcon();
@@ -50,7 +50,7 @@ namespace Trabajo_grupal.Clases
             return retorno;
         }
 
-        public static List<Datosget> BuscarNuevoInventario(string pNombre_Mercancia, Int16 Codigo) 
+        public static List<Datosget> BuscarNuevoInventario(string pNombre_Mercancia, string Codigo) 
         {
             List<Datosget> lista = new List<Datosget>();
             Conexion.opoencon();
@@ -64,15 +64,15 @@ namespace Trabajo_grupal.Clases
                     Datosget pNuevoInventario = new Datosget();
 
 
-                    pNuevoInventario.Codigo = reader.GetInt32(0);
+                    pNuevoInventario.Codigo = reader.GetString(0);
                     pNuevoInventario.Nombre_Mercancia = reader.GetString(1);
                     pNuevoInventario.Descripcion = reader.GetString(2);
                     pNuevoInventario.Tipo_Producto = reader.GetString(3);
                     pNuevoInventario.Docenas = reader.GetString(4);
                     pNuevoInventario.Unidad = reader.GetString(5);
                     pNuevoInventario.Lotes = reader.GetString(6);
-                    pNuevoInventario.Cantidad = reader.GetInt32(7);
-                    pNuevoInventario.Inv_Minimo = reader.GetInt32(8);
+                    pNuevoInventario.Cantidad = reader.GetString(7);
+                    pNuevoInventario.Inv_Minimo = reader.GetString(8);
                     pNuevoInventario.Color_Producto = reader.GetString(9);
                     pNuevoInventario.Precio_Compra = reader.GetString(10);
 
@@ -85,7 +85,7 @@ namespace Trabajo_grupal.Clases
             }
 
         }
-        public static Datosget ObtenerNuevoInventario(Int64 pId)
+        public static Datosget ObtenerNuevoInventario(string pId)
         {
             Conexion.opoencon();
             {
@@ -95,15 +95,15 @@ namespace Trabajo_grupal.Clases
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-                    pNuevoInventario.Codigo = reader.GetInt32(0);
+                    pNuevoInventario.Codigo = reader.GetString(0);
                     pNuevoInventario.Nombre_Mercancia = reader.GetString(1);
                     pNuevoInventario.Descripcion = reader.GetString(2);
                     pNuevoInventario.Tipo_Producto = reader.GetString(3);
                     pNuevoInventario.Docenas = reader.GetString(4);
                     pNuevoInventario.Unidad = reader.GetString(5);
                     pNuevoInventario.Lotes = reader.GetString(6);
-                    pNuevoInventario.Cantidad = reader.GetInt32(7);
-                    pNuevoInventario.Inv_Minimo = reader.GetInt32(8);
+                    pNuevoInventario.Cantidad = reader.GetString(7);
+                    pNuevoInventario.Inv_Minimo = reader.GetString(8);
                     pNuevoInventario.Color_Producto = reader.GetString(9);
                     pNuevoInventario.Precio_Compra = reader.GetString(10);
                     

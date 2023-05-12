@@ -59,10 +59,11 @@
     <Compile Include="ClasesDropDown\MenuRenderer.cs" />
     <Compile Include="Clases\Datosbasedt.cs" />
     <Compile Include="Clases\DatosbaseEmpleados.cs" />
+    <Compile Include="Clases\DatosbaseInvPantalones.cs" />
     <Compile Include="Clases\DatosgetClientes.cs" />
-    <Compile Include="Clases\Datosget.cs" />
+    <Compile Include="Clases\DatosgetMateriaPrima.cs" />
     <Compile Include="Clases\DatosgetEmpleados.cs" />
-    <Compile Include="Clases\DatosgetInv.Minimo.cs" />
+    <Compile Include="Clases\DatosgetInvPantalones.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>

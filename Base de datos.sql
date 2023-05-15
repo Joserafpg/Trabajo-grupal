@@ -97,11 +97,12 @@ Cedula varchar (50),
 Telefono varchar (20),
 Direccion varchar (50),
 Correo varchar (50),
-Fecha_de_nacimiento datetimeoffset,
-Fecha_de_ingreso datetime,
-Sueldo int,
+Fecha_de_nacimiento date,
+Fecha_de_ingreso date,
+Sueldo varchar (50),
+AFP varchar (50),
+SFS varchar (50),
 )
-
 
 select * from Usuarios
 

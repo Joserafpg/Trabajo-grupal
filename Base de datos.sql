@@ -62,15 +62,15 @@ Fecha_de_ingreso datetime
 
 /*Tabla NuevoInventario*/
 create table NuevoInventario(
-Codigo varchar (50) NOT NULL PRIMARY KEY,
+Codigo int IDENTITY (1,1) NOT NULL PRIMARY KEY,
 Nombre_Mercancia Varchar (50),
 Descripcion Varchar (50),
 Tipo_Producto Varchar (50),
 Docenas bit,
 Unidad bit,
 Lotes bit,
-Cantidad varchar (50),
-Inv_Minimo Varchar (50),
+Cantidad int,
+Inv_Minimo int,
 Color_Producto Varchar (50),
 Precio_Compra varchar (50)
 )
@@ -78,11 +78,11 @@ Precio_Compra varchar (50)
 
 /*tabla InvPantalones*/
 create table InvPantalones(
-Codigo varchar (50) NOT NULL PRIMARY KEY,
+Codigo int IDENTITY (1,1) NOT NULL PRIMARY KEY,
 Nombre_Producto Varchar (50),
 Descripcion Varchar (50),
-Cantidad varchar (50),
-Inv_Minimo varchar (50),
+Cantidad int,
+Inv_Minimo int,
 Mercancia_Utilizada varchar (50),
 Precio_Venta varchar (50),
 Precio_PorMayor varchar (50)

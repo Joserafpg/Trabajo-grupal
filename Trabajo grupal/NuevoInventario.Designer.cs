@@ -52,11 +52,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtInvMinimo);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.chlotes);
@@ -155,7 +159,7 @@
             // btndeshacer
             // 
             this.btndeshacer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndeshacer.Location = new System.Drawing.Point(602, 238);
+            this.btndeshacer.Location = new System.Drawing.Point(601, 365);
             this.btndeshacer.Name = "btndeshacer";
             this.btndeshacer.Size = new System.Drawing.Size(180, 56);
             this.btndeshacer.TabIndex = 22;
@@ -165,7 +169,7 @@
             // btnguardar
             // 
             this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnguardar.Location = new System.Drawing.Point(602, 311);
+            this.btnguardar.Location = new System.Drawing.Point(601, 289);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(180, 56);
             this.btnguardar.TabIndex = 21;
@@ -322,6 +326,26 @@
             this.panel1.TabIndex = 4;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(601, 201);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 61);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Modificar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(601, 114);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(180, 61);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Buscar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // NuevoInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,5 +390,7 @@
         private System.Windows.Forms.RadioButton chlotes;
         private System.Windows.Forms.RadioButton chUnidad;
         private System.Windows.Forms.RadioButton chDocenas;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

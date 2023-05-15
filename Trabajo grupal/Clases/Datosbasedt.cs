@@ -64,15 +64,15 @@ namespace Trabajo_grupal.Clases
                     Datosget pNuevoInventario = new Datosget();
 
 
-                    pNuevoInventario.Codigo = reader.GetString(0);
+                    pNuevoInventario.Codigo = Convert.ToInt64(reader.GetValue(7));
                     pNuevoInventario.Nombre_Mercancia = reader.GetString(1);
                     pNuevoInventario.Descripcion = reader.GetString(2);
                     pNuevoInventario.Tipo_Producto = reader.GetString(3);
                     pNuevoInventario.Docenas = reader.GetString(4);
                     pNuevoInventario.Unidad = reader.GetString(5);
                     pNuevoInventario.Lotes = reader.GetString(6);
-                    pNuevoInventario.Cantidad = reader.GetString(7);
-                    pNuevoInventario.Inv_Minimo = reader.GetString(8);
+                    pNuevoInventario.Cantidad = Convert.ToInt64(reader.GetValue(7));
+                    pNuevoInventario.Inv_Minimo = Convert.ToInt64(reader.GetValue(7));
                     pNuevoInventario.Color_Producto = reader.GetString(9);
                     pNuevoInventario.Precio_Compra = reader.GetString(10);
 
@@ -95,15 +95,15 @@ namespace Trabajo_grupal.Clases
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-                    pNuevoInventario.Codigo = reader.GetString(0);
+                    pNuevoInventario.Codigo = Convert.ToInt64(reader.GetValue(0));
                     pNuevoInventario.Nombre_Mercancia = reader.GetString(1);
                     pNuevoInventario.Descripcion = reader.GetString(2);
                     pNuevoInventario.Tipo_Producto = reader.GetString(3);
                     pNuevoInventario.Docenas = reader.GetString(4);
                     pNuevoInventario.Unidad = reader.GetString(5);
                     pNuevoInventario.Lotes = reader.GetString(6);
-                    pNuevoInventario.Cantidad = reader.GetString(7);
-                    pNuevoInventario.Inv_Minimo = reader.GetString(8);
+                    pNuevoInventario.Cantidad = Convert.ToInt64(reader.GetValue(7));
+                    pNuevoInventario.Inv_Minimo = Convert.ToInt64(reader.GetValue(8));
                     pNuevoInventario.Color_Producto = reader.GetString(9);
                     pNuevoInventario.Precio_Compra = reader.GetString(10);
                     

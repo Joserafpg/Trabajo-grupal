@@ -16,8 +16,8 @@ namespace Trabajo_grupal.Clases
 
             Conexion.opoencon();
 
-            SqlCommand Comando = new SqlCommand(string.Format("Insert into Empleados (Nombre_Completo, Cedula, Telefono, Direccion, Correo, Fecha_de_nacimiento, Fecha_de_ingreso, Sueldo) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')",
-                    pget.Nombre, pget.Cedula, pget.Telefono, pget.Direccion, pget.Correo, pget.Fecha_Nac.ToString("yyyy-MM-dd HH:mm:ss"), pget.Fecha_Ingreso.ToString("yyyy-MM-dd HH:mm:ss"), pget.Sueldo), Conexion.ObtenerConexion());
+            SqlCommand Comando = new SqlCommand(string.Format("Insert into Empleados (Nombre_Completo, Cedula, Direccion, Telefono, Correo, Fecha_de_nacimiento, Fecha_de_ingreso, Sueldo, AFP, SFS) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')",
+                    pget.Nombre, pget.Cedula, pget.Direccion, pget.Telefono, pget.Correo, pget.Fecha_Nac.ToString("yyyy-MM-dd HH:mm:ss"), pget.Fecha_Ingreso.ToString("yyyy-MM-dd HH:mm:ss"), pget.Sueldo, pget.AFP, pget.SFS), Conexion.ObtenerConexion());
 
             retorno = Comando.ExecuteNonQuery();
             Conexion.cerrarcon();
@@ -30,8 +30,8 @@ namespace Trabajo_grupal.Clases
             int retorno = 0;
             Conexion.opoencon();
             {
-                SqlCommand comando = new SqlCommand(string.Format("update Empleados set Nombre_Completo = '{0}', Cedula = '{1}', Telefono = '{2}', Direccion = '{3}', Correo = '{4}', Fecha_de_nacimiento = '{5}', Fecha_de_ingreso = '{6}', Sueldo = '{7}',  where Codigo = {8}",
-                    pAlumno.Nombre, pAlumno.Cedula, pAlumno.Telefono, pAlumno.Direccion, pAlumno.Correo, pAlumno.Fecha_Nac.ToString("yyyy-MM-dd HH:mm:ss"), pAlumno.Fecha_Ingreso.ToString("yyyy-MM-dd HH:mm:ss"), pAlumno.Sueldo, pAlumno.Codigo), Conexion.ObtenerConexion());
+                SqlCommand comando = new SqlCommand(string.Format("update Empleados set Nombre_Completo = '{0}', Cedula = '{1}', Direccion = '{2}', Telefono = '{3}', Correo = '{4}', Fecha_de_nacimiento = '{5}', Fecha_de_ingreso = '{6}', Sueldo = '{7}', AFP = '{8}', SFS= '{9}'  where Codigo = {10}",
+                    pAlumno.Nombre, pAlumno.Cedula, pAlumno.Direccion, pAlumno.Telefono, pAlumno.Correo, pAlumno.Fecha_Nac.ToString("yyyy-MM-dd HH:mm:ss"), pAlumno.Fecha_Ingreso.ToString("yyyy-MM-dd HH:mm:ss"), pAlumno.Sueldo, pAlumno.AFP, pAlumno.SFS, pAlumno.Codigo), Conexion.ObtenerConexion());
                 retorno = comando.ExecuteNonQuery();
             }
             Conexion.cerrarcon();
@@ -42,14 +42,14 @@ namespace Trabajo_grupal.Clases
         {
             int retorno = 0;
             Conexion.opoencon();
-            SqlCommand Comando = new SqlCommand(string.Format("Delete from Alumnos where Codigo = {0}", pID), Conexion.ObtenerConexion());
+            SqlCommand Comando = new SqlCommand(string.Format("Delete from Empleados where Codigo = {0}", pID), Conexion.ObtenerConexion());
 
             retorno = Comando.ExecuteNonQuery();
             Conexion.cerrarcon();
             return retorno;
         }
 
-        public static List<DatosgetEmpleados> BuscarAlumnos(string pCodigo, string pCedula)
+        public static List<DatosgetEmpleados> BuscarEmpleados(string pCodigo, string pCedula)
         {
             List<DatosgetEmpleados> lista = new List<DatosgetEmpleados>();
             Conexion.opoencon();
@@ -61,18 +61,20 @@ namespace Trabajo_grupal.Clases
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-                    DatosgetEmpleados pAlumnos = new DatosgetEmpleados();
-                    pAlumnos.Codigo = Convert.ToInt64(reader.GetValue(0));
-                    pAlumnos.Nombre = reader.GetString(1);
-                    pAlumnos.Cedula = reader.GetString(2);
-                    pAlumnos.Telefono = reader.GetString(3);
-                    pAlumnos.Direccion = reader.GetString(4);
-                    pAlumnos.Correo = reader.GetString(5);
-                    pAlumnos.Fecha_Nac = Convert.ToDateTime(reader.GetValue(6));
-                    pAlumnos.Fecha_Ingreso = Convert.ToDateTime(reader.GetValue(7));
-                    pAlumnos.Sueldo = reader.GetString(8);
+                    DatosgetEmpleados pEmpleados = new DatosgetEmpleados();
+                    pEmpleados.Codigo = Convert.ToInt64(reader.GetValue(0));
+                    pEmpleados.Nombre = reader.GetString(1);
+                    pEmpleados.Cedula = reader.GetString(2);
+                    pEmpleados.Telefono = reader.GetString(3);
+                    pEmpleados.Direccion = reader.GetString(4);
+                    pEmpleados.Correo = reader.GetString(5);
+                    pEmpleados.Fecha_Nac = Convert.ToDateTime(reader.GetValue(6));
+                    pEmpleados.Fecha_Ingreso = Convert.ToDateTime(reader.GetValue(7));
+                    pEmpleados.Sueldo = reader.GetString(8);
+                    pEmpleados.AFP = reader.GetString(9);
+                    pEmpleados.SFS = reader.GetString(10);
 
-                    lista.Add(pAlumnos);
+                    lista.Add(pEmpleados);
                 }
                 Conexion.cerrarcon();
                 return lista;
@@ -80,7 +82,7 @@ namespace Trabajo_grupal.Clases
         }
 
 
-        public static DatosgetEmpleados ObtenerAlumnos(string pId)
+        public static DatosgetEmpleados ObtenerEmpleados(string pId)
         {
             Conexion.opoencon();
             {

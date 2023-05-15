@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnconfiguracion = new System.Windows.Forms.Button();
+            this.btncuentas = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.btnpagos = new System.Windows.Forms.Button();
             this.btnfacturacion = new System.Windows.Forms.Button();
+            this.btnempleados = new System.Windows.Forms.Button();
             this.btnclientes = new System.Windows.Forms.Button();
             this.btninventario = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -59,11 +59,11 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(90)))), ((int)(((byte)(244)))));
-            this.panelMenu.Controls.Add(this.button2);
-            this.panelMenu.Controls.Add(this.button1);
+            this.panelMenu.Controls.Add(this.btnconfiguracion);
+            this.panelMenu.Controls.Add(this.btncuentas);
             this.panelMenu.Controls.Add(this.button10);
-            this.panelMenu.Controls.Add(this.btnpagos);
             this.panelMenu.Controls.Add(this.btnfacturacion);
+            this.panelMenu.Controls.Add(this.btnempleados);
             this.panelMenu.Controls.Add(this.btnclientes);
             this.panelMenu.Controls.Add(this.btninventario);
             this.panelMenu.Controls.Add(this.panel1);
@@ -73,41 +73,41 @@
             this.panelMenu.Size = new System.Drawing.Size(230, 561);
             this.panelMenu.TabIndex = 0;
             // 
-            // button2
+            // btnconfiguracion
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Trabajo_grupal.Properties.Resources.configuracion;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 370);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(230, 46);
-            this.button2.TabIndex = 3;
-            this.button2.Tag = "Configuracion";
-            this.button2.Text = "Configuracion";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnconfiguracion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnconfiguracion.FlatAppearance.BorderSize = 0;
+            this.btnconfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnconfiguracion.ForeColor = System.Drawing.Color.White;
+            this.btnconfiguracion.Image = global::Trabajo_grupal.Properties.Resources.configuracion;
+            this.btnconfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnconfiguracion.Location = new System.Drawing.Point(0, 370);
+            this.btnconfiguracion.Name = "btnconfiguracion";
+            this.btnconfiguracion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnconfiguracion.Size = new System.Drawing.Size(230, 46);
+            this.btnconfiguracion.TabIndex = 3;
+            this.btnconfiguracion.Tag = "Configuracion";
+            this.btnconfiguracion.Text = "Configuracion";
+            this.btnconfiguracion.UseVisualStyleBackColor = true;
+            this.btnconfiguracion.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btncuentas
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Trabajo_grupal.Properties.Resources.metodo_de_pago__3_;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 324);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(230, 46);
-            this.button1.TabIndex = 8;
-            this.button1.Tag = "Cuentas";
-            this.button1.Text = "Cuentas";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btncuentas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btncuentas.FlatAppearance.BorderSize = 0;
+            this.btncuentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncuentas.ForeColor = System.Drawing.Color.White;
+            this.btncuentas.Image = global::Trabajo_grupal.Properties.Resources.metodo_de_pago__3_;
+            this.btncuentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncuentas.Location = new System.Drawing.Point(0, 324);
+            this.btncuentas.Name = "btncuentas";
+            this.btncuentas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btncuentas.Size = new System.Drawing.Size(230, 46);
+            this.btncuentas.TabIndex = 8;
+            this.btncuentas.Tag = "Cuentas";
+            this.btncuentas.Text = "Cuentas";
+            this.btncuentas.UseVisualStyleBackColor = true;
+            this.btncuentas.Click += new System.EventHandler(this.button1_Click);
             // 
             // button10
             // 
@@ -127,41 +127,41 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // btnpagos
-            // 
-            this.btnpagos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnpagos.FlatAppearance.BorderSize = 0;
-            this.btnpagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnpagos.ForeColor = System.Drawing.Color.White;
-            this.btnpagos.Image = global::Trabajo_grupal.Properties.Resources.factura__1_;
-            this.btnpagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnpagos.Location = new System.Drawing.Point(0, 278);
-            this.btnpagos.Name = "btnpagos";
-            this.btnpagos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnpagos.Size = new System.Drawing.Size(230, 46);
-            this.btnpagos.TabIndex = 4;
-            this.btnpagos.Tag = "Ventas";
-            this.btnpagos.Text = "Ventas";
-            this.btnpagos.UseVisualStyleBackColor = true;
-            this.btnpagos.Click += new System.EventHandler(this.btnpagos_Click);
-            // 
             // btnfacturacion
             // 
             this.btnfacturacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnfacturacion.FlatAppearance.BorderSize = 0;
             this.btnfacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnfacturacion.ForeColor = System.Drawing.Color.White;
-            this.btnfacturacion.Image = global::Trabajo_grupal.Properties.Resources.empleados__1_;
+            this.btnfacturacion.Image = global::Trabajo_grupal.Properties.Resources.factura__1_;
             this.btnfacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnfacturacion.Location = new System.Drawing.Point(0, 232);
+            this.btnfacturacion.Location = new System.Drawing.Point(0, 278);
             this.btnfacturacion.Name = "btnfacturacion";
             this.btnfacturacion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnfacturacion.Size = new System.Drawing.Size(230, 46);
-            this.btnfacturacion.TabIndex = 3;
-            this.btnfacturacion.Tag = "Empleados";
-            this.btnfacturacion.Text = "Empleados";
+            this.btnfacturacion.TabIndex = 4;
+            this.btnfacturacion.Tag = "Ventas";
+            this.btnfacturacion.Text = "Ventas";
             this.btnfacturacion.UseVisualStyleBackColor = true;
-            this.btnfacturacion.Click += new System.EventHandler(this.btnfacturacion_Click);
+            this.btnfacturacion.Click += new System.EventHandler(this.btnpagos_Click);
+            // 
+            // btnempleados
+            // 
+            this.btnempleados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnempleados.FlatAppearance.BorderSize = 0;
+            this.btnempleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnempleados.ForeColor = System.Drawing.Color.White;
+            this.btnempleados.Image = global::Trabajo_grupal.Properties.Resources.empleados__1_;
+            this.btnempleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnempleados.Location = new System.Drawing.Point(0, 232);
+            this.btnempleados.Name = "btnempleados";
+            this.btnempleados.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnempleados.Size = new System.Drawing.Size(230, 46);
+            this.btnempleados.TabIndex = 3;
+            this.btnempleados.Tag = "Empleados";
+            this.btnempleados.Text = "Empleados";
+            this.btnempleados.UseVisualStyleBackColor = true;
+            this.btnempleados.Click += new System.EventHandler(this.btnfacturacion_Click);
             // 
             // btnclientes
             // 
@@ -368,8 +368,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.PictureBox btnlogoInicio;
-        private System.Windows.Forms.Button btnpagos;
         private System.Windows.Forms.Button btnfacturacion;
+        private System.Windows.Forms.Button btnempleados;
         private System.Windows.Forms.Button btnclientes;
         private System.Windows.Forms.Button btninventario;
         private System.Windows.Forms.Button btnClose;
@@ -380,8 +380,8 @@
         private ClasesDropDown.DropDownMenu dropDownMenu1;
         private System.Windows.Forms.ToolStripMenuItem cuentasPorPagarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuentasPorCobrarToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btncuentas;
+        private System.Windows.Forms.Button btnconfiguracion;
     }
 }
 

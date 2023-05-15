@@ -44,13 +44,16 @@ namespace Trabajo_grupal
             ms6.SetToolTip(btnclientes, "Clientes");
 
             var ms7 = new ToolTip();
-            ms7.SetToolTip(btnfacturacion, "Ventas");
+            ms7.SetToolTip(btnempleados, "Empleados");
 
             var ms8 = new ToolTip();
-            ms8.SetToolTip(btnpagos, "Cuentas");
+            ms8.SetToolTip(btnfacturacion, "Ventas");
 
             var ms9 = new ToolTip();
-            ms9.SetToolTip(button1, "Configuracion");
+            ms9.SetToolTip(btncuentas, "Cuentas");
+            
+            var ms10 = new ToolTip();
+            ms10.SetToolTip(btnconfiguracion, "Configuracion");
         }
 
         Facturacion form2 = new Facturacion();
@@ -227,7 +230,7 @@ namespace Trabajo_grupal
         private void button1_Click(object sender, EventArgs e)
         {
             CollapseMenuOpen();
-            dropDownMenu1.Show(btnpagos, btnpagos.Width, 0);
+            dropDownMenu1.Show(btnfacturacion, btnfacturacion.Width, 0);
         }
 
         private void button2_Click(object sender, EventArgs e)

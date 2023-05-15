@@ -62,7 +62,7 @@ Fecha_de_ingreso datetime
 
 /*Tabla NuevoInventario*/
 create table NuevoInventario(
-Codigo int IDENTITY (1,1) NOT NULL PRIMARY KEY,
+Codigo int NOT NULL PRIMARY KEY,
 Nombre_Mercancia Varchar (50),
 Descripcion Varchar (50),
 Tipo_Producto Varchar (50),
@@ -102,10 +102,29 @@ Fecha_de_ingreso date,
 Sueldo varchar (50),
 AFP varchar (50),
 SFS varchar (50),
+Puesto varchar (50),
 )
 
-select * from Usuarios
 
-drop table Clientes
+/*Tabla Factura*/
+create table Factura(
+NO_Factura int IDENTITY (1,1) NOT NULL PRIMARY KEY,
+ID_Cliente int,
+Fecha datetime,
+
+)
+
+/*Tabla Detalles Factura*/
+create table Detalles_Factura(
+NO_Factura int PRIMARY KEY,
+ID_Producto int,
+Nombre_Producto varchar (50),
+Cantidad int,
+Precio varchar (50),
+)
+
+select * from Empleados
+
+drop table Empleados
 
 drop database Proyecto_Grupal

@@ -40,15 +40,15 @@ namespace Trabajo_grupal
             Datosget datosget = new Datosget();
 
 
-            datosget.Codigo = txtcodigo.Text;
+            datosget.Codigo = Convert.ToInt64(txtcodigo.Text);
             datosget.Nombre_Mercancia = CBNom.Text;
             datosget.Descripcion = txtDescripcion.Text;
             datosget.Tipo_Producto = CBtipodep.Text;
-            datosget.Docenas = chDocenas.Text;
-            datosget.Unidad = chUnidad.Text;
-            datosget.Lotes = chlotes.Text;
-            datosget.Cantidad = txtcantidad.Text;
-            datosget.Inv_Minimo = txtInvMinimo.Text;
+            datosget.Docenas = chDocenas.Checked;
+            datosget.Unidad = chUnidad.Checked;
+            datosget.Lotes = chlotes.Checked;
+            datosget.Cantidad = Convert.ToInt64(txtcantidad.Text);
+            datosget.Inv_Minimo = Convert.ToInt64(txtInvMinimo.Text);
             datosget.Color_Producto = CBcolor.Text;
             datosget.Precio_Compra = txtpreciocompra.Text;
 

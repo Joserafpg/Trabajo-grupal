@@ -33,7 +33,7 @@ namespace proveedores
         private void button1_Click(object sender, EventArgs e)
         {
             NuevoUsuario frm = new NuevoUsuario();
-            frm.Show();
+            frm.ShowDialog();
         }
     }
 }

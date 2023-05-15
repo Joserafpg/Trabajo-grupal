@@ -35,31 +35,31 @@ namespace Trabajo_grupal
         private void agregar_Click(object sender, EventArgs e)
         {
             NuevoInventario frm = new NuevoInventario();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             ModificarInventario frm = new ModificarInventario();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             ProductosBajoInventario frm = new ProductosBajoInventario();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             EliminarInventario frm = new EliminarInventario();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void Ajustes_Click(object sender, EventArgs e)
         {
             AjustesInventario frm = new AjustesInventario();
-            frm.Show();
+            frm.ShowDialog();
         }
     }
 }

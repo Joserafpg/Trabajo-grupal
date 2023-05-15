@@ -64,6 +64,7 @@ namespace Trabajo_grupal
                 pEmpleados.Sueldo = txtsueldo.Text;
                 pEmpleados.SFS = txtsfs.Text;
                 pEmpleados.AFP = txtafp.Text;
+                pEmpleados.Puesto = cPuesto.Text;
 
                 int resultado = DatosbaseEmpleados.Agregar(pEmpleados);
 

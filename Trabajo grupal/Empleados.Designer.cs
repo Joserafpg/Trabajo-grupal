@@ -55,6 +55,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtcedula = new System.Windows.Forms.TextBox();
             this.btnsiguiente = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cPuesto = new System.Windows.Forms.ComboBox();
             this.panelsueldo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -220,6 +222,8 @@
             // 
             // panelsueldo
             // 
+            this.panelsueldo.Controls.Add(this.cPuesto);
+            this.panelsueldo.Controls.Add(this.label12);
             this.panelsueldo.Controls.Add(this.txtafp);
             this.panelsueldo.Controls.Add(this.label10);
             this.panelsueldo.Controls.Add(this.txtsfs);
@@ -236,7 +240,7 @@
             // 
             this.txtafp.Location = new System.Drawing.Point(157, 225);
             this.txtafp.Name = "txtafp";
-            this.txtafp.Size = new System.Drawing.Size(155, 20);
+            this.txtafp.Size = new System.Drawing.Size(165, 20);
             this.txtafp.TabIndex = 38;
             // 
             // label10
@@ -254,7 +258,7 @@
             // 
             this.txtsfs.Location = new System.Drawing.Point(157, 180);
             this.txtsfs.Name = "txtsfs";
-            this.txtsfs.Size = new System.Drawing.Size(155, 20);
+            this.txtsfs.Size = new System.Drawing.Size(165, 20);
             this.txtsfs.TabIndex = 36;
             // 
             // label9
@@ -270,9 +274,9 @@
             // 
             // txtsueldo
             // 
-            this.txtsueldo.Location = new System.Drawing.Point(157, 127);
+            this.txtsueldo.Location = new System.Drawing.Point(157, 125);
             this.txtsueldo.Name = "txtsueldo";
-            this.txtsueldo.Size = new System.Drawing.Size(155, 20);
+            this.txtsueldo.Size = new System.Drawing.Size(165, 20);
             this.txtsueldo.TabIndex = 34;
             this.txtsueldo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -328,6 +332,25 @@
             this.btnsiguiente.Text = "Siguiente";
             this.btnsiguiente.UseVisualStyleBackColor = false;
             this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(79, 276);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(62, 21);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Puesto";
+            // 
+            // cPuesto
+            // 
+            this.cPuesto.FormattingEnabled = true;
+            this.cPuesto.Location = new System.Drawing.Point(157, 276);
+            this.cPuesto.Name = "cPuesto";
+            this.cPuesto.Size = new System.Drawing.Size(165, 21);
+            this.cPuesto.TabIndex = 36;
             // 
             // Empleados
             // 
@@ -396,5 +419,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtcedula;
         private System.Windows.Forms.Button btnsiguiente;
+        private System.Windows.Forms.ComboBox cPuesto;
+        private System.Windows.Forms.Label label12;
     }
 }

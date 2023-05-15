@@ -15,9 +15,9 @@ namespace Trabajo_grupal.Clases
             int retorno = 0;
 
             Conexion.opoencon();
-            SqlCommand comando = new SqlCommand(string.Format(" insert into NuevoInventario (Codigo, Nombre_Mercancia, Descripcion, Tipo_Producto,Docenas, Unidad, Lotes, Cantidad, Inv_Minimo, Color_Producto, Precio_Comprar) " +
+            SqlCommand comando = new SqlCommand(string.Format(" insert into NuevoInventario (Codigo, Nombre_Mercancia, Descripcion, Tipo_Producto,Docenas, Unidad, Lotes, Cantidad, Inv_Minimo, Color_Producto, Precio_Compra) " +
                 "values ('{0}','{1}','{2}','{3}','{4}', '{5}','{6}','{7}','{8}','{9}','{10}')",
-                    pget.Codigo, pget.Nombre_Mercancia, pget.Descripcion, pget.Tipo_Producto, pget.Docenas, pget.Unidad, pget.Lotes, pget.Cantidad, pget.Inv_Minimo,pget.Color_Producto, pget.Precio_Compra), Conexion.ObtenerConexion());
+                    pget.Codigo, pget.Nombre_Mercancia, pget.Descripcion, pget.Tipo_Producto, pget.Docenas, pget.Unidad, pget.Lotes, pget.Cantidad, pget.Inv_Minimo, pget.Color_Producto, pget.Precio_Compra), Conexion.ObtenerConexion());
 
             retorno = comando.ExecuteNonQuery();
             Conexion.cerrarcon();
@@ -33,7 +33,7 @@ namespace Trabajo_grupal.Clases
             Conexion.opoencon();
             {
                 SqlCommand comando = new SqlCommand(string.Format("Update NuevoInventario set Nombre_Mercancia ='{0}', Descripcion='{1}',Tipo_Producto='{2}',Docenas='{3}', Unidad='{4}',Lotes='{5}' ,Cantidad='{6}',Inv_Minimo='{7}', Color_Producto ='{8}', Precio_Compra ='{9}' where Codigo={10}",
-                     pNuevoInventario.Codigo, pNuevoInventario.Nombre_Mercancia, pNuevoInventario.Descripcion, pNuevoInventario.Tipo_Producto, pNuevoInventario.Docenas, pNuevoInventario.Unidad,pNuevoInventario.Lotes, pNuevoInventario.Cantidad, pNuevoInventario.Inv_Minimo,
+                     pNuevoInventario.Codigo, pNuevoInventario.Nombre_Mercancia, pNuevoInventario.Descripcion, pNuevoInventario.Tipo_Producto, pNuevoInventario.Docenas, pNuevoInventario.Unidad, pNuevoInventario.Lotes, pNuevoInventario.Cantidad, pNuevoInventario.Inv_Minimo,
                      pNuevoInventario.Color_Producto, pNuevoInventario.Precio_Compra), Conexion.ObtenerConexion());
                 retorno = comando.ExecuteNonQuery();
             }
@@ -50,7 +50,7 @@ namespace Trabajo_grupal.Clases
             return retorno;
         }
 
-        public static List<Datosget> BuscarNuevoInventario(string pNombre_Mercancia, string Codigo) 
+        public static List<Datosget> BuscarNuevoInventario(string pNombre_Mercancia, string Codigo)
         {
             List<Datosget> lista = new List<Datosget>();
             Conexion.opoencon();
@@ -68,9 +68,9 @@ namespace Trabajo_grupal.Clases
                     pNuevoInventario.Nombre_Mercancia = reader.GetString(1);
                     pNuevoInventario.Descripcion = reader.GetString(2);
                     pNuevoInventario.Tipo_Producto = reader.GetString(3);
-                    pNuevoInventario.Docenas = reader.GetString(4);
-                    pNuevoInventario.Unidad = reader.GetString(5);
-                    pNuevoInventario.Lotes = reader.GetString(6);
+                    pNuevoInventario.Docenas = reader.GetBoolean(4);
+                    pNuevoInventario.Unidad = reader.GetBoolean(5);
+                    pNuevoInventario.Lotes = reader.GetBoolean(6);
                     pNuevoInventario.Cantidad = Convert.ToInt64(reader.GetValue(7));
                     pNuevoInventario.Inv_Minimo = Convert.ToInt64(reader.GetValue(7));
                     pNuevoInventario.Color_Producto = reader.GetString(9);
@@ -99,21 +99,19 @@ namespace Trabajo_grupal.Clases
                     pNuevoInventario.Nombre_Mercancia = reader.GetString(1);
                     pNuevoInventario.Descripcion = reader.GetString(2);
                     pNuevoInventario.Tipo_Producto = reader.GetString(3);
-                    pNuevoInventario.Docenas = reader.GetString(4);
-                    pNuevoInventario.Unidad = reader.GetString(5);
-                    pNuevoInventario.Lotes = reader.GetString(6);
+                    pNuevoInventario.Docenas = reader.GetBoolean(4);
+                    pNuevoInventario.Unidad = reader.GetBoolean(5);
+                    pNuevoInventario.Lotes = reader.GetBoolean(6);
                     pNuevoInventario.Cantidad = Convert.ToInt64(reader.GetValue(7));
                     pNuevoInventario.Inv_Minimo = Convert.ToInt64(reader.GetValue(8));
                     pNuevoInventario.Color_Producto = reader.GetString(9);
                     pNuevoInventario.Precio_Compra = reader.GetString(10);
-                    
+
 
                 }
                 Conexion.cerrarcon();
                 return pNuevoInventario;
             }
-
         }
-
     }
 }

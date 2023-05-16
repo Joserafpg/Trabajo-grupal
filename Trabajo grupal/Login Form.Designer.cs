@@ -42,6 +42,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -54,6 +56,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.txtcontraseña);
@@ -70,7 +74,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Trabajo_grupal.Properties.Resources.cerrar__4_;
-            this.pictureBox4.Location = new System.Drawing.Point(39, 247);
+            this.pictureBox4.Location = new System.Drawing.Point(39, 253);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(36, 26);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -89,20 +93,21 @@
             // 
             // txtcontraseña
             // 
+            this.txtcontraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontraseña.Location = new System.Drawing.Point(81, 247);
+            this.txtcontraseña.Location = new System.Drawing.Point(90, 260);
             this.txtcontraseña.Name = "txtcontraseña";
-            this.txtcontraseña.PasswordChar = '0';
-            this.txtcontraseña.Size = new System.Drawing.Size(239, 26);
-            this.txtcontraseña.TabIndex = 7;
+            this.txtcontraseña.Size = new System.Drawing.Size(230, 19);
+            this.txtcontraseña.TabIndex = 1;
             // 
             // txtusuario
             // 
+            this.txtusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusuario.Location = new System.Drawing.Point(81, 202);
+            this.txtusuario.Location = new System.Drawing.Point(90, 202);
             this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(239, 26);
-            this.txtusuario.TabIndex = 6;
+            this.txtusuario.Size = new System.Drawing.Size(230, 19);
+            this.txtusuario.TabIndex = 0;
             // 
             // panel2
             // 
@@ -142,7 +147,7 @@
             this.rjButton1.Location = new System.Drawing.Point(81, 347);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(239, 45);
-            this.rjButton1.TabIndex = 4;
+            this.rjButton1.TabIndex = 2;
             this.rjButton1.Text = "Iniciar sesion";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
@@ -156,7 +161,7 @@
             this.label1.Location = new System.Drawing.Point(32, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(242, 37);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Iniciar Sesion";
             // 
             // panel3
@@ -201,7 +206,7 @@
             this.label2.Location = new System.Drawing.Point(69, 228);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(212, 28);
-            this.label2.TabIndex = 5;
+            this.label2.TabIndex = 7;
             this.label2.Text = "You can sign in to access with your \r\nexisting account";
             // 
             // label3
@@ -213,8 +218,24 @@
             this.label3.Location = new System.Drawing.Point(65, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(295, 37);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 6;
             this.label3.Text = "Welcome Back!!!";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.panel4.Location = new System.Drawing.Point(90, 223);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(230, 1);
+            this.panel4.TabIndex = 10;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.panel5.Location = new System.Drawing.Point(90, 281);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(230, 1);
+            this.panel5.TabIndex = 11;
             // 
             // Login_Form
             // 
@@ -254,5 +275,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
     }
 }

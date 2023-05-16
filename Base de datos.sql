@@ -47,7 +47,6 @@ FormCliente bit,
 FormInventario bit
 )
 
-
 /*Tabla Clientes*/
 create table Clientes(
 ID_Cliente int IDENTITY (1,1) NOT NULL PRIMARY KEY,
@@ -98,6 +97,8 @@ Telefono varchar (20),
 Direccion varchar (50),
 Correo varchar (50),
 Fecha_de_nacimiento date,
+Masculino bit,
+Femenino bit,
 Fecha_de_ingreso date,
 Sueldo varchar (50),
 AFP varchar (50),
@@ -115,24 +116,27 @@ Fecha datetime,
 )
 
 /*Tabla Detalles Factura*/
-create table Detalles_Factura(
+Create table Detalles_Factura(
 NO_Factura int PRIMARY KEY,
 ID_Producto int,
 Nombre_Producto varchar (50),
 Cantidad int,
 Precio varchar (50),
 )
+GO
 
 select * from Empleados
+go
 
 CREATE PROCEDURE SP_EMPLEADOCOMBOBOX
 AS
 SELECT Nombre_Completo FROM Empleados
-GO
+go
 
 EXEC SP_EMPLEADOCOMBOBOX
 GO
 
 drop table Empleados
+GO
 
 drop database Proyecto_Grupal

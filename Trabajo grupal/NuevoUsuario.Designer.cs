@@ -83,7 +83,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnusuarios = new System.Windows.Forms.Button();
             this.btnchange = new System.Windows.Forms.Button();
-            this.btninvisible = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.formpermiso.SuspendLayout();
@@ -116,7 +115,7 @@
             // txtusuario
             // 
             this.txtusuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusuario.Location = new System.Drawing.Point(231, 129);
+            this.txtusuario.Location = new System.Drawing.Point(299, 129);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(244, 27);
             this.txtusuario.TabIndex = 8;
@@ -127,7 +126,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(316, 105);
+            this.label2.Location = new System.Drawing.Point(384, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 21);
             this.label2.TabIndex = 7;
@@ -136,7 +135,7 @@
             // txtcontraseña
             // 
             this.txtcontraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontraseña.Location = new System.Drawing.Point(231, 205);
+            this.txtcontraseña.Location = new System.Drawing.Point(299, 205);
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.Size = new System.Drawing.Size(244, 27);
             this.txtcontraseña.TabIndex = 10;
@@ -146,7 +145,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(304, 181);
+            this.label3.Location = new System.Drawing.Point(372, 181);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 21);
             this.label3.TabIndex = 9;
@@ -155,6 +154,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnguardar);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.formpermiso);
             this.groupBox1.Controls.Add(this.txtempleado);
@@ -166,7 +166,6 @@
             this.groupBox1.Controls.Add(this.txtusuario);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnchange);
-            this.groupBox1.Controls.Add(this.btninvisible);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(29, 52);
@@ -180,7 +179,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(344, 267);
+            this.button2.Location = new System.Drawing.Point(451, 267);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 51);
             this.button2.TabIndex = 12;
@@ -206,7 +205,6 @@
             this.formpermiso.Controls.Add(this.agregarpagos);
             this.formpermiso.Controls.Add(this.label10);
             this.formpermiso.Controls.Add(this.label1);
-            this.formpermiso.Controls.Add(this.btnguardar);
             this.formpermiso.Controls.Add(this.cheliminarfactura);
             this.formpermiso.Controls.Add(this.cheliminarmercancia);
             this.formpermiso.Controls.Add(this.modificaruser);
@@ -230,15 +228,16 @@
             this.formpermiso.Controls.Add(this.chmodificarinventario);
             this.formpermiso.Controls.Add(this.chagregarmercancia);
             this.formpermiso.Controls.Add(this.checonsultar);
+            this.formpermiso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.formpermiso.Location = new System.Drawing.Point(3, 23);
             this.formpermiso.Name = "formpermiso";
-            this.formpermiso.Size = new System.Drawing.Size(113, 364);
+            this.formpermiso.Size = new System.Drawing.Size(845, 364);
             this.formpermiso.TabIndex = 12;
             // 
             // chformcobrar
             // 
             this.chformcobrar.AutoSize = true;
-            this.chformcobrar.Location = new System.Drawing.Point(668, 230);
+            this.chformcobrar.Location = new System.Drawing.Point(652, 230);
             this.chformcobrar.Name = "chformcobrar";
             this.chformcobrar.Size = new System.Drawing.Size(119, 25);
             this.chformcobrar.TabIndex = 74;
@@ -249,7 +248,7 @@
             // chformpagar
             // 
             this.chformpagar.AutoSize = true;
-            this.chformpagar.Location = new System.Drawing.Point(668, 108);
+            this.chformpagar.Location = new System.Drawing.Point(656, 108);
             this.chformpagar.Name = "chformpagar";
             this.chformpagar.Size = new System.Drawing.Size(116, 25);
             this.chformpagar.TabIndex = 73;
@@ -262,9 +261,9 @@
             this.chformusuarios.AutoSize = true;
             this.chformusuarios.Location = new System.Drawing.Point(535, 202);
             this.chformusuarios.Name = "chformusuarios";
-            this.chformusuarios.Size = new System.Drawing.Size(129, 25);
+            this.chformusuarios.Size = new System.Drawing.Size(99, 25);
             this.chformusuarios.TabIndex = 72;
-            this.chformusuarios.Text = "FormUsuarios";
+            this.chformusuarios.Text = "FormUser";
             this.chformusuarios.UseVisualStyleBackColor = true;
             this.chformusuarios.Visible = false;
             // 
@@ -305,7 +304,7 @@
             // 
             this.consultarcobros.AutoSize = true;
             this.consultarcobros.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.consultarcobros.Location = new System.Drawing.Point(751, 172);
+            this.consultarcobros.Location = new System.Drawing.Point(735, 172);
             this.consultarcobros.Name = "consultarcobros";
             this.consultarcobros.Size = new System.Drawing.Size(93, 23);
             this.consultarcobros.TabIndex = 68;
@@ -317,7 +316,7 @@
             // 
             this.eliminarcobros.AutoSize = true;
             this.eliminarcobros.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.eliminarcobros.Location = new System.Drawing.Point(764, 202);
+            this.eliminarcobros.Location = new System.Drawing.Point(748, 202);
             this.eliminarcobros.Name = "eliminarcobros";
             this.eliminarcobros.Size = new System.Drawing.Size(81, 23);
             this.eliminarcobros.TabIndex = 67;
@@ -329,7 +328,7 @@
             // 
             this.modificarcobros.AutoSize = true;
             this.modificarcobros.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.modificarcobros.Location = new System.Drawing.Point(668, 201);
+            this.modificarcobros.Location = new System.Drawing.Point(652, 201);
             this.modificarcobros.Name = "modificarcobros";
             this.modificarcobros.Size = new System.Drawing.Size(93, 23);
             this.modificarcobros.TabIndex = 66;
@@ -341,7 +340,7 @@
             // 
             this.agregarcobros.AutoSize = true;
             this.agregarcobros.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.agregarcobros.Location = new System.Drawing.Point(668, 172);
+            this.agregarcobros.Location = new System.Drawing.Point(652, 172);
             this.agregarcobros.Name = "agregarcobros";
             this.agregarcobros.Size = new System.Drawing.Size(82, 23);
             this.agregarcobros.TabIndex = 65;
@@ -353,7 +352,7 @@
             // 
             this.consultarpagos.AutoSize = true;
             this.consultarpagos.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.consultarpagos.Location = new System.Drawing.Point(751, 54);
+            this.consultarpagos.Location = new System.Drawing.Point(739, 54);
             this.consultarpagos.Name = "consultarpagos";
             this.consultarpagos.Size = new System.Drawing.Size(93, 23);
             this.consultarpagos.TabIndex = 64;
@@ -365,7 +364,7 @@
             // 
             this.eliminarpagos.AutoSize = true;
             this.eliminarpagos.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.eliminarpagos.Location = new System.Drawing.Point(764, 84);
+            this.eliminarpagos.Location = new System.Drawing.Point(752, 84);
             this.eliminarpagos.Name = "eliminarpagos";
             this.eliminarpagos.Size = new System.Drawing.Size(81, 23);
             this.eliminarpagos.TabIndex = 63;
@@ -377,7 +376,7 @@
             // 
             this.modificarpagos.AutoSize = true;
             this.modificarpagos.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.modificarpagos.Location = new System.Drawing.Point(668, 83);
+            this.modificarpagos.Location = new System.Drawing.Point(656, 83);
             this.modificarpagos.Name = "modificarpagos";
             this.modificarpagos.Size = new System.Drawing.Size(93, 23);
             this.modificarpagos.TabIndex = 62;
@@ -389,7 +388,7 @@
             // 
             this.agregarpagos.AutoSize = true;
             this.agregarpagos.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.agregarpagos.Location = new System.Drawing.Point(668, 54);
+            this.agregarpagos.Location = new System.Drawing.Point(656, 54);
             this.agregarpagos.Name = "agregarpagos";
             this.agregarpagos.Size = new System.Drawing.Size(82, 23);
             this.agregarpagos.TabIndex = 61;
@@ -400,7 +399,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(677, 136);
+            this.label10.Location = new System.Drawing.Point(648, 148);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(136, 21);
             this.label10.TabIndex = 57;
@@ -409,7 +408,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(672, 17);
+            this.label1.Location = new System.Drawing.Point(660, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 21);
             this.label1.TabIndex = 52;
@@ -419,7 +418,7 @@
             // 
             this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnguardar.ForeColor = System.Drawing.Color.White;
-            this.btnguardar.Location = new System.Drawing.Point(145, 244);
+            this.btnguardar.Location = new System.Drawing.Point(246, 267);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(169, 51);
             this.btnguardar.TabIndex = 19;
@@ -478,7 +477,7 @@
             // chCajero
             // 
             this.chCajero.AutoSize = true;
-            this.chCajero.Location = new System.Drawing.Point(580, 320);
+            this.chCajero.Location = new System.Drawing.Point(731, 323);
             this.chCajero.Name = "chCajero";
             this.chCajero.Size = new System.Drawing.Size(81, 25);
             this.chCajero.TabIndex = 43;
@@ -488,7 +487,7 @@
             // chCustom
             // 
             this.chCustom.AutoSize = true;
-            this.chCustom.Location = new System.Drawing.Point(580, 289);
+            this.chCustom.Location = new System.Drawing.Point(590, 323);
             this.chCustom.Name = "chCustom";
             this.chCustom.Size = new System.Drawing.Size(135, 25);
             this.chCustom.TabIndex = 42;
@@ -498,7 +497,7 @@
             // chAdmin
             // 
             this.chAdmin.AutoSize = true;
-            this.chAdmin.Location = new System.Drawing.Point(580, 258);
+            this.chAdmin.Location = new System.Drawing.Point(491, 323);
             this.chAdmin.Name = "chAdmin";
             this.chAdmin.Size = new System.Drawing.Size(81, 25);
             this.chAdmin.TabIndex = 41;
@@ -689,7 +688,7 @@
             // txtempleado
             // 
             this.txtempleado.FormattingEnabled = true;
-            this.txtempleado.Location = new System.Drawing.Point(231, 64);
+            this.txtempleado.Location = new System.Drawing.Point(299, 64);
             this.txtempleado.Name = "txtempleado";
             this.txtempleado.Size = new System.Drawing.Size(244, 29);
             this.txtempleado.TabIndex = 18;
@@ -699,7 +698,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(304, 35);
+            this.label5.Location = new System.Drawing.Point(372, 35);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 21);
             this.label5.TabIndex = 17;
@@ -730,23 +729,13 @@
             // 
             this.btnchange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnchange.ForeColor = System.Drawing.Color.White;
-            this.btnchange.Location = new System.Drawing.Point(148, 267);
+            this.btnchange.Location = new System.Drawing.Point(246, 267);
             this.btnchange.Name = "btnchange";
             this.btnchange.Size = new System.Drawing.Size(169, 51);
             this.btnchange.TabIndex = 11;
             this.btnchange.Text = "Aceptar";
             this.btnchange.UseVisualStyleBackColor = true;
             this.btnchange.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btninvisible
-            // 
-            this.btninvisible.Location = new System.Drawing.Point(592, 148);
-            this.btninvisible.Name = "btninvisible";
-            this.btninvisible.Size = new System.Drawing.Size(75, 23);
-            this.btninvisible.TabIndex = 19;
-            this.btninvisible.Text = "button1";
-            this.btninvisible.UseVisualStyleBackColor = true;
-            this.btninvisible.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // NuevoUsuario
             // 
@@ -826,6 +815,5 @@
         private System.Windows.Forms.CheckBox chformfacturas;
         private System.Windows.Forms.CheckBox chformcliente;
         private System.Windows.Forms.CheckBox chforminventario;
-        private System.Windows.Forms.Button btninvisible;
     }
 }

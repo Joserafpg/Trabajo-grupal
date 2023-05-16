@@ -161,10 +161,11 @@ namespace Trabajo_grupal
             }
         }
 
-        
+
         private void NuevoUsuario_Load(object sender, EventArgs e)
         {
             formpermiso.Visible = false;
+            RejuegoON();
             CargarComboBox();
         }
 
@@ -201,7 +202,7 @@ namespace Trabajo_grupal
         private void button4_Click(object sender, EventArgs e)
         {
             Usuarios frm = new Usuarios();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -462,12 +463,5 @@ namespace Trabajo_grupal
         {
             CheckboxCuentasCobra();
         }
-
-        
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
     }
 }

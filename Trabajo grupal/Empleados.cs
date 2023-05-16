@@ -23,7 +23,14 @@ namespace Trabajo_grupal
         void Limpiar()
         {
             txtnombre.Clear();
+            txtcedula.Clear();
             txtdireccion.Clear();
+            txTelefono.Clear();
+            txtCorreo.Clear();
+            chMasculino.Checked = false;
+            chFemenino.Checked = false;
+            txtsueldo.Clear();
+            cPuesto.ResetText();
         }
 
         void RejuegoON()
@@ -32,6 +39,7 @@ namespace Trabajo_grupal
             btnsiguiente.Visible = false;
             btnagregar.Visible = true;
         }
+
         void RejuegoOFF()
         {
             panelsueldo.Visible = false;
@@ -52,6 +60,7 @@ namespace Trabajo_grupal
             {
                 MessageBox.Show("Por favor, llene todos los campos antes de guardar los datos", "Campos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
             else
             {
 
@@ -62,6 +71,8 @@ namespace Trabajo_grupal
                 pEmpleados.Direccion = txtdireccion.Text;
                 pEmpleados.Correo = txtCorreo.Text;
                 pEmpleados.Fecha_Nac = txtfech.Value;
+                pEmpleados.Masculino = chMasculino.Checked;
+                pEmpleados.Femenino = chFemenino.Checked;
                 pEmpleados.Fecha_Ingreso = dtpingreso.Value;
                 pEmpleados.Sueldo = txtsueldo.Text;
                 pEmpleados.SFS = txtsfs.Text;
@@ -132,6 +143,8 @@ namespace Trabajo_grupal
                 txTelefono.Text = pBuscar.EmpleadoSeleccionado.Telefono;
                 txtCorreo.Text = pBuscar.EmpleadoSeleccionado.Correo;
                 txtfech.Value = pBuscar.EmpleadoSeleccionado.Fecha_Nac;
+                chMasculino.Checked = pBuscar.EmpleadoSeleccionado.Masculino;
+                chFemenino.Checked = pBuscar.EmpleadoSeleccionado.Femenino;
                 dtpingreso.Value = pBuscar.EmpleadoSeleccionado.Fecha_Ingreso;
                 txtsueldo.Text = pBuscar.EmpleadoSeleccionado.Sueldo;
                 txtsfs.Text = pBuscar.EmpleadoSeleccionado.SFS;
@@ -153,6 +166,8 @@ namespace Trabajo_grupal
             pModificar.Telefono = txTelefono.Text;
             pModificar.Correo = txtCorreo.Text;
             pModificar.Fecha_Nac = txtfech.Value;
+            pModificar.Masculino = chMasculino.Checked;
+            pModificar.Femenino = chFemenino.Checked;
             pModificar.Fecha_Ingreso = dtpingreso.Value;
             pModificar.Sueldo = txtsueldo.Text;
             pModificar.SFS = txtsfs.Text;
@@ -166,6 +181,7 @@ namespace Trabajo_grupal
             {
                 MessageBox.Show("Alumno Modificado con exito", "Alumno modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiar();
+                RejuegoOFF();
                 btneliminar.Enabled = false;
                 btnmodificar.Enabled = false;
                 btnagregar.Enabled = true;
@@ -174,6 +190,35 @@ namespace Trabajo_grupal
             {
                 MessageBox.Show("No se pudo modificar el alumno", "Ocurrio un error!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void btndeshacer_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro que desea eliminar estudiante actual??", "Esta Seguro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Int64 resultado = DatosbaseEmpleados.Eliminar((int)EmpleadoActual.Codigo);
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Estudiantes eliminados", "Estudiante Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+                    btneliminar.Enabled = false;
+                    btnmodificar.Enabled = false;
+                    btnagregar.Enabled = true;
+                }
+
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar al estudiantes", "Estudiantes eliminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+
+            else
+                MessageBox.Show("Se cancelo la eliminacion", "Cancelado");
         }
     }
 }

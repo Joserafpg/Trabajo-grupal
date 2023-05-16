@@ -15,6 +15,8 @@ namespace Trabajo_grupal.Clases
         public string Direccion { get; set; }
         public string Correo { get; set; }
         public DateTime Fecha_Nac { get; set; }
+        public bool Masculino { get; set; }
+        public bool Femenino { get; set; }
         public DateTime Fecha_Ingreso { get; set; }
         public string Sueldo { get; set; }
         public string AFP { get; set; }
@@ -23,7 +25,7 @@ namespace Trabajo_grupal.Clases
 
         public DatosgetEmpleados() { }
 
-        public DatosgetEmpleados(Int64 pCodigo, string pCedula, string pNombre, string pTelefono, string pDireccion, DateTime pFecha_Nac, DateTime pFecha_Ingres, string pSueldo, string aFP, string sFS, string pPuesto)
+        public DatosgetEmpleados(Int64 pCodigo, string pCedula, string pNombre, string pTelefono, string pDireccion, DateTime pFecha_Nac, bool pMasculino, bool pFemenino, DateTime pFecha_Ingres, string pSueldo, string aFP, string sFS, string pPuesto)
         {
             this.Codigo = pCodigo;
             this.Cedula = pCedula;
@@ -31,6 +33,8 @@ namespace Trabajo_grupal.Clases
             this.Telefono = pTelefono;
             this.Direccion = pDireccion;
             this.Fecha_Nac = pFecha_Nac;
+            this.Masculino = pMasculino;
+            this.Femenino = pFemenino;
             this.Fecha_Ingreso = pFecha_Ingres;
             this.Sueldo = pSueldo;
             this.AFP = aFP;

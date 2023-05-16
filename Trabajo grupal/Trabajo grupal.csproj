@@ -442,5 +442,8 @@
   <ItemGroup>
     <None Include="Resources\empleados %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reportes\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

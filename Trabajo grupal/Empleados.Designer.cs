@@ -57,9 +57,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtcedula = new System.Windows.Forms.TextBox();
             this.btnsiguiente = new System.Windows.Forms.Button();
-            this.chMasculino = new System.Windows.Forms.RadioButton();
-            this.chFemenino = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
+            this.cSexo = new System.Windows.Forms.ComboBox();
             this.panelsueldo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -237,7 +236,7 @@
             this.panelsueldo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelsueldo.Location = new System.Drawing.Point(0, 0);
             this.panelsueldo.Name = "panelsueldo";
-            this.panelsueldo.Size = new System.Drawing.Size(561, 485);
+            this.panelsueldo.Size = new System.Drawing.Size(543, 485);
             this.panelsueldo.TabIndex = 24;
             // 
             // cPuesto
@@ -356,32 +355,6 @@
             this.btnsiguiente.UseVisualStyleBackColor = false;
             this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
             // 
-            // chMasculino
-            // 
-            this.chMasculino.AutoSize = true;
-            this.chMasculino.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.chMasculino.ForeColor = System.Drawing.Color.White;
-            this.chMasculino.Location = new System.Drawing.Point(263, 363);
-            this.chMasculino.Name = "chMasculino";
-            this.chMasculino.Size = new System.Drawing.Size(106, 25);
-            this.chMasculino.TabIndex = 6;
-            this.chMasculino.TabStop = true;
-            this.chMasculino.Text = "Masculino";
-            this.chMasculino.UseVisualStyleBackColor = true;
-            // 
-            // chFemenino
-            // 
-            this.chFemenino.AutoSize = true;
-            this.chFemenino.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.chFemenino.ForeColor = System.Drawing.Color.White;
-            this.chFemenino.Location = new System.Drawing.Point(385, 363);
-            this.chFemenino.Name = "chFemenino";
-            this.chFemenino.Size = new System.Drawing.Size(104, 25);
-            this.chFemenino.TabIndex = 7;
-            this.chFemenino.TabStop = true;
-            this.chFemenino.Text = "Femenino";
-            this.chFemenino.UseVisualStyleBackColor = true;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -392,6 +365,14 @@
             this.label13.Size = new System.Drawing.Size(46, 21);
             this.label13.TabIndex = 25;
             this.label13.Text = "Sexo";
+            // 
+            // cSexo
+            // 
+            this.cSexo.FormattingEnabled = true;
+            this.cSexo.Location = new System.Drawing.Point(263, 362);
+            this.cSexo.Name = "cSexo";
+            this.cSexo.Size = new System.Drawing.Size(254, 21);
+            this.cSexo.TabIndex = 26;
             // 
             // Empleados
             // 
@@ -420,9 +401,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtcedula);
-            this.Controls.Add(this.chFemenino);
-            this.Controls.Add(this.chMasculino);
             this.Controls.Add(this.label13);
+            this.Controls.Add(this.cSexo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Empleados";
             this.Text = "Empleados";
@@ -465,8 +445,7 @@
         private System.Windows.Forms.Button btnsiguiente;
         private System.Windows.Forms.ComboBox cPuesto;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.RadioButton chMasculino;
-        private System.Windows.Forms.RadioButton chFemenino;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cSexo;
     }
 }

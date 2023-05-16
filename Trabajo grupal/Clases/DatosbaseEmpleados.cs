@@ -16,8 +16,8 @@ namespace Trabajo_grupal.Clases
 
             Conexion.opoencon();
 
-            SqlCommand Comando = new SqlCommand(string.Format("Insert into Empleados (Nombre_Completo, Cedula, Direccion, Telefono, Correo, Fecha_de_nacimiento, Masculino, Femenino, Fecha_de_ingreso, Sueldo, AFP, SFS, Puesto) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')",
-                    pget.Nombre, pget.Cedula, pget.Direccion, pget.Telefono, pget.Correo, pget.Fecha_Nac.ToString("yyyy-MM-dd HH:mm:ss"), pget.Masculino, pget.Femenino, pget.Fecha_Ingreso.ToString("yyyy-MM-dd HH:mm:ss"), pget.Sueldo, pget.AFP, pget.SFS, pget.Puesto), Conexion.ObtenerConexion());
+            SqlCommand Comando = new SqlCommand(string.Format("Insert into Empleados (Nombre_Completo, Cedula, Direccion, Telefono, Correo, Fecha_de_nacimiento, Sexo, Fecha_de_ingreso, Sueldo, AFP, SFS, Puesto) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')",
+                    pget.Nombre, pget.Cedula, pget.Direccion, pget.Telefono, pget.Correo, pget.Fecha_Nac.ToString("yyyy-MM-dd HH:mm:ss"), pget.Sexo, pget.Fecha_Ingreso.ToString("yyyy-MM-dd HH:mm:ss"), pget.Sueldo, pget.AFP, pget.SFS, pget.Puesto), Conexion.ObtenerConexion());
 
             retorno = Comando.ExecuteNonQuery();
             Conexion.cerrarcon();
@@ -30,8 +30,8 @@ namespace Trabajo_grupal.Clases
             int retorno = 0;
             Conexion.opoencon();
             {
-                SqlCommand comando = new SqlCommand(string.Format("update Empleados set Nombre_Completo = '{0}', Cedula = '{1}', Direccion = '{2}', Telefono = '{3}', Correo = '{4}', Fecha_de_nacimiento = '{5}', Masculino = '{6}', Femenino = '{7}', Fecha_de_ingreso = '{8}', Sueldo = '{9}', AFP = '{10}', SFS= '{11}', Puesto = '{12}'  where Id_Empleados = {13}",
-                    pAlumno.Nombre, pAlumno.Cedula, pAlumno.Direccion, pAlumno.Telefono, pAlumno.Correo, pAlumno.Fecha_Nac.ToString("yyyy-MM-dd HH:mm:ss"), pAlumno.Masculino, pAlumno.Femenino, pAlumno.Fecha_Ingreso.ToString("yyyy-MM-dd HH:mm:ss"), pAlumno.Sueldo, pAlumno.AFP, pAlumno.SFS, pAlumno.Puesto, pAlumno.Codigo), Conexion.ObtenerConexion());
+                SqlCommand comando = new SqlCommand(string.Format("update Empleados set Nombre_Completo = '{0}', Cedula = '{1}', Direccion = '{2}', Telefono = '{3}', Correo = '{4}', Fecha_de_nacimiento = '{5}', Sexo = '{6}', Fecha_de_ingreso = '{7}', Sueldo = '{8}', AFP = '{9}', SFS= '{10}', Puesto = '{11}'  where Id_Empleados = {12}",
+                    pAlumno.Nombre, pAlumno.Cedula, pAlumno.Direccion, pAlumno.Telefono, pAlumno.Correo, pAlumno.Fecha_Nac.ToString("yyyy-MM-dd HH:mm:ss"), pAlumno.Sexo, pAlumno.Fecha_Ingreso.ToString("yyyy-MM-dd HH:mm:ss"), pAlumno.Sueldo, pAlumno.AFP, pAlumno.SFS, pAlumno.Puesto, pAlumno.Codigo), Conexion.ObtenerConexion());
                 retorno = comando.ExecuteNonQuery();
             }
             Conexion.cerrarcon();
@@ -55,7 +55,7 @@ namespace Trabajo_grupal.Clases
             Conexion.opoencon();
             {
 
-                SqlCommand comando = new SqlCommand(String.Format("SELECT Id_Empleados, Nombre_Completo, Cedula, Direccion, Telefono, Correo, Fecha_de_nacimiento, Masculino, Femenino, Fecha_de_ingreso, Sueldo, AFP, SFS, Puesto FROM Empleados where Nombre_Completo like '%{0}%' and Cedula like '%{1}%' ", pNombre, pCedula),
+                SqlCommand comando = new SqlCommand(String.Format("SELECT Id_Empleados, Nombre_Completo, Cedula, Direccion, Telefono, Correo, Fecha_de_nacimiento, Sexo, Fecha_de_ingreso, Sueldo, AFP, SFS, Puesto FROM Empleados where Nombre_Completo like '%{0}%' and Cedula like '%{1}%' ", pNombre, pCedula),
                     Conexion.ObtenerConexion());
 
                 SqlDataReader reader = comando.ExecuteReader();
@@ -69,13 +69,12 @@ namespace Trabajo_grupal.Clases
                     pEmpleados.Direccion = reader.GetString(4);
                     pEmpleados.Correo = reader.GetString(5);
                     pEmpleados.Fecha_Nac = Convert.ToDateTime(reader.GetValue(6));
-                    pEmpleados.Masculino = reader.GetBoolean(7);
-                    pEmpleados.Femenino = reader.GetBoolean(8);
-                    pEmpleados.Fecha_Ingreso = Convert.ToDateTime(reader.GetValue(9));
-                    pEmpleados.Sueldo = reader.GetString(10);
-                    pEmpleados.AFP = reader.GetString(11);
-                    pEmpleados.SFS = reader.GetString(12);
-                    pEmpleados.Puesto = reader.GetString(13);
+                    pEmpleados.Sexo = reader.GetString(7);
+                    pEmpleados.Fecha_Ingreso = Convert.ToDateTime(reader.GetValue(8));
+                    pEmpleados.Sueldo = reader.GetString(9);
+                    pEmpleados.AFP = reader.GetString(10);
+                    pEmpleados.SFS = reader.GetString(11);
+                    pEmpleados.Puesto = reader.GetString(12);
 
                     lista.Add(pEmpleados);
                 }
@@ -91,7 +90,7 @@ namespace Trabajo_grupal.Clases
             {
                 DatosgetEmpleados pAlumno = new DatosgetEmpleados();
                 SqlCommand comando = new SqlCommand(string.Format(
-                   "select Id_Empleados, Nombre_Completo, Cedula, Direccion, Telefono, Correo, Fecha_de_nacimiento, Masculino, Femenino, Fecha_de_ingreso, Sueldo, AFP, SFS, Puesto From Empleados where Id_Empleados = {0}", pId), Conexion.ObtenerConexion());
+                   "select Id_Empleados, Nombre_Completo, Cedula, Direccion, Telefono, Correo, Fecha_de_nacimiento, Sexo, Fecha_de_ingreso, Sueldo, AFP, SFS, Puesto From Empleados where Id_Empleados = {0}", pId), Conexion.ObtenerConexion());
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
@@ -102,13 +101,12 @@ namespace Trabajo_grupal.Clases
                     pAlumno.Telefono = reader.GetString(4);
                     pAlumno.Correo = reader.GetString(5);
                     pAlumno.Fecha_Nac = reader.GetDateTime(6);
-                    pAlumno.Masculino = reader.GetBoolean(7);
-                    pAlumno.Femenino = reader.GetBoolean(8);
-                    pAlumno.Fecha_Ingreso = reader.GetDateTime(9);
-                    pAlumno.Sueldo = reader.GetString(10);
-                    pAlumno.AFP = reader.GetString(11);
-                    pAlumno.SFS = reader.GetString(12);
-                    pAlumno.Puesto = reader.GetString(13);
+                    pAlumno.Sexo = reader.GetString(7);
+                    pAlumno.Fecha_Ingreso = reader.GetDateTime(8);
+                    pAlumno.Sueldo = reader.GetString(9);
+                    pAlumno.AFP = reader.GetString(10);
+                    pAlumno.SFS = reader.GetString(11);
+                    pAlumno.Puesto = reader.GetString(12);
                 }
                 Conexion.cerrarcon();
                 return pAlumno;

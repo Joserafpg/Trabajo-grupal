@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -27,8 +28,7 @@ namespace Trabajo_grupal
             txtdireccion.Clear();
             txTelefono.Clear();
             txtCorreo.Clear();
-            chMasculino.Checked = false;
-            chFemenino.Checked = false;
+            cSexo.ResetText();
             txtsueldo.Clear();
             cPuesto.ResetText();
         }
@@ -48,10 +48,27 @@ namespace Trabajo_grupal
             Limpiar();
         }
 
+        private static SqlConnection Conn = new SqlConnection("Server = DESKTOP-NDDA7LS; database=Proyecto_Grupal; Integrated Security=True");
+        void CargarComboBox()
+        {
+            Conn.Open();
+            string consulta = "Select * from Sexo";
+            SqlCommand comando = new SqlCommand(consulta, Conn);
+            SqlDataReader lector = comando.ExecuteReader();
+
+            while (lector.Read())
+            {
+                cSexo.Items.Add(lector.GetString(0));
+            }
+
+            Conn.Close();
+        }
+
         private void Empleados_Load(object sender, EventArgs e)
         {
             btnagregar.Visible = false;
             panelsueldo.Visible = false;
+            CargarComboBox();
         }
 
         private void btnagregar_Click(object sender, EventArgs e)
@@ -71,8 +88,7 @@ namespace Trabajo_grupal
                 pEmpleados.Direccion = txtdireccion.Text;
                 pEmpleados.Correo = txtCorreo.Text;
                 pEmpleados.Fecha_Nac = txtfech.Value;
-                pEmpleados.Masculino = chMasculino.Checked;
-                pEmpleados.Femenino = chFemenino.Checked;
+                pEmpleados.Sexo = cSexo.Text;
                 pEmpleados.Fecha_Ingreso = dtpingreso.Value;
                 pEmpleados.Sueldo = txtsueldo.Text;
                 pEmpleados.SFS = txtsfs.Text;
@@ -143,8 +159,7 @@ namespace Trabajo_grupal
                 txTelefono.Text = pBuscar.EmpleadoSeleccionado.Telefono;
                 txtCorreo.Text = pBuscar.EmpleadoSeleccionado.Correo;
                 txtfech.Value = pBuscar.EmpleadoSeleccionado.Fecha_Nac;
-                chMasculino.Checked = pBuscar.EmpleadoSeleccionado.Masculino;
-                chFemenino.Checked = pBuscar.EmpleadoSeleccionado.Femenino;
+                cSexo.Text = pBuscar.EmpleadoSeleccionado.Sexo;
                 dtpingreso.Value = pBuscar.EmpleadoSeleccionado.Fecha_Ingreso;
                 txtsueldo.Text = pBuscar.EmpleadoSeleccionado.Sueldo;
                 txtsfs.Text = pBuscar.EmpleadoSeleccionado.SFS;
@@ -166,8 +181,7 @@ namespace Trabajo_grupal
             pModificar.Telefono = txTelefono.Text;
             pModificar.Correo = txtCorreo.Text;
             pModificar.Fecha_Nac = txtfech.Value;
-            pModificar.Masculino = chMasculino.Checked;
-            pModificar.Femenino = chFemenino.Checked;
+            pModificar.Sexo = cSexo.Text;
             pModificar.Fecha_Ingreso = dtpingreso.Value;
             pModificar.Sueldo = txtsueldo.Text;
             pModificar.SFS = txtsfs.Text;

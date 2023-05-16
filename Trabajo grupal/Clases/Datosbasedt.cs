@@ -40,7 +40,7 @@ namespace Trabajo_grupal.Clases
             Conexion.cerrarcon();
             return retorno;
         }
-        public static int Eliminar(int pId)
+        public static int Eliminar(Int64 pId)
         {
             int retorno = 0;
             Conexion.opoencon();
@@ -50,21 +50,21 @@ namespace Trabajo_grupal.Clases
             return retorno;
         }
 
-        public static List<Datosget> BuscarNuevoInventario(string pNombre_Mercancia, string Codigo)
+        public static List<Datosget> BuscarNuevoInventario(string pNombre_Mercancia, Int32 pCodigo)
         {
             List<Datosget> lista = new List<Datosget>();
             Conexion.opoencon();
             {
 
                 SqlCommand comando = new SqlCommand(String.Format(
-                    "SELECT  Nombre_Mercancia, Descripcion, Tipo_Producto,Docenas, Unidad, Lotes, Cantidad, Inv_Minimo, Color_Producto, Precio_Compra FROM NuevoInventario  where Codigo like '%{0}%'", pNombre_Mercancia, Codigo), Conexion.ObtenerConexion());
+                    "SELECT  Nombre_Mercancia, Descripcion, Tipo_Producto,Docenas, Unidad, Lotes, Cantidad, Inv_Minimo, Color_Producto, Precio_Compra FROM NuevoInventario  where Codigo like '%{0}%'", pNombre_Mercancia, pCodigo), Conexion.ObtenerConexion());
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
                     Datosget pNuevoInventario = new Datosget();
 
 
-                    pNuevoInventario.Codigo = Convert.ToInt64(reader.GetValue(7));
+                    pNuevoInventario.Codigo = Convert.ToInt64(reader.GetValue(0));
                     pNuevoInventario.Nombre_Mercancia = reader.GetString(1);
                     pNuevoInventario.Descripcion = reader.GetString(2);
                     pNuevoInventario.Tipo_Producto = reader.GetString(3);
@@ -72,7 +72,7 @@ namespace Trabajo_grupal.Clases
                     pNuevoInventario.Unidad = reader.GetBoolean(5);
                     pNuevoInventario.Lotes = reader.GetBoolean(6);
                     pNuevoInventario.Cantidad = Convert.ToInt64(reader.GetValue(7));
-                    pNuevoInventario.Inv_Minimo = Convert.ToInt64(reader.GetValue(7));
+                    pNuevoInventario.Inv_Minimo = Convert.ToInt64(reader.GetValue(8));
                     pNuevoInventario.Color_Producto = reader.GetString(9);
                     pNuevoInventario.Precio_Compra = reader.GetString(10);
 
@@ -85,7 +85,7 @@ namespace Trabajo_grupal.Clases
             }
 
         }
-        public static Datosget ObtenerNuevoInventario(string pId)
+        public static Datosget ObtenerNuevoInventario(Int64 pId)
         {
             Conexion.opoencon();
             {

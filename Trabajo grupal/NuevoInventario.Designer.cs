@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnbuscar = new System.Windows.Forms.Button();
+            this.btnmodificar = new System.Windows.Forms.Button();
             this.txtInvMinimo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.chlotes = new System.Windows.Forms.RadioButton();
@@ -52,15 +54,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btncancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btncancelar);
+            this.groupBox1.Controls.Add(this.btnbuscar);
+            this.groupBox1.Controls.Add(this.btnmodificar);
             this.groupBox1.Controls.Add(this.txtInvMinimo);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.chlotes);
@@ -90,6 +92,28 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Nueva Mercancia";
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscar.Location = new System.Drawing.Point(601, 68);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(180, 56);
+            this.btnbuscar.TabIndex = 33;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
+            // 
+            // btnmodificar
+            // 
+            this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmodificar.Location = new System.Drawing.Point(601, 143);
+            this.btnmodificar.Name = "btnmodificar";
+            this.btnmodificar.Size = new System.Drawing.Size(180, 56);
+            this.btnmodificar.TabIndex = 32;
+            this.btnmodificar.Text = "Modificar";
+            this.btnmodificar.UseVisualStyleBackColor = true;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // txtInvMinimo
             // 
@@ -159,7 +183,7 @@
             // btndeshacer
             // 
             this.btndeshacer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndeshacer.Location = new System.Drawing.Point(601, 365);
+            this.btndeshacer.Location = new System.Drawing.Point(601, 311);
             this.btndeshacer.Name = "btndeshacer";
             this.btndeshacer.Size = new System.Drawing.Size(180, 56);
             this.btndeshacer.TabIndex = 22;
@@ -169,7 +193,7 @@
             // btnguardar
             // 
             this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnguardar.Location = new System.Drawing.Point(601, 289);
+            this.btnguardar.Location = new System.Drawing.Point(601, 227);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(180, 56);
             this.btnguardar.TabIndex = 21;
@@ -326,25 +350,16 @@
             this.panel1.TabIndex = 4;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
-            // button1
+            // btncancelar
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(601, 201);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 61);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Modificar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(601, 114);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 61);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncancelar.Location = new System.Drawing.Point(601, 391);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(180, 56);
+            this.btncancelar.TabIndex = 34;
+            this.btncancelar.Text = "Cancelar";
+            this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // NuevoInventario
             // 
@@ -390,7 +405,8 @@
         private System.Windows.Forms.RadioButton chlotes;
         private System.Windows.Forms.RadioButton chUnidad;
         private System.Windows.Forms.RadioButton chDocenas;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnbuscar;
+        private System.Windows.Forms.Button btnmodificar;
+        private System.Windows.Forms.Button btncancelar;
     }
 }

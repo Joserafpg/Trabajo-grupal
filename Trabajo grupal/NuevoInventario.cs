@@ -19,10 +19,11 @@ namespace Trabajo_grupal
         {
             InitializeComponent();
         }
+        public Datosget MateriaPrimaActual { get; set; }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -67,6 +68,51 @@ namespace Trabajo_grupal
                 MessageBox.Show(" No se Pudieron Guardar Datos de Materia Prima  ", "Error al Guardar ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
+        }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void btnmodificar_Click(object sender, EventArgs e)
+        {
+            Datosget pNuevaMercancia = new Datosget();
+
+
+            pNuevaMercancia.Codigo = Convert.ToInt64(txtcodigo.Text);
+            pNuevaMercancia.Nombre_Mercancia = CBNom.Text;
+            pNuevaMercancia.Descripcion = txtDescripcion.Text;
+            pNuevaMercancia.Tipo_Producto = CBtipodep.Text;
+            pNuevaMercancia.Docenas = chDocenas.Checked;
+            pNuevaMercancia.Unidad = chUnidad.Checked;
+            pNuevaMercancia.Lotes = chlotes.Checked;
+            pNuevaMercancia.Cantidad = Convert.ToInt64(txtcantidad.Text);
+            pNuevaMercancia.Inv_Minimo = Convert.ToInt64(txtInvMinimo.Text);
+            pNuevaMercancia.Color_Producto = CBcolor.Text;
+            pNuevaMercancia.Precio_Compra = txtpreciocompra.Text;
+
+            int Resultado = Datosbasedt.Modificar(pNuevaMercancia);
+
+            if (Resultado > 0)
+            {
+                MessageBox.Show("Materia Prima Modificada Con Exito","Materia Prima Modificada" ,MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                btndeshacer.Enabled = false;
+                btnmodificar.Enabled = false;
+                btnguardar.Enabled = true;
+                btnClose.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("No se pudo Modificadar la Materia Prima", "Ocurrio un error!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -72,7 +72,28 @@ namespace Trabajo_grupal
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
-           
+            ConsultarMateriaPrima pBuscar = new ConsultarMateriaPrima();
+            pBuscar.ShowDialog();
+
+            if (pBuscar.MateriaPrimaSeleccionada != null)
+            {
+                MateriaPrimaActual = pBuscar.MateriaPrimaSeleccionada;
+                CBNom.Text = pBuscar.MateriaPrimaSeleccionada.Nombre_Mercancia;
+                txtDescripcion.Text = pBuscar.MateriaPrimaSeleccionada.Descripcion;
+                CBtipodep.Text = pBuscar.MateriaPrimaSeleccionada.Tipo_Producto;
+                chDocenas.Checked = pBuscar.MateriaPrimaSeleccionada.Docenas;
+                chUnidad.Checked = pBuscar.MateriaPrimaSeleccionada.Unidad;
+                chlotes.Checked = pBuscar.MateriaPrimaSeleccionada.Lotes;
+             
+                CBcolor.Text = pBuscar.MateriaPrimaSeleccionada.Color_Producto;
+                txtpreciocompra.Text = pBuscar.MateriaPrimaSeleccionada.Precio_Compra;
+
+
+                btnguardar.Enabled = false;
+                btnmodificar.Enabled = true;
+                btndeshacer.Enabled = true;
+            }
+
 
         }
 
@@ -113,6 +134,11 @@ namespace Trabajo_grupal
         private void btncancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

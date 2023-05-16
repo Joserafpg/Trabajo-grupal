@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Trabajo_grupal.Clases
 {
-    internal class DatosbaseInvPantalones
+    public class DatosbaseInvPantalones
     {
     }
 }

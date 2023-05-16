@@ -83,6 +83,18 @@
     <Compile Include="ConsultarEmpleados.Designer.cs">
       <DependentUpon>ConsultarEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarInvPantalones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarInvPantalones.Designer.cs">
+      <DependentUpon>ConsultarInvPantalones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarMateriaPrima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarMateriaPrima.Designer.cs">
+      <DependentUpon>ConsultarMateriaPrima.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cuentas por cobrar .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +247,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarEmpleados.resx">
       <DependentUpon>ConsultarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarInvPantalones.resx">
+      <DependentUpon>ConsultarInvPantalones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarMateriaPrima.resx">
+      <DependentUpon>ConsultarMateriaPrima.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cuentas por cobrar .resx">
       <DependentUpon>Cuentas por cobrar .cs</DependentUpon>

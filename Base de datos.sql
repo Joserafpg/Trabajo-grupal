@@ -125,6 +125,14 @@ Precio varchar (50),
 
 select * from Empleados
 
+CREATE PROCEDURE SP_EMPLEADOCOMBOBOX
+AS
+SELECT Nombre_Completo FROM Empleados
+GO
+
+EXEC SP_EMPLEADOCOMBOBOX
+GO
+
 drop table Empleados
 
 drop database Proyecto_Grupal

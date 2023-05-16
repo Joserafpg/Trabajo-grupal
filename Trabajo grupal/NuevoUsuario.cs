@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using System.Data.SqlClient;
 
 namespace Trabajo_grupal
 {
@@ -64,6 +65,22 @@ namespace Trabajo_grupal
             modificarpagos.Checked = false;
             consultarpagos.Checked = false;
             eliminarpagos.Checked = false;
+        }
+
+        private static SqlConnection Conn = new SqlConnection("Server = DESKTOP-NDDA7LS; database=Proyecto_Grupal; Integrated Security=True");
+        void CargarComboBox()
+        {
+            Conn.Open();
+            string consulta = "Select * from Empleados";
+            SqlCommand comando = new SqlCommand(consulta, Conn);
+            SqlDataReader lector = comando.ExecuteReader();
+
+            while (lector.Read())
+            {
+                txtempleado.Items.Add(lector.GetString(1));
+            }
+
+            Conn.Close();
         }
 
         void CheckboxInventario()
@@ -144,9 +161,11 @@ namespace Trabajo_grupal
             }
         }
 
+        
         private void NuevoUsuario_Load(object sender, EventArgs e)
         {
             formpermiso.Visible = false;
+            CargarComboBox();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -443,5 +462,12 @@ namespace Trabajo_grupal
         {
             CheckboxCuentasCobra();
         }
+
+        
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }

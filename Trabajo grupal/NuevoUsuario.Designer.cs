@@ -83,6 +83,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnusuarios = new System.Windows.Forms.Button();
             this.btnchange = new System.Windows.Forms.Button();
+            this.btninvisible = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.formpermiso.SuspendLayout();
@@ -165,6 +166,7 @@
             this.groupBox1.Controls.Add(this.txtusuario);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnchange);
+            this.groupBox1.Controls.Add(this.btninvisible);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(29, 52);
@@ -230,7 +232,7 @@
             this.formpermiso.Controls.Add(this.checonsultar);
             this.formpermiso.Location = new System.Drawing.Point(3, 23);
             this.formpermiso.Name = "formpermiso";
-            this.formpermiso.Size = new System.Drawing.Size(122, 364);
+            this.formpermiso.Size = new System.Drawing.Size(113, 364);
             this.formpermiso.TabIndex = 12;
             // 
             // chformcobrar
@@ -687,8 +689,6 @@
             // txtempleado
             // 
             this.txtempleado.FormattingEnabled = true;
-            this.txtempleado.Items.AddRange(new object[] {
-            "Jose Rafael Payero Garcia"});
             this.txtempleado.Location = new System.Drawing.Point(231, 64);
             this.txtempleado.Name = "txtempleado";
             this.txtempleado.Size = new System.Drawing.Size(244, 29);
@@ -737,6 +737,16 @@
             this.btnchange.Text = "Aceptar";
             this.btnchange.UseVisualStyleBackColor = true;
             this.btnchange.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btninvisible
+            // 
+            this.btninvisible.Location = new System.Drawing.Point(592, 148);
+            this.btninvisible.Name = "btninvisible";
+            this.btninvisible.Size = new System.Drawing.Size(75, 23);
+            this.btninvisible.TabIndex = 19;
+            this.btninvisible.Text = "button1";
+            this.btninvisible.UseVisualStyleBackColor = true;
+            this.btninvisible.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // NuevoUsuario
             // 
@@ -816,5 +826,6 @@
         private System.Windows.Forms.CheckBox chformfacturas;
         private System.Windows.Forms.CheckBox chformcliente;
         private System.Windows.Forms.CheckBox chforminventario;
+        private System.Windows.Forms.Button btninvisible;
     }
 }

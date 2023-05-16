@@ -77,6 +77,12 @@
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="ConsultarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEmpleados.Designer.cs">
+      <DependentUpon>ConsultarEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cuentas por cobrar .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEmpleados.resx">
+      <DependentUpon>ConsultarEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cuentas por cobrar .resx">
       <DependentUpon>Cuentas por cobrar .cs</DependentUpon>

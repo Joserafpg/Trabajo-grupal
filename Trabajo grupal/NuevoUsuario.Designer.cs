@@ -38,7 +38,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.formpermiso = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.chformcobrar = new System.Windows.Forms.CheckBox();
             this.chformpagar = new System.Windows.Forms.CheckBox();
             this.chformusuarios = new System.Windows.Forms.CheckBox();
@@ -189,7 +188,6 @@
             // 
             // formpermiso
             // 
-            this.formpermiso.Controls.Add(this.button1);
             this.formpermiso.Controls.Add(this.chformcobrar);
             this.formpermiso.Controls.Add(this.chformpagar);
             this.formpermiso.Controls.Add(this.chformusuarios);
@@ -230,22 +228,10 @@
             this.formpermiso.Controls.Add(this.chmodificarinventario);
             this.formpermiso.Controls.Add(this.chagregarmercancia);
             this.formpermiso.Controls.Add(this.checonsultar);
-            this.formpermiso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.formpermiso.Location = new System.Drawing.Point(3, 23);
             this.formpermiso.Name = "formpermiso";
-            this.formpermiso.Size = new System.Drawing.Size(845, 364);
+            this.formpermiso.Size = new System.Drawing.Size(122, 364);
             this.formpermiso.TabIndex = 12;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(145, 306);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 51);
-            this.button1.TabIndex = 75;
-            this.button1.Text = "Modificar";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // chformcobrar
             // 
@@ -830,6 +816,5 @@
         private System.Windows.Forms.CheckBox chformfacturas;
         private System.Windows.Forms.CheckBox chformcliente;
         private System.Windows.Forms.CheckBox chforminventario;
-        private System.Windows.Forms.Button button1;
     }
 }

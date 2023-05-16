@@ -18,6 +18,8 @@ namespace Trabajo_grupal
             InitializeComponent();
         }
 
+        public DatosgetEmpleados EmpleadoActual { get; set; }
+
         void Limpiar()
         {
             txtnombre.Clear();
@@ -114,6 +116,63 @@ namespace Trabajo_grupal
             else
             {
                 RejuegoON();
+            }
+        }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            ConsultarEmpleados pBuscar = new ConsultarEmpleados();
+            pBuscar.ShowDialog();
+            if (pBuscar.EmpleadoSeleccionado != null)
+            {
+                EmpleadoActual = pBuscar.EmpleadoSeleccionado;
+                txtnombre.Text = pBuscar.EmpleadoSeleccionado.Nombre;
+                txtcedula.Text = pBuscar.EmpleadoSeleccionado.Cedula;
+                txtdireccion.Text = pBuscar.EmpleadoSeleccionado.Direccion;
+                txTelefono.Text = pBuscar.EmpleadoSeleccionado.Telefono;
+                txtCorreo.Text = pBuscar.EmpleadoSeleccionado.Correo;
+                txtfech.Value = pBuscar.EmpleadoSeleccionado.Fecha_Nac;
+                dtpingreso.Value = pBuscar.EmpleadoSeleccionado.Fecha_Ingreso;
+                txtsueldo.Text = pBuscar.EmpleadoSeleccionado.Sueldo;
+                txtsfs.Text = pBuscar.EmpleadoSeleccionado.SFS;
+                txtafp.Text = pBuscar.EmpleadoSeleccionado.AFP;
+                cPuesto.Text = pBuscar.EmpleadoSeleccionado.Puesto;
+
+                btnagregar.Enabled = false;
+                btnmodificar.Enabled = true;
+                btneliminar.Enabled = true;
+            }
+        }
+
+        private void btnmodificar_Click(object sender, EventArgs e)
+        {
+            DatosgetEmpleados pModificar = new DatosgetEmpleados();
+            pModificar.Nombre = txtnombre.Text;
+            pModificar.Cedula = txtcedula.Text;
+            pModificar.Direccion = txtdireccion.Text;
+            pModificar.Telefono = txTelefono.Text;
+            pModificar.Correo = txtCorreo.Text;
+            pModificar.Fecha_Nac = txtfech.Value;
+            pModificar.Fecha_Ingreso = dtpingreso.Value;
+            pModificar.Sueldo = txtsueldo.Text;
+            pModificar.SFS = txtsfs.Text;
+            pModificar.AFP = txtafp.Text;
+            pModificar.Puesto = cPuesto.Text;
+            pModificar.Codigo = EmpleadoActual.Codigo;
+
+            int Resultado = DatosbaseEmpleados.Modificar(pModificar);
+
+            if (Resultado > 0)
+            {
+                MessageBox.Show("Alumno Modificado con exito", "Alumno modificado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar();
+                btneliminar.Enabled = false;
+                btnmodificar.Enabled = false;
+                btnagregar.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("No se pudo modificar el alumno", "Ocurrio un error!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

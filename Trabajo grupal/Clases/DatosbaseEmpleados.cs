@@ -30,7 +30,7 @@ namespace Trabajo_grupal.Clases
             int retorno = 0;
             Conexion.opoencon();
             {
-                SqlCommand comando = new SqlCommand(string.Format("update Empleados set Nombre_Completo = '{0}', Cedula = '{1}', Direccion = '{2}', Telefono = '{3}', Correo = '{4}', Fecha_de_nacimiento = '{5}', Fecha_de_ingreso = '{6}', Sueldo = '{7}', AFP = '{8}', SFS= '{9}', Puesto = '{10}'  where Codigo = {11}",
+                SqlCommand comando = new SqlCommand(string.Format("update Empleados set Nombre_Completo = '{0}', Cedula = '{1}', Direccion = '{2}', Telefono = '{3}', Correo = '{4}', Fecha_de_nacimiento = '{5}', Fecha_de_ingreso = '{6}', Sueldo = '{7}', AFP = '{8}', SFS= '{9}', Puesto = '{10}'  where Id_Empleados = {11}",
                     pAlumno.Nombre, pAlumno.Cedula, pAlumno.Direccion, pAlumno.Telefono, pAlumno.Correo, pAlumno.Fecha_Nac.ToString("yyyy-MM-dd HH:mm:ss"), pAlumno.Fecha_Ingreso.ToString("yyyy-MM-dd HH:mm:ss"), pAlumno.Sueldo, pAlumno.AFP, pAlumno.SFS, pAlumno.Puesto, pAlumno.Codigo), Conexion.ObtenerConexion());
                 retorno = comando.ExecuteNonQuery();
             }
@@ -49,13 +49,13 @@ namespace Trabajo_grupal.Clases
             return retorno;
         }
 
-        public static List<DatosgetEmpleados> BuscarEmpleados(string pCodigo, string pCedula)
+        public static List<DatosgetEmpleados> BuscarEmpleados(string pNombre, string pCedula)
         {
             List<DatosgetEmpleados> lista = new List<DatosgetEmpleados>();
             Conexion.opoencon();
             {
 
-                SqlCommand comando = new SqlCommand(String.Format("SELECT Codigo,Cedula, Nombre, Telefono, Direccion, Fecha_nacimiento FROM Alumnos where codigo like '%{0}%' and telefono like '%{1}%' ", pCodigo, pCedula),
+                SqlCommand comando = new SqlCommand(String.Format("SELECT Id_Empleados, Nombre_Completo, Cedula, Direccion, Telefono, Correo, Fecha_de_nacimiento, Fecha_de_ingreso, Sueldo, AFP, SFS, Puesto FROM Empleados where Nombre_Completo like '%{0}%' and Cedula like '%{1}%' ", pNombre, pCedula),
                     Conexion.ObtenerConexion());
 
                 SqlDataReader reader = comando.ExecuteReader();
@@ -73,6 +73,7 @@ namespace Trabajo_grupal.Clases
                     pEmpleados.Sueldo = reader.GetString(8);
                     pEmpleados.AFP = reader.GetString(9);
                     pEmpleados.SFS = reader.GetString(10);
+                    pEmpleados.Puesto = reader.GetString(11);
 
                     lista.Add(pEmpleados);
                 }
@@ -88,16 +89,22 @@ namespace Trabajo_grupal.Clases
             {
                 DatosgetEmpleados pAlumno = new DatosgetEmpleados();
                 SqlCommand comando = new SqlCommand(string.Format(
-                   "select codigo, Nombre, Cedula, Telefono, Direccion, Fecha_nacimiento From Alumnos where Codigo = {0}", pId), Conexion.ObtenerConexion());
+                   "select Id_Empleados, Nombre_Completo, Cedula, Direccion, Telefono, Correo, Fecha_de_nacimiento, Fecha_de_ingreso, Sueldo, AFP, SFS, Puesto From Empleados where Id_Empleados = {0}", pId), Conexion.ObtenerConexion());
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
                     pAlumno.Codigo = Convert.ToInt64(reader.GetValue(0));
                     pAlumno.Nombre = reader.GetString(1);
-                    pAlumno.Telefono = reader.GetString(2);
-                    pAlumno.Cedula = reader.GetString(3);
-                    pAlumno.Direccion = reader.GetString(4);
-                    pAlumno.Fecha_Nac = reader.GetDateTime(5);
+                    pAlumno.Cedula = reader.GetString(2);
+                    pAlumno.Direccion = reader.GetString(3);
+                    pAlumno.Telefono = reader.GetString(4);
+                    pAlumno.Correo = reader.GetString(5);
+                    pAlumno.Fecha_Nac = reader.GetDateTime(6);
+                    pAlumno.Fecha_Ingreso = reader.GetDateTime(7);
+                    pAlumno.Sueldo = reader.GetString(8);
+                    pAlumno.AFP = reader.GetString(9);
+                    pAlumno.SFS = reader.GetString(10);
+                    pAlumno.Puesto = reader.GetString(11);
                 }
                 Conexion.cerrarcon();
                 return pAlumno;

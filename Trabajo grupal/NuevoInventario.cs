@@ -41,15 +41,15 @@ namespace Trabajo_grupal
             Datosget datosget = new Datosget();
 
 
-            datosget.Codigo = Convert.ToInt64(txtcodigo.Text);
+            datosget.Codigo = txtcodigo.Text;
             datosget.Nombre_Mercancia = CBNom.Text;
             datosget.Descripcion = txtDescripcion.Text;
             datosget.Tipo_Producto = CBtipodep.Text;
             datosget.Docenas = chDocenas.Checked;
             datosget.Unidad = chUnidad.Checked;
             datosget.Lotes = chlotes.Checked;
-            datosget.Cantidad = Convert.ToInt64(txtcantidad.Text);
-            datosget.Inv_Minimo = Convert.ToInt64(txtInvMinimo.Text);
+            datosget.Cantidad = txtcantidad.Text;
+            datosget.Inv_Minimo = txtInvMinimo.Text;
             datosget.Color_Producto = CBcolor.Text;
             datosget.Precio_Compra = txtpreciocompra.Text;
 
@@ -102,15 +102,15 @@ namespace Trabajo_grupal
             Datosget pNuevaMercancia = new Datosget();
 
 
-            pNuevaMercancia.Codigo = Convert.ToInt64(txtcodigo.Text);
+            pNuevaMercancia.Codigo = txtcodigo.Text;
             pNuevaMercancia.Nombre_Mercancia = CBNom.Text;
             pNuevaMercancia.Descripcion = txtDescripcion.Text;
             pNuevaMercancia.Tipo_Producto = CBtipodep.Text;
             pNuevaMercancia.Docenas = chDocenas.Checked;
             pNuevaMercancia.Unidad = chUnidad.Checked;
             pNuevaMercancia.Lotes = chlotes.Checked;
-            pNuevaMercancia.Cantidad = Convert.ToInt64(txtcantidad.Text);
-            pNuevaMercancia.Inv_Minimo = Convert.ToInt64(txtInvMinimo.Text);
+            pNuevaMercancia.Cantidad = txtcantidad.Text;
+            pNuevaMercancia.Inv_Minimo = txtInvMinimo.Text;
             pNuevaMercancia.Color_Producto = CBcolor.Text;
             pNuevaMercancia.Precio_Compra = txtpreciocompra.Text;
 
@@ -133,7 +133,7 @@ namespace Trabajo_grupal
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+           
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

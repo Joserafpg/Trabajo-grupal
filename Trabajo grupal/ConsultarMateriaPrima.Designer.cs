@@ -45,7 +45,7 @@
             // 
             this.datagrieldv.BackgroundColor = System.Drawing.Color.White;
             this.datagrieldv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrieldv.Location = new System.Drawing.Point(112, 104);
+            this.datagrieldv.Location = new System.Drawing.Point(35, 125);
             this.datagrieldv.Name = "datagrieldv";
             this.datagrieldv.Size = new System.Drawing.Size(554, 248);
             this.datagrieldv.TabIndex = 0;
@@ -53,61 +53,65 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(118, 71);
+            this.label1.Location = new System.Drawing.Point(31, 95);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 17);
+            this.label1.Size = new System.Drawing.Size(162, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre Mercancia";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(437, 71);
+            this.label2.Location = new System.Drawing.Point(378, 99);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.Size = new System.Drawing.Size(68, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "Codigo";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(257, 71);
+            this.txtNombre.Location = new System.Drawing.Point(199, 98);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(134, 20);
+            this.txtNombre.Size = new System.Drawing.Size(149, 20);
             this.txtNombre.TabIndex = 3;
             // 
             // btnaceptar
             // 
+            this.btnaceptar.BackColor = System.Drawing.Color.LightGreen;
+            this.btnaceptar.FlatAppearance.BorderSize = 0;
             this.btnaceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnaceptar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaceptar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnaceptar.Location = new System.Drawing.Point(234, 377);
+            this.btnaceptar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaceptar.ForeColor = System.Drawing.Color.Black;
+            this.btnaceptar.Location = new System.Drawing.Point(610, 165);
             this.btnaceptar.Name = "btnaceptar";
-            this.btnaceptar.Size = new System.Drawing.Size(105, 36);
+            this.btnaceptar.Size = new System.Drawing.Size(134, 55);
             this.btnaceptar.TabIndex = 4;
-            this.btnaceptar.Text = "aceptar";
-            this.btnaceptar.UseVisualStyleBackColor = true;
+            this.btnaceptar.Text = "Aceptar";
+            this.btnaceptar.UseVisualStyleBackColor = false;
             this.btnaceptar.Click += new System.EventHandler(this.btnaceptar_Click);
             // 
             // btnbuscar
             // 
+            this.btnbuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnbuscar.FlatAppearance.BorderSize = 0;
             this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbuscar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnbuscar.Location = new System.Drawing.Point(404, 377);
+            this.btnbuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnbuscar.Location = new System.Drawing.Point(610, 234);
             this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(105, 36);
+            this.btnbuscar.Size = new System.Drawing.Size(134, 55);
             this.btnbuscar.TabIndex = 5;
             this.btnbuscar.Text = "Buscar";
-            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.UseVisualStyleBackColor = false;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(529, 68);
+            this.txtcodigo.Location = new System.Drawing.Point(452, 99);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(137, 20);
             this.txtcodigo.TabIndex = 6;

@@ -33,7 +33,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtprecioventa = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btndeshacer = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
             this.txtMercanciaUtilizada = new System.Windows.Forms.TextBox();
             this.txtinvminimo = new System.Windows.Forms.TextBox();
@@ -48,10 +47,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnbuscar = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +64,6 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtprecioventa);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.btndeshacer);
             this.groupBox1.Controls.Add(this.btnguardar);
             this.groupBox1.Controls.Add(this.txtMercanciaUtilizada);
             this.groupBox1.Controls.Add(this.txtinvminimo);
@@ -121,26 +119,18 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Precio Venta";
             // 
-            // btndeshacer
-            // 
-            this.btndeshacer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndeshacer.Location = new System.Drawing.Point(546, 385);
-            this.btndeshacer.Name = "btndeshacer";
-            this.btndeshacer.Size = new System.Drawing.Size(153, 64);
-            this.btndeshacer.TabIndex = 13;
-            this.btndeshacer.Text = "Deshacer";
-            this.btndeshacer.UseVisualStyleBackColor = true;
-            this.btndeshacer.Click += new System.EventHandler(this.button2_Click);
-            // 
             // btnguardar
             // 
+            this.btnguardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnguardar.FlatAppearance.BorderSize = 0;
             this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnguardar.Location = new System.Drawing.Point(546, 213);
+            this.btnguardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnguardar.Location = new System.Drawing.Point(546, 257);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(153, 64);
             this.btnguardar.TabIndex = 12;
             this.btnguardar.Text = "Guardar";
-            this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.UseVisualStyleBackColor = false;
             this.btnguardar.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtMercanciaUtilizada
@@ -251,6 +241,45 @@
             this.panel1.Size = new System.Drawing.Size(806, 31);
             this.panel1.TabIndex = 1;
             // 
+            // btneliminar
+            // 
+            this.btneliminar.BackColor = System.Drawing.Color.White;
+            this.btneliminar.FlatAppearance.BorderSize = 0;
+            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btneliminar.Location = new System.Drawing.Point(546, 345);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(153, 64);
+            this.btneliminar.TabIndex = 18;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnModificar.Location = new System.Drawing.Point(546, 174);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(153, 64);
+            this.btnModificar.TabIndex = 19;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.BackColor = System.Drawing.Color.LightGreen;
+            this.btnbuscar.FlatAppearance.BorderSize = 0;
+            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnbuscar.Location = new System.Drawing.Point(546, 97);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(153, 64);
+            this.btnbuscar.TabIndex = 20;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = false;
+            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -263,36 +292,6 @@
             this.btnClose.Size = new System.Drawing.Size(45, 25);
             this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = false;
-            // 
-            // btneliminar
-            // 
-            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btneliminar.Location = new System.Drawing.Point(546, 301);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(153, 64);
-            this.btneliminar.TabIndex = 18;
-            this.btneliminar.Text = "Eliminar";
-            this.btneliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(546, 130);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(153, 64);
-            this.btnModificar.TabIndex = 19;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnbuscar
-            // 
-            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbuscar.Location = new System.Drawing.Point(546, 53);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(153, 64);
-            this.btnbuscar.TabIndex = 20;
-            this.btnbuscar.Text = "Buscar";
-            this.btnbuscar.UseVisualStyleBackColor = true;
             // 
             // InventarioPantalones
             // 
@@ -330,7 +329,6 @@
         private System.Windows.Forms.TextBox txtboxcodigo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btndeshacer;
         private System.Windows.Forms.TextBox txtprecioventa;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtpreciopormayor;

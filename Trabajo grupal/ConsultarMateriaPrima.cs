@@ -34,6 +34,7 @@ namespace Trabajo_grupal
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
+            datagrieldv.DataSource = Datosbasedt.BuscarNuevoInventario(txtcodigo.Text, txtNombre.Text);
         }
 
         private void ConsultarMateriaPrima_Load(object sender, EventArgs e)

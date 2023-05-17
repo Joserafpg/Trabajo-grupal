@@ -61,15 +61,15 @@ Fecha_de_ingreso datetime
 
 /*Tabla NuevoInventario*/
 create table NuevoInventario(
-Codigo int NOT NULL PRIMARY KEY,
+Codigo varchar (50) PRIMARY KEY,
 Nombre_Mercancia Varchar (50),
 Descripcion Varchar (50),
 Tipo_Producto Varchar (50),
 Docenas bit,
 Unidad bit,
 Lotes bit,
-Cantidad int,
-Inv_Minimo int,
+Cantidad varchar (50),
+Inv_Minimo varchar (50),
 Color_Producto Varchar (50),
 Precio_Compra varchar (50)
 )
@@ -77,11 +77,12 @@ Precio_Compra varchar (50)
 
 /*tabla InvPantalones*/
 create table InvPantalones(
-Codigo int IDENTITY (1,1) NOT NULL PRIMARY KEY,
+Codigo Varchar (50) PRIMARY KEY,
 Nombre_Producto Varchar (50),
 Descripcion Varchar (50),
-Cantidad int,
-Inv_Minimo int,
+Size varchar (50),
+Cantidad varchar (50),
+Inv_Minimo varchar (50),
 Mercancia_Utilizada varchar (50),
 Precio_Venta varchar (50),
 Precio_PorMayor varchar (50)
@@ -97,7 +98,8 @@ Telefono varchar (20),
 Direccion varchar (50),
 Correo varchar (50),
 Fecha_de_nacimiento date,
-Sexo varchar(20),
+Masculino bit,
+Femenino bit,
 Fecha_de_ingreso date,
 Sueldo varchar (50),
 AFP varchar (50),
@@ -122,21 +124,7 @@ Nombre_Producto varchar (50),
 Cantidad int,
 Precio varchar (50),
 )
-
-create table Sexo(
-Sexo varchar (20) PRIMARY KEY
-)
-
-CREATE PROCEDURE SP_SEXOCOMBOBOX
-AS
-SELECT Sexo FROM Sexo
-go
-
-EXEC SP_SEXOCOMBOBOX
 GO
-
-insert into Sexo (Sexo)
-values ('Femenina')
 
 select * from Empleados
 go

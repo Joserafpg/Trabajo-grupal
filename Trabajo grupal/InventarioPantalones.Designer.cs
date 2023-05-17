@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnbuscar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btneliminar = new System.Windows.Forms.Button();
             this.txtpreciopormayor = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtprecioventa = new System.Windows.Forms.TextBox();
@@ -47,16 +50,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btneliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnbuscar = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbSize = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbSize);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.btnbuscar);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.btneliminar);
@@ -81,15 +85,56 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(40, 34);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(741, 476);
+            this.groupBox1.Size = new System.Drawing.Size(746, 505);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inventario Pantalones";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // btnbuscar
+            // 
+            this.btnbuscar.BackColor = System.Drawing.Color.LightGreen;
+            this.btnbuscar.FlatAppearance.BorderSize = 0;
+            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnbuscar.Location = new System.Drawing.Point(546, 97);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(153, 64);
+            this.btnbuscar.TabIndex = 20;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnModificar.Location = new System.Drawing.Point(546, 174);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(153, 64);
+            this.btnModificar.TabIndex = 19;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btneliminar
+            // 
+            this.btneliminar.BackColor = System.Drawing.Color.White;
+            this.btneliminar.FlatAppearance.BorderSize = 0;
+            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btneliminar.Location = new System.Drawing.Point(546, 345);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(153, 64);
+            this.btneliminar.TabIndex = 18;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = false;
+            // 
             // txtpreciopormayor
             // 
-            this.txtpreciopormayor.Location = new System.Drawing.Point(258, 429);
+            this.txtpreciopormayor.Location = new System.Drawing.Point(258, 460);
             this.txtpreciopormayor.Name = "txtpreciopormayor";
             this.txtpreciopormayor.Size = new System.Drawing.Size(249, 27);
             this.txtpreciopormayor.TabIndex = 17;
@@ -97,7 +142,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(56, 432);
+            this.label8.Location = new System.Drawing.Point(56, 463);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(158, 21);
             this.label8.TabIndex = 16;
@@ -105,7 +150,7 @@
             // 
             // txtprecioventa
             // 
-            this.txtprecioventa.Location = new System.Drawing.Point(258, 385);
+            this.txtprecioventa.Location = new System.Drawing.Point(258, 416);
             this.txtprecioventa.Name = "txtprecioventa";
             this.txtprecioventa.Size = new System.Drawing.Size(249, 27);
             this.txtprecioventa.TabIndex = 15;
@@ -113,7 +158,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(56, 388);
+            this.label7.Location = new System.Drawing.Point(56, 419);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(110, 21);
             this.label7.TabIndex = 14;
@@ -135,7 +180,7 @@
             // 
             // txtMercanciaUtilizada
             // 
-            this.txtMercanciaUtilizada.Location = new System.Drawing.Point(258, 306);
+            this.txtMercanciaUtilizada.Location = new System.Drawing.Point(258, 337);
             this.txtMercanciaUtilizada.Multiline = true;
             this.txtMercanciaUtilizada.Name = "txtMercanciaUtilizada";
             this.txtMercanciaUtilizada.Size = new System.Drawing.Size(249, 59);
@@ -143,14 +188,14 @@
             // 
             // txtinvminimo
             // 
-            this.txtinvminimo.Location = new System.Drawing.Point(258, 262);
+            this.txtinvminimo.Location = new System.Drawing.Point(258, 293);
             this.txtinvminimo.Name = "txtinvminimo";
             this.txtinvminimo.Size = new System.Drawing.Size(249, 27);
             this.txtinvminimo.TabIndex = 10;
             // 
             // txtcantidad
             // 
-            this.txtcantidad.Location = new System.Drawing.Point(258, 216);
+            this.txtcantidad.Location = new System.Drawing.Point(258, 247);
             this.txtcantidad.Name = "txtcantidad";
             this.txtcantidad.Size = new System.Drawing.Size(249, 27);
             this.txtcantidad.TabIndex = 9;
@@ -181,7 +226,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(56, 326);
+            this.label6.Location = new System.Drawing.Point(56, 357);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(166, 21);
             this.label6.TabIndex = 5;
@@ -190,7 +235,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(56, 265);
+            this.label5.Location = new System.Drawing.Point(56, 296);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 21);
             this.label5.TabIndex = 4;
@@ -208,7 +253,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 219);
+            this.label3.Location = new System.Drawing.Point(56, 250);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 21);
             this.label3.TabIndex = 2;
@@ -238,47 +283,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(806, 31);
+            this.panel1.Size = new System.Drawing.Size(842, 31);
             this.panel1.TabIndex = 1;
-            // 
-            // btneliminar
-            // 
-            this.btneliminar.BackColor = System.Drawing.Color.White;
-            this.btneliminar.FlatAppearance.BorderSize = 0;
-            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btneliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btneliminar.Location = new System.Drawing.Point(546, 345);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(153, 64);
-            this.btneliminar.TabIndex = 18;
-            this.btneliminar.Text = "Eliminar";
-            this.btneliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnModificar.Location = new System.Drawing.Point(546, 174);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(153, 64);
-            this.btnModificar.TabIndex = 19;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            // 
-            // btnbuscar
-            // 
-            this.btnbuscar.BackColor = System.Drawing.Color.LightGreen;
-            this.btnbuscar.FlatAppearance.BorderSize = 0;
-            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnbuscar.Location = new System.Drawing.Point(546, 97);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(153, 64);
-            this.btnbuscar.TabIndex = 20;
-            this.btnbuscar.Text = "Buscar";
-            this.btnbuscar.UseVisualStyleBackColor = false;
             // 
             // btnClose
             // 
@@ -287,23 +293,48 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::Trabajo_grupal.Properties.Resources.cerrar__3_;
-            this.btnClose.Location = new System.Drawing.Point(758, 3);
+            this.btnClose.Location = new System.Drawing.Point(794, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(45, 25);
             this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(56, 208);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(38, 21);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Size";
+            // 
+            // cbSize
+            // 
+            this.cbSize.FormattingEnabled = true;
+            this.cbSize.Items.AddRange(new object[] {
+            "Xsmall",
+            "Small",
+            "Medium",
+            "Large",
+            "XLarge",
+            "XXLarge"});
+            this.cbSize.Location = new System.Drawing.Point(258, 207);
+            this.cbSize.Name = "cbSize";
+            this.cbSize.Size = new System.Drawing.Size(249, 29);
+            this.cbSize.TabIndex = 22;
             // 
             // InventarioPantalones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(806, 522);
+            this.ClientSize = new System.Drawing.Size(842, 565);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InventarioPantalones";
             this.Text = "InventarioPantalones";
+            this.Load += new System.EventHandler(this.InventarioPantalones_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -336,5 +367,7 @@
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btneliminar;
+        private System.Windows.Forms.ComboBox cbSize;
+        private System.Windows.Forms.Label label9;
     }
 }

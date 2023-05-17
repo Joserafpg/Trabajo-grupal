@@ -197,6 +197,7 @@
             this.btndeshacer.TabIndex = 22;
             this.btndeshacer.Text = "Deshacer";
             this.btndeshacer.UseVisualStyleBackColor = false;
+            this.btndeshacer.Click += new System.EventHandler(this.btndeshacer_Click);
             // 
             // btnguardar
             // 

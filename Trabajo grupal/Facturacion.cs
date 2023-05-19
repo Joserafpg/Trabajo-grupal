@@ -143,7 +143,7 @@ namespace Trabajo_grupal
             btnefectivo.Visible = false;
         }
 
-        SqlConnection conn = new SqlConnection("Data source = DESKTOP-NDDA7LS; Initial Catalog = Practica_Grupal; Integrated Security = True");
+        SqlConnection conn = new SqlConnection("Data source = DESKTOP-NDDA7LS; Initial Catalog = Proyecto_Grupal; Integrated Security = True");
 
         private Pantalones ObtenerProducto(Int64 idProducto)
         {
@@ -228,10 +228,10 @@ namespace Trabajo_grupal
                 return; // Salir del método sin ejecutar el código restante
             }
 
-            SqlCommand agregar = new SqlCommand("INSERT INTO Factura VALUES (@Codigo, @Nombre_Producto, @Size, @Precio, @Stock)", conn);
+            SqlCommand agregar = new SqlCommand("INSERT INTO Factura VALUES (@Codigo, @Producto, @Size, @Precio, @Cantidad, @Total)", conn);
             string verificarQuery = "SELECT Stock FROM InvPantalones WHERE Nombre_Producto = @Producto";
-            string actualizarQuery = "UPDATE InvPantalones SET Stock = Stock - @Stock WHERE Nombre_Producto = @d|Producto";
-
+            string actualizarQuery = "UPDATE InvPantalones SET Stock = Stock - @Cantidad WHERE Nombre_Producto = @Producto";
+            
             conn.Open();
 
             try
@@ -240,7 +240,7 @@ namespace Trabajo_grupal
                 {
                     // Obtener los valores de la fila actual del DataGridView
                     int id_producto = Convert.ToInt32(row.Cells["codigos"].Value);
-                    string producto = Convert.ToString(row.Cells["productos"].Value);
+                    string producto = Convert.ToString(row.Cells["producto"].Value);
                     string size = Convert.ToString(row.Cells["size"].Value);
                     decimal precio = Convert.ToDecimal(row.Cells["precios"].Value);
                     int cantidad = Convert.ToInt32(row.Cells["cantidad"].Value);
@@ -249,7 +249,7 @@ namespace Trabajo_grupal
                     // Verificar si el Stock es menor que la Cantidad
                     using (SqlCommand verificarCmd = new SqlCommand(verificarQuery, conn))
                     {
-                        verificarCmd.Parameters.AddWithValue("@Nombre_Producto", producto);
+                        verificarCmd.Parameters.AddWithValue("@Producto", producto);
                         int stock = Convert.ToInt32(verificarCmd.ExecuteScalar());
 
                         if (stock < cantidad)
@@ -262,7 +262,7 @@ namespace Trabajo_grupal
                     // Agregar los parámetros al comando
                     agregar.Parameters.Clear();
                     agregar.Parameters.AddWithValue("@Codigo", id_producto);
-                    agregar.Parameters.AddWithValue("@Nombre_Producto", producto);
+                    agregar.Parameters.AddWithValue("@Producto", producto);
                     agregar.Parameters.AddWithValue("@Size", size);
                     agregar.Parameters.AddWithValue("@Precio", precio);
                     agregar.Parameters.AddWithValue("@Cantidad", cantidad);
@@ -274,7 +274,7 @@ namespace Trabajo_grupal
                     // Actualizar los datos de la tabla productos
                     using (SqlCommand actualizarCmd = new SqlCommand(actualizarQuery, conn))
                     {
-                        actualizarCmd.Parameters.AddWithValue("@Nombre_Producto", producto);
+                        actualizarCmd.Parameters.AddWithValue("@Producto", producto);
                         actualizarCmd.Parameters.AddWithValue("@Cantidad", cantidad);
                         actualizarCmd.ExecuteNonQuery();
                     }

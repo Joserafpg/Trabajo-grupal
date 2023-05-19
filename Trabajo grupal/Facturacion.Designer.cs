@@ -100,10 +100,9 @@
             this.PPago.Controls.Add(this.label4);
             this.PPago.Controls.Add(this.label6);
             this.PPago.Controls.Add(this.txtdinero);
-            this.PPago.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PPago.Location = new System.Drawing.Point(0, 0);
             this.PPago.Name = "PPago";
-            this.PPago.Size = new System.Drawing.Size(1034, 501);
+            this.PPago.Size = new System.Drawing.Size(938, 501);
             this.PPago.TabIndex = 34;
             // 
             // pcredito
@@ -251,7 +250,7 @@
             this.btnefectivo.FlatAppearance.BorderSize = 0;
             this.btnefectivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnefectivo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnefectivo.Location = new System.Drawing.Point(12, 40);
+            this.btnefectivo.Location = new System.Drawing.Point(-36, 40);
             this.btnefectivo.Name = "btnefectivo";
             this.btnefectivo.Size = new System.Drawing.Size(175, 50);
             this.btnefectivo.TabIndex = 23;
@@ -266,7 +265,7 @@
             this.btncredito.FlatAppearance.BorderSize = 0;
             this.btncredito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncredito.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btncredito.Location = new System.Drawing.Point(12, 40);
+            this.btncredito.Location = new System.Drawing.Point(-36, 40);
             this.btncredito.Name = "btncredito";
             this.btncredito.Size = new System.Drawing.Size(175, 50);
             this.btncredito.TabIndex = 22;
@@ -281,7 +280,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(781, 341);
+            this.button1.Location = new System.Drawing.Point(733, 341);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 50);
             this.button1.TabIndex = 21;

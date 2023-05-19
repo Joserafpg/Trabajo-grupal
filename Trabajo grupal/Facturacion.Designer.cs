@@ -53,20 +53,22 @@
             this.btnconsultar = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.txttotal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnagregarmanual = new System.Windows.Forms.Button();
             this.btndeshacer = new System.Windows.Forms.Button();
             this.btnfacturar = new System.Windows.Forms.Button();
+            this.codigos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5.SuspendLayout();
             this.PPago.SuspendLayout();
             this.pcredito.SuspendLayout();
@@ -98,10 +100,9 @@
             this.PPago.Controls.Add(this.label4);
             this.PPago.Controls.Add(this.label6);
             this.PPago.Controls.Add(this.txtdinero);
-            this.PPago.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PPago.Location = new System.Drawing.Point(0, 0);
             this.PPago.Name = "PPago";
-            this.PPago.Size = new System.Drawing.Size(1034, 501);
+            this.PPago.Size = new System.Drawing.Size(296, 501);
             this.PPago.TabIndex = 34;
             // 
             // pcredito
@@ -119,7 +120,7 @@
             this.pcredito.Controls.Add(this.label2);
             this.pcredito.Location = new System.Drawing.Point(0, 105);
             this.pcredito.Name = "pcredito";
-            this.pcredito.Size = new System.Drawing.Size(724, 395);
+            this.pcredito.Size = new System.Drawing.Size(688, 395);
             this.pcredito.TabIndex = 26;
             // 
             // dateTimePicker2
@@ -249,7 +250,7 @@
             this.btnefectivo.FlatAppearance.BorderSize = 0;
             this.btnefectivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnefectivo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnefectivo.Location = new System.Drawing.Point(12, 40);
+            this.btnefectivo.Location = new System.Drawing.Point(-357, 40);
             this.btnefectivo.Name = "btnefectivo";
             this.btnefectivo.Size = new System.Drawing.Size(175, 50);
             this.btnefectivo.TabIndex = 23;
@@ -264,7 +265,7 @@
             this.btncredito.FlatAppearance.BorderSize = 0;
             this.btncredito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncredito.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btncredito.Location = new System.Drawing.Point(12, 40);
+            this.btncredito.Location = new System.Drawing.Point(-357, 40);
             this.btncredito.Name = "btncredito";
             this.btncredito.Size = new System.Drawing.Size(175, 50);
             this.btncredito.TabIndex = 22;
@@ -279,12 +280,13 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(781, 341);
+            this.button1.Location = new System.Drawing.Point(412, 341);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 50);
             this.button1.TabIndex = 21;
             this.button1.Text = "Facturar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txtcambio
             // 
@@ -355,6 +357,7 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.txttotal);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dateTimePicker1);
@@ -368,6 +371,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(482, 485);
             this.panel1.TabIndex = 21;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Location = new System.Drawing.Point(353, 108);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 25);
+            this.button2.TabIndex = 36;
+            this.button2.Text = "Agregar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txttotal
             // 
@@ -417,44 +431,16 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.NombreProducto,
-            this.Precio,
-            this.CantidadProducto,
+            this.codigos,
+            this.producto,
+            this.size,
+            this.precios,
+            this.cantidad,
             this.Total});
             this.dataGridView1.Location = new System.Drawing.Point(31, 161);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(422, 148);
             this.dataGridView1.TabIndex = 16;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 68;
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.HeaderText = "Producto";
-            this.NombreProducto.Name = "NombreProducto";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.Width = 80;
-            // 
-            // CantidadProducto
-            // 
-            this.CantidadProducto.HeaderText = "Cantidad";
-            this.CantidadProducto.Name = "CantidadProducto";
-            this.CantidadProducto.Width = 60;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.Width = 73;
             // 
             // btnagregarmanual
             // 
@@ -496,6 +482,41 @@
             this.btnfacturar.UseVisualStyleBackColor = false;
             this.btnfacturar.Click += new System.EventHandler(this.button3_Click);
             // 
+            // codigos
+            // 
+            this.codigos.HeaderText = "Codigo";
+            this.codigos.Name = "codigos";
+            this.codigos.Width = 48;
+            // 
+            // producto
+            // 
+            this.producto.HeaderText = "Producto";
+            this.producto.Name = "producto";
+            // 
+            // size
+            // 
+            this.size.HeaderText = "Size";
+            this.size.Name = "size";
+            this.size.Width = 40;
+            // 
+            // precios
+            // 
+            this.precios.HeaderText = "Precio";
+            this.precios.Name = "precios";
+            this.precios.Width = 60;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Width = 60;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.Width = 73;
+            // 
             // Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,11 +552,6 @@
         private System.Windows.Forms.Button btnfacturar;
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PPago;
         private System.Windows.Forms.Label txtcambio;
@@ -559,5 +575,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn size;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
     }
 }

@@ -77,15 +77,13 @@ Precio_Compra varchar (50)
 
 /*tabla InvPantalones*/
 create table InvPantalones(
-Codigo Varchar (50) PRIMARY KEY,
+Codigo INT IDENTITY (1,1) NOT NULL PRIMARY KEY,
 Nombre_Producto Varchar (50),
-Descripcion Varchar (50),
 Size varchar (50),
-Cantidad varchar (50),
+Stock int,
 Inv_Minimo varchar (50),
 Mercancia_Utilizada varchar (50),
-Precio_Venta varchar (50),
-Precio_PorMayor varchar (50)
+Precio decimal (38),
 )
 
 
@@ -137,7 +135,7 @@ go
 EXEC SP_EMPLEADOCOMBOBOX
 GO
 
-drop table Empleados
+drop table InvPantalones
 GO
 
 drop database Proyecto_Grupal

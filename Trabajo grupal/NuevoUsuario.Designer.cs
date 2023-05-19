@@ -36,6 +36,7 @@
             this.txtcontraseña = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnguardar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.formpermiso = new System.Windows.Forms.Panel();
             this.chformcobrar = new System.Windows.Forms.CheckBox();
@@ -54,7 +55,6 @@
             this.agregarpagos = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnguardar = new System.Windows.Forms.Button();
             this.cheliminarfactura = new System.Windows.Forms.CheckBox();
             this.cheliminarmercancia = new System.Windows.Forms.CheckBox();
             this.modificaruser = new System.Windows.Forms.CheckBox();
@@ -174,6 +174,18 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Nuevo Usuario";
+            // 
+            // btnguardar
+            // 
+            this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnguardar.ForeColor = System.Drawing.Color.White;
+            this.btnguardar.Location = new System.Drawing.Point(246, 267);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(169, 51);
+            this.btnguardar.TabIndex = 19;
+            this.btnguardar.Text = "Aceptar";
+            this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // button2
             // 
@@ -413,18 +425,6 @@
             this.label1.Size = new System.Drawing.Size(124, 21);
             this.label1.TabIndex = 52;
             this.label1.Text = "CuentasPagar";
-            // 
-            // btnguardar
-            // 
-            this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnguardar.ForeColor = System.Drawing.Color.White;
-            this.btnguardar.Location = new System.Drawing.Point(246, 267);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(169, 51);
-            this.btnguardar.TabIndex = 19;
-            this.btnguardar.Text = "Aceptar";
-            this.btnguardar.UseVisualStyleBackColor = true;
-            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // cheliminarfactura
             // 

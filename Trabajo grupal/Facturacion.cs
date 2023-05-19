@@ -17,7 +17,7 @@ namespace Trabajo_grupal
     {
         public Facturacion()
         {
-            InitializeComponent(); 
+            InitializeComponent();
             dataGridView1.RowsAdded += dataGridView1_RowsAdded;
         }
 
@@ -222,16 +222,10 @@ namespace Trabajo_grupal
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count == 0)
-            {
-                MessageBox.Show("No se ha agregado ningun produto para ser facturado.");
-                return; // Salir del método sin ejecutar el código restante
-            }
-
             SqlCommand agregar = new SqlCommand("INSERT INTO Factura VALUES (@Codigo, @Producto, @Size, @Precio, @Cantidad, @Total)", conn);
             string verificarQuery = "SELECT Stock FROM InvPantalones WHERE Nombre_Producto = @Producto";
             string actualizarQuery = "UPDATE InvPantalones SET Stock = Stock - @Cantidad WHERE Nombre_Producto = @Producto";
-            
+
             conn.Open();
 
             try
@@ -255,6 +249,8 @@ namespace Trabajo_grupal
                         if (stock < cantidad)
                         {
                             MessageBox.Show("No hay suficiente stock para el producto " + producto);
+                            FacturarEfectivoOFF();
+                            FacturarCreditoOFF();
                             return; // Salta a la siguiente iteración del bucle sin ejecutar el código restante
                         }
                     }
@@ -282,6 +278,7 @@ namespace Trabajo_grupal
 
                 MessageBox.Show("Facturado con exito");
                 dataGridView1.Rows.Clear();
+                Limpiar();
             }
 
             catch (Exception ex)

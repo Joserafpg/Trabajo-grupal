@@ -122,9 +122,21 @@ Nombre_Producto varchar (50),
 Cantidad int,
 Precio varchar (50),
 )
+
+create table Factura (
+Codigo INT, 
+Producto varchar (50), 
+Size varchar (50), 
+Precio decimal (38), 
+Cantidad int,
+Total decimal (38),
+)
 GO
 
-select * from Empleados
+select * from InvPantalones
+go
+
+select * from Factura
 go
 
 CREATE PROCEDURE SP_EMPLEADOCOMBOBOX
@@ -135,7 +147,7 @@ go
 EXEC SP_EMPLEADOCOMBOBOX
 GO
 
-drop table InvPantalones
+drop table Factura
 GO
 
 drop database Proyecto_Grupal

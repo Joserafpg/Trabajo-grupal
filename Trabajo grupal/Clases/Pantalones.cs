@@ -12,5 +12,6 @@ namespace Trabajo_grupal.Clases
         public string Nombre_Producto { get; set; }
         public string Size { get; set; }
         public decimal Precio { get; set; }
+        public int Cantidad = 1;
     }
 }

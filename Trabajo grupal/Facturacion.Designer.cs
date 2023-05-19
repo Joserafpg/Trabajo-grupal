@@ -60,15 +60,15 @@
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnagregarmanual = new System.Windows.Forms.Button();
-            this.btndeshacer = new System.Windows.Forms.Button();
-            this.btnfacturar = new System.Windows.Forms.Button();
             this.codigos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnagregarmanual = new System.Windows.Forms.Button();
+            this.btndeshacer = new System.Windows.Forms.Button();
+            this.btnfacturar = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.PPago.SuspendLayout();
             this.pcredito.SuspendLayout();
@@ -100,9 +100,10 @@
             this.PPago.Controls.Add(this.label4);
             this.PPago.Controls.Add(this.label6);
             this.PPago.Controls.Add(this.txtdinero);
+            this.PPago.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PPago.Location = new System.Drawing.Point(0, 0);
             this.PPago.Name = "PPago";
-            this.PPago.Size = new System.Drawing.Size(296, 501);
+            this.PPago.Size = new System.Drawing.Size(1034, 501);
             this.PPago.TabIndex = 34;
             // 
             // pcredito
@@ -250,7 +251,7 @@
             this.btnefectivo.FlatAppearance.BorderSize = 0;
             this.btnefectivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnefectivo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnefectivo.Location = new System.Drawing.Point(-357, 40);
+            this.btnefectivo.Location = new System.Drawing.Point(12, 40);
             this.btnefectivo.Name = "btnefectivo";
             this.btnefectivo.Size = new System.Drawing.Size(175, 50);
             this.btnefectivo.TabIndex = 23;
@@ -265,7 +266,7 @@
             this.btncredito.FlatAppearance.BorderSize = 0;
             this.btncredito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncredito.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btncredito.Location = new System.Drawing.Point(-357, 40);
+            this.btncredito.Location = new System.Drawing.Point(12, 40);
             this.btncredito.Name = "btncredito";
             this.btncredito.Size = new System.Drawing.Size(175, 50);
             this.btncredito.TabIndex = 22;
@@ -280,7 +281,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(412, 341);
+            this.button1.Location = new System.Drawing.Point(781, 341);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 50);
             this.button1.TabIndex = 21;
@@ -387,8 +388,10 @@
             // 
             this.txttotal.Location = new System.Drawing.Point(388, 324);
             this.txttotal.Name = "txttotal";
+            this.txttotal.ReadOnly = true;
             this.txttotal.Size = new System.Drawing.Size(65, 20);
             this.txttotal.TabIndex = 35;
+            this.txttotal.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
             // 
             // label1
             // 
@@ -441,6 +444,42 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(422, 148);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
+            // 
+            // codigos
+            // 
+            this.codigos.HeaderText = "Codigo";
+            this.codigos.Name = "codigos";
+            this.codigos.Width = 48;
+            // 
+            // producto
+            // 
+            this.producto.HeaderText = "Producto";
+            this.producto.Name = "producto";
+            // 
+            // size
+            // 
+            this.size.HeaderText = "Size";
+            this.size.Name = "size";
+            this.size.Width = 40;
+            // 
+            // precios
+            // 
+            this.precios.HeaderText = "Precio";
+            this.precios.Name = "precios";
+            this.precios.Width = 60;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Width = 60;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.Width = 73;
             // 
             // btnagregarmanual
             // 
@@ -481,41 +520,6 @@
             this.btnfacturar.Text = "Facturar";
             this.btnfacturar.UseVisualStyleBackColor = false;
             this.btnfacturar.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // codigos
-            // 
-            this.codigos.HeaderText = "Codigo";
-            this.codigos.Name = "codigos";
-            this.codigos.Width = 48;
-            // 
-            // producto
-            // 
-            this.producto.HeaderText = "Producto";
-            this.producto.Name = "producto";
-            // 
-            // size
-            // 
-            this.size.HeaderText = "Size";
-            this.size.Name = "size";
-            this.size.Width = 40;
-            // 
-            // precios
-            // 
-            this.precios.HeaderText = "Precio";
-            this.precios.Name = "precios";
-            this.precios.Width = 60;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.Width = 60;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.Width = 73;
             // 
             // Facturacion
             // 

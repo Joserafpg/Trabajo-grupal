@@ -17,7 +17,20 @@ namespace Trabajo_grupal
     {
         public Facturacion()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            dataGridView1.RowsAdded += dataGridView1_RowsAdded;
+        }
+
+        public void SumarColumna()
+        {
+            double Total = 0;
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                Total += Convert.ToDouble(row.Cells["Total"].Value);
+            }
+            txttotal.Text = Total.ToString();
+
         }
 
         void FacturarCredito()
@@ -45,9 +58,10 @@ namespace Trabajo_grupal
             txtdinero.Clear();
             txtcambio.ResetText();
             txttotal.Clear();
+            dataGridView1.Rows.Clear();
             FacturarCreditoOFF();
             FacturarEfectivoOFF();
-            
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -58,6 +72,12 @@ namespace Trabajo_grupal
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("No se ha agregado ningun produto para ser facturado.");
+                return; // Salir del método sin ejecutar el código restante
+            }
+
             FacturarEfectivo();
         }
 
@@ -80,6 +100,9 @@ namespace Trabajo_grupal
             btnconsultar.Enabled = Permisos.ConsultarFACTURA;
             btnconsultar.Enabled = Permisos.ModificarFACTURA;
             btnconsultar.Enabled = Permisos.EliminarFACTURA;
+
+            dataGridView1.AllowUserToAddRows = false;
+
         }
 
         private void txtdinero_TextChanged(object sender, EventArgs e)
@@ -170,6 +193,12 @@ namespace Trabajo_grupal
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtcodigo.Text))
+            {
+                MessageBox.Show("Debe colocar el ID del producto");
+                return;
+            }
+
             Int64 idProducto = Convert.ToInt64(txtcodigo.Text);
 
             // Llamar a un método para obtener el producto completo según su ID
@@ -179,7 +208,7 @@ namespace Trabajo_grupal
             if (producto != null)
             {
                 // Agregar una nueva fila al DataTable con los datos del producto
-                dataGridView1.Rows.Add(producto.Id, producto.Nombre_Producto, producto.Size, producto.Precio);
+                dataGridView1.Rows.Add(producto.Id, producto.Nombre_Producto, producto.Size, producto.Precio, producto.Cantidad);
             }
             else
             {
@@ -188,13 +217,14 @@ namespace Trabajo_grupal
             }
 
             txtcodigo.Clear();
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             if (dataGridView1.Rows.Count == 0)
             {
-                MessageBox.Show("No hay datos en el DataGridView.");
+                MessageBox.Show("No se ha agregado ningun produto para ser facturado.");
                 return; // Salir del método sin ejecutar el código restante
             }
 
@@ -250,7 +280,7 @@ namespace Trabajo_grupal
                     }
                 }
 
-                MessageBox.Show("Facturado");
+                MessageBox.Show("Facturado con exito");
                 dataGridView1.Rows.Clear();
             }
 
@@ -263,6 +293,27 @@ namespace Trabajo_grupal
             {
                 conn.Close();
             }
+        }
+
+        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                // Obtener los valores de las columnas "Columna1" y "Columna2"
+                double valor1 = Convert.ToDouble(row.Cells["precios"].Value);
+                int valor2 = Convert.ToInt32(row.Cells["cantidad"].Value);
+                // Realizar la multiplicación
+                double resultado = valor1 * valor2;
+
+                // Asignar el resultado a la columna "Resultado" de la fila actual
+                row.Cells["Total"].Value = resultado;
+                SumarColumna();
+            }
+        }
+
+        private void txttotal_TextChanged(object sender, EventArgs e)
+        {
+            txtdinero.Text = txttotal.Text;
         }
     }
 }

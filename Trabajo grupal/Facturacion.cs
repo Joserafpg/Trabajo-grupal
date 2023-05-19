@@ -191,6 +191,35 @@ namespace Trabajo_grupal
 
         }
 
+        private void VerificarAgregarModificarProducto(Pantalones producto)
+        {
+            bool encontrado = false;
+
+            // Recorrer las filas del DataGridView para buscar el producto
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                // Obtener el ID del producto en la fila actual
+                Int64 id = Convert.ToInt64(row.Cells["codigos"].Value);
+
+                if (id == producto.Id)
+                {
+                    // El producto ya está en el DataGridView, modificar la cantidad
+                    int cantidadExistente = Convert.ToInt32(row.Cells["cantidad"].Value);
+                    int cantidadNueva = cantidadExistente + producto.Cantidad;
+                    row.Cells["cantidad"].Value = cantidadNueva;
+
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if (!encontrado)
+            {
+                // El producto no está en el DataGridView, agregar una nueva fila
+                dataGridView1.Rows.Add(producto.Id, producto.Nombre_Producto, producto.Size, producto.Precio, producto.Cantidad);
+            }
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtcodigo.Text))
@@ -204,17 +233,17 @@ namespace Trabajo_grupal
             // Llamar a un método para obtener el producto completo según su ID
             Pantalones producto = ObtenerProducto(idProducto);
 
-            // Verificar si se encontró un producto con el ID especificado
             if (producto != null)
             {
-                // Agregar una nueva fila al DataTable con los datos del producto
-                dataGridView1.Rows.Add(producto.Id, producto.Nombre_Producto, producto.Size, producto.Precio, producto.Cantidad);
+                // Verificar si el producto ya está en el DataGridView y realizar la acción correspondiente
+                VerificarAgregarModificarProducto(producto);
             }
             else
             {
                 // No se encontró un producto con el ID especificado, mostrar un mensaje de error o realizar alguna otra acción apropiada
                 MessageBox.Show("No se encontró ningún producto con el ID especificado.");
             }
+
 
             txtcodigo.Clear();
 

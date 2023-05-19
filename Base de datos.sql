@@ -106,14 +106,6 @@ Puesto varchar (50),
 )
 
 
-/*Tabla Factura*/
-create table Factura(
-NO_Factura int IDENTITY (1,1) NOT NULL PRIMARY KEY,
-ID_Cliente int,
-Fecha datetime,
-
-)
-
 /*Tabla Detalles Factura*/
 Create table Detalles_Factura(
 NO_Factura int PRIMARY KEY,
@@ -123,6 +115,7 @@ Cantidad int,
 Precio varchar (50),
 )
 
+/*Tabla factura (prueba)*/
 create table Factura (
 Codigo INT, 
 Producto varchar (50), 

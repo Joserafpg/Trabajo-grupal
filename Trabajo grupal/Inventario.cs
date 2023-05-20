@@ -61,5 +61,16 @@ namespace Trabajo_grupal
             AjustesInventario frm = new AjustesInventario();
             frm.ShowDialog();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+           InventarioPantalones  frm = new InventarioPantalones();
+            frm.ShowDialog();
+        }
     }
 }

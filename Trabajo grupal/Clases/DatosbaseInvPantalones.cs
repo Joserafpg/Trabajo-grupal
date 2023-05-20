@@ -14,9 +14,8 @@ namespace Trabajo_grupal.Clases
             int retorno = 0;
 
             Conexion.opoencon();
-            SqlCommand comando = new SqlCommand(string.Format(" insert into InvPantalones (Codigo, Nombre_Producto, Descripcion, Size, Cantidad, Inv_Minimo, Mercancia_Utilizada, Precio_Venta, Precio_PorMayor) " +
-                "values ('{0}','{1}','{2}','{3}','{4}', '{5}','{6}','{7}','{8}')",
-                    pget.Codigo, pget.Nombre_Producto, pget.Descripcion, pget.Size, pget.Cantidad, pget.Inv_Minimo, pget.Mercancia_Utilizada, pget.Precio_Venta, pget.Precio_PorMayor), Conexion.ObtenerConexion());
+            SqlCommand comando = new SqlCommand(string.Format(" insert into InvPantalones (Nombre_Producto, Size, Stock, Inv_Minimo, Mercancia_Utilizada, Precio) values ('{0}','{1}','{2}','{3}','{4}', '{5}')",
+                pget.Nombre_Producto,  pget.Size, pget.Stock, pget.Inv_Minimo, pget.Mercancia_Utilizada, pget.Precio), Conexion.ObtenerConexion());
 
             retorno = comando.ExecuteNonQuery();
             Conexion.cerrarcon();
@@ -31,9 +30,8 @@ namespace Trabajo_grupal.Clases
             int retorno = 0;
             Conexion.opoencon();
             {
-                SqlCommand comando = new SqlCommand(string.Format("Update InvPantalones set Nombre_Producto ='{0}', Descripcion='{1}',Size='{2}',Cantidad='{3}', Inv_Minimo='{4}', Mercancia_Utilizada='{5}' ,Precio_Venta='{6}',Precio_PorMayor='{7}' where Codigo={8}",
-                     pInventarioPantalon.Codigo, pInventarioPantalon.Nombre_Producto, pInventarioPantalon.Descripcion, pInventarioPantalon.Size, pInventarioPantalon.Cantidad, pInventarioPantalon.Inv_Minimo, pInventarioPantalon.Mercancia_Utilizada, pInventarioPantalon.Precio_Venta, pInventarioPantalon.Precio_PorMayor
-                     ), Conexion.ObtenerConexion());
+                SqlCommand comando = new SqlCommand(string.Format("Update InvPantalones set Nombre_Producto ='{0}', Size = '{1}', Stock = '{2}', Inv_Minimo = '{3}', Mercancia_Utilizada = '{4}', Precio = '{5}' where Codigo={6}",
+                     pInventarioPantalon.Nombre_Producto,  pInventarioPantalon.Size, pInventarioPantalon.Stock, pInventarioPantalon.Inv_Minimo, pInventarioPantalon.Mercancia_Utilizada, pInventarioPantalon.Precio, pInventarioPantalon.Codigo), Conexion.ObtenerConexion());
                 retorno = comando.ExecuteNonQuery();
             }
             Conexion.cerrarcon();
@@ -56,22 +54,21 @@ namespace Trabajo_grupal.Clases
             {
 
                 SqlCommand comando = new SqlCommand(String.Format(
-                    "SELECT  Codigo, Nombre_Producto, Descripcion, Size, Cantidad, Inv_Minimo, Mercancia_Utilizada, Precio_Venta, Precio_PorMayor FROM InvPantalones  where Codigo like '%{0}%'", pNombre_Producto, pCodigo), Conexion.ObtenerConexion());
+                    "SELECT  Codigo, Nombre_Producto, Size, Stock, Inv_Minimo, Mercancia_Utilizada, Precio FROM InvPantalones  where Codigo like '%{0}%'", pNombre_Producto, pCodigo), Conexion.ObtenerConexion());
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
                     DatosgetInv pInventarioPantalon = new DatosgetInv();
 
 
-                    pInventarioPantalon.Codigo = reader.GetString(0);
+                    pInventarioPantalon.Codigo = reader.GetInt32(0);
                     pInventarioPantalon.Nombre_Producto = reader.GetString(1);
-                    pInventarioPantalon.Descripcion = reader.GetString(2);
-                    pInventarioPantalon.Size = reader.GetString(3);
-                    pInventarioPantalon.Cantidad = reader.GetString(4);
-                    pInventarioPantalon.Inv_Minimo = reader.GetString(5);
-                    pInventarioPantalon.Mercancia_Utilizada = reader.GetString(6);
-                    pInventarioPantalon.Precio_Venta = reader.GetString(7);
-                    pInventarioPantalon.Precio_PorMayor= reader.GetString(8);
+                    pInventarioPantalon.Size = reader.GetString(2);
+                    pInventarioPantalon.Stock = reader.GetInt32(3);
+                    pInventarioPantalon.Inv_Minimo = reader.GetString(4);
+                    pInventarioPantalon.Mercancia_Utilizada = reader.GetString(5);
+                    pInventarioPantalon.Precio = reader.GetDecimal(6);
+                
                    
 
 
@@ -89,19 +86,18 @@ namespace Trabajo_grupal.Clases
             {
                 DatosgetInv pInventarioPantalon= new DatosgetInv();
                 SqlCommand comando = new SqlCommand(String.Format(
-                    "Select Nombre_Producto, Descripcion, Size, Cantidad, Inv_Minimo, Mercancia_Utilizada, Precio_Venta, Precio_PorMayor FROM InvPantalones  where Codigo={0}", pId), Conexion.ObtenerConexion());
+                    "Select Codigo, Nombre_Producto, Size, Stock, Inv_Minimo, Mercancia_Utilizada, Precio FROM InvPantalones where Codigo={0}", pId), Conexion.ObtenerConexion());
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-                    pInventarioPantalon.Codigo = reader.GetString(0);
+                    pInventarioPantalon.Codigo = Convert.ToInt64(reader.GetValue(0));
                     pInventarioPantalon.Nombre_Producto = reader.GetString(1);
-                    pInventarioPantalon.Descripcion = reader.GetString(2);
-                    pInventarioPantalon.Size = reader.GetString(3);
-                    pInventarioPantalon.Cantidad = reader.GetString(4);
-                    pInventarioPantalon.Inv_Minimo = reader.GetString(5);
-                    pInventarioPantalon.Mercancia_Utilizada = reader.GetString(6);
-                    pInventarioPantalon.Precio_Venta = reader.GetString(7);
-                    pInventarioPantalon.Precio_PorMayor = reader.GetString(8);
+                    pInventarioPantalon.Size = reader.GetString(2);
+                    pInventarioPantalon.Stock = reader.GetInt32(3);
+                    pInventarioPantalon.Inv_Minimo = reader.GetString(4);
+                    pInventarioPantalon.Mercancia_Utilizada = reader.GetString(5);
+                    pInventarioPantalon.Precio = reader.GetDecimal(6);
+                    
 
 
                 }

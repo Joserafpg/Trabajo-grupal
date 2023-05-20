@@ -38,15 +38,13 @@ namespace Trabajo_grupal
             DatosgetInv datosgetinv = new DatosgetInv();
 
 
-            datosgetinv.Codigo = txtboxcodigo.Text;
             datosgetinv.Nombre_Producto = txtNombreProducto.Text;
-            datosgetinv.Descripcion = txtdescripcion.Text;
             datosgetinv.Size = cbSize.Text;
-            datosgetinv.Cantidad = txtcantidad.Text;
+            datosgetinv.Stock = Convert.ToInt32(txtstock.Text);
             datosgetinv.Inv_Minimo = txtinvminimo.Text;
             datosgetinv.Mercancia_Utilizada = txtMercanciaUtilizada.Text;
-            datosgetinv.Precio_Venta = txtprecioventa.Text;
-            datosgetinv.Precio_PorMayor = txtpreciopormayor.Text;
+            datosgetinv.Precio = Convert.ToDecimal(txtprecio.Text);
+            
 
             int resultado = DatosbaseInvPantalones.agregar(datosgetinv);
 
@@ -74,13 +72,12 @@ namespace Trabajo_grupal
             {
                 InvPantalonActual = pBuscar.InvPantalonSeleccionado;
                 txtNombreProducto.Text = pBuscar.InvPantalonSeleccionado.Nombre_Producto;
-                txtdescripcion.Text = pBuscar.InvPantalonSeleccionado.Descripcion;
                 cbSize.Text = pBuscar.InvPantalonSeleccionado.Size;
-                txtcantidad.Text = pBuscar.InvPantalonSeleccionado.Cantidad;
+                txtstock.Text = pBuscar.InvPantalonSeleccionado.Stock.ToString();
                 txtinvminimo.Text = pBuscar.InvPantalonSeleccionado.Inv_Minimo;
                 txtMercanciaUtilizada.Text = pBuscar.InvPantalonSeleccionado.Mercancia_Utilizada;
-                txtprecioventa.Text = pBuscar.InvPantalonSeleccionado.Precio_Venta;
-                txtpreciopormayor.Text = pBuscar.InvPantalonSeleccionado.Precio_PorMayor;
+                txtprecio.Text = pBuscar.InvPantalonSeleccionado.Precio.ToString();
+                
 
 
                 btnguardar.Enabled = false;
@@ -92,17 +89,14 @@ namespace Trabajo_grupal
         private void btnModificar_Click(object sender, EventArgs e)
         {
             DatosgetInv pInventarioPantalon = new DatosgetInv();
-
-
-            pInventarioPantalon.Codigo = InvPantalonActual.Codigo;
+          
             pInventarioPantalon.Nombre_Producto = txtNombreProducto.Text;
-            pInventarioPantalon.Descripcion = txtdescripcion.Text;
-            pInventarioPantalon. Size = cbSize.Text;
-            pInventarioPantalon.Cantidad = txtcantidad.Text;
+            pInventarioPantalon.Size = cbSize.Text;
+            pInventarioPantalon.Stock = Convert.ToInt32(txtstock.Text);
             pInventarioPantalon.Inv_Minimo  = txtinvminimo.Text;
             pInventarioPantalon.Mercancia_Utilizada = txtMercanciaUtilizada.Text;
-            pInventarioPantalon.Precio_Venta = txtprecioventa.Text;
-            pInventarioPantalon.Precio_PorMayor = txtpreciopormayor.Text;
+            pInventarioPantalon.Precio = Convert.ToDecimal(txtprecio.Text);
+            pInventarioPantalon.Codigo = InvPantalonActual.Codigo;
             
         
 
@@ -126,6 +120,11 @@ namespace Trabajo_grupal
         private void InventarioPantalones_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

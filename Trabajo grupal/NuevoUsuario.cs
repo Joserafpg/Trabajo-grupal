@@ -67,7 +67,7 @@ namespace Trabajo_grupal
             eliminarpagos.Checked = false;
         }
 
-        private static SqlConnection Conn = new SqlConnection("Server = DESKTOP-NDDA7LS; database=Proyecto_Grupal; Integrated Security=True");
+        private static SqlConnection Conn = new SqlConnection("Server = DESKTOP-EO4FJKE; database=Proyecto_Grupal; Integrated Security=True");
         void CargarComboBox()
         {
             Conn.Open();

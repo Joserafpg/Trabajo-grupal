@@ -237,6 +237,19 @@ namespace Trabajo_grupal
             {
                 // Verificar si el producto ya está en el DataGridView y realizar la acción correspondiente
                 VerificarAgregarModificarProducto(producto);
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    // Obtener los valores de las columnas "Columna1" y "Columna2"
+                    double valor1 = Convert.ToDouble(row.Cells["precios"].Value);
+                    int valor2 = Convert.ToInt32(row.Cells["cantidad"].Value);
+                    // Realizar la multiplicación
+                    double resultado = valor1 * valor2;
+
+                    // Asignar el resultado a la columna "Resultado" de la fila actual
+                    row.Cells["Total"].Value = resultado;
+                    SumarColumna();
+                }
             }
             else
             {
@@ -323,6 +336,16 @@ namespace Trabajo_grupal
 
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
+            
+        }
+
+        private void txttotal_TextChanged(object sender, EventArgs e)
+        {
+            txtdinero.Text = txttotal.Text;
+        }
+
+        private void dataGridView1_CurrentCellChanged(object sender, EventArgs e)
+        {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 // Obtener los valores de las columnas "Columna1" y "Columna2"
@@ -335,11 +358,6 @@ namespace Trabajo_grupal
                 row.Cells["Total"].Value = resultado;
                 SumarColumna();
             }
-        }
-
-        private void txttotal_TextChanged(object sender, EventArgs e)
-        {
-            txtdinero.Text = txttotal.Text;
         }
     }
 }

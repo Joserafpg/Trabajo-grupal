@@ -19,7 +19,7 @@ namespace Trabajo_grupal
         {
             InitializeComponent();
         }
-        public Datosget MateriaPrimaActual { get; set; }
+        public DatosgetFactura MateriaPrimaActual { get; set; }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -38,7 +38,7 @@ namespace Trabajo_grupal
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            Datosget datosget = new Datosget();
+            DatosgetFactura datosget = new DatosgetFactura();
 
 
             datosget.Codigo = txtcodigo.Text;
@@ -99,7 +99,7 @@ namespace Trabajo_grupal
 
         private void btnmodificar_Click(object sender, EventArgs e)
         {
-            Datosget pNuevaMercancia = new Datosget();
+            DatosgetFactura pNuevaMercancia = new DatosgetFactura();
 
 
             pNuevaMercancia.Codigo = txtcodigo.Text;

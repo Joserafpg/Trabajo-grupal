@@ -56,7 +56,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txttotal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -69,6 +69,9 @@
             this.btnagregarmanual = new System.Windows.Forms.Button();
             this.btndeshacer = new System.Windows.Forms.Button();
             this.btnfacturar = new System.Windows.Forms.Button();
+            this.cempleado = new System.Windows.Forms.ComboBox();
+            this.ccliente = new System.Windows.Forms.ComboBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.PPago.SuspendLayout();
             this.pcredito.SuspendLayout();
@@ -83,6 +86,8 @@
             this.panel5.Controls.Add(this.btnconsultar);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.panel1);
+            this.panel5.Controls.Add(this.cempleado);
+            this.panel5.Controls.Add(this.ccliente);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
@@ -91,6 +96,7 @@
             // 
             // PPago
             // 
+            this.PPago.Controls.Add(this.button4);
             this.PPago.Controls.Add(this.pcredito);
             this.PPago.Controls.Add(this.button3);
             this.PPago.Controls.Add(this.btnefectivo);
@@ -361,7 +367,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.txttotal);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dtpFecha);
             this.panel1.Controls.Add(this.txtcodigo);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -403,12 +409,12 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Total";
             // 
-            // dateTimePicker1
+            // dtpFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(253, 66);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 31;
+            this.dtpFecha.Location = new System.Drawing.Point(253, 66);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(200, 20);
+            this.dtpFecha.TabIndex = 31;
             // 
             // txtcodigo
             // 
@@ -522,6 +528,40 @@
             this.btnfacturar.UseVisualStyleBackColor = false;
             this.btnfacturar.Click += new System.EventHandler(this.button3_Click);
             // 
+            // cempleado
+            // 
+            this.cempleado.FormattingEnabled = true;
+            this.cempleado.Items.AddRange(new object[] {
+            "Jose Rafael Payero"});
+            this.cempleado.Location = new System.Drawing.Point(818, 234);
+            this.cempleado.Name = "cempleado";
+            this.cempleado.Size = new System.Drawing.Size(121, 21);
+            this.cempleado.TabIndex = 35;
+            // 
+            // ccliente
+            // 
+            this.ccliente.FormattingEnabled = true;
+            this.ccliente.Items.AddRange(new object[] {
+            "Luis Rafael Payero Garcia"});
+            this.ccliente.Location = new System.Drawing.Point(818, 274);
+            this.ccliente.Name = "ccliente";
+            this.ccliente.Size = new System.Drawing.Size(121, 21);
+            this.ccliente.TabIndex = 36;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button4.BackColor = System.Drawing.Color.LightGreen;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button4.Location = new System.Drawing.Point(781, 263);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(175, 50);
+            this.button4.TabIndex = 27;
+            this.button4.Text = "Facturar";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -556,7 +596,7 @@
         private System.Windows.Forms.Button btnconsultar;
         private System.Windows.Forms.Button btnfacturar;
         private System.Windows.Forms.TextBox txtcodigo;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PPago;
         private System.Windows.Forms.Label txtcambio;
@@ -587,5 +627,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precios;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.ComboBox cempleado;
+        private System.Windows.Forms.ComboBox ccliente;
+        private System.Windows.Forms.Button button4;
     }
 }

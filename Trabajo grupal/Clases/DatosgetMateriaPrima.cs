@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Trabajo_grupal.Clases
 {
-    public class Datosget
+    public class DatosgetFactura
     {
         public string Codigo { get; set; }
         public string Nombre_Mercancia { get; set; }
@@ -20,9 +20,9 @@ namespace Trabajo_grupal.Clases
         public string Color_Producto { get; set; }
         public string Precio_Compra { get; set; }
         
-        public Datosget() { }
+        public DatosgetFactura() { }
 
-        public Datosget(string pCodigo, string pNombre_Mercancia, string pDescripcion, string pTipo_Producto, bool Docenas, bool Unidad, 
+        public DatosgetFactura(string pCodigo, string pNombre_Mercancia, string pDescripcion, string pTipo_Producto, bool Docenas, bool Unidad, 
             bool Lotes,string pCantidad,  string pInv_Minimo, string pColor_Producto, string Precio_Compra)
         {
             this.Codigo = pCodigo;

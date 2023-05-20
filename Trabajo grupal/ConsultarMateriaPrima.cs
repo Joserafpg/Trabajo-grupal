@@ -17,7 +17,7 @@ namespace Trabajo_grupal
         {
             InitializeComponent();
         }
-        public Datosget MateriaPrimaSeleccionada { get; set; }
+        public DatosgetFactura MateriaPrimaSeleccionada { get; set; }
         private void btnaceptar_Click(object sender, EventArgs e)
         {
             if (datagrieldv.SelectedRows.Count == 1)

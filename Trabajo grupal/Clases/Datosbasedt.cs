@@ -10,7 +10,7 @@ namespace Trabajo_grupal.Clases
 {
     public class Datosbasedt
     {
-        public static int agregar(Datosget pget)
+        public static int agregar(DatosgetFactura pget)
         {
             int retorno = 0;
 
@@ -26,7 +26,7 @@ namespace Trabajo_grupal.Clases
 
 
         }
-        public static int Modificar(Datosget pNuevoInventario)
+        public static int Modificar(DatosgetFactura pNuevoInventario)
         {
 
             int retorno = 0;
@@ -50,9 +50,9 @@ namespace Trabajo_grupal.Clases
             return retorno;
         }
 
-        public static List<Datosget> BuscarNuevoInventario(string pNombre_Mercancia, string pCodigo)
+        public static List<DatosgetFactura> BuscarNuevoInventario(string pNombre_Mercancia, string pCodigo)
         {
-            List<Datosget> lista = new List<Datosget>();
+            List<DatosgetFactura> lista = new List<DatosgetFactura>();
             Conexion.opoencon();
             {
 
@@ -61,7 +61,7 @@ namespace Trabajo_grupal.Clases
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-                    Datosget pNuevoInventario = new Datosget();
+                    DatosgetFactura pNuevoInventario = new DatosgetFactura();
 
 
                     pNuevoInventario.Codigo = reader.GetString(0);
@@ -85,11 +85,11 @@ namespace Trabajo_grupal.Clases
             }
 
         }
-        public static Datosget ObtenerNuevoInventario(Int64 pId)
+        public static DatosgetFactura ObtenerNuevoInventario(Int64 pId)
         {
             Conexion.opoencon();
             {
-                Datosget pNuevoInventario = new Datosget();
+                DatosgetFactura pNuevoInventario = new DatosgetFactura();
                 SqlCommand comando = new SqlCommand(String.Format(
                     "Select Nombre_Mercancia, Descripcion, Tipo_Producto, Docenas, Unidad, Lotes, Cantidad, Inv_Minimo, Color_Producto, Precio_Compra FROM NuevoInventario  where Codigo={0}", pId), Conexion.ObtenerConexion());
                 SqlDataReader reader = comando.ExecuteReader();

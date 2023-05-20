@@ -124,6 +124,31 @@ Precio decimal (38),
 Cantidad int,
 Total decimal (38),
 )
+
+/*Tabla facturaTitulo*/
+create table FacturaTittle(
+Id_Factura INT IDENTITY (1,1) NOT NULL PRIMARY KEY,
+Empleado varchar (50),
+Cliente varchar (50),
+Fecha datetime,
+Total decimal (38),
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 GO
 
 select * from InvPantalones

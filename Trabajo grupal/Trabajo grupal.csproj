@@ -65,8 +65,10 @@
     <Compile Include="ClasesDropDown\MenuRenderer.cs" />
     <Compile Include="Clases\Datosbasedt.cs" />
     <Compile Include="Clases\DatosbaseEmpleados.cs" />
+    <Compile Include="Clases\DatosbaseFactura.cs" />
     <Compile Include="Clases\DatosbaseInvPantalones.cs" />
     <Compile Include="Clases\DatosgetClientes.cs" />
+    <Compile Include="Clases\Datosgetfactura.cs" />
     <Compile Include="Clases\DatosgetMateriaPrima.cs" />
     <Compile Include="Clases\DatosgetEmpleados.cs" />
     <Compile Include="Clases\DatosgetInvPantalones.cs" />

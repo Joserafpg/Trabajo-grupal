@@ -58,6 +58,7 @@ namespace Trabajo_grupal
             txtcambio.ResetText();
             txttotal.Clear();
             dataGridView1.Rows.Clear();
+            dtpFecha.ResetText();
             FacturarCreditoOFF();
             FacturarEfectivoOFF();
 
@@ -366,6 +367,7 @@ namespace Trabajo_grupal
 
             DatosbaseFactura.Agregar(pFactura);
 
+            txtidfactura.Visible = true;
             conn.Open();
 
             // Consultar el último registro de Id_Factura en FacturaTittle
@@ -398,6 +400,12 @@ namespace Trabajo_grupal
             button1.PerformClick();
             button1.Visible = false;
             button4.Visible = true;
+            txtidfactura.Visible = false;
+        }
+
+        private void btndeshacer_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }

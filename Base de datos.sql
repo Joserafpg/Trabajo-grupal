@@ -117,6 +117,7 @@ Precio varchar (50),
 
 /*Tabla factura (prueba)*/
 create table Factura (
+No_Factura INT NOT NULL,
 Codigo INT, 
 Producto varchar (50), 
 Size varchar (50), 
@@ -127,7 +128,7 @@ Total decimal (38),
 
 /*Tabla facturaTitulo*/
 create table FacturaTittle(
-Id_Factura INT IDENTITY (1,1) NOT NULL PRIMARY KEY,
+Id_Factura INT IDENTITY (1,1) PRIMARY KEY,
 Empleado varchar (50),
 Cliente varchar (50),
 Fecha datetime,
@@ -157,6 +158,9 @@ go
 select * from Factura
 go
 
+select * from FacturaTittle
+go
+
 CREATE PROCEDURE SP_EMPLEADOCOMBOBOX
 AS
 SELECT Nombre_Completo FROM Empleados
@@ -166,6 +170,9 @@ EXEC SP_EMPLEADOCOMBOBOX
 GO
 
 drop table Factura
+GO
+
+drop table FacturaTittle
 GO
 
 drop database Proyecto_Grupal

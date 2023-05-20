@@ -30,6 +30,7 @@
         {
             this.panel5 = new System.Windows.Forms.Panel();
             this.PPago = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.pcredito = new System.Windows.Forms.Panel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -71,7 +72,7 @@
             this.btnfacturar = new System.Windows.Forms.Button();
             this.cempleado = new System.Windows.Forms.ComboBox();
             this.ccliente = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.txtidfactura = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
             this.PPago.SuspendLayout();
             this.pcredito.SuspendLayout();
@@ -88,6 +89,7 @@
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.cempleado);
             this.panel5.Controls.Add(this.ccliente);
+            this.panel5.Controls.Add(this.txtidfactura);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
@@ -106,11 +108,25 @@
             this.PPago.Controls.Add(this.label4);
             this.PPago.Controls.Add(this.label6);
             this.PPago.Controls.Add(this.txtdinero);
-            this.PPago.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PPago.Location = new System.Drawing.Point(0, 0);
             this.PPago.Name = "PPago";
-            this.PPago.Size = new System.Drawing.Size(1034, 501);
+            this.PPago.Size = new System.Drawing.Size(1000, 501);
             this.PPago.TabIndex = 34;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button4.BackColor = System.Drawing.Color.LightGreen;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button4.Location = new System.Drawing.Point(764, 263);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(175, 50);
+            this.button4.TabIndex = 27;
+            this.button4.Text = "Facturar";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // pcredito
             // 
@@ -257,7 +273,7 @@
             this.btnefectivo.FlatAppearance.BorderSize = 0;
             this.btnefectivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnefectivo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnefectivo.Location = new System.Drawing.Point(12, 40);
+            this.btnefectivo.Location = new System.Drawing.Point(-5, 40);
             this.btnefectivo.Name = "btnefectivo";
             this.btnefectivo.Size = new System.Drawing.Size(175, 50);
             this.btnefectivo.TabIndex = 23;
@@ -272,7 +288,7 @@
             this.btncredito.FlatAppearance.BorderSize = 0;
             this.btncredito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncredito.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btncredito.Location = new System.Drawing.Point(12, 40);
+            this.btncredito.Location = new System.Drawing.Point(-5, 40);
             this.btncredito.Name = "btncredito";
             this.btncredito.Size = new System.Drawing.Size(175, 50);
             this.btncredito.TabIndex = 22;
@@ -287,12 +303,13 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(781, 341);
+            this.button1.Location = new System.Drawing.Point(764, 263);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 50);
             this.button1.TabIndex = 21;
             this.button1.Text = "Facturar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txtcambio
@@ -451,7 +468,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(422, 148);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CurrentCellChanged += new System.EventHandler(this.dataGridView1_CurrentCellChanged);
-            this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
             // 
             // codigos
             // 
@@ -548,19 +564,12 @@
             this.ccliente.Size = new System.Drawing.Size(121, 21);
             this.ccliente.TabIndex = 36;
             // 
-            // button4
+            // txtidfactura
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.BackColor = System.Drawing.Color.LightGreen;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(781, 263);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(175, 50);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Facturar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.txtidfactura.Location = new System.Drawing.Point(818, 42);
+            this.txtidfactura.Name = "txtidfactura";
+            this.txtidfactura.Size = new System.Drawing.Size(100, 20);
+            this.txtidfactura.TabIndex = 37;
             // 
             // Facturacion
             // 
@@ -630,5 +639,6 @@
         private System.Windows.Forms.ComboBox cempleado;
         private System.Windows.Forms.ComboBox ccliente;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtidfactura;
     }
 }

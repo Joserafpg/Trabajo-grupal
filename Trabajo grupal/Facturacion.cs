@@ -18,7 +18,6 @@ namespace Trabajo_grupal
         public Facturacion()
         {
             InitializeComponent();
-            dataGridView1.RowsAdded += dataGridView1_RowsAdded;
         }
 
         public void SumarColumna()
@@ -264,7 +263,7 @@ namespace Trabajo_grupal
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            SqlCommand agregar = new SqlCommand("INSERT INTO Factura VALUES (@Codigo, @Producto, @Size, @Precio, @Cantidad, @Total)", conn);
+            SqlCommand agregar = new SqlCommand("INSERT INTO Factura VALUES (@No_Factura , @Codigo, @Producto, @Size, @Precio, @Cantidad, @Total)", conn);
             string verificarQuery = "SELECT Stock FROM InvPantalones WHERE Nombre_Producto = @Producto";
             string actualizarQuery = "UPDATE InvPantalones SET Stock = Stock - @Cantidad WHERE Nombre_Producto = @Producto";
 
@@ -275,6 +274,7 @@ namespace Trabajo_grupal
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     // Obtener los valores de la fila actual del DataGridView
+                    Int64 idfactura = Convert.ToInt64(txtidfactura.Text);
                     int id_producto = Convert.ToInt32(row.Cells["codigos"].Value);
                     string producto = Convert.ToString(row.Cells["producto"].Value);
                     string size = Convert.ToString(row.Cells["size"].Value);
@@ -299,6 +299,7 @@ namespace Trabajo_grupal
 
                     // Agregar los parámetros al comando
                     agregar.Parameters.Clear();
+                    agregar.Parameters.AddWithValue("@No_Factura", idfactura);
                     agregar.Parameters.AddWithValue("@Codigo", id_producto);
                     agregar.Parameters.AddWithValue("@Producto", producto);
                     agregar.Parameters.AddWithValue("@Size", size);
@@ -334,11 +335,6 @@ namespace Trabajo_grupal
             }
         }
 
-        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {
-            
-        }
-
         private void txttotal_TextChanged(object sender, EventArgs e)
         {
             txtdinero.Text = txttotal.Text;
@@ -358,6 +354,50 @@ namespace Trabajo_grupal
                 row.Cells["Total"].Value = resultado;
                 SumarColumna();
             }
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            Datosgetfactura pFactura = new Datosgetfactura();
+            pFactura.Empleado = cempleado.Text;
+            pFactura.Cliente = ccliente.Text;
+            pFactura.Fecha = dtpFecha.Value;
+            pFactura.Total = Convert.ToDecimal(txttotal.Text);
+
+            DatosbaseFactura.Agregar(pFactura);
+
+            conn.Open();
+
+            // Consultar el último registro de Id_Factura en FacturaTittle
+            string query = "SELECT TOP 1 Id_Factura FROM FacturaTittle ORDER BY Id_Factura DESC";
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                // Obtener el resultado de la consulta
+                object result = command.ExecuteScalar();
+
+                // Verificar si se obtuvo un resultado válido
+                if (result != null && result != DBNull.Value)
+                {
+                    // Convertir el resultado en un entero
+                    int ultimoIdFactura = Convert.ToInt32(result);
+
+                    // Mostrar el último Id_Factura en un TextBox
+                    txtidfactura.Text = ultimoIdFactura.ToString();
+                }
+                else
+                {
+                    // No se encontraron registros en la tabla FacturaTittle
+                    // Puedes mostrar un valor predeterminado o dejar el TextBox vacío
+                    txtidfactura.Text = "No hay registros";
+                }
+            }
+
+            conn.Close();
+            button1.Visible = true;
+            button4.Visible = false;
+            button1.PerformClick();
+            button1.Visible = false;
+            button4.Visible = true;
         }
     }
 }

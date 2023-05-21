@@ -18,7 +18,7 @@ namespace Trabajo_grupal
             InitializeComponent();
         }
 
-        public DatosgetClientes AlumnoActual { get; set; }
+        public DatosgetClientes ClienteActual { get; set; }
 
         void Limpiar()
         {
@@ -61,7 +61,7 @@ namespace Trabajo_grupal
             pClientes.Telefono = txTelefono.Text;
             pClientes.Correo = txtCorreo.Text;
             pClientes.Fecha_Ingreso = txtfech.Value;
-            pClientes.Codigo = AlumnoActual.Codigo;
+            pClientes.Codigo = ClienteActual.Codigo;
 
             int Resultado = DatosbaseCliente.Modificar(pClientes);
 
@@ -83,7 +83,7 @@ namespace Trabajo_grupal
         {
             if (MessageBox.Show("Esta seguro que desea eliminar estudiante actual??", "Esta Seguro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Int64 resultado = Datosbasedt.Eliminar((int)AlumnoActual.Codigo);
+                Int64 resultado = Datosbasedt.Eliminar((int)ClienteActual.Codigo);
                 if (resultado > 0)
                 {
                     MessageBox.Show("Estudiantes eliminados", "Estudiante Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -105,13 +105,33 @@ namespace Trabajo_grupal
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
-            
+            BuscarClientes pBuscar = new BuscarClientes();
+            pBuscar.ShowDialog();
+            if (pBuscar.ClienteSeleccionado != null)
+            {
+                ClienteActual = pBuscar.ClienteSeleccionado;
+                txtnombre.Text = pBuscar.ClienteSeleccionado.Nombre;
+                txtapellido.Text = pBuscar.ClienteSeleccionado.Apellido;
+                txtdireccion.Text = pBuscar.ClienteSeleccionado.Direccion;
+                txTelefono.Text = pBuscar.ClienteSeleccionado.Telefono;
+                txtCorreo.Text = pBuscar.ClienteSeleccionado.Correo;
+                txtfech.Value = pBuscar.ClienteSeleccionado.Fecha_Ingreso;
+
+                btnagregar.Enabled = false;
+                btnmodificar.Enabled = true;
+                btneliminar.Enabled = true;
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Cliente_Load(object sender, EventArgs e)
+        {
+            btnmodificar.Enabled = false;
+            btneliminar.Enabled = false;
         }
     }
 }
-
-
-        
-    
-    
-

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabajo_grupal.Clases;
 
 namespace Trabajo_grupal
 {
@@ -16,6 +17,8 @@ namespace Trabajo_grupal
         {
             InitializeComponent();
         }
+
+        public DatosgetClientes ClienteSeleccionado { get; set; }
 
         private void label1_Click(object sender, EventArgs e)
         {

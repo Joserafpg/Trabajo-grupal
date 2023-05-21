@@ -161,6 +161,8 @@ go
 select * from FacturaTittle
 go
 
+select * from Factura where No_Factura = 10;
+
 CREATE PROCEDURE SP_EMPLEADOCOMBOBOX
 AS
 SELECT Nombre_Completo FROM Empleados

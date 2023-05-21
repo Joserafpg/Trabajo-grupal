@@ -102,6 +102,7 @@ namespace Trabajo_grupal
         private void ProductoFacturaNew_Load(object sender, EventArgs e)
         {
             btnbuscar.PerformClick();
+            dtproductos.AllowUserToAddRows = false;
         }
     }
 }

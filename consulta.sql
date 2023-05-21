@@ -6,7 +6,7 @@ AS
 BEGIN
     SELECT
         ft.Empleado, ft.Cliente, ft.Fecha, ft.Total,
-        f.Codigo, f.Producto, f.Size, f.Precio, f.Cantidad, f.Total
+        f.Codigo, f.Producto, f.Size, f.Precio, f.Cantidad, f.SubTotal
     FROM
         FacturaTittle ft
     INNER JOIN

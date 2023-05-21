@@ -123,7 +123,7 @@ Producto varchar (50),
 Size varchar (50), 
 Precio decimal (38), 
 Cantidad int,
-Total decimal (38),
+SubTotal decimal (38),
 )
 
 /*Tabla facturaTitulo*/

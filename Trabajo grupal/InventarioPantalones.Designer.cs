@@ -143,6 +143,7 @@
             this.btneliminar.TabIndex = 18;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // txtprecio
             // 

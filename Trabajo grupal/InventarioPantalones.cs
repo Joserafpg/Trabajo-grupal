@@ -126,5 +126,29 @@ namespace Trabajo_grupal
         {
             this.Close();
         }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro que desea eliminar el pantalon??", "Esta Seguro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Int64 resultado = DatosbaseInvPantalones.Eliminar((int)InvPantalonActual.Codigo);
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Pantalon eliminado", "Pantalon Eliminado ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Refresh();
+                    btneliminar.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnguardar.Enabled = true;
+                }
+
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el pantalon", "Pantalon eliminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+
+            else
+                MessageBox.Show("Se cancelo la eliminacion", "Cancelado");
+        }
     }
 }

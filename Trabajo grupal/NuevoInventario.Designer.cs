@@ -38,7 +38,7 @@
             this.chDocenas = new System.Windows.Forms.RadioButton();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btndeshacer = new System.Windows.Forms.Button();
+            this.btneliminar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -68,7 +68,7 @@
             this.groupBox1.Controls.Add(this.chDocenas);
             this.groupBox1.Controls.Add(this.txtcodigo);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.btndeshacer);
+            this.groupBox1.Controls.Add(this.btneliminar);
             this.groupBox1.Controls.Add(this.btnguardar);
             this.groupBox1.Controls.Add(this.txtcantidad);
             this.groupBox1.Controls.Add(this.txtDescripcion);
@@ -185,19 +185,19 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Codigo";
             // 
-            // btndeshacer
+            // btneliminar
             // 
-            this.btndeshacer.BackColor = System.Drawing.Color.White;
-            this.btndeshacer.FlatAppearance.BorderSize = 0;
-            this.btndeshacer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndeshacer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btndeshacer.Location = new System.Drawing.Point(589, 374);
-            this.btndeshacer.Name = "btndeshacer";
-            this.btndeshacer.Size = new System.Drawing.Size(180, 56);
-            this.btndeshacer.TabIndex = 22;
-            this.btndeshacer.Text = "Deshacer";
-            this.btndeshacer.UseVisualStyleBackColor = false;
-            this.btndeshacer.Click += new System.EventHandler(this.btndeshacer_Click);
+            this.btneliminar.BackColor = System.Drawing.Color.White;
+            this.btneliminar.FlatAppearance.BorderSize = 0;
+            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btneliminar.Location = new System.Drawing.Point(589, 374);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(180, 56);
+            this.btneliminar.TabIndex = 22;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btndeshacer_Click);
             // 
             // btnguardar
             // 
@@ -398,7 +398,7 @@
         private System.Windows.Forms.TextBox txtcantidad;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnguardar;
-        private System.Windows.Forms.Button btndeshacer;
+        private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtInvMinimo;

@@ -91,7 +91,7 @@ namespace Trabajo_grupal
 
                 btnguardar.Enabled = false;
                 btnmodificar.Enabled = true;
-                btndeshacer.Enabled = true;
+                btneliminar.Enabled = true;
             }
 
 
@@ -120,7 +120,7 @@ namespace Trabajo_grupal
             {
                 MessageBox.Show("Materia Prima Modificada Con Exito","Materia Prima Modificada" ,MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
-                btndeshacer.Enabled = false;
+                btneliminar.Enabled = false;
                 btnmodificar.Enabled = false;
                 btnguardar.Enabled = true;
                 btnClose.Enabled = false;
@@ -143,6 +143,7 @@ namespace Trabajo_grupal
 
         private void btndeshacer_Click(object sender, EventArgs e)
         {
+            
         }
     }
 }

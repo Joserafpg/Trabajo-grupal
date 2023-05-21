@@ -37,7 +37,7 @@ namespace Trabajo_grupal.Clases
             Conexion.cerrarcon();
             return retorno;
         }
-        public static int Eliminar(string pId)
+        public static int Eliminar(int pId)
         {
             int retorno = 0;
             Conexion.opoencon();

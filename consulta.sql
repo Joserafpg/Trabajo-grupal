@@ -1,9 +1,19 @@
 use Proyecto_Grupal
 
-create proc busquedaClienteFacturaPrueba
-@numFact varchar(15)
-as select Empleado, Cliente, Fecha, Total from FacturaTittle where Id_Factura like @numFact 
-
+CREATE PROCEDURE busquedaClienteFacturaPrueba
+    @numFact VARCHAR(15)
+AS
+BEGIN
+    SELECT
+        ft.Empleado, ft.Cliente, ft.Fecha, ft.Total,
+        f.Codigo, f.Producto, f.Size, f.Precio, f.Cantidad, f.Total
+    FROM
+        FacturaTittle ft
+    INNER JOIN
+        Factura f ON ft.Id_Factura = f.No_Factura
+    WHERE
+        ft.Id_Factura LIKE @numFact
+END
 go
 
 create proc busquedaDetallePrueba

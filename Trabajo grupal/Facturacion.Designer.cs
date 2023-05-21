@@ -121,7 +121,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(781, 294);
+            this.button4.Location = new System.Drawing.Point(781, 263);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(175, 50);
             this.button4.TabIndex = 27;

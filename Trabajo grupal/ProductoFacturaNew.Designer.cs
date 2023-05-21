@@ -28,55 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.DescriProduc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtproductos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.btnbuscar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtproductos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtproductos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DescriProduc,
-            this.PrecVenta,
-            this.Departamento,
-            this.Inventario});
-            this.dataGridView1.Location = new System.Drawing.Point(33, 109);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(730, 255);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // DescriProduc
-            // 
-            this.DescriProduc.HeaderText = "Descripcion del Producto";
-            this.DescriProduc.Name = "DescriProduc";
-            this.DescriProduc.Width = 300;
-            // 
-            // PrecVenta
-            // 
-            this.PrecVenta.HeaderText = "Precio Venta";
-            this.PrecVenta.Name = "PrecVenta";
-            this.PrecVenta.Width = 130;
-            // 
-            // Departamento
-            // 
-            this.Departamento.HeaderText = "Departamento";
-            this.Departamento.Name = "Departamento";
-            this.Departamento.Width = 157;
-            // 
-            // Inventario
-            // 
-            this.Inventario.HeaderText = "Stock";
-            this.Inventario.Name = "Inventario";
+            this.dtproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtproductos.Location = new System.Drawing.Point(88, 108);
+            this.dtproductos.Name = "dtproductos";
+            this.dtproductos.Size = new System.Drawing.Size(593, 255);
+            this.dtproductos.TabIndex = 0;
+            this.dtproductos.DoubleClick += new System.EventHandler(this.dtproductos_DoubleClick);
             // 
             // panel1
             // 
@@ -108,7 +78,7 @@
             this.button1.BackColor = System.Drawing.Color.LightGreen;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(254, 379);
+            this.button1.Location = new System.Drawing.Point(231, 379);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 50);
             this.button1.TabIndex = 19;
@@ -121,35 +91,47 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(415, 379);
+            this.button2.Location = new System.Drawing.Point(402, 379);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(155, 50);
             this.button2.TabIndex = 20;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtnombre
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(88, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 26);
-            this.textBox1.TabIndex = 21;
+            this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnombre.Location = new System.Drawing.Point(88, 66);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(233, 26);
+            this.txtnombre.TabIndex = 21;
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.Location = new System.Drawing.Point(427, 69);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnbuscar.TabIndex = 22;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.button3_Click);
             // 
             // ProductoFacturaNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnbuscar);
+            this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtproductos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductoFacturaNew";
             this.Text = "ProductoFacturaNew";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ProductoFacturaNew_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtproductos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -158,15 +140,12 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescriProduc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Departamento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Inventario;
+        private System.Windows.Forms.DataGridView dtproductos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.Button btnbuscar;
     }
 }

@@ -56,7 +56,7 @@ namespace Trabajo_grupal
             txtcodigo.Clear();
             txtdinero.Clear();
             txtcambio.ResetText();
-            txttotal.Clear();
+            txttotal.ResetText();
             dataGridView1.Rows.Clear();
             dtpFecha.ResetText();
             FacturarCreditoOFF();
@@ -81,10 +81,18 @@ namespace Trabajo_grupal
             FacturarEfectivo();
         }
 
+        private DataGridView _DTPantalones;
+        public DataGridView DTPantalones { get => _DTPantalones; set => _DTPantalones = value; }
+        
+        public void DT_PANTALON()
+        {
+            _DTPantalones = dataGridView1;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             ProductoFacturaNew frm = new ProductoFacturaNew();
-            frm.Show();
+            AddOwnedForm(frm);
+            frm.ShowDialog();
         }
 
         private void Facturacion_Load(object sender, EventArgs e)
@@ -102,6 +110,7 @@ namespace Trabajo_grupal
             btnconsultar.Enabled = Permisos.EliminarFACTURA;
 
             dataGridView1.AllowUserToAddRows = false;
+            DT_PANTALON();
 
         }
 
@@ -144,7 +153,7 @@ namespace Trabajo_grupal
         }
 
         SqlConnection conn = new SqlConnection("Data source = DESKTOP-NDDA7LS; Initial Catalog = Proyecto_Grupal; Integrated Security = True");
-
+       
         private Pantalones ObtenerProducto(Int64 idProducto)
         {
             Pantalones producto = null;
@@ -386,6 +395,7 @@ namespace Trabajo_grupal
                     // Mostrar el último Id_Factura en un TextBox
                     txtidfactura.Text = ultimoIdFactura.ToString();
                 }
+
                 else
                 {
                     // No se encontraron registros en la tabla FacturaTittle

@@ -37,7 +37,6 @@
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnimprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datagrieldv)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -139,27 +138,12 @@
             this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // btnimprimir
-            // 
-            this.btnimprimir.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnimprimir.FlatAppearance.BorderSize = 0;
-            this.btnimprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnimprimir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnimprimir.Location = new System.Drawing.Point(610, 295);
-            this.btnimprimir.Name = "btnimprimir";
-            this.btnimprimir.Size = new System.Drawing.Size(134, 55);
-            this.btnimprimir.TabIndex = 8;
-            this.btnimprimir.Text = "Imprimir";
-            this.btnimprimir.UseVisualStyleBackColor = false;
-            this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
-            // 
             // ConsultarMateriaPrima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnimprimir);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtcodigo);
             this.Controls.Add(this.btnbuscar);
@@ -190,6 +174,5 @@
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnimprimir;
     }
 }

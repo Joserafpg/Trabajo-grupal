@@ -61,18 +61,18 @@
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnagregarmanual = new System.Windows.Forms.Button();
-            this.btndeshacer = new System.Windows.Forms.Button();
-            this.btnfacturar = new System.Windows.Forms.Button();
-            this.cempleado = new System.Windows.Forms.ComboBox();
-            this.ccliente = new System.Windows.Forms.ComboBox();
-            this.txtidfactura = new System.Windows.Forms.TextBox();
             this.codigos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnagregarmanual = new System.Windows.Forms.Button();
+            this.btndeshacer = new System.Windows.Forms.Button();
+            this.btnfacturar = new System.Windows.Forms.Button();
+            this.cempleado = new System.Windows.Forms.ComboBox();
+            this.ccliente = new System.Windows.Forms.ComboBox();
+            this.txtidfactura = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
             this.PPago.SuspendLayout();
             this.pcredito.SuspendLayout();
@@ -121,7 +121,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(781, 263);
+            this.button4.Location = new System.Drawing.Point(781, 294);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(175, 50);
             this.button4.TabIndex = 27;
@@ -423,7 +423,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(343, 324);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 16);
+            this.label1.Size = new System.Drawing.Size(39, 16);
             this.label1.TabIndex = 33;
             this.label1.Text = "Total";
             // 
@@ -469,6 +469,46 @@
             this.dataGridView1.Size = new System.Drawing.Size(422, 148);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CurrentCellChanged += new System.EventHandler(this.dataGridView1_CurrentCellChanged);
+            // 
+            // codigos
+            // 
+            this.codigos.HeaderText = "Codigo";
+            this.codigos.Name = "codigos";
+            this.codigos.ReadOnly = true;
+            this.codigos.Width = 48;
+            // 
+            // producto
+            // 
+            this.producto.HeaderText = "Producto";
+            this.producto.Name = "producto";
+            this.producto.ReadOnly = true;
+            // 
+            // size
+            // 
+            this.size.HeaderText = "Size";
+            this.size.Name = "size";
+            this.size.ReadOnly = true;
+            this.size.Width = 40;
+            // 
+            // precios
+            // 
+            this.precios.HeaderText = "Precio";
+            this.precios.Name = "precios";
+            this.precios.ReadOnly = true;
+            this.precios.Width = 60;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Width = 60;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            this.Total.Width = 73;
             // 
             // btnagregarmanual
             // 
@@ -538,46 +578,6 @@
             this.txtidfactura.Size = new System.Drawing.Size(100, 20);
             this.txtidfactura.TabIndex = 37;
             this.txtidfactura.Visible = false;
-            // 
-            // codigos
-            // 
-            this.codigos.HeaderText = "Codigo";
-            this.codigos.Name = "codigos";
-            this.codigos.ReadOnly = true;
-            this.codigos.Width = 48;
-            // 
-            // producto
-            // 
-            this.producto.HeaderText = "Producto";
-            this.producto.Name = "producto";
-            this.producto.ReadOnly = true;
-            // 
-            // size
-            // 
-            this.size.HeaderText = "Size";
-            this.size.Name = "size";
-            this.size.ReadOnly = true;
-            this.size.Width = 40;
-            // 
-            // precios
-            // 
-            this.precios.HeaderText = "Precio";
-            this.precios.Name = "precios";
-            this.precios.ReadOnly = true;
-            this.precios.Width = 60;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.Width = 60;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Width = 73;
             // 
             // Facturacion
             // 

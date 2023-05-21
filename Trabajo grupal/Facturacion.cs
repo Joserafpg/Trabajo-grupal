@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajo_grupal.Clases;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace Trabajo_grupal
 {
@@ -343,7 +345,26 @@ namespace Trabajo_grupal
             {
                 conn.Close();
             }
+
+            PlantillaFactura form = new PlantillaFactura();
+            ReportDocument oRep = new ReportDocument();
+            ParameterField pf = new ParameterField();
+            ParameterFields pfs = new ParameterFields();
+            ParameterDiscreteValue pdv = new ParameterDiscreteValue();
+            pf.Name = "@numFact";
+            txtidfactura.Visible = true;
+            pdv.Value = txtidfactura.Text;
+            txtidfactura.Visible = false;
+            pf.CurrentValues.Add(pdv);
+            pfs.Add(pf);
+            form.crystalReportViewer1.ParameterFieldInfo = pfs;
+            oRep.Load(@"C:\Users\Jose\source\repos\Trabajo-grupal\Trabajo grupal\Reportes\Factura.rpt");
+            form.crystalReportViewer1.ReportSource = oRep;
+            form.Show();
+            oRep.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Jose\source\repos\Trabajo-grupal\Trabajo grupal\Reportes PDF\Factura.pdf");
         }
+
+        
 
         private void txttotal_TextChanged(object sender, EventArgs e)
         {

@@ -33,9 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -197,6 +204,12 @@
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Permisos.cs" />
+    <Compile Include="PlantillaFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaFactura.Designer.cs">
+      <DependentUpon>PlantillaFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductoFacturaNew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +229,12 @@
     </Compile>
     <Compile Include="Configuracion.designer.cs">
       <DependentUpon>Configuracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Factura.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Factura.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="RJButton\RJButton.cs">
       <SubType>Component</SubType>
@@ -305,6 +324,9 @@
     <EmbeddedResource Include="NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaFactura.resx">
+      <DependentUpon>PlantillaFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductoFacturaNew.resx">
       <DependentUpon>ProductoFacturaNew.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,6 +340,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Factura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Factura.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Sub Menú Facturacion.resx">
       <DependentUpon>Sub Menú Facturacion.cs</DependentUpon>
@@ -445,8 +471,9 @@
   <ItemGroup>
     <None Include="Resources\empleados %281%29.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Reportes\" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

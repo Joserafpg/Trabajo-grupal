@@ -41,5 +41,16 @@ namespace Trabajo_grupal
                 MessageBox.Show("Aun no ha seleccionado nigun Alumno");
             }
         }
+
+        private void ReporteInvPantalones1_InitReport(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }

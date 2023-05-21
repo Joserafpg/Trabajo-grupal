@@ -242,6 +242,12 @@
       <DependentUpon>Factura.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\MateriaPrima.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MateriaPrima.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RJButton\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -354,6 +360,10 @@
     <EmbeddedResource Include="Reportes\Factura.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Factura.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\MateriaPrima.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MateriaPrima.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Sub Menú Facturacion.resx">
       <DependentUpon>Sub Menú Facturacion.cs</DependentUpon>

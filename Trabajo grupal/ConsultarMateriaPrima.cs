@@ -41,5 +41,11 @@ namespace Trabajo_grupal
         {
 
         }
+
+        private void btnimprimir_Click(object sender, EventArgs e)
+        {
+         
+
+        }
     }
 }

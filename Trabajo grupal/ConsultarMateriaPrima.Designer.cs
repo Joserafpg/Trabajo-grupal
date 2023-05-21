@@ -151,6 +151,7 @@
             this.btnimprimir.TabIndex = 8;
             this.btnimprimir.Text = "Imprimir";
             this.btnimprimir.UseVisualStyleBackColor = false;
+            this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
             // 
             // ConsultarMateriaPrima
             // 

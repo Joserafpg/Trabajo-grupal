@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panelMateriaUtilizada = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.agregaraldtg = new System.Windows.Forms.Button();
+            this.tctprecio = new System.Windows.Forms.TextBox();
+            this.agregarmateriaprimamanual = new System.Windows.Forms.Button();
+            this.dtgDatos = new System.Windows.Forms.DataGridView();
             this.cbSize = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnbuscar = new System.Windows.Forms.Button();
@@ -45,20 +54,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.panelMateriaUtilizada = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.agregarmateriaprimamanual = new System.Windows.Forms.Button();
-            this.agregaraldtg = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panelMateriaUtilizada.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -86,7 +86,96 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inventario Pantalones";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // panelMateriaUtilizada
+            // 
+            this.panelMateriaUtilizada.Controls.Add(this.label1);
+            this.panelMateriaUtilizada.Controls.Add(this.txtcodigo);
+            this.panelMateriaUtilizada.Controls.Add(this.groupBox2);
+            this.panelMateriaUtilizada.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMateriaUtilizada.Location = new System.Drawing.Point(3, 23);
+            this.panelMateriaUtilizada.Name = "panelMateriaUtilizada";
+            this.panelMateriaUtilizada.Size = new System.Drawing.Size(642, 479);
+            this.panelMateriaUtilizada.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(50, 103);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 21);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Codigo";
+            // 
+            // txtcodigo
+            // 
+            this.txtcodigo.Location = new System.Drawing.Point(135, 100);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(201, 27);
+            this.txtcodigo.TabIndex = 9;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.agregaraldtg);
+            this.groupBox2.Controls.Add(this.tctprecio);
+            this.groupBox2.Controls.Add(this.agregarmateriaprimamanual);
+            this.groupBox2.Controls.Add(this.dtgDatos);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(21, 30);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(606, 416);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Mercancia utilizada";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(397, 358);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 21);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Precio";
+            // 
+            // agregaraldtg
+            // 
+            this.agregaraldtg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.agregaraldtg.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.agregaraldtg.Location = new System.Drawing.Point(321, 74);
+            this.agregaraldtg.Name = "agregaraldtg";
+            this.agregaraldtg.Size = new System.Drawing.Size(85, 23);
+            this.agregaraldtg.TabIndex = 1;
+            this.agregaraldtg.Text = "Agregar";
+            this.agregaraldtg.UseVisualStyleBackColor = true;
+            this.agregaraldtg.Click += new System.EventHandler(this.agregaraldtg_Click);
+            // 
+            // tctprecio
+            // 
+            this.tctprecio.Location = new System.Drawing.Point(482, 355);
+            this.tctprecio.Name = "tctprecio";
+            this.tctprecio.Size = new System.Drawing.Size(81, 27);
+            this.tctprecio.TabIndex = 12;
+            // 
+            // agregarmateriaprimamanual
+            // 
+            this.agregarmateriaprimamanual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.agregarmateriaprimamanual.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.agregarmateriaprimamanual.Location = new System.Drawing.Point(39, 345);
+            this.agregarmateriaprimamanual.Name = "agregarmateriaprimamanual";
+            this.agregarmateriaprimamanual.Size = new System.Drawing.Size(85, 23);
+            this.agregarmateriaprimamanual.TabIndex = 0;
+            this.agregarmateriaprimamanual.Text = "Agregar";
+            this.agregarmateriaprimamanual.UseVisualStyleBackColor = true;
+            this.agregarmateriaprimamanual.Click += new System.EventHandler(this.agregarmateriaprimamanual_Click);
+            // 
+            // dtgDatos
+            // 
+            this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDatos.Location = new System.Drawing.Point(33, 120);
+            this.dtgDatos.Name = "dtgDatos";
+            this.dtgDatos.Size = new System.Drawing.Size(542, 219);
+            this.dtgDatos.TabIndex = 0;
             // 
             // cbSize
             // 
@@ -255,94 +344,6 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // panelMateriaUtilizada
-            // 
-            this.panelMateriaUtilizada.Controls.Add(this.label1);
-            this.panelMateriaUtilizada.Controls.Add(this.textBox1);
-            this.panelMateriaUtilizada.Controls.Add(this.groupBox2);
-            this.panelMateriaUtilizada.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMateriaUtilizada.Location = new System.Drawing.Point(3, 23);
-            this.panelMateriaUtilizada.Name = "panelMateriaUtilizada";
-            this.panelMateriaUtilizada.Size = new System.Drawing.Size(642, 479);
-            this.panelMateriaUtilizada.TabIndex = 23;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 120);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(542, 219);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(135, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 27);
-            this.textBox1.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 21);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Codigo";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.agregaraldtg);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.agregarmateriaprimamanual);
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(21, 30);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(606, 416);
-            this.groupBox2.TabIndex = 11;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Mercancia utilizada";
-            // 
-            // agregarmateriaprimamanual
-            // 
-            this.agregarmateriaprimamanual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.agregarmateriaprimamanual.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.agregarmateriaprimamanual.Location = new System.Drawing.Point(39, 345);
-            this.agregarmateriaprimamanual.Name = "agregarmateriaprimamanual";
-            this.agregarmateriaprimamanual.Size = new System.Drawing.Size(85, 23);
-            this.agregarmateriaprimamanual.TabIndex = 0;
-            this.agregarmateriaprimamanual.Text = "Agregar";
-            this.agregarmateriaprimamanual.UseVisualStyleBackColor = true;
-            // 
-            // agregaraldtg
-            // 
-            this.agregaraldtg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.agregaraldtg.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.agregaraldtg.Location = new System.Drawing.Point(321, 74);
-            this.agregaraldtg.Name = "agregaraldtg";
-            this.agregaraldtg.Size = new System.Drawing.Size(85, 23);
-            this.agregaraldtg.TabIndex = 1;
-            this.agregaraldtg.Text = "Agregar";
-            this.agregaraldtg.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(397, 358);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 21);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Precio";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(482, 355);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(81, 27);
-            this.textBox2.TabIndex = 12;
-            // 
             // InventarioPantalones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,12 +358,12 @@
             this.Load += new System.EventHandler(this.InventarioPantalones_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.panelMateriaUtilizada.ResumeLayout(false);
             this.panelMateriaUtilizada.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -388,12 +389,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panelMateriaUtilizada;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtcodigo;
+        private System.Windows.Forms.DataGridView dtgDatos;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button agregarmateriaprimamanual;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button agregaraldtg;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tctprecio;
     }
 }

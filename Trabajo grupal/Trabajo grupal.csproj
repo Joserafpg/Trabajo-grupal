@@ -178,6 +178,12 @@
     <Compile Include="Login Form.Designer.cs">
       <DependentUpon>Login Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="MateriaPantalonesNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MateriaPantalonesNew.Designer.cs">
+      <DependentUpon>MateriaPantalonesNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login Form.resx">
       <DependentUpon>Login Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MateriaPantalonesNew.resx">
+      <DependentUpon>MateriaPantalonesNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu inicio.resx">
       <DependentUpon>Menu inicio.cs</DependentUpon>

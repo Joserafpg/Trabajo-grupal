@@ -61,17 +61,15 @@ Fecha_de_ingreso datetime
 
 /*Tabla NuevoInventario*/
 create table NuevoInventario(
-Codigo varchar (50) PRIMARY KEY,
+Codigo INT IDENTITY (1,1) NOT NULL PRIMARY KEY,
 Nombre_Mercancia Varchar (50),
 Descripcion Varchar (50),
 Tipo_Producto Varchar (50),
-Docenas bit,
-Unidad bit,
-Lotes bit,
-Cantidad varchar (50),
-Inv_Minimo varchar (50),
-Color_Producto Varchar (50),
-Precio_Compra varchar (50)
+Unidad_Medida varchar (50),
+Stock INT,
+Inv_Minimo INT,
+Precio_Compra decimal (38),
+Fecha_Ingreso date,
 )
 
 /*Tabla MercanciaUtilizada*/
@@ -187,6 +185,9 @@ drop table Factura
 GO
 
 drop table FacturaTittle
+GO
+
+drop table NuevoInventario
 GO
 
 drop database Proyecto_Grupal

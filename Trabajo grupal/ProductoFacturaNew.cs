@@ -104,5 +104,10 @@ namespace Trabajo_grupal
             btnbuscar.PerformClick();
             dtproductos.AllowUserToAddRows = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

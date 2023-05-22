@@ -18,20 +18,6 @@ namespace Trabajo_grupal
             InitializeComponent();
         }
         public DatosgetInv InvPantalonActual { get; set; }
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -42,7 +28,6 @@ namespace Trabajo_grupal
             datosgetinv.Size = cbSize.Text;
             datosgetinv.Stock = Convert.ToInt32(txtstock.Text);
             datosgetinv.Inv_Minimo = txtinvminimo.Text;
-            datosgetinv.Mercancia_Utilizada = txtMercanciaUtilizada.Text;
             datosgetinv.Precio = Convert.ToDecimal(txtprecio.Text);
             
 
@@ -75,7 +60,6 @@ namespace Trabajo_grupal
                 cbSize.Text = pBuscar.InvPantalonSeleccionado.Size;
                 txtstock.Text = pBuscar.InvPantalonSeleccionado.Stock.ToString();
                 txtinvminimo.Text = pBuscar.InvPantalonSeleccionado.Inv_Minimo;
-                txtMercanciaUtilizada.Text = pBuscar.InvPantalonSeleccionado.Mercancia_Utilizada;
                 txtprecio.Text = pBuscar.InvPantalonSeleccionado.Precio.ToString();
                 
 
@@ -94,7 +78,6 @@ namespace Trabajo_grupal
             pInventarioPantalon.Size = cbSize.Text;
             pInventarioPantalon.Stock = Convert.ToInt32(txtstock.Text);
             pInventarioPantalon.Inv_Minimo  = txtinvminimo.Text;
-            pInventarioPantalon.Mercancia_Utilizada = txtMercanciaUtilizada.Text;
             pInventarioPantalon.Precio = Convert.ToDecimal(txtprecio.Text);
             pInventarioPantalon.Codigo = InvPantalonActual.Codigo;
             
@@ -149,6 +132,18 @@ namespace Trabajo_grupal
 
             else
                 MessageBox.Show("Se cancelo la eliminacion", "Cancelado");
+        }
+
+        private void agregarmateriaprimamanual_Click(object sender, EventArgs e)
+        {
+            MateriaPantalonesNew frm = new MateriaPantalonesNew();
+            AddOwnedForm(frm);
+            frm.ShowDialog();
+        }
+
+        private void agregaraldtg_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

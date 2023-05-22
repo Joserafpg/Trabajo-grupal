@@ -102,7 +102,7 @@ namespace Trabajo_grupal
 
         private void InventarioPantalones_Load(object sender, EventArgs e)
         {
-
+            dtgDatos.AllowUserToAddRows = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -142,6 +142,11 @@ namespace Trabajo_grupal
         }
 
         private void agregaraldtg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

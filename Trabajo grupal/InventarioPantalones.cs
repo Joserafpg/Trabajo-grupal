@@ -380,7 +380,7 @@ namespace Trabajo_grupal
 
                     // Agregar los parámetros al comando
                     agregar.Parameters.Clear();
-                    agregar.Parameters.AddWithValue("@Id_Pantalon", id_materia);
+                    agregar.Parameters.AddWithValue("@Id_Pantalon", idpantalon);
                     agregar.Parameters.AddWithValue("@Id_Materiales", id_materia);
                     agregar.Parameters.AddWithValue("@Nombre", materia);
                     agregar.Parameters.AddWithValue("@Descripcion", descripcion);

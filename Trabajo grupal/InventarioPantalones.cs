@@ -325,6 +325,7 @@ namespace Trabajo_grupal
         {
             Next();
             btnguardar.Visible = true;
+            btnsiguiente.Visible = false;
         }
 
         private void dtgDatos_CurrentCellChanged(object sender, EventArgs e)

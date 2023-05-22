@@ -46,7 +46,7 @@ namespace Trabajo_grupal
             MostrarMateriaPrima();
         }
 
-        private void dtproductos_DoubleClick(object sender, EventArgs e)
+        void AgregarMateria()
         {
             InventarioPantalones frm = Owner as InventarioPantalones;
 
@@ -67,7 +67,7 @@ namespace Trabajo_grupal
                 string medidaExistente = row.Cells[3].Value.ToString();
                 string precioExistente = row.Cells[4].Value.ToString();
 
-                if (codigo == codigoExistente && nombre == nombreExistente && descripcion == descripcionExistente && Unidad_Medida == medidaExistente && precio == precioExistente )
+                if (codigo == codigoExistente && nombre == nombreExistente && descripcion == descripcionExistente && Unidad_Medida == medidaExistente && precio == precioExistente)
                 {
                     // El registro ya existe, suma el quinto valor existente con el nuevo valor
                     int valorExistente = Convert.ToInt32(row.Cells[5].Value);
@@ -87,9 +87,19 @@ namespace Trabajo_grupal
             this.Close();
         }
 
+        private void dtproductos_DoubleClick(object sender, EventArgs e)
+        {
+            AgregarMateria();
+        }
+
         private void MateriaPantalonesNew_Load(object sender, EventArgs e)
         {
             btnbuscar.PerformClick();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AgregarMateria();
         }
     }
 }

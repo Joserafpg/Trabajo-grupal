@@ -32,13 +32,21 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnsiguiente = new System.Windows.Forms.Button();
             this.panelMateriaUtilizada = new System.Windows.Forms.Panel();
+            this.txtidmateria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtcodigo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.agregaraldtg = new System.Windows.Forms.Button();
-            this.txtprecio = new System.Windows.Forms.TextBox();
-            this.agregarmateriaprimamanual = new System.Windows.Forms.Button();
             this.dtgDatos = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.agregarmateriaprimamanual = new System.Windows.Forms.Button();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
+            this.txtprecio = new System.Windows.Forms.TextBox();
+            this.agregaraldtg = new System.Windows.Forms.Button();
             this.cbSize = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnbuscar = new System.Windows.Forms.Button();
@@ -53,14 +61,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtidmateria = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panelMateriaUtilizada.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
@@ -99,7 +99,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(651, 408);
+            this.button2.Location = new System.Drawing.Point(651, 264);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(186, 64);
             this.button2.TabIndex = 25;
@@ -114,7 +114,7 @@
             this.btnsiguiente.FlatAppearance.BorderSize = 0;
             this.btnsiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsiguiente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnsiguiente.Location = new System.Drawing.Point(651, 334);
+            this.btnsiguiente.Location = new System.Drawing.Point(651, 264);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(186, 64);
             this.btnsiguiente.TabIndex = 24;
@@ -140,6 +140,13 @@
             this.panelMateriaUtilizada.TabIndex = 23;
             this.panelMateriaUtilizada.Visible = false;
             // 
+            // txtidmateria
+            // 
+            this.txtidmateria.Location = new System.Drawing.Point(430, 37);
+            this.txtidmateria.Name = "txtidmateria";
+            this.txtidmateria.Size = new System.Drawing.Size(100, 20);
+            this.txtidmateria.TabIndex = 14;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -148,53 +155,6 @@
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "Codigo";
-            // 
-            // txtcodigo
-            // 
-            this.txtcodigo.Location = new System.Drawing.Point(132, 80);
-            this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(201, 20);
-            this.txtcodigo.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(427, 382);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Precio";
-            // 
-            // agregaraldtg
-            // 
-            this.agregaraldtg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.agregaraldtg.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.agregaraldtg.Location = new System.Drawing.Point(365, 80);
-            this.agregaraldtg.Name = "agregaraldtg";
-            this.agregaraldtg.Size = new System.Drawing.Size(85, 23);
-            this.agregaraldtg.TabIndex = 1;
-            this.agregaraldtg.Text = "Agregar";
-            this.agregaraldtg.UseVisualStyleBackColor = true;
-            this.agregaraldtg.Click += new System.EventHandler(this.agregaraldtg_Click);
-            // 
-            // txtprecio
-            // 
-            this.txtprecio.Location = new System.Drawing.Point(512, 379);
-            this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(81, 20);
-            this.txtprecio.TabIndex = 12;
-            // 
-            // agregarmateriaprimamanual
-            // 
-            this.agregarmateriaprimamanual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.agregarmateriaprimamanual.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.agregarmateriaprimamanual.Location = new System.Drawing.Point(69, 369);
-            this.agregarmateriaprimamanual.Name = "agregarmateriaprimamanual";
-            this.agregarmateriaprimamanual.Size = new System.Drawing.Size(85, 23);
-            this.agregarmateriaprimamanual.TabIndex = 0;
-            this.agregarmateriaprimamanual.Text = "Agregar";
-            this.agregarmateriaprimamanual.UseVisualStyleBackColor = true;
-            this.agregarmateriaprimamanual.Click += new System.EventHandler(this.agregarmateriaprimamanual_Click);
             // 
             // dtgDatos
             // 
@@ -212,6 +172,94 @@
             this.dtgDatos.Size = new System.Drawing.Size(542, 219);
             this.dtgDatos.TabIndex = 0;
             this.dtgDatos.CurrentCellChanged += new System.EventHandler(this.dtgDatos_CurrentCellChanged);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Id Material";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "Descripcion";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // medida
+            // 
+            this.medida.HeaderText = "Medida";
+            this.medida.Name = "medida";
+            this.medida.ReadOnly = true;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            // 
+            // subtotal
+            // 
+            this.subtotal.HeaderText = "Sub Total";
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(427, 382);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Precio";
+            // 
+            // agregarmateriaprimamanual
+            // 
+            this.agregarmateriaprimamanual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.agregarmateriaprimamanual.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.agregarmateriaprimamanual.Location = new System.Drawing.Point(69, 369);
+            this.agregarmateriaprimamanual.Name = "agregarmateriaprimamanual";
+            this.agregarmateriaprimamanual.Size = new System.Drawing.Size(85, 23);
+            this.agregarmateriaprimamanual.TabIndex = 0;
+            this.agregarmateriaprimamanual.Text = "Agregar";
+            this.agregarmateriaprimamanual.UseVisualStyleBackColor = true;
+            this.agregarmateriaprimamanual.Click += new System.EventHandler(this.agregarmateriaprimamanual_Click);
+            // 
+            // txtcodigo
+            // 
+            this.txtcodigo.Location = new System.Drawing.Point(132, 80);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(201, 20);
+            this.txtcodigo.TabIndex = 9;
+            // 
+            // txtprecio
+            // 
+            this.txtprecio.Location = new System.Drawing.Point(512, 379);
+            this.txtprecio.Name = "txtprecio";
+            this.txtprecio.Size = new System.Drawing.Size(81, 20);
+            this.txtprecio.TabIndex = 12;
+            // 
+            // agregaraldtg
+            // 
+            this.agregaraldtg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.agregaraldtg.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.agregaraldtg.Location = new System.Drawing.Point(365, 80);
+            this.agregaraldtg.Name = "agregaraldtg";
+            this.agregaraldtg.Size = new System.Drawing.Size(85, 23);
+            this.agregaraldtg.TabIndex = 1;
+            this.agregaraldtg.Text = "Agregar";
+            this.agregaraldtg.UseVisualStyleBackColor = true;
+            this.agregaraldtg.Click += new System.EventHandler(this.agregaraldtg_Click);
             // 
             // cbSize
             // 
@@ -365,54 +413,6 @@
             this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Id Material";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "Descripcion";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            // 
-            // medida
-            // 
-            this.medida.HeaderText = "Medida";
-            this.medida.Name = "medida";
-            this.medida.ReadOnly = true;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            // 
-            // subtotal
-            // 
-            this.subtotal.HeaderText = "Sub Total";
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
-            // 
-            // txtidmateria
-            // 
-            this.txtidmateria.Location = new System.Drawing.Point(430, 37);
-            this.txtidmateria.Name = "txtidmateria";
-            this.txtidmateria.Size = new System.Drawing.Size(100, 20);
-            this.txtidmateria.TabIndex = 14;
             // 
             // InventarioPantalones
             // 

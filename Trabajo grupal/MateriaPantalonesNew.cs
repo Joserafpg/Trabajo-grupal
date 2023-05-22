@@ -52,8 +52,10 @@ namespace Trabajo_grupal
 
             string codigo = dtproductos.CurrentRow.Cells[0].Value.ToString();
             string nombre = dtproductos.CurrentRow.Cells[1].Value.ToString();
-            string size = dtproductos.CurrentRow.Cells[2].Value.ToString();
-            string precio = dtproductos.CurrentRow.Cells[3].Value.ToString();
+            string descripcion = dtproductos.CurrentRow.Cells[2].Value.ToString();
+            string Unidad_Medida = dtproductos.CurrentRow.Cells[3].Value.ToString();
+            string precio = dtproductos.CurrentRow.Cells[4].Value.ToString();
+            string stock = dtproductos.CurrentRow.Cells[5].Value.ToString();
             int nuevoValor = 1;
 
             // Verifica si ya existe un registro con los mismos valores en las primeras cuatro columnas

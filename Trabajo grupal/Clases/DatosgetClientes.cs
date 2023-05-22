@@ -14,7 +14,7 @@ namespace Trabajo_grupal.Clases
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public string Correo { get; set; }
-        public DateTime Fecha_Ingreso { get; set; }
+        public DateTime Fecha_de_Ingreso { get; set; }
 
         public DatosgetClientes() { }
 
@@ -26,7 +26,7 @@ namespace Trabajo_grupal.Clases
             this.Direccion = pDireccion;
             this.Telefono = pTelefono;
             this.Correo = pCorreo;
-            this.Fecha_Ingreso = pFecha_Ingreso;
+            this.Fecha_de_Ingreso = pFecha_Ingreso;
         }
     }
 }

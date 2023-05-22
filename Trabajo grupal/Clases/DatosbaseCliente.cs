@@ -19,8 +19,8 @@ namespace Trabajo_grupal
 
             Conexion.opoencon();
 
-            SqlCommand Comando = new SqlCommand(string.Format("Insert into Clientes (Nombre, Apellido, Telefono, Direccion, Correo, Fecha_Ingreso) values ('{0}','{1}','{2}','{3}','{4}','{5}')",
-              pget.Nombre, pget.Apellido, pget.Telefono, pget.Direccion, pget.Correo, pget.Fecha_Ingreso.ToString("yyyy-MM-dd HH:mm:ss")), Conexion.ObtenerConexion());
+            SqlCommand Comando = new SqlCommand(string.Format("Insert into Clientes (Nombre, Apellido, Telefono, Direccion, Correo, Fecha_de_ingreso) values ('{0}','{1}','{2}','{3}','{4}','{5}')",
+              pget.Nombre, pget.Apellido, pget.Telefono, pget.Direccion, pget.Correo, pget.Fecha_de_Ingreso.ToString("yyyy-MM-dd HH:mm:ss")), Conexion.ObtenerConexion());
 
             retorno = Comando.ExecuteNonQuery();
             Conexion.cerrarcon();
@@ -34,7 +34,7 @@ namespace Trabajo_grupal
             Conexion.opoencon();
             {
                 SqlCommand comando = new SqlCommand(string.Format("Update Clientes set Nombre='{0}',Apellido='{1}',Telefono='{2}',Direccion='{3}',Correo='{4}' where Fecha_Ingreso='{5}'",
-                 pClientes.Nombre, pClientes.Apellido, pClientes.Telefono, pClientes.Direccion, pClientes.Correo, pClientes.Fecha_Ingreso.ToString("yyyy-MM-dd HH:mm:ss"), pClientes.Codigo), Conexion.ObtenerConexion());
+                 pClientes.Nombre, pClientes.Apellido, pClientes.Telefono, pClientes.Direccion, pClientes.Correo, pClientes.Fecha_de_Ingreso.ToString("yyyy-MM-dd HH:mm:ss"), pClientes.Codigo), Conexion.ObtenerConexion());
                 retorno = comando.ExecuteNonQuery();
 
             }
@@ -66,7 +66,7 @@ namespace Trabajo_grupal
             {
 
                 SqlCommand comando = new SqlCommand(String.Format(
-               "SELECT Codigo,Cedula, Nombre, APellido, Telefono, Direccion, Correo,Fecha_IngresoFROM  where codigo like '%{0}%' and telefono like '%{1}%' ", pNombre, pTelefono),
+               "SELECT Codigo,Cedula, Nombre, APellido, Telefono, Direccion, Correo,Fecha_de_Ingreso FROM  where codigo like '%{0}%' and telefono like '%{1}%' ", pNombre, pTelefono),
                     Conexion.ObtenerConexion());
 
                 SqlDataReader reader = comando.ExecuteReader();
@@ -79,7 +79,7 @@ namespace Trabajo_grupal
                     pClientes.Direccion = reader.GetString(3);
                     pClientes.Telefono = reader.GetString(4);
                     pClientes.Correo = reader.GetString(5);
-                    pClientes.Fecha_Ingreso = Convert.ToDateTime(reader.GetValue(6));
+                    pClientes.Fecha_de_Ingreso = Convert.ToDateTime(reader.GetValue(6));
 
                     lista.Add(pClientes);
                 }
@@ -87,8 +87,39 @@ namespace Trabajo_grupal
                 return lista;
             }
         }
+        public static DatosgetClientes ObtenerClientes(Int64 pId)
+        {
+            Conexion.opoencon();
+            {
+                DatosgetClientes pClientes = new DatosgetClientes();
+                SqlCommand comando = new SqlCommand(string.Format(
+                   "select Codigo, Nombre, Apellido, Direccion, Telefono,Correo,Fecha_de_Ingreso Fecha From Clientes where Codigo = {0}", pId), Conexion.ObtenerConexion());
+                SqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    pClientes.Codigo = Convert.ToInt64(reader.GetValue(0));
+                    pClientes.Nombre = reader.GetString(1);
+                    pClientes.Apellido = reader.GetString(2);
+                    pClientes.Direccion = reader.GetString(3);
+                    pClientes.Telefono = reader.GetString(4);
+                    pClientes.Correo = reader.GetString(5);
+                    pClientes.Fecha_de_Ingreso = reader.GetDateTime(5);
+
+                }
+
+                
+                Conexion.cerrarcon();
+                return pClientes;
+            }
+        }
     }
 }
+
+     
+
+
+    
+
 
 
 

@@ -37,7 +37,7 @@ namespace Trabajo_grupal
             Clientes.Direccion = txtdireccion.Text;
             Clientes.Telefono= txTelefono.Text;
             Clientes.Correo = txtCorreo.Text;
-            Clientes.Fecha_Ingreso = txtfech.Value;
+            Clientes.Fecha_de_Ingreso = txtfech.Value;
 
             int resultado = DatosbaseCliente.Agregar(Clientes);
 
@@ -60,7 +60,7 @@ namespace Trabajo_grupal
             pClientes.Direccion = txtdireccion.Text;
             pClientes.Telefono = txTelefono.Text;
             pClientes.Correo = txtCorreo.Text;
-            pClientes.Fecha_Ingreso = txtfech.Value;
+            pClientes.Fecha_de_Ingreso = txtfech.Value;
             pClientes.Codigo = ClienteActual.Codigo;
 
             int Resultado = DatosbaseCliente.Modificar(pClientes);
@@ -115,7 +115,7 @@ namespace Trabajo_grupal
                 txtdireccion.Text = pBuscar.ClienteSeleccionado.Direccion;
                 txTelefono.Text = pBuscar.ClienteSeleccionado.Telefono;
                 txtCorreo.Text = pBuscar.ClienteSeleccionado.Correo;
-                txtfech.Value = pBuscar.ClienteSeleccionado.Fecha_Ingreso;
+                txtfech.Value = pBuscar.ClienteSeleccionado.Fecha_de_Ingreso;
 
                 btnagregar.Enabled = false;
                 btnmodificar.Enabled = true;

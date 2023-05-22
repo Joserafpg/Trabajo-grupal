@@ -70,7 +70,7 @@ namespace Trabajo_grupal
                 if (codigo == codigoExistente && nombre == nombreExistente && descripcion == descripcionExistente && Unidad_Medida == medidaExistente && precio == precioExistente )
                 {
                     // El registro ya existe, suma el quinto valor existente con el nuevo valor
-                    int valorExistente = Convert.ToInt32(row.Cells[4].Value);
+                    int valorExistente = Convert.ToInt32(row.Cells[5].Value);
                     int valorSumado = valorExistente + nuevoValor;
                     row.Cells[5].Value = valorSumado;
                     existeRegistro = true;

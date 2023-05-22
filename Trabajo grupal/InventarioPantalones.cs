@@ -238,13 +238,16 @@ namespace Trabajo_grupal
 
         public void SumarColumna()
         {
-            double Total = 0;
+            double totalconsuma, Total = 0;
 
             foreach (DataGridViewRow row in dtgDatos.Rows)
             {
                 Total += Convert.ToDouble(row.Cells["subtotal"].Value);
             }
-            txtprecio.Text = Total.ToString();
+
+            totalconsuma = Total + (Total * 0.20);
+
+            txtprecio.Text = totalconsuma.ToString();
 
         }
 

@@ -74,6 +74,18 @@ Color_Producto Varchar (50),
 Precio_Compra varchar (50)
 )
 
+/*Tabla MercanciaUtilizada*/
+create table MercanciaUtilizada(
+Id_Mercancia INT IDENTITY (1,1) NOT NULL PRIMARY KEY,
+Id_Materiales INT,
+Nombre varchar (50),
+Descripcion varchar (50),
+Medida varchar (50),
+Precio decimal (38),
+Cantidad INT,
+SubTotal decimal (38),
+)
+
 
 /*tabla InvPantalones*/
 create table InvPantalones(

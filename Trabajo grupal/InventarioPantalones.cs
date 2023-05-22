@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -156,8 +157,136 @@ namespace Trabajo_grupal
             frm.ShowDialog();
         }
 
+        SqlConnection conn = new SqlConnection("Data source = DESKTOP-NDDA7LS; Initial Catalog = Proyecto_Grupal; Integrated Security = True");
+
+        private MateriaPrima ObtenerProducto(Int64 idMateria)
+        {
+            MateriaPrima materia = null;
+
+            // Cadena de conexión a la base de datos
+            string connectionString = "Data source = DESKTOP-NDDA7LS; Initial Catalog=Proyecto_Grupal; Integrated Security=True";
+
+            // Consulta SQL para obtener el producto según su ID
+            string query = "SELECT Codigo, Nombre_Mercancia, Descripcion, Unidad_Medida, Precio_Compra, Stock FROM NuevoInventario WHERE Codigo = @Id";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", idMateria);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Obtener los valores del producto desde el lector de datos
+                            Int32 id = reader.GetInt32(0);
+                            string nombre = reader.GetString(1);
+                            string descripcion = reader.GetString(2);
+                            string medida = reader.GetString(3);
+                            decimal precio = reader.GetDecimal(4);
+
+                            // Crear un objeto Producto con los valores obtenidos
+                            materia = new MateriaPrima
+                            {
+                                Id = id,
+                                Nombre = nombre,
+                                Descripcion = descripcion,
+                                Medida = medida,
+                                Precio = precio
+                            };
+                        }
+                    }
+                }
+                conn.Close();
+            }
+
+            return materia;
+
+        }
+
+        private void VerificarAgregarModificarProducto(MateriaPrima materia)
+        {
+            bool encontrado = false;
+
+            // Recorrer las filas del DataGridView para buscar el producto
+            foreach (DataGridViewRow row in dtgDatos.Rows)
+            {
+                // Obtener el ID del producto en la fila actual
+                Int64 id = Convert.ToInt64(row.Cells["id"].Value);
+
+                if (id == materia.Id)
+                {
+                    // El producto ya está en el DataGridView, modificar la cantidad
+                    int cantidadExistente = Convert.ToInt32(row.Cells["cantidad"].Value);
+                    int cantidadNueva = cantidadExistente + materia.Cantidad;
+                    row.Cells["cantidad"].Value = cantidadNueva;
+
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if (!encontrado)
+            {
+                // El producto no está en el DataGridView, agregar una nueva fila
+                dtgDatos.Rows.Add(materia.Id, materia.Nombre, materia.Descripcion, materia.Medida, materia.Precio, materia.Cantidad);
+            }
+        }
+
+        public void SumarColumna()
+        {
+            double Total = 0;
+
+            foreach (DataGridViewRow row in dtgDatos.Rows)
+            {
+                Total += Convert.ToDouble(row.Cells["subtotal"].Value);
+            }
+            txtprecio.Text = Total.ToString();
+
+        }
+
         private void agregaraldtg_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtcodigo.Text))
+            {
+                MessageBox.Show("Debe colocar el ID del producto");
+                return;
+            }
+
+            Int64 idProducto = Convert.ToInt64(txtcodigo.Text);
+
+            // Llamar a un método para obtener el producto completo según su ID
+            MateriaPrima materia = ObtenerProducto(idProducto);
+
+            if (materia != null)
+            {
+                // Verificar si el producto ya está en el DataGridView y realizar la acción correspondiente
+                VerificarAgregarModificarProducto(materia);
+
+                foreach (DataGridViewRow row in dtgDatos.Rows)
+                {
+                    // Obtener los valores de las columnas "Columna1" y "Columna2"
+                    double valor1 = Convert.ToDouble(row.Cells["precio"].Value);
+                    int valor2 = Convert.ToInt32(row.Cells["cantidad"].Value);
+                    // Realizar la multiplicación
+                    double resultado = valor1 * valor2;
+
+                    // Asignar el resultado a la columna "Resultado" de la fila actual
+                    row.Cells["subtotal"].Value = resultado;
+                    SumarColumna();
+                }
+            }
+            else
+            {
+                // No se encontró un producto con el ID especificado, mostrar un mensaje de error o realizar alguna otra acción apropiada
+                MessageBox.Show("No se encontró ningún producto con el ID especificado.");
+            }
+
+
+            txtcodigo.Clear();
 
         }
 
@@ -169,6 +298,22 @@ namespace Trabajo_grupal
         private void button1_Click_1(object sender, EventArgs e)
         {
             Next();
+        }
+
+        private void dtgDatos_CurrentCellChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dtgDatos.Rows)
+            {
+                // Obtener los valores de las columnas "Columna1" y "Columna2"
+                double valor1 = Convert.ToDouble(row.Cells["precio"].Value);
+                int valor2 = Convert.ToInt32(row.Cells["cantidad"].Value);
+                // Realizar la multiplicación
+                double resultado = valor1 * valor2;
+
+                // Asignar el resultado a la columna "Resultado" de la fila actual
+                row.Cells["subtotal"].Value = resultado;
+                SumarColumna();
+            }
         }
     }
 }

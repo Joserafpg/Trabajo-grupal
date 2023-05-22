@@ -55,7 +55,6 @@ namespace Trabajo_grupal
             string descripcion = dtproductos.CurrentRow.Cells[2].Value.ToString();
             string Unidad_Medida = dtproductos.CurrentRow.Cells[3].Value.ToString();
             string precio = dtproductos.CurrentRow.Cells[4].Value.ToString();
-            string stock = dtproductos.CurrentRow.Cells[5].Value.ToString();
             int nuevoValor = 1;
 
             // Verifica si ya existe un registro con los mismos valores en las primeras cuatro columnas
@@ -64,15 +63,16 @@ namespace Trabajo_grupal
             {
                 string codigoExistente = row.Cells[0].Value.ToString();
                 string nombreExistente = row.Cells[1].Value.ToString();
-                string sizeExistente = row.Cells[2].Value.ToString();
-                string precioExistente = row.Cells[3].Value.ToString();
+                string descripcionExistente = row.Cells[2].Value.ToString();
+                string medidaExistente = row.Cells[3].Value.ToString();
+                string precioExistente = row.Cells[4].Value.ToString();
 
-                if (codigo == codigoExistente && nombre == nombreExistente && size == sizeExistente && precio == precioExistente)
+                if (codigo == codigoExistente && nombre == nombreExistente && descripcion == descripcionExistente && Unidad_Medida == medidaExistente && precio == precioExistente )
                 {
                     // El registro ya existe, suma el quinto valor existente con el nuevo valor
                     int valorExistente = Convert.ToInt32(row.Cells[4].Value);
                     int valorSumado = valorExistente + nuevoValor;
-                    row.Cells[4].Value = valorSumado;
+                    row.Cells[5].Value = valorSumado;
                     existeRegistro = true;
                     break;
                 }
@@ -81,7 +81,7 @@ namespace Trabajo_grupal
             if (!existeRegistro)
             {
                 // El registro no existe, agrega una nueva fila con los valores
-                frm.DTPantalones.Rows.Add(codigo, nombre, size, precio, nuevoValor);
+                frm.DTPantalones.Rows.Add(codigo, nombre, descripcion, Unidad_Medida, precio, nuevoValor);
             }
 
             this.Close();

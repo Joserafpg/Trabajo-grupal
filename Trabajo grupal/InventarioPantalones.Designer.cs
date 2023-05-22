@@ -56,6 +56,13 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.panelMateriaUtilizada.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -125,6 +132,7 @@
             this.groupBox2.Controls.Add(this.tctprecio);
             this.groupBox2.Controls.Add(this.agregarmateriaprimamanual);
             this.groupBox2.Controls.Add(this.dtgDatos);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(21, 30);
             this.groupBox2.Name = "groupBox2";
@@ -138,7 +146,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(397, 358);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 21);
+            this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 13;
             this.label4.Text = "Precio";
             // 
@@ -158,7 +166,7 @@
             // 
             this.tctprecio.Location = new System.Drawing.Point(482, 355);
             this.tctprecio.Name = "tctprecio";
-            this.tctprecio.Size = new System.Drawing.Size(81, 27);
+            this.tctprecio.Size = new System.Drawing.Size(81, 20);
             this.tctprecio.TabIndex = 12;
             // 
             // agregarmateriaprimamanual
@@ -176,7 +184,15 @@
             // dtgDatos
             // 
             this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDatos.Location = new System.Drawing.Point(33, 120);
+            this.dtgDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.nombre,
+            this.descripcion,
+            this.medida,
+            this.precio,
+            this.cantidad,
+            this.subtotal});
+            this.dtgDatos.Location = new System.Drawing.Point(39, 103);
             this.dtgDatos.Name = "dtgDatos";
             this.dtgDatos.Size = new System.Drawing.Size(542, 219);
             this.dtgDatos.TabIndex = 0;
@@ -376,6 +392,41 @@
             this.button2.Text = "Guardar mercancia";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // id
+            // 
+            this.id.HeaderText = "Id Material";
+            this.id.Name = "id";
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "Descripcion";
+            this.descripcion.Name = "descripcion";
+            // 
+            // medida
+            // 
+            this.medida.HeaderText = "Medida";
+            this.medida.Name = "medida";
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            // 
+            // subtotal
+            // 
+            this.subtotal.HeaderText = "Sub Total";
+            this.subtotal.Name = "subtotal";
+            // 
             // InventarioPantalones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,5 +481,12 @@
         private System.Windows.Forms.TextBox tctprecio;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
     }
 }

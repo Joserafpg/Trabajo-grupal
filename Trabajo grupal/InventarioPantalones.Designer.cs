@@ -30,7 +30,7 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnsiguiente = new System.Windows.Forms.Button();
             this.panelMateriaUtilizada = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtcodigo = new System.Windows.Forms.TextBox();
@@ -60,6 +60,7 @@
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtidmateria = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panelMateriaUtilizada.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
@@ -69,7 +70,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnsiguiente);
             this.groupBox1.Controls.Add(this.panelMateriaUtilizada);
             this.groupBox1.Controls.Add(this.cbSize);
             this.groupBox1.Controls.Add(this.label9);
@@ -104,23 +105,26 @@
             this.button2.TabIndex = 25;
             this.button2.Text = "Guardar mercancia";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnsiguiente
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(651, 334);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 64);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Siguiente";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnsiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnsiguiente.FlatAppearance.BorderSize = 0;
+            this.btnsiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsiguiente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnsiguiente.Location = new System.Drawing.Point(651, 334);
+            this.btnsiguiente.Name = "btnsiguiente";
+            this.btnsiguiente.Size = new System.Drawing.Size(186, 64);
+            this.btnsiguiente.TabIndex = 24;
+            this.btnsiguiente.Text = "Siguiente";
+            this.btnsiguiente.UseVisualStyleBackColor = false;
+            this.btnsiguiente.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panelMateriaUtilizada
             // 
+            this.panelMateriaUtilizada.Controls.Add(this.txtidmateria);
             this.panelMateriaUtilizada.Controls.Add(this.label1);
             this.panelMateriaUtilizada.Controls.Add(this.dtgDatos);
             this.panelMateriaUtilizada.Controls.Add(this.label4);
@@ -287,6 +291,7 @@
             this.btnguardar.TabIndex = 12;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = false;
+            this.btnguardar.Visible = false;
             this.btnguardar.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtinvminimo
@@ -402,6 +407,13 @@
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
             // 
+            // txtidmateria
+            // 
+            this.txtidmateria.Location = new System.Drawing.Point(430, 37);
+            this.txtidmateria.Name = "txtidmateria";
+            this.txtidmateria.Size = new System.Drawing.Size(100, 20);
+            this.txtidmateria.TabIndex = 14;
+            // 
             // InventarioPantalones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,7 +462,7 @@
         private System.Windows.Forms.Button agregaraldtg;
         private System.Windows.Forms.TextBox txtprecio;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnsiguiente;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
@@ -458,5 +470,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.TextBox txtidmateria;
     }
 }

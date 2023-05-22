@@ -62,7 +62,6 @@ Fecha_de_ingreso datetime
 /*Tabla NuevoInventario*/
 create table NuevoInventario(
 Codigo INT IDENTITY (1,1) NOT NULL PRIMARY KEY,
-Id_Mercancia_Utilizada INT NOT NULL,
 Nombre_Mercancia Varchar (50),
 Descripcion Varchar (50),
 Tipo_Producto Varchar (50),
@@ -75,7 +74,7 @@ Fecha_Ingreso date,
 
 /*Tabla MercanciaUtilizada*/
 create table MercanciaUtilizada(
-Id_Mercancia INT IDENTITY (1,1) NOT NULL PRIMARY KEY,
+Id_Pantalon INT,
 Id_Materiales INT,
 Nombre varchar (50),
 Descripcion varchar (50),
@@ -93,7 +92,6 @@ Nombre_Producto Varchar (50),
 Size varchar (50),
 Stock int,
 Inv_Minimo varchar (50),
-Mercancia_Utilizada varchar (50),
 Precio decimal (38),
 )
 
@@ -172,6 +170,19 @@ go
 select * from FacturaTittle
 go
 
+
+
+select * from MercanciaUtilizada
+go
+
+select * from InvPantalones
+go
+
+select * from NuevoInventario
+go
+
+
+
 select * from Factura where No_Factura = 10;
 
 CREATE PROCEDURE SP_EMPLEADOCOMBOBOX
@@ -188,7 +199,10 @@ GO
 drop table FacturaTittle
 GO
 
-drop table NuevoInventario
+drop table MercanciaUtilizada
+GO
+
+drop table InvPantalones
 GO
 
 drop database Proyecto_Grupal

@@ -14,8 +14,8 @@ namespace Trabajo_grupal.Clases
             int retorno = 0;
 
             Conexion.opoencon();
-            SqlCommand comando = new SqlCommand(string.Format(" insert into InvPantalones (Nombre_Producto, Size, Stock, Inv_Minimo, Mercancia_Utilizada, Precio) values ('{0}','{1}','{2}','{3}','{4}', '{5}')",
-                pget.Nombre_Producto,  pget.Size, pget.Stock, pget.Inv_Minimo, pget.Mercancia_Utilizada, pget.Precio), Conexion.ObtenerConexion());
+            SqlCommand comando = new SqlCommand(string.Format(" insert into InvPantalones (Nombre_Producto, Size, Stock, Inv_Minimo, Precio) values ('{0}','{1}','{2}','{3}','{4}')",
+                pget.Nombre_Producto,  pget.Size, pget.Stock, pget.Inv_Minimo, pget.Precio), Conexion.ObtenerConexion());
 
             retorno = comando.ExecuteNonQuery();
             Conexion.cerrarcon();

@@ -46,20 +46,43 @@ namespace Trabajo_grupal
             datosgetinv.Precio = Convert.ToDecimal(txtprecio.Text);
             
 
-            int resultado = DatosbaseInvPantalones.agregar(datosgetinv);
+            DatosbaseInvPantalones.agregar(datosgetinv);
 
+            txtidmateria.Visible = true;
+            conn.Open();
 
-            if (resultado > 0)
+            // Consultar el último registro de Id_Factura en FacturaTittle
+            string query = "SELECT TOP 1 Codigo FROM InvPantalones ORDER BY Codigo DESC";
+            using (SqlCommand command = new SqlCommand(query, conn))
             {
+                // Obtener el resultado de la consulta
+                object result = command.ExecuteScalar();
 
-                MessageBox.Show("Datos del Pantalon Guardados Correctamente", "Datos Guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Verificar si se obtuvo un resultado válido
+                if (result != null && result != DBNull.Value)
+                {
+                    // Convertir el resultado en un entero
+                    int ultimoIdFactura = Convert.ToInt32(result);
 
+                    // Mostrar el último Id_Factura en un TextBox
+                    txtidmateria.Text = ultimoIdFactura.ToString();
+                }
 
+                else
+                {
+                    // No se encontraron registros en la tabla FacturaTittle
+                    // Puedes mostrar un valor predeterminado o dejar el TextBox vacío
+                    txtidmateria.Text = "No hay registros";
+                }
             }
-            else
-            {
-                MessageBox.Show(" No se Pudieron Guardar Datos del Pantalon ", "Error al Guardar ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+
+            conn.Close();
+            button2.Visible = true;
+            btnguardar.Visible = false;
+            button2.PerformClick();
+            button2.Visible = false;
+            btnguardar.Visible = true;
+            txtidmateria.Visible = false;
 
         }
 
@@ -301,6 +324,7 @@ namespace Trabajo_grupal
         private void button1_Click_1(object sender, EventArgs e)
         {
             Next();
+            btnguardar.Visible = true;
         }
 
         private void dtgDatos_CurrentCellChanged(object sender, EventArgs e)
@@ -316,6 +340,79 @@ namespace Trabajo_grupal
                 // Asignar el resultado a la columna "Resultado" de la fila actual
                 row.Cells["subtotal"].Value = resultado;
                 SumarColumna();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SqlCommand agregar = new SqlCommand("INSERT INTO MercanciaUtilizada VALUES (@Id_Pantalon, @Id_Materiales, @Nombre, @Descripcion, @Medida, @Precio, @Cantidad, @SubTotal)", conn);
+            string verificarQuery = "SELECT Stock FROM NuevoInventario WHERE Nombre_Mercancia = @Nombre";
+            string actualizarQuery = "UPDATE NuevoInventario SET Stock = Stock - @Cantidad WHERE Nombre_Mercancia = @Nombre";
+
+            conn.Open();
+
+            try
+            {
+                foreach (DataGridViewRow row in dtgDatos.Rows)
+                {
+                    // Obtener los valores de la fila actual del DataGridView
+                    Int64 idpantalon = Convert.ToInt64(txtidmateria.Text);
+                    int id_materia = Convert.ToInt32(row.Cells["id"].Value);
+                    string materia = Convert.ToString(row.Cells["nombre"].Value);
+                    string descripcion = Convert.ToString(row.Cells["descripcion"].Value);
+                    string medida = Convert.ToString(row.Cells["medida"].Value);
+                    decimal precio = Convert.ToDecimal(row.Cells["precio"].Value);
+                    int cantidad = Convert.ToInt32(row.Cells["cantidad"].Value);
+                    decimal subtotal = Convert.ToDecimal(row.Cells["subtotal"].Value);
+
+                    // Verificar si el Stock es menor que la Cantidad
+                    using (SqlCommand verificarCmd = new SqlCommand(verificarQuery, conn))
+                    {
+                        verificarCmd.Parameters.AddWithValue("@Nombre", materia);
+                        int stock = Convert.ToInt32(verificarCmd.ExecuteScalar());
+
+                        if (stock < cantidad)
+                        {
+                            MessageBox.Show("No hay suficiente stock para el producto " + materia);
+                            return; // Salta a la siguiente iteración del bucle sin ejecutar el código restante
+                        }
+                    }
+
+                    // Agregar los parámetros al comando
+                    agregar.Parameters.Clear();
+                    agregar.Parameters.AddWithValue("@Id_Pantalon", id_materia);
+                    agregar.Parameters.AddWithValue("@Id_Materiales", id_materia);
+                    agregar.Parameters.AddWithValue("@Nombre", materia);
+                    agregar.Parameters.AddWithValue("@Descripcion", descripcion);
+                    agregar.Parameters.AddWithValue("@Medida", medida);
+                    agregar.Parameters.AddWithValue("@Precio", precio);
+                    agregar.Parameters.AddWithValue("@Cantidad", cantidad);
+                    agregar.Parameters.AddWithValue("@SubTotal", subtotal);
+
+                    // Ejecutar el comando para agregar la factura
+                    agregar.ExecuteNonQuery();
+
+                    // Actualizar los datos de la tabla productos
+                    using (SqlCommand actualizarCmd = new SqlCommand(actualizarQuery, conn))
+                    {
+                        actualizarCmd.Parameters.AddWithValue("@Nombre", materia);
+                        actualizarCmd.Parameters.AddWithValue("@Cantidad", cantidad);
+                        actualizarCmd.ExecuteNonQuery();
+                    }
+                }
+
+                MessageBox.Show("Facturado con exito");
+                dtgDatos.Rows.Clear();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar: " + ex.Message);
+            }
+
+            finally
+            {
+                conn.Close();
             }
         }
     }

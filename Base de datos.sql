@@ -180,6 +180,8 @@ go
 select * from NuevoInventario
 go
 
+SELECT ID_Cliente, Nombre, Apellido, Direccion, Telefono, Correo,Fecha_de_Ingreso FROM Clientes where Nombre like '%{0}%' and Telefono like '%{1}%'
+
 SELECT Stock FROM InvPantalones WHERE Nombre_Producto = @Producto
 SELECT TOP 1 Stock FROM InvPantalones ORDER BY Stock DESC
 
@@ -203,7 +205,7 @@ GO
 drop table MercanciaUtilizada
 GO
 
-drop table InvPantalones
+drop table NuevoInventario
 GO
 
 drop database Proyecto_Grupal

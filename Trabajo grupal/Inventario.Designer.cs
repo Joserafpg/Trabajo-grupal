@@ -32,11 +32,11 @@
             this.button4 = new System.Windows.Forms.Button();
             this.agregar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnconsultamateria = new System.Windows.Forms.Button();
             this.btnconsultaPantal = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnconsultamateria = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -81,10 +81,25 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.agregar);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Location = new System.Drawing.Point(144, 0);
+            this.panel1.Location = new System.Drawing.Point(190, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(557, 501);
             this.panel1.TabIndex = 11;
+            // 
+            // btnconsultaPantal
+            // 
+            this.btnconsultaPantal.BackColor = System.Drawing.Color.MistyRose;
+            this.btnconsultaPantal.FlatAppearance.BorderSize = 0;
+            this.btnconsultaPantal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnconsultaPantal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnconsultaPantal.ForeColor = System.Drawing.Color.Black;
+            this.btnconsultaPantal.Location = new System.Drawing.Point(228, 399);
+            this.btnconsultaPantal.Name = "btnconsultaPantal";
+            this.btnconsultaPantal.Size = new System.Drawing.Size(164, 52);
+            this.btnconsultaPantal.TabIndex = 15;
+            this.btnconsultaPantal.Text = "Consulta de Pantalones";
+            this.btnconsultaPantal.UseVisualStyleBackColor = false;
+            this.btnconsultaPantal.Click += new System.EventHandler(this.btnconsultaPantal_Click);
             // 
             // pictureBox1
             // 
@@ -96,26 +111,6 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(149, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(346, 56);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "PONEN JEANS";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(246, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 24);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "INVENTARIO";
             // 
             // btnconsultamateria
             // 
@@ -132,20 +127,25 @@
             this.btnconsultamateria.UseVisualStyleBackColor = false;
             this.btnconsultamateria.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // btnconsultaPantal
+            // label2
             // 
-            this.btnconsultaPantal.BackColor = System.Drawing.Color.MistyRose;
-            this.btnconsultaPantal.FlatAppearance.BorderSize = 0;
-            this.btnconsultaPantal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnconsultaPantal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnconsultaPantal.ForeColor = System.Drawing.Color.Black;
-            this.btnconsultaPantal.Location = new System.Drawing.Point(228, 399);
-            this.btnconsultaPantal.Name = "btnconsultaPantal";
-            this.btnconsultaPantal.Size = new System.Drawing.Size(164, 52);
-            this.btnconsultaPantal.TabIndex = 15;
-            this.btnconsultaPantal.Text = "Consulta de Pantalones";
-            this.btnconsultaPantal.UseVisualStyleBackColor = false;
-            this.btnconsultaPantal.Click += new System.EventHandler(this.btnconsultaPantal_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(246, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 24);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "INVENTARIO";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(149, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(346, 56);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "PONEN JEANS";
             // 
             // Inventario
             // 

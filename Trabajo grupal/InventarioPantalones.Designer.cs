@@ -103,7 +103,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(186, 64);
             this.button2.TabIndex = 25;
-            this.button2.Text = "Guardar mercancia";
+            this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -146,13 +146,16 @@
             this.txtidmateria.Name = "txtidmateria";
             this.txtidmateria.Size = new System.Drawing.Size(100, 20);
             this.txtidmateria.TabIndex = 14;
+            this.txtidmateria.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 83);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(58, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(68, 21);
             this.label1.TabIndex = 10;
             this.label1.Text = "Codigo";
             // 
@@ -217,9 +220,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(427, 382);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.Size = new System.Drawing.Size(57, 21);
             this.label4.TabIndex = 13;
             this.label4.Text = "Precio";
             // 
@@ -399,6 +404,7 @@
             this.panel1.Size = new System.Drawing.Size(938, 31);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // btnClose
             // 

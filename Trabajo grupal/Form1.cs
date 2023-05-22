@@ -51,7 +51,7 @@ namespace Trabajo_grupal
 
             var ms9 = new ToolTip();
             ms9.SetToolTip(btncuentas, "Cuentas");
-            
+
             var ms10 = new ToolTip();
             ms10.SetToolTip(btnconfiguracion, "Configuracion");
         }
@@ -77,7 +77,10 @@ namespace Trabajo_grupal
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            btninventario.Visible = Permisos.FormInventario;
+            btnclientes.Visible = Permisos.FormClientes;
+            btnfacturacion.Visible = Permisos.FormFactura;
+            btncuentas.Visible = Permisos.FormCobrar;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

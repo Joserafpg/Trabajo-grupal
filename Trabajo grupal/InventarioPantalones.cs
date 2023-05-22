@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,6 +23,15 @@ namespace Trabajo_grupal
         void Next()
         {
             panelMateriaUtilizada.Visible = true;
+        }
+
+        void Limpiar()
+        {
+            txtNombreProducto.Clear();
+            cbSize.ResetText();
+            txtstock.Clear();
+            txtinvminimo.Clear();
+            dtgDatos.Rows.Clear();
         }
 
         private DataGridView _DTPantalones;
@@ -83,6 +93,7 @@ namespace Trabajo_grupal
             button2.Visible = false;
             btnguardar.Visible = true;
             txtidmateria.Visible = false;
+            panelMateriaUtilizada.Visible = false;
 
         }
 
@@ -278,7 +289,7 @@ namespace Trabajo_grupal
         {
             if (string.IsNullOrEmpty(txtcodigo.Text))
             {
-                MessageBox.Show("Debe colocar el ID del producto");
+                MessageBox.Show("Debe colocar el ID del material");
                 return;
             }
 
@@ -348,7 +359,6 @@ namespace Trabajo_grupal
         {
             SqlCommand agregar = new SqlCommand("INSERT INTO MercanciaUtilizada VALUES (@Id_Pantalon, @Id_Materiales, @Nombre, @Descripcion, @Medida, @Precio, @Cantidad, @SubTotal)", conn);
             string verificarQuery = "SELECT Stock FROM NuevoInventario WHERE Nombre_Mercancia = @Nombre";
-            string query = "SELECT TOP 1 Stock FROM InvPantalones ORDER BY Stock DESC";
             string actualizarQuery = "UPDATE NuevoInventario SET Stock = Stock - (@Cantidad * (SELECT TOP 1 Stock FROM InvPantalones ORDER BY Stock DESC)) WHERE Nombre_Mercancia = @Nombre";
 
 
@@ -376,7 +386,7 @@ namespace Trabajo_grupal
 
                         if (stock < cantidad)
                         {
-                            MessageBox.Show("No hay suficiente stock para el producto " + materia);
+                            MessageBox.Show("No hay suficiente stock para el material " + materia);
                             return; // Salta a la siguiente iteración del bucle sin ejecutar el código restante
                         }
                     }
@@ -404,8 +414,9 @@ namespace Trabajo_grupal
                     }
                 }
 
-                MessageBox.Show("Facturado con exito");
+                MessageBox.Show("Producto agregado con exito");
                 dtgDatos.Rows.Clear();
+                Limpiar();
             }
 
             catch (Exception ex)
@@ -417,6 +428,16 @@ namespace Trabajo_grupal
             {
                 conn.Close();
             }
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

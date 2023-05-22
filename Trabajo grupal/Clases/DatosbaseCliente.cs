@@ -33,7 +33,7 @@ namespace Trabajo_grupal
             int retorno = 0;
             Conexion.opoencon();
             {
-                SqlCommand comando = new SqlCommand(string.Format("Update Clientes set Nombre='{0}',Apellido='{1}',Telefono='{2}',Direccion='{3}',Correo='{4}' where Fecha_Ingreso='{5}'",
+                SqlCommand comando = new SqlCommand(string.Format("Update Clientes set Nombre='{0}',Apellido='{1}',Direccion='{2}',Telefono='{3}',Correo='{4}', Fecha_de_ingreso='{5}' where ID_Cliente = '{6}'",
                  pClientes.Nombre, pClientes.Apellido, pClientes.Telefono, pClientes.Direccion, pClientes.Correo, pClientes.Fecha_de_Ingreso.ToString("yyyy-MM-dd HH:mm:ss"), pClientes.Codigo), Conexion.ObtenerConexion());
                 retorno = comando.ExecuteNonQuery();
 
@@ -49,7 +49,7 @@ namespace Trabajo_grupal
             {
                 int retorno = 0;
                 Conexion.opoencon();
-                SqlCommand comando = new SqlCommand(string.Format("Delete From Clientes where Codigo = {0}", pId), Conexion.ObtenerConexion());
+                SqlCommand comando = new SqlCommand(string.Format("Delete From Clientes where ID_Cliente = {0}", pId), Conexion.ObtenerConexion());
                 retorno = comando.ExecuteNonQuery();
                 Conexion.cerrarcon();
                 return retorno;
@@ -66,7 +66,7 @@ namespace Trabajo_grupal
             {
 
                 SqlCommand comando = new SqlCommand(String.Format(
-               "SELECT Codigo,Cedula, Nombre, APellido, Telefono, Direccion, Correo,Fecha_de_Ingreso FROM  where codigo like '%{0}%' and telefono like '%{1}%' ", pNombre, pTelefono),
+               "SELECT ID_Cliente, Nombre, Apellido, Direccion, Telefono, Correo,Fecha_de_Ingreso FROM Clientes where Nombre like '%{0}%' and Telefono like '%{1}%' ", pNombre, pTelefono),
                     Conexion.ObtenerConexion());
 
                 SqlDataReader reader = comando.ExecuteReader();
@@ -93,7 +93,7 @@ namespace Trabajo_grupal
             {
                 DatosgetClientes pClientes = new DatosgetClientes();
                 SqlCommand comando = new SqlCommand(string.Format(
-                   "select Codigo, Nombre, Apellido, Direccion, Telefono,Correo,Fecha_de_Ingreso Fecha From Clientes where Codigo = {0}", pId), Conexion.ObtenerConexion());
+                   "select ID_Cliente, Nombre, Apellido, Direccion, Telefono,Correo,Fecha_de_ingreso Fecha From Clientes where ID_Cliente = {0}", pId), Conexion.ObtenerConexion());
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
@@ -103,7 +103,7 @@ namespace Trabajo_grupal
                     pClientes.Direccion = reader.GetString(3);
                     pClientes.Telefono = reader.GetString(4);
                     pClientes.Correo = reader.GetString(5);
-                    pClientes.Fecha_de_Ingreso = reader.GetDateTime(5);
+                    pClientes.Fecha_de_Ingreso = reader.GetDateTime(6);
 
                 }
 

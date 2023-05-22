@@ -23,7 +23,7 @@ namespace Trabajo_grupal
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

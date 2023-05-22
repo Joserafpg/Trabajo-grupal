@@ -26,5 +26,10 @@ namespace angel22mg
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

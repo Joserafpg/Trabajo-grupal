@@ -211,6 +211,12 @@
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Permisos.cs" />
+    <Compile Include="PlantillaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaEmpleado.Designer.cs">
+      <DependentUpon>PlantillaEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlantillaFactura.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -33,8 +33,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dtproductos = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
+            this.dtproductos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtproductos)).BeginInit();
@@ -93,14 +93,6 @@
             this.panel1.Size = new System.Drawing.Size(800, 48);
             this.panel1.TabIndex = 24;
             // 
-            // dtproductos
-            // 
-            this.dtproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtproductos.Location = new System.Drawing.Point(88, 119);
-            this.dtproductos.Name = "dtproductos";
-            this.dtproductos.Size = new System.Drawing.Size(593, 255);
-            this.dtproductos.TabIndex = 23;
-            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -114,6 +106,15 @@
             this.btnClose.TabIndex = 13;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // dtproductos
+            // 
+            this.dtproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtproductos.Location = new System.Drawing.Point(88, 119);
+            this.dtproductos.Name = "dtproductos";
+            this.dtproductos.Size = new System.Drawing.Size(593, 255);
+            this.dtproductos.TabIndex = 23;
+            this.dtproductos.DoubleClick += new System.EventHandler(this.dtproductos_DoubleClick);
             // 
             // label1
             // 
@@ -139,6 +140,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MateriaPantalonesNew";
             this.Text = "MateriaPantalonesNew";
+            this.Load += new System.EventHandler(this.MateriaPantalonesNew_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtproductos)).EndInit();
             this.ResumeLayout(false);

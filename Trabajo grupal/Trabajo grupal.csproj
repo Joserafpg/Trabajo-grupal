@@ -79,6 +79,7 @@
     <Compile Include="Clases\DatosgetMateriaPrima.cs" />
     <Compile Include="Clases\DatosgetEmpleados.cs" />
     <Compile Include="Clases\DatosgetInvPantalones.cs" />
+    <Compile Include="Clases\MateriaPrima.cs" />
     <Compile Include="Clases\Pantalones.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>

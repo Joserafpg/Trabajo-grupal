@@ -62,6 +62,7 @@ Fecha_de_ingreso datetime
 /*Tabla NuevoInventario*/
 create table NuevoInventario(
 Codigo INT IDENTITY (1,1) NOT NULL PRIMARY KEY,
+Id_Mercancia_Utilizada INT NOT NULL,
 Nombre_Mercancia Varchar (50),
 Descripcion Varchar (50),
 Tipo_Producto Varchar (50),

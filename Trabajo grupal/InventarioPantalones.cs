@@ -17,6 +17,20 @@ namespace Trabajo_grupal
         {
             InitializeComponent();
         }
+
+        void Next()
+        {
+            panelMateriaUtilizada.Visible = true;
+        }
+
+        private DataGridView _DTPantalones;
+        public DataGridView DTPantalones { get => _DTPantalones; set => _DTPantalones = value; }
+        
+        public void DT_PANTALON()
+        {
+            _DTPantalones = dtgDatos;
+        }
+
         public DatosgetInv InvPantalonActual { get; set; }
 
         private void button1_Click(object sender, EventArgs e)
@@ -103,6 +117,7 @@ namespace Trabajo_grupal
         private void InventarioPantalones_Load(object sender, EventArgs e)
         {
             dtgDatos.AllowUserToAddRows = false;
+            DT_PANTALON();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -149,6 +164,11 @@ namespace Trabajo_grupal
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Next();
         }
     }
 }

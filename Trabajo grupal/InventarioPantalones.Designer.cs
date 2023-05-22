@@ -54,6 +54,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panelMateriaUtilizada.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -63,6 +65,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.panelMateriaUtilizada);
             this.groupBox1.Controls.Add(this.cbSize);
             this.groupBox1.Controls.Add(this.label9);
@@ -92,11 +96,11 @@
             this.panelMateriaUtilizada.Controls.Add(this.label1);
             this.panelMateriaUtilizada.Controls.Add(this.txtcodigo);
             this.panelMateriaUtilizada.Controls.Add(this.groupBox2);
-            this.panelMateriaUtilizada.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMateriaUtilizada.Location = new System.Drawing.Point(3, 23);
             this.panelMateriaUtilizada.Name = "panelMateriaUtilizada";
             this.panelMateriaUtilizada.Size = new System.Drawing.Size(642, 479);
             this.panelMateriaUtilizada.TabIndex = 23;
+            this.panelMateriaUtilizada.Visible = false;
             // 
             // label1
             // 
@@ -345,6 +349,33 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(651, 334);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(186, 64);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Siguiente";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(651, 408);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(186, 64);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Guardar mercancia";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // InventarioPantalones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,5 +428,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button agregaraldtg;
         private System.Windows.Forms.TextBox tctprecio;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -95,7 +95,6 @@ Inv_Minimo varchar (50),
 Precio decimal (38),
 )
 
-
 /*Tabla Empleados*/
 create table Empleados(
 Id_Empleados int IDENTITY (1,1) NOT NULL PRIMARY KEY,
@@ -181,6 +180,8 @@ go
 select * from NuevoInventario
 go
 
+SELECT Stock FROM InvPantalones WHERE Nombre_Producto = @Producto
+SELECT TOP 1 Stock FROM InvPantalones ORDER BY Stock DESC
 
 
 select * from Factura where No_Factura = 10;

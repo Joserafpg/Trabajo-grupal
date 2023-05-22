@@ -348,7 +348,9 @@ namespace Trabajo_grupal
         {
             SqlCommand agregar = new SqlCommand("INSERT INTO MercanciaUtilizada VALUES (@Id_Pantalon, @Id_Materiales, @Nombre, @Descripcion, @Medida, @Precio, @Cantidad, @SubTotal)", conn);
             string verificarQuery = "SELECT Stock FROM NuevoInventario WHERE Nombre_Mercancia = @Nombre";
-            string actualizarQuery = "UPDATE NuevoInventario SET Stock = Stock - @Cantidad WHERE Nombre_Mercancia = @Nombre";
+            string query = "SELECT TOP 1 Stock FROM InvPantalones ORDER BY Stock DESC";
+            string actualizarQuery = "UPDATE NuevoInventario SET Stock = Stock - (@Cantidad * (SELECT TOP 1 Stock FROM InvPantalones ORDER BY Stock DESC)) WHERE Nombre_Mercancia = @Nombre";
+
 
             conn.Open();
 

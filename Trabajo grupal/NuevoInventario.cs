@@ -19,7 +19,7 @@ namespace Trabajo_grupal
         {
             InitializeComponent();
         }
-        public DatosgetFactura MateriaPrimaActual { get; set; }
+        public DatosgetMateriaPrima MateriaPrimaActual { get; set; }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -38,20 +38,18 @@ namespace Trabajo_grupal
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            DatosgetFactura datosget = new DatosgetFactura();
+            DatosgetMateriaPrima datosget = new DatosgetMateriaPrima();
 
 
-            datosget.Codigo = txtcodigo.Text;
+            datosget.Codigo = Convert.ToInt64(txtcodigo.Text);
             datosget.Nombre_Mercancia = CBNom.Text;
             datosget.Descripcion = txtDescripcion.Text;
             datosget.Tipo_Producto = CBtipodep.Text;
-            datosget.Docenas = chDocenas.Checked;
-            datosget.Unidad = chUnidad.Checked;
-            datosget.Lotes = chlotes.Checked;
-            datosget.Cantidad = txtcantidad.Text;
-            datosget.Inv_Minimo = txtInvMinimo.Text;
-            datosget.Color_Producto = CBcolor.Text;
-            datosget.Precio_Compra = txtpreciocompra.Text;
+            datosget.Unidad_Medida = txtunidadmedida.Text;
+            datosget.Stock = Convert.ToInt32(txtcantidad.Text);
+            datosget.Inv_Minimo = Convert.ToInt32(txtInvMinimo.Text);
+            datosget.Precio_Compra = Convert.ToDecimal(txtpreciocompra.Text);
+            datosget.Fecha_Ingreso = Convert.ToDateTime(dateTimePicker1.Value);
 
             int resultado = Datosbasedt.agregar(datosget);
 
@@ -81,12 +79,15 @@ namespace Trabajo_grupal
                 CBNom.Text = pBuscar.MateriaPrimaSeleccionada.Nombre_Mercancia;
                 txtDescripcion.Text = pBuscar.MateriaPrimaSeleccionada.Descripcion;
                 CBtipodep.Text = pBuscar.MateriaPrimaSeleccionada.Tipo_Producto;
-                chDocenas.Checked = pBuscar.MateriaPrimaSeleccionada.Docenas;
-                chUnidad.Checked = pBuscar.MateriaPrimaSeleccionada.Unidad;
-                chlotes.Checked = pBuscar.MateriaPrimaSeleccionada.Lotes;
+                txtunidadmedida.Text = pBuscar.MateriaPrimaSeleccionada.Unidad_Medida;
+                txtcantidad.Text = pBuscar.MateriaPrimaSeleccionada.Stock;
+                txtInvMinimo.Text = pBuscar.MateriaPrimaSeleccionada.InvMinimo;
+                txtpreciocompra.Text = pBuscar.MateriaPrimaSeleccionada.Preciocompra;
+                dateTimePicker1.Value = pBuscar.MateriaPrimaSeleccionada.Fecha_Inngreso;
+                
              
-                CBcolor.Text = pBuscar.MateriaPrimaSeleccionada.Color_Producto;
-                txtpreciocompra.Text = pBuscar.MateriaPrimaSeleccionada.Precio_Compra;
+               
+                
 
 
                 btnguardar.Enabled = false;
@@ -99,20 +100,19 @@ namespace Trabajo_grupal
 
         private void btnmodificar_Click(object sender, EventArgs e)
         {
-            DatosgetFactura pNuevaMercancia = new DatosgetFactura();
+            DatosgetMateriaPrima pNuevaMercancia = new DatosgetMateriaPrima();
 
 
-            pNuevaMercancia.Codigo = txtcodigo.Text;
+            pNuevaMercancia.Codigo = Convert.ToInt64(txtcodigo.Text);
             pNuevaMercancia.Nombre_Mercancia = CBNom.Text;
             pNuevaMercancia.Descripcion = txtDescripcion.Text;
             pNuevaMercancia.Tipo_Producto = CBtipodep.Text;
-            pNuevaMercancia.Docenas = chDocenas.Checked;
-            pNuevaMercancia.Unidad = chUnidad.Checked;
-            pNuevaMercancia.Lotes = chlotes.Checked;
-            pNuevaMercancia.Cantidad = txtcantidad.Text;
-            pNuevaMercancia.Inv_Minimo = txtInvMinimo.Text;
-            pNuevaMercancia.Color_Producto = CBcolor.Text;
-            pNuevaMercancia.Precio_Compra = txtpreciocompra.Text;
+            pNuevaMercancia.Unidad_Medida = txtunidadmedida.Text;
+            pNuevaMercancia.Stock = Convert.ToInt32(txtcantidad.Text);
+            pNuevaMercancia.Inv_Minimo = Convert.ToInt32(txtInvMinimo.Text);
+            
+            pNuevaMercancia.Precio_Compra = Convert.ToDecimal(txtpreciocompra.Text);
+            pNuevaMercancia.Fecha_Ingreso = Convert.ToDateTime(dateTimePicker1.Value);
 
             int Resultado = Datosbasedt.Modificar(pNuevaMercancia);
 

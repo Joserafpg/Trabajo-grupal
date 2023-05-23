@@ -33,20 +33,15 @@
             this.btnmodificar = new System.Windows.Forms.Button();
             this.txtInvMinimo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.chlotes = new System.Windows.Forms.RadioButton();
-            this.chUnidad = new System.Windows.Forms.RadioButton();
-            this.chDocenas = new System.Windows.Forms.RadioButton();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtpreciocompra = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.CBtipodep = new System.Windows.Forms.ComboBox();
-            this.CBcolor = new System.Windows.Forms.ComboBox();
             this.CBNom = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,29 +49,32 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtunidadmedida = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtunidadmedida);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.btnbuscar);
             this.groupBox1.Controls.Add(this.btnmodificar);
             this.groupBox1.Controls.Add(this.txtInvMinimo);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.chlotes);
-            this.groupBox1.Controls.Add(this.chUnidad);
-            this.groupBox1.Controls.Add(this.chDocenas);
             this.groupBox1.Controls.Add(this.txtcodigo);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btneliminar);
             this.groupBox1.Controls.Add(this.btnguardar);
             this.groupBox1.Controls.Add(this.txtcantidad);
             this.groupBox1.Controls.Add(this.txtDescripcion);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtpreciocompra);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.CBtipodep);
-            this.groupBox1.Controls.Add(this.CBcolor);
             this.groupBox1.Controls.Add(this.CBNom);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -98,7 +96,7 @@
             this.btnbuscar.FlatAppearance.BorderSize = 0;
             this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnbuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnbuscar.Location = new System.Drawing.Point(589, 131);
+            this.btnbuscar.Location = new System.Drawing.Point(624, 117);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(180, 56);
             this.btnbuscar.TabIndex = 33;
@@ -112,7 +110,7 @@
             this.btnmodificar.FlatAppearance.BorderSize = 0;
             this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmodificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnmodificar.Location = new System.Drawing.Point(589, 206);
+            this.btnmodificar.Location = new System.Drawing.Point(624, 192);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(180, 56);
             this.btnmodificar.TabIndex = 32;
@@ -122,66 +120,35 @@
             // 
             // txtInvMinimo
             // 
-            this.txtInvMinimo.Location = new System.Drawing.Point(286, 356);
+            this.txtInvMinimo.Location = new System.Drawing.Point(286, 374);
             this.txtInvMinimo.Name = "txtInvMinimo";
-            this.txtInvMinimo.Size = new System.Drawing.Size(257, 31);
+            this.txtInvMinimo.Size = new System.Drawing.Size(286, 31);
             this.txtInvMinimo.TabIndex = 31;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(83, 359);
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(83, 377);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(109, 22);
+            this.label10.Size = new System.Drawing.Size(95, 21);
             this.label10.TabIndex = 30;
             this.label10.Text = "Inv.Minimo";
             // 
-            // chlotes
-            // 
-            this.chlotes.AutoSize = true;
-            this.chlotes.Location = new System.Drawing.Point(425, 271);
-            this.chlotes.Name = "chlotes";
-            this.chlotes.Size = new System.Drawing.Size(75, 26);
-            this.chlotes.TabIndex = 29;
-            this.chlotes.TabStop = true;
-            this.chlotes.Text = "Lotes";
-            this.chlotes.UseVisualStyleBackColor = true;
-            // 
-            // chUnidad
-            // 
-            this.chUnidad.AutoSize = true;
-            this.chUnidad.Location = new System.Drawing.Point(306, 271);
-            this.chUnidad.Name = "chUnidad";
-            this.chUnidad.Size = new System.Drawing.Size(94, 26);
-            this.chUnidad.TabIndex = 28;
-            this.chUnidad.TabStop = true;
-            this.chUnidad.Text = "Unidad";
-            this.chUnidad.UseVisualStyleBackColor = true;
-            // 
-            // chDocenas
-            // 
-            this.chDocenas.AutoSize = true;
-            this.chDocenas.Location = new System.Drawing.Point(156, 271);
-            this.chDocenas.Name = "chDocenas";
-            this.chDocenas.Size = new System.Drawing.Size(110, 26);
-            this.chDocenas.TabIndex = 27;
-            this.chDocenas.TabStop = true;
-            this.chDocenas.Text = "Docenas";
-            this.chDocenas.UseVisualStyleBackColor = true;
-            // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(286, 52);
+            this.txtcodigo.Location = new System.Drawing.Point(286, 51);
             this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(257, 31);
+            this.txtcodigo.Size = new System.Drawing.Size(286, 31);
             this.txtcodigo.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(83, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 22);
+            this.label2.Size = new System.Drawing.Size(68, 21);
             this.label2.TabIndex = 23;
             this.label2.Text = "Codigo";
             // 
@@ -191,7 +158,7 @@
             this.btneliminar.FlatAppearance.BorderSize = 0;
             this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btneliminar.Location = new System.Drawing.Point(589, 374);
+            this.btneliminar.Location = new System.Drawing.Point(624, 360);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(180, 56);
             this.btneliminar.TabIndex = 22;
@@ -205,7 +172,7 @@
             this.btnguardar.FlatAppearance.BorderSize = 0;
             this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnguardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnguardar.Location = new System.Drawing.Point(589, 290);
+            this.btnguardar.Location = new System.Drawing.Point(624, 276);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(180, 56);
             this.btnguardar.TabIndex = 21;
@@ -215,9 +182,9 @@
             // 
             // txtcantidad
             // 
-            this.txtcantidad.Location = new System.Drawing.Point(286, 303);
+            this.txtcantidad.Location = new System.Drawing.Point(286, 321);
             this.txtcantidad.Name = "txtcantidad";
-            this.txtcantidad.Size = new System.Drawing.Size(257, 31);
+            this.txtcantidad.Size = new System.Drawing.Size(286, 31);
             this.txtcantidad.TabIndex = 20;
             // 
             // txtDescripcion
@@ -225,31 +192,23 @@
             this.txtDescripcion.Location = new System.Drawing.Point(286, 142);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(257, 71);
+            this.txtDescripcion.Size = new System.Drawing.Size(286, 71);
             this.txtDescripcion.TabIndex = 19;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(83, 408);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(178, 22);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Color de Producto";
             // 
             // txtpreciocompra
             // 
-            this.txtpreciocompra.Location = new System.Drawing.Point(286, 454);
+            this.txtpreciocompra.Location = new System.Drawing.Point(286, 424);
             this.txtpreciocompra.Name = "txtpreciocompra";
-            this.txtpreciocompra.Size = new System.Drawing.Size(257, 31);
+            this.txtpreciocompra.Size = new System.Drawing.Size(286, 31);
             this.txtpreciocompra.TabIndex = 12;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(83, 457);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(83, 427);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(142, 22);
+            this.label7.Size = new System.Drawing.Size(122, 21);
             this.label7.TabIndex = 11;
             this.label7.Text = "PrecioCompra";
             // 
@@ -271,24 +230,8 @@
             "Pequeño"});
             this.CBtipodep.Location = new System.Drawing.Point(286, 231);
             this.CBtipodep.Name = "CBtipodep";
-            this.CBtipodep.Size = new System.Drawing.Size(257, 30);
+            this.CBtipodep.Size = new System.Drawing.Size(286, 30);
             this.CBtipodep.TabIndex = 9;
-            // 
-            // CBcolor
-            // 
-            this.CBcolor.FormattingEnabled = true;
-            this.CBcolor.Items.AddRange(new object[] {
-            "Rojo",
-            "Azul",
-            "Negro",
-            "Blanco",
-            "Gris",
-            "Caqui",
-            "Verde "});
-            this.CBcolor.Location = new System.Drawing.Point(286, 405);
-            this.CBcolor.Name = "CBcolor";
-            this.CBcolor.Size = new System.Drawing.Size(257, 30);
-            this.CBcolor.TabIndex = 8;
             // 
             // CBNom
             // 
@@ -300,7 +243,7 @@
             "Hilo"});
             this.CBNom.Location = new System.Drawing.Point(286, 96);
             this.CBNom.Name = "CBNom";
-            this.CBNom.Size = new System.Drawing.Size(257, 30);
+            this.CBNom.Size = new System.Drawing.Size(286, 30);
             this.CBNom.TabIndex = 7;
             // 
             // label5
@@ -315,27 +258,30 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(83, 306);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(83, 324);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 22);
+            this.label4.Size = new System.Drawing.Size(87, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "Cantidad";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(83, 234);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 22);
+            this.label3.Size = new System.Drawing.Size(145, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tipo de producto";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(83, 99);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 22);
+            this.label1.Size = new System.Drawing.Size(158, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "NombreMercancia";
             // 
@@ -362,6 +308,41 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(83, 278);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(157, 21);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Unidad de Medida";
+            // 
+            // txtunidadmedida
+            // 
+            this.txtunidadmedida.Location = new System.Drawing.Point(286, 274);
+            this.txtunidadmedida.Name = "txtunidadmedida";
+            this.txtunidadmedida.Size = new System.Drawing.Size(286, 31);
+            this.txtunidadmedida.TabIndex = 35;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(83, 474);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(145, 21);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Fecha de Ingreso";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(286, 472);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(286, 23);
+            this.dateTimePicker1.TabIndex = 37;
+            // 
             // NuevoInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,7 +366,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CBtipodep;
-        private System.Windows.Forms.ComboBox CBcolor;
         private System.Windows.Forms.ComboBox CBNom;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -394,7 +374,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtpreciocompra;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtcantidad;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnguardar;
@@ -403,10 +382,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtInvMinimo;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton chlotes;
-        private System.Windows.Forms.RadioButton chUnidad;
-        private System.Windows.Forms.RadioButton chDocenas;
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Button btnmodificar;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtunidadmedida;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -6,36 +6,32 @@ using System.Threading.Tasks;
 
 namespace Trabajo_grupal.Clases
 {
-    public class DatosgetFactura
+    public class DatosgetMateriaPrima
     {
-        public string Codigo { get; set; }
+        public Int64 Codigo { get; set; }
         public string Nombre_Mercancia { get; set; }
         public string Descripcion { get; set; }
         public string Tipo_Producto { get; set; }
-        public bool Docenas { get; set; }
-        public bool Unidad { get; set; }
-        public bool Lotes { get; set; }
-        public string Cantidad { get; set; }
-        public string Inv_Minimo { get; set; }
-        public string Color_Producto { get; set; }
-        public string Precio_Compra { get; set; }
+        public string Unidad_Medida { get; set; }
+        public int Stock { get; set; }
+        public int Inv_Minimo { get; set; }
+        public decimal Precio_Compra { get; set; }
+        public DateTime Fecha_Ingreso { get; set; }
         
-        public DatosgetFactura() { }
+        public DatosgetMateriaPrima() { }
 
-        public DatosgetFactura(string pCodigo, string pNombre_Mercancia, string pDescripcion, string pTipo_Producto, bool Docenas, bool Unidad, 
-            bool Lotes,string pCantidad,  string pInv_Minimo, string pColor_Producto, string Precio_Compra)
+        public DatosgetMateriaPrima(Int64 pCodigo, string pNombre_Mercancia, string pDescripcion, string pTipo_Producto,  
+            string pUnidad_Medida,int pStock,  int pInv_Minimo, DateTime Fecha_Ingreso, decimal Precio_Compra )
         {
-            this.Codigo = pCodigo;
+            this.Codigo = Codigo;
             this.Nombre_Mercancia = pNombre_Mercancia;
             this.Descripcion = pDescripcion;
             this.Tipo_Producto = pTipo_Producto;
-            this.Docenas = Docenas;
-            this.Unidad = Unidad;
-            this.Lotes = Lotes;
-            this.Cantidad = pCantidad;
+            this.Unidad_Medida = pUnidad_Medida;
+            this.Stock = pStock;
             this.Inv_Minimo = pInv_Minimo;
-            this.Color_Producto = pColor_Producto;
             this.Precio_Compra = Precio_Compra;
+            this.Fecha_Ingreso = Fecha_Ingreso;
             
         }
     }

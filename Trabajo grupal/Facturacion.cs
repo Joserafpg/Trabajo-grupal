@@ -80,6 +80,18 @@ namespace Trabajo_grupal
                 return; // Salir del método sin ejecutar el código restante
             }
 
+            else if (string.IsNullOrEmpty(ccliente.Text))
+            {
+                MessageBox.Show("Por favor selecciona un cliente");
+                return; // Salir del método sin ejecutar el código restante
+            }
+            
+            else if (string.IsNullOrEmpty(cempleado.Text))
+            {
+                MessageBox.Show("Por favor selecciona un empleado");
+                return; // Salir del método sin ejecutar el código restante
+            }
+
             FacturarEfectivo();
         }
 
@@ -134,10 +146,7 @@ namespace Trabajo_grupal
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Limpiar();
-            btncredito.Visible = true;
-            btnefectivo.Visible = false;
-
+            FacturarEfectivoOFF();
         }
 
         private void btncredito_Click(object sender, EventArgs e)
@@ -365,7 +374,6 @@ namespace Trabajo_grupal
         }
 
         
-
         private void txttotal_TextChanged(object sender, EventArgs e)
         {
             txtdinero.Text = txttotal.Text;
@@ -437,6 +445,7 @@ namespace Trabajo_grupal
         private void btndeshacer_Click(object sender, EventArgs e)
         {
             Limpiar();
+            txttotal.Clear();
         }
     }
 }

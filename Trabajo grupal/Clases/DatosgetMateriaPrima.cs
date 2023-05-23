@@ -23,7 +23,7 @@ namespace Trabajo_grupal.Clases
         public DatosgetMateriaPrima(Int64 pCodigo, string pNombre_Mercancia, string pDescripcion, string pTipo_Producto,  
             string pUnidad_Medida,int pStock,  int pInv_Minimo, DateTime Fecha_Ingreso, decimal Precio_Compra )
         {
-            this.Codigo = Codigo;
+            this.Codigo = Codigo = pCodigo;
             this.Nombre_Mercancia = pNombre_Mercancia;
             this.Descripcion = pDescripcion;
             this.Tipo_Producto = pTipo_Producto;

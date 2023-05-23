@@ -123,12 +123,7 @@ namespace Trabajo_grupal
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Cliente_Load(object sender, EventArgs e)
+        private void Cliente_Load_1(object sender, EventArgs e)
         {
             btnmodificar.Enabled = false;
             btneliminar.Enabled = false;

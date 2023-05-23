@@ -15,9 +15,9 @@ namespace Trabajo_grupal.Clases
             int retorno = 0;
 
             Conexion.opoencon();
-            SqlCommand comando = new SqlCommand(string.Format(" insert into NuevoInventario (Codigo, Nombre_Mercancia, Descripcion, Tipo_Producto, Unidad_Medida, Stock, Inv_Minimo, Precio_Compra, Fecha_Ingreso) " +
-                "values ('{0}','{1}','{2}','{3}','{4}', '{5}','{6}','{7}','{8}')",
-                    pget.Codigo, pget.Nombre_Mercancia, pget.Descripcion, pget.Tipo_Producto, pget.Unidad_Medida, pget.Stock, pget.Inv_Minimo, pget.Precio_Compra, pget.Fecha_Ingreso), Conexion.ObtenerConexion());
+            SqlCommand comando = new SqlCommand(string.Format(" insert into NuevoInventario (Nombre_Mercancia, Descripcion, Tipo_Producto, Unidad_Medida, Stock, Inv_Minimo, Precio_Compra, Fecha_Ingreso) " +
+                "values ('{0}','{1}','{2}','{3}','{4}', '{5}','{6}','{7}')",
+                   pget.Nombre_Mercancia, pget.Descripcion, pget.Tipo_Producto, pget.Unidad_Medida, pget.Stock, pget.Inv_Minimo, pget.Precio_Compra, pget.Fecha_Ingreso.ToString("yyyy-MM-dd HH:mm:ss")), Conexion.ObtenerConexion());
 
             retorno = comando.ExecuteNonQuery();
             Conexion.cerrarcon();
@@ -33,8 +33,7 @@ namespace Trabajo_grupal.Clases
             Conexion.opoencon();
             {
                 SqlCommand comando = new SqlCommand(string.Format("Update NuevoInventario set Nombre_Mercancia ='{0}', Descripcion='{1}',Tipo_Producto='{2}', Unidad_Medida='{3}' ,Stock='{4}',Inv_Minimo='{5}', Precio_Compra ='{6}', Fecha_Ingreso = '{7}' where Codigo={8}",
-                     pNuevoInventario.Codigo, pNuevoInventario.Nombre_Mercancia, pNuevoInventario.Descripcion, pNuevoInventario.Tipo_Producto, pNuevoInventario.Unidad_Medida,  pNuevoInventario.Stock, pNuevoInventario.Inv_Minimo,
-                     pNuevoInventario.Precio_Compra, pNuevoInventario.Fecha_Ingreso), Conexion.ObtenerConexion());
+                     pNuevoInventario.Codigo, pNuevoInventario.Nombre_Mercancia, pNuevoInventario.Descripcion, pNuevoInventario.Tipo_Producto, pNuevoInventario.Unidad_Medida,  pNuevoInventario.Stock, pNuevoInventario.Inv_Minimo,pNuevoInventario.Precio_Compra, pNuevoInventario.Fecha_Ingreso.ToString("yyyy-MM-dd HH:mm:ss")), Conexion.ObtenerConexion());
                 retorno = comando.ExecuteNonQuery();
             }
             Conexion.cerrarcon();
@@ -50,14 +49,14 @@ namespace Trabajo_grupal.Clases
             return retorno;
         }
 
-        public static List<DatosgetMateriaPrima> BuscarNuevoInventario(string pNombre_Mercancia, Int64 pCodigo)
+        public static List<DatosgetMateriaPrima> BuscarNuevoInventario(string pNombre_Mercancia, string pCodigo)
         {
             List<DatosgetMateriaPrima> lista = new List<DatosgetMateriaPrima>();
             Conexion.opoencon();
             {
 
                 SqlCommand comando = new SqlCommand(String.Format(
-                    "SELECT  Nombre_Mercancia, Descripcion, Tipo_Producto, Unidad_Medida, Stock, Inv_Minimo, Precio_Compra, Fecha_Ingreso FROM NuevoInventario  where Codigo like '%{0}%'", pNombre_Mercancia, pCodigo), Conexion.ObtenerConexion());
+                    "SELECT Codigo, Nombre_Mercancia, Descripcion, Tipo_Producto, Unidad_Medida, Stock, Inv_Minimo, Precio_Compra, Fecha_Ingreso FROM NuevoInventario  where Codigo like '%{0}%'", pNombre_Mercancia, pCodigo), Conexion.ObtenerConexion());
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {

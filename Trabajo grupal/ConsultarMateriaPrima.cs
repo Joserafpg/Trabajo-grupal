@@ -17,7 +17,7 @@ namespace Trabajo_grupal
         {
             InitializeComponent();
         }
-        public DatosgetFactura MateriaPrimaSeleccionada { get; set; }
+        public DatosgetMateriaPrima MateriaPrimaSeleccionada { get; set; }
         private void btnaceptar_Click(object sender, EventArgs e)
         {
             if (datagrieldv.SelectedRows.Count == 1)
@@ -34,7 +34,7 @@ namespace Trabajo_grupal
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
-            datagrieldv.DataSource = Datosbasedt.BuscarNuevoInventario(txtcodigo.Text, txtNombre.Text);
+            datagrieldv.DataSource = Datosbasedt.BuscarNuevoInventario(txtNombre.Text,txtcodigo.Text);
         }
 
         private void ConsultarMateriaPrima_Load(object sender, EventArgs e)
@@ -46,6 +46,11 @@ namespace Trabajo_grupal
         {
          
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -40,8 +40,6 @@ namespace Trabajo_grupal
         {
             DatosgetMateriaPrima datosget = new DatosgetMateriaPrima();
 
-
-            datosget.Codigo = Convert.ToInt64(txtcodigo.Text);
             datosget.Nombre_Mercancia = CBNom.Text;
             datosget.Descripcion = txtDescripcion.Text;
             datosget.Tipo_Producto = CBtipodep.Text;
@@ -80,16 +78,11 @@ namespace Trabajo_grupal
                 txtDescripcion.Text = pBuscar.MateriaPrimaSeleccionada.Descripcion;
                 CBtipodep.Text = pBuscar.MateriaPrimaSeleccionada.Tipo_Producto;
                 txtunidadmedida.Text = pBuscar.MateriaPrimaSeleccionada.Unidad_Medida;
-                txtcantidad.Text = pBuscar.MateriaPrimaSeleccionada.Stock;
-                txtInvMinimo.Text = pBuscar.MateriaPrimaSeleccionada.InvMinimo;
-                txtpreciocompra.Text = pBuscar.MateriaPrimaSeleccionada.Preciocompra;
-                dateTimePicker1.Value = pBuscar.MateriaPrimaSeleccionada.Fecha_Inngreso;
-                
-             
-               
-                
-
-
+                txtcantidad.Text = pBuscar.MateriaPrimaSeleccionada.Stock.ToString();
+                txtInvMinimo.Text = pBuscar.MateriaPrimaSeleccionada.Inv_Minimo.ToString();
+                txtpreciocompra.Text = pBuscar.MateriaPrimaSeleccionada.Precio_Compra.ToString();
+                dateTimePicker1.Value = pBuscar.MateriaPrimaSeleccionada.Fecha_Ingreso;
+                              
                 btnguardar.Enabled = false;
                 btnmodificar.Enabled = true;
                 btneliminar.Enabled = true;

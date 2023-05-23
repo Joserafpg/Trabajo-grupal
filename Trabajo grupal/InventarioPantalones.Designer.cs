@@ -69,21 +69,21 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.btnsiguiente);
             this.groupBox1.Controls.Add(this.panelMateriaUtilizada);
             this.groupBox1.Controls.Add(this.cbSize);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.btnbuscar);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.btneliminar);
-            this.groupBox1.Controls.Add(this.btnguardar);
             this.groupBox1.Controls.Add(this.txtinvminimo);
             this.groupBox1.Controls.Add(this.txtstock);
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.txtNombreProducto);
+            this.groupBox1.Controls.Add(this.btnsiguiente);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.btnguardar);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(40, 34);
@@ -136,7 +136,7 @@
             this.panelMateriaUtilizada.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelMateriaUtilizada.Location = new System.Drawing.Point(3, 23);
             this.panelMateriaUtilizada.Name = "panelMateriaUtilizada";
-            this.panelMateriaUtilizada.Size = new System.Drawing.Size(642, 479);
+            this.panelMateriaUtilizada.Size = new System.Drawing.Size(625, 479);
             this.panelMateriaUtilizada.TabIndex = 23;
             this.panelMateriaUtilizada.Visible = false;
             // 

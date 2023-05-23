@@ -107,7 +107,41 @@ namespace Trabajo_grupal
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Facturacion frm = Owner as Facturacion;
 
+            string codigo = dtproductos.CurrentRow.Cells[0].Value.ToString();
+            string nombre = dtproductos.CurrentRow.Cells[1].Value.ToString();
+            string size = dtproductos.CurrentRow.Cells[2].Value.ToString();
+            string precio = dtproductos.CurrentRow.Cells[3].Value.ToString();
+            int nuevoValor = 1;
+
+            // Verifica si ya existe un registro con los mismos valores en las primeras cuatro columnas
+            bool existeRegistro = false;
+            foreach (DataGridViewRow row in frm.DTPantalones.Rows)
+            {
+                string codigoExistente = row.Cells[0].Value.ToString();
+                string nombreExistente = row.Cells[1].Value.ToString();
+                string sizeExistente = row.Cells[2].Value.ToString();
+                string precioExistente = row.Cells[3].Value.ToString();
+
+                if (codigo == codigoExistente && nombre == nombreExistente && size == sizeExistente && precio == precioExistente)
+                {
+                    // El registro ya existe, suma el quinto valor existente con el nuevo valor
+                    int valorExistente = Convert.ToInt32(row.Cells[4].Value);
+                    int valorSumado = valorExistente + nuevoValor;
+                    row.Cells[4].Value = valorSumado;
+                    existeRegistro = true;
+                    break;
+                }
+            }
+
+            if (!existeRegistro)
+            {
+                // El registro no existe, agrega una nueva fila con los valores
+                frm.DTPantalones.Rows.Add(codigo, nombre, size, precio, nuevoValor);
+            }
+
+            this.Close();
         }
     }
 }

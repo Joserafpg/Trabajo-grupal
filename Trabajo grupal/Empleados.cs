@@ -67,6 +67,8 @@ namespace Trabajo_grupal
         private void Empleados_Load(object sender, EventArgs e)
         {
             btnagregar.Visible = false;
+            btnmodificar.Enabled = false;
+            btneliminar.Enabled = false;
             panelsueldo.Visible = false;
             CargarComboBox();
         }

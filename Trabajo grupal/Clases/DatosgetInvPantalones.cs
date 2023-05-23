@@ -13,19 +13,17 @@ namespace Trabajo_grupal.Clases
         public string Size { get; set; }
         public int Stock { get; set; }
         public string Inv_Minimo { get; set; }
-        public string Mercancia_Utilizada { get; set; }
         public decimal Precio { get; set; }
 
         public DatosgetInv() { }
 
-        public DatosgetInv(Int64 pCodigo, string pNombre_Producto,  string pSize, int pStock, string pInv_Minimo, string pMercancia_Utilizada, decimal pPrecio)
+        public DatosgetInv(Int64 pCodigo, string pNombre_Producto,  string pSize, int pStock, string pInv_Minimo, decimal pPrecio)
         {
             this.Codigo = pCodigo;
             this.Nombre_Producto = pNombre_Producto;
             this.Size = pSize;
             this.Stock = pStock;
             this.Inv_Minimo = pInv_Minimo;
-            this.Mercancia_Utilizada = pMercancia_Utilizada;
             this.Precio = pPrecio;
             
 

@@ -137,6 +137,7 @@
             this.btnClose.Size = new System.Drawing.Size(45, 25);
             this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ConsultarMateriaPrima
             // 

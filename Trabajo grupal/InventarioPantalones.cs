@@ -152,6 +152,8 @@ namespace Trabajo_grupal
         private void InventarioPantalones_Load(object sender, EventArgs e)
         {
             dtgDatos.AllowUserToAddRows = false;
+            btnModificar.Enabled = false;
+            btneliminar.Enabled = false;
             DT_PANTALON();
         }
 
@@ -334,9 +336,18 @@ namespace Trabajo_grupal
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Next();
-            btnguardar.Visible = true;
-            btnsiguiente.Visible = false;
+            if (string.IsNullOrEmpty(txtNombreProducto.Text) || string.IsNullOrEmpty(cbSize.Text) || string.IsNullOrEmpty(txtstock.Text) || string.IsNullOrEmpty(txtinvminimo.Text))
+            {
+                MessageBox.Show("Por favor llenar todos los campos");
+            }
+
+            else
+            {
+                Next();
+                btnguardar.Visible = true;
+                btnsiguiente.Visible = false;
+            }
+            
         }
 
         private void dtgDatos_CurrentCellChanged(object sender, EventArgs e)

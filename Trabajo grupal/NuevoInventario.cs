@@ -63,7 +63,6 @@ namespace Trabajo_grupal
             {
                 MessageBox.Show(" No se Pudieron Guardar Datos de Materia Prima  ", "Error al Guardar ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)
@@ -87,16 +86,12 @@ namespace Trabajo_grupal
                 btnmodificar.Enabled = true;
                 btneliminar.Enabled = true;
             }
-
-
         }
 
         private void btnmodificar_Click(object sender, EventArgs e)
         {
             DatosgetMateriaPrima pNuevaMercancia = new DatosgetMateriaPrima();
 
-
-            pNuevaMercancia.Codigo = Convert.ToInt64(txtcodigo.Text);
             pNuevaMercancia.Nombre_Mercancia = CBNom.Text;
             pNuevaMercancia.Descripcion = txtDescripcion.Text;
             pNuevaMercancia.Tipo_Producto = CBtipodep.Text;
@@ -124,19 +119,10 @@ namespace Trabajo_grupal
             }
         }
 
-        private void btncancelar_Click(object sender, EventArgs e)
+        private void NuevoInventario_Load(object sender, EventArgs e)
         {
-           
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btndeshacer_Click(object sender, EventArgs e)
-        {
-            
+            btnmodificar.Enabled = false;
+            btneliminar.Enabled = false;
         }
     }
 }

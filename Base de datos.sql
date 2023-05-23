@@ -183,10 +183,18 @@ go
 SELECT ID_Cliente, Nombre, Apellido, Direccion, Telefono, Correo,Fecha_de_Ingreso FROM Clientes where Nombre like '%{0}%' and Telefono like '%{1}%'
 
 SELECT Stock FROM InvPantalones WHERE Nombre_Producto = @Producto
+
 SELECT TOP 1 Stock FROM InvPantalones ORDER BY Stock DESC
 
+SELECT  Codigo, Nombre_Producto, Size, Stock, Inv_Minimo, Precio FROM InvPantalones
 
-select * from Factura where No_Factura = 10;
+SELECT Empleado, Cliente, Fecha, Total FROM FacturaTittle where Id_Factura like '1' 
+
+SELECT * from Factura where No_Factura = '2'
+
+SELECT * from FacturaTittle where Id_Factura = '2'
+
+select Codigo, Producto, Size, Precio,Cantidad,SubTotal from Factura where No_Factura = 10;
 
 CREATE PROCEDURE SP_EMPLEADOCOMBOBOX
 AS

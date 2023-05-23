@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnsiguiente = new System.Windows.Forms.Button();
             this.panelMateriaUtilizada = new System.Windows.Forms.Panel();
             this.txtidmateria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,13 +50,15 @@
             this.btnbuscar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
-            this.btnguardar = new System.Windows.Forms.Button();
             this.txtinvminimo = new System.Windows.Forms.TextBox();
             this.txtstock = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
+            this.btnsiguiente = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnguardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -93,35 +93,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inventario Pantalones";
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(651, 264);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 64);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnsiguiente
-            // 
-            this.btnsiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnsiguiente.FlatAppearance.BorderSize = 0;
-            this.btnsiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsiguiente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnsiguiente.Location = new System.Drawing.Point(651, 264);
-            this.btnsiguiente.Name = "btnsiguiente";
-            this.btnsiguiente.Size = new System.Drawing.Size(186, 64);
-            this.btnsiguiente.TabIndex = 24;
-            this.btnsiguiente.Text = "Siguiente";
-            this.btnsiguiente.UseVisualStyleBackColor = false;
-            this.btnsiguiente.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // panelMateriaUtilizada
             // 
             this.panelMateriaUtilizada.Controls.Add(this.txtidmateria);
@@ -136,7 +107,7 @@
             this.panelMateriaUtilizada.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelMateriaUtilizada.Location = new System.Drawing.Point(3, 23);
             this.panelMateriaUtilizada.Name = "panelMateriaUtilizada";
-            this.panelMateriaUtilizada.Size = new System.Drawing.Size(625, 479);
+            this.panelMateriaUtilizada.Size = new System.Drawing.Size(630, 479);
             this.panelMateriaUtilizada.TabIndex = 23;
             this.panelMateriaUtilizada.Visible = false;
             // 
@@ -332,21 +303,6 @@
             this.btneliminar.UseVisualStyleBackColor = false;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
-            // btnguardar
-            // 
-            this.btnguardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnguardar.FlatAppearance.BorderSize = 0;
-            this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnguardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnguardar.Location = new System.Drawing.Point(651, 264);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(186, 64);
-            this.btnguardar.TabIndex = 12;
-            this.btnguardar.Text = "Guardar";
-            this.btnguardar.UseVisualStyleBackColor = false;
-            this.btnguardar.Visible = false;
-            this.btnguardar.Click += new System.EventHandler(this.button1_Click);
-            // 
             // txtinvminimo
             // 
             this.txtinvminimo.Location = new System.Drawing.Point(255, 258);
@@ -361,12 +317,41 @@
             this.txtstock.Size = new System.Drawing.Size(249, 27);
             this.txtstock.TabIndex = 9;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(651, 264);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(186, 64);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Guardar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // txtNombreProducto
             // 
             this.txtNombreProducto.Location = new System.Drawing.Point(255, 123);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(249, 27);
             this.txtNombreProducto.TabIndex = 8;
+            // 
+            // btnsiguiente
+            // 
+            this.btnsiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnsiguiente.FlatAppearance.BorderSize = 0;
+            this.btnsiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsiguiente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnsiguiente.Location = new System.Drawing.Point(651, 264);
+            this.btnsiguiente.Name = "btnsiguiente";
+            this.btnsiguiente.Size = new System.Drawing.Size(186, 64);
+            this.btnsiguiente.TabIndex = 24;
+            this.btnsiguiente.Text = "Siguiente";
+            this.btnsiguiente.UseVisualStyleBackColor = false;
+            this.btnsiguiente.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label5
             // 
@@ -382,9 +367,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(53, 215);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 21);
+            this.label3.Size = new System.Drawing.Size(87, 21);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Stock";
+            this.label3.Text = "Cantidad";
             // 
             // label2
             // 
@@ -394,6 +379,21 @@
             this.label2.Size = new System.Drawing.Size(145, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "NombreProducto";
+            // 
+            // btnguardar
+            // 
+            this.btnguardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnguardar.FlatAppearance.BorderSize = 0;
+            this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnguardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnguardar.Location = new System.Drawing.Point(651, 264);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(186, 64);
+            this.btnguardar.TabIndex = 12;
+            this.btnguardar.Text = "Guardar";
+            this.btnguardar.UseVisualStyleBackColor = false;
+            this.btnguardar.Visible = false;
+            this.btnguardar.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 

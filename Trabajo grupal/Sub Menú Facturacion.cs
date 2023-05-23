@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -38,6 +39,38 @@ namespace Trabajo_grupal
         {
             btnModificar.Enabled = Permisos.ModificarFACTURA;
             btneliminar.Enabled = Permisos.EliminarFACTURA;
+        }
+
+        private void btnconsultar_Click(object sender, EventArgs e)
+        {
+            SqlCommand comando = new SqlCommand("SELECT * from FacturaTittle where Id_Factura = @No_Factura", Conexion.ObtenerConexion());
+            comando.Parameters.AddWithValue("@No_Factura", txtnofactura.Text);
+            Conexion.opoencon();
+            SqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {
+                txtempleado.Text = registro["Empleado"].ToString();
+                txtcliente.Text = registro["Cliente"].ToString();
+                dtpfecha.Text = registro["Fecha"].ToString();
+                txttotal.Text = registro["Total"].ToString();
+
+            }
+            Conexion.cerrarcon();
+
+            String query = "select Codigo, Producto, Size, Precio, Cantidad, SubTotal from Factura where ";
+            if (btnconsultar.Text != "")
+            {
+                query = query + "( No_Factura like '%" + Convert.ToInt64(txtnofactura.Text) + "%')";
+            }
+
+            Conexion.opoencon();
+            SqlCommand cmd = new SqlCommand(query, Conexion.ObtenerConexion());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            Conexion.cerrarcon();
+
         }
     }
 }

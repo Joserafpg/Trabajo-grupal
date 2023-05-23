@@ -39,6 +39,7 @@ namespace Trabajo_grupal
         {
             btnModificar.Enabled = Permisos.ModificarFACTURA;
             btneliminar.Enabled = Permisos.EliminarFACTURA;
+            dataGridView1.AllowUserToAddRows = false;
         }
 
         private void btnconsultar_Click(object sender, EventArgs e)
@@ -50,6 +51,7 @@ namespace Trabajo_grupal
 
             else
             {
+                paneldetalles.Visible = true;
                 SqlCommand comando = new SqlCommand("SELECT * FROM FacturaTittle WHERE Id_Factura = @No_Factura", Conexion.ObtenerConexion());
                 comando.Parameters.AddWithValue("@No_Factura", txtnofactura.Text);
                 Conexion.opoencon();
@@ -63,7 +65,7 @@ namespace Trabajo_grupal
                 }
                 Conexion.cerrarcon();
 
-                string query = "SELECT No_Factura, Codigo, Producto, Size, Precio, Cantidad, SubTotal FROM Factura WHERE No_Factura = @No_Factura";
+                string query = "SELECT Codigo, Producto, Size, Precio, Cantidad, SubTotal FROM Factura WHERE No_Factura = @No_Factura";
                 Conexion.opoencon();
                 SqlCommand cmd = new SqlCommand(query, Conexion.ObtenerConexion());
                 cmd.Parameters.AddWithValue("@No_Factura", Convert.ToInt64(txtnofactura.Text));
@@ -72,7 +74,29 @@ namespace Trabajo_grupal
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
 
+                foreach (DataGridViewColumn column in dataGridView1.Columns)
+                {
+                    column.ReadOnly = true;
+                }
+
                 Conexion.cerrarcon();
+            }
+        }
+
+        private void txtnofactura_TextChanged(object sender, EventArgs e)
+        {
+            if (paneldetalles.Visible == true)
+            {
+                paneldetalles.Visible = false;
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Columns["Cantidad"].ReadOnly == true)
+            {
+                MessageBox.Show("Ya puedes modificar");
+                dataGridView1.Columns["Cantidad"].ReadOnly = false;
             }
         }
     }

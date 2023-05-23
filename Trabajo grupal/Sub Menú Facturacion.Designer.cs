@@ -45,8 +45,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txttotal = new System.Windows.Forms.TextBox();
             this.btnconsultar = new System.Windows.Forms.Button();
+            this.paneldetalles = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.paneldetalles.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -92,6 +94,7 @@
             this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btneliminar
             // 
@@ -119,6 +122,7 @@
             this.txtnofactura.Name = "txtnofactura";
             this.txtnofactura.Size = new System.Drawing.Size(200, 20);
             this.txtnofactura.TabIndex = 7;
+            this.txtnofactura.TextChanged += new System.EventHandler(this.txtnofactura_TextChanged);
             // 
             // label2
             // 
@@ -134,7 +138,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 187);
+            this.label3.Location = new System.Drawing.Point(8, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 10;
@@ -142,7 +146,7 @@
             // 
             // txtempleado
             // 
-            this.txtempleado.Location = new System.Drawing.Point(162, 187);
+            this.txtempleado.Location = new System.Drawing.Point(135, 13);
             this.txtempleado.Name = "txtempleado";
             this.txtempleado.Size = new System.Drawing.Size(200, 20);
             this.txtempleado.TabIndex = 9;
@@ -151,7 +155,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(35, 242);
+            this.label4.Location = new System.Drawing.Point(8, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 12;
@@ -159,7 +163,7 @@
             // 
             // txtcliente
             // 
-            this.txtcliente.Location = new System.Drawing.Point(162, 242);
+            this.txtcliente.Location = new System.Drawing.Point(135, 68);
             this.txtcliente.Name = "txtcliente";
             this.txtcliente.Size = new System.Drawing.Size(200, 20);
             this.txtcliente.TabIndex = 11;
@@ -168,7 +172,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(35, 300);
+            this.label5.Location = new System.Drawing.Point(8, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 20);
             this.label5.TabIndex = 14;
@@ -176,7 +180,7 @@
             // 
             // dtpfecha
             // 
-            this.dtpfecha.Location = new System.Drawing.Point(162, 300);
+            this.dtpfecha.Location = new System.Drawing.Point(135, 126);
             this.dtpfecha.Name = "dtpfecha";
             this.dtpfecha.Size = new System.Drawing.Size(200, 20);
             this.dtpfecha.TabIndex = 15;
@@ -209,6 +213,20 @@
             this.btnconsultar.UseVisualStyleBackColor = false;
             this.btnconsultar.Click += new System.EventHandler(this.btnconsultar_Click);
             // 
+            // paneldetalles
+            // 
+            this.paneldetalles.Controls.Add(this.txtempleado);
+            this.paneldetalles.Controls.Add(this.txtcliente);
+            this.paneldetalles.Controls.Add(this.dtpfecha);
+            this.paneldetalles.Controls.Add(this.label3);
+            this.paneldetalles.Controls.Add(this.label5);
+            this.paneldetalles.Controls.Add(this.label4);
+            this.paneldetalles.Location = new System.Drawing.Point(27, 175);
+            this.paneldetalles.Name = "paneldetalles";
+            this.paneldetalles.Size = new System.Drawing.Size(358, 201);
+            this.paneldetalles.TabIndex = 19;
+            this.paneldetalles.Visible = false;
+            // 
             // Sub_Menú_Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,12 +235,6 @@
             this.Controls.Add(this.btnconsultar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txttotal);
-            this.Controls.Add(this.dtpfecha);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtcliente);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtempleado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtnofactura);
             this.Controls.Add(this.btneliminar);
@@ -230,12 +242,15 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.paneldetalles);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Sub_Menú_Facturacion";
             this.Text = "Sub_Menú_Facturacion";
             this.Load += new System.EventHandler(this.Sub_Menú_Facturacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.paneldetalles.ResumeLayout(false);
+            this.paneldetalles.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,5 +275,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txttotal;
         private System.Windows.Forms.Button btnconsultar;
+        private System.Windows.Forms.Panel paneldetalles;
     }
 }

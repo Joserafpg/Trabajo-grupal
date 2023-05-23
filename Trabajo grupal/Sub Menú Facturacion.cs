@@ -43,34 +43,37 @@ namespace Trabajo_grupal
 
         private void btnconsultar_Click(object sender, EventArgs e)
         {
-            SqlCommand comando = new SqlCommand("SELECT * from FacturaTittle where Id_Factura = @No_Factura", Conexion.ObtenerConexion());
-            comando.Parameters.AddWithValue("@No_Factura", txtnofactura.Text);
-            Conexion.opoencon();
-            SqlDataReader registro = comando.ExecuteReader();
-            if (registro.Read())
+            if (string.IsNullOrEmpty(txtnofactura.Text))
             {
-                txtempleado.Text = registro["Empleado"].ToString();
-                txtcliente.Text = registro["Cliente"].ToString();
-                dtpfecha.Text = registro["Fecha"].ToString();
-                txttotal.Text = registro["Total"].ToString();
-
-            }
-            Conexion.cerrarcon();
-
-            String query = "select Codigo, Producto, Size, Precio, Cantidad, SubTotal from Factura where ";
-            if (btnconsultar.Text != "")
-            {
-                query = query + "( No_Factura like '%" + Convert.ToInt64(txtnofactura.Text) + "%')";
+                MessageBox.Show("Por favor llenar el campo");
             }
 
-            Conexion.opoencon();
-            SqlCommand cmd = new SqlCommand(query, Conexion.ObtenerConexion());
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
-            Conexion.cerrarcon();
+            else
+            {
+                SqlCommand comando = new SqlCommand("SELECT * FROM FacturaTittle WHERE Id_Factura = @No_Factura", Conexion.ObtenerConexion());
+                comando.Parameters.AddWithValue("@No_Factura", txtnofactura.Text);
+                Conexion.opoencon();
+                SqlDataReader registro = comando.ExecuteReader();
+                if (registro.Read())
+                {
+                    txtempleado.Text = registro["Empleado"].ToString();
+                    txtcliente.Text = registro["Cliente"].ToString();
+                    dtpfecha.Text = registro["Fecha"].ToString();
+                    txttotal.Text = registro["Total"].ToString();
+                }
+                Conexion.cerrarcon();
 
+                string query = "SELECT No_Factura, Codigo, Producto, Size, Precio, Cantidad, SubTotal FROM Factura WHERE No_Factura = @No_Factura";
+                Conexion.opoencon();
+                SqlCommand cmd = new SqlCommand(query, Conexion.ObtenerConexion());
+                cmd.Parameters.AddWithValue("@No_Factura", Convert.ToInt64(txtnofactura.Text));
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+
+                Conexion.cerrarcon();
+            }
         }
     }
 }

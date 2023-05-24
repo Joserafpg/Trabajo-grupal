@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,38 @@ namespace Trabajo_grupal
         public DatosgetInv InvPantalonSeleccionado { get; set; }
         private void ConsultarInvPantalones_Load(object sender, EventArgs e)
         {
+            using (SqlConnection connection = new SqlConnection("Data source = DESKTOP-NDDA7LS; Initial Catalog = Proyecto_Grupal; Integrated Security = True"))
+            {
+                connection.Open();
 
+                using (SqlCommand command = new SqlCommand("VALORDEINVENTARIOPANTS", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        DataTable dataTable = new DataTable();
+
+                        adapter.Fill(dataTable);
+
+                        if (dataTable.Rows.Count > 0)
+                        {
+                            string resultado = dataTable.Rows[0][0].ToString();
+                            txtvalor.Text = resultado;
+                        }
+
+                        else
+                        {
+                            // No se obtuvieron resultados
+                            txtvalor.Text = "No se encontró resultado.";
+                        }
+                    }
+                }
+            }
+
+            btnbuscar.PerformClick();
+            datagrieldv.ReadOnly = true;
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)
@@ -51,6 +83,11 @@ namespace Trabajo_grupal
         {
             
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

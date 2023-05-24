@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajo_grupal.Clases;
+using System.Data.SqlClient;
 
 namespace Trabajo_grupal
 {
@@ -34,17 +35,50 @@ namespace Trabajo_grupal
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
-            datagrieldv.DataSource = Datosbasedt.BuscarNuevoInventario(txtNombre.Text,txtcodigo.Text);
+            datagrieldv.DataSource = Datosbasedt.BuscarNuevoInventario(txtNombre.Text, txtcodigo.Text);
         }
 
         private void ConsultarMateriaPrima_Load(object sender, EventArgs e)
         {
+            using (SqlConnection connection = new SqlConnection("Data source = DESKTOP-NDDA7LS; Initial Catalog = Proyecto_Grupal; Integrated Security = True"))
+            {
+                connection.Open();
 
+                using (SqlCommand command = new SqlCommand("VALORDEMATERIAPRIMA", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        DataTable dataTable = new DataTable();
+
+                        adapter.Fill(dataTable);
+
+                        if (dataTable.Rows.Count > 0)
+                        {
+                            string resultado = dataTable.Rows[0][0].ToString();
+                            txtvalor.Text = resultado;
+                        }
+
+                        else
+                        {
+                            // No se obtuvieron resultados
+                            txtvalor.Text = "No se encontró resultado.";
+                        }
+                    }
+                }
+            }
+
+            btnbuscar.PerformClick();
+            datagrieldv.AllowUserToAddRows = false;
+            datagrieldv.ReadOnly = true;
         }
+
 
         private void btnimprimir_Click(object sender, EventArgs e)
         {
-         
+
 
         }
 

@@ -37,6 +37,8 @@
             this.txtnomb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtvalor = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datagrieldv)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -45,14 +47,14 @@
             // 
             this.datagrieldv.BackgroundColor = System.Drawing.Color.White;
             this.datagrieldv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrieldv.Location = new System.Drawing.Point(32, 117);
+            this.datagrieldv.Location = new System.Drawing.Point(31, 92);
             this.datagrieldv.Name = "datagrieldv";
             this.datagrieldv.Size = new System.Drawing.Size(594, 299);
             this.datagrieldv.TabIndex = 0;
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(102, 91);
+            this.txtCodigo.Location = new System.Drawing.Point(101, 66);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(136, 20);
             this.txtCodigo.TabIndex = 1;
@@ -108,10 +110,11 @@
             this.btnClose.Size = new System.Drawing.Size(45, 25);
             this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtnomb
             // 
-            this.txtnomb.Location = new System.Drawing.Point(460, 91);
+            this.txtnomb.Location = new System.Drawing.Point(459, 66);
             this.txtnomb.Name = "txtnomb";
             this.txtnomb.Size = new System.Drawing.Size(166, 20);
             this.txtnomb.TabIndex = 6;
@@ -121,7 +124,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(28, 88);
+            this.label1.Location = new System.Drawing.Point(27, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 21);
             this.label1.TabIndex = 7;
@@ -132,18 +135,39 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(309, 91);
+            this.label2.Location = new System.Drawing.Point(308, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 21);
             this.label2.TabIndex = 8;
             this.label2.Text = "NombreProducto";
+            // 
+            // txtvalor
+            // 
+            this.txtvalor.AutoSize = true;
+            this.txtvalor.Location = new System.Drawing.Point(519, 429);
+            this.txtvalor.Name = "txtvalor";
+            this.txtvalor.Size = new System.Drawing.Size(35, 13);
+            this.txtvalor.TabIndex = 11;
+            this.txtvalor.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(397, 429);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Valor del inventario";
             // 
             // ConsultarInvPantalones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 465);
+            this.Controls.Add(this.txtvalor);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtnomb);
@@ -175,5 +199,7 @@
         private System.Windows.Forms.TextBox txtnomb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label txtvalor;
+        private System.Windows.Forms.Label label3;
     }
 }

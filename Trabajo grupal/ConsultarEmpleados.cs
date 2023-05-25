@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,6 +39,16 @@ namespace Trabajo_grupal
             {
                 MessageBox.Show("Aun on ha seleccionado nungun Alumno");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PlantillaEmpleado form = new PlantillaEmpleado();
+            ReportDocument oRep = new ReportDocument();
+            oRep.Load(@"C:\Users\Jose\source\repos\Trabajo-grupal\Trabajo grupal\Reportes\Empleados.rpt");
+            form.crystalReportViewer1.ReportSource = oRep;
+            form.Show();
+
         }
     }
 }

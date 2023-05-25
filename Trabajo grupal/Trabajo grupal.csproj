@@ -358,6 +358,9 @@
     <EmbeddedResource Include="NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaEmpleado.resx">
+      <DependentUpon>PlantillaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PlantillaFactura.resx">
       <DependentUpon>PlantillaFactura.cs</DependentUpon>
     </EmbeddedResource>

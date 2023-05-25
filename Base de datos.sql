@@ -180,8 +180,9 @@ go
 select * from NuevoInventario
 go
 
+select Tipo_Producto from NuevoInventario
 
-
+select * from Empleados
 SELECT ID_Cliente, Nombre, Apellido, Direccion, Telefono, Correo,Fecha_de_Ingreso FROM Clientes where Nombre like '%{0}%' and Telefono like '%{1}%'
 
 SELECT Stock FROM InvPantalones WHERE Nombre_Producto = @Producto

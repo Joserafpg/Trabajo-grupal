@@ -51,7 +51,7 @@ namespace Trabajo_grupal
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "PlantillaEmpleado";
-            this.Text = "PlantillaEmpleado";
+            this.Text = "Reportes";
             this.ResumeLayout(false);
 
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -79,15 +80,18 @@ namespace Trabajo_grupal
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PlantillaEmpleado form = new PlantillaEmpleado();
+            ReportDocument oRep = new ReportDocument();
+            oRep.Load(@"C:\Users\Jose\source\repos\Trabajo-grupal\Trabajo grupal\Reportes\CrystalReport1.rpt");
+            form.crystalReportViewer1.ReportSource = oRep;
+            form.Show();
         }
     }
 }

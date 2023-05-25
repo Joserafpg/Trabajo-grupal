@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtvalor = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datagrieldv)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -160,12 +161,25 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Valor del inventario";
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(673, 391);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 51);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Imprimir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ConsultarInvPantalones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(800, 465);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtvalor);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -201,5 +215,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label txtvalor;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }

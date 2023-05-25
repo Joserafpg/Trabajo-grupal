@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajo_grupal.Clases;
 using System.Data.SqlClient;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace Trabajo_grupal
 {
@@ -85,6 +86,15 @@ namespace Trabajo_grupal
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PlantillaEmpleado form = new PlantillaEmpleado();
+            ReportDocument oRep = new ReportDocument();
+            oRep.Load(@"C:\Users\Jose\source\repos\Trabajo-grupal\Trabajo grupal\Reportes\MateriaPrima.rpt");
+            form.crystalReportViewer1.ReportSource = oRep;
+            form.Show();
         }
     }
 }

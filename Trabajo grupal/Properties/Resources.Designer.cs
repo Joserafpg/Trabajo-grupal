@@ -103,6 +103,26 @@ namespace Trabajo_grupal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2023_05_31_223307 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2023-05-31 223307", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2023_05_31_223506 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2023-05-31 223506", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar__3_ {
             get {
                 object obj = ResourceManager.GetObject("cerrar (3)", resourceCulture);

@@ -77,12 +77,14 @@ namespace Trabajo_grupal
         SqlConnection conn = new SqlConnection("Data source = DESKTOP-NDDA7LS; Initial Catalog = Proyecto_Grupal; Integrated Security = True");
         private void MostrarDatosInvPantalones()
         {
-            String query = "SELECT Codigo, Nombre_Producto, Size, Precio, Stock FROM InvPantalones where ";
+            string query = "SELECT Codigo, Nombre_Producto, Size, Precio, Stock FROM InvPantalones WHERE ";
 
             if (btnbuscar.Text != "")
             {
-                query = query + "  ( Nombre_Producto like '%" + txtnombre.Text + "%')";
+                query = query + "(Nombre_Producto LIKE '%" + txtnombre.Text + "%') AND ";
             }
+
+            query = query + "Stock > 1";
 
             Conexion.opoencon();
             SqlCommand cmd = new SqlCommand(query, Conexion.ObtenerConexion());

@@ -18,7 +18,7 @@ go
 
 create proc busquedaDetallePrueba
 @numFact varchar(15)
- as select Codigo, Producto,  Size, Precio, Cantidad, Total from Factura where No_Factura like @numFact 
+ as select Codigo, Producto,  Size, Precio, Cantidad, SubTotal from Factura where No_Factura like '1025' 
 
 
 

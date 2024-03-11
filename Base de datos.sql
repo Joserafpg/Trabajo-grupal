@@ -59,7 +59,7 @@ Fecha_de_ingreso datetime
 )
 
 
-/*Tabla NuevoInventario*/
+/*Tabla NuevoInventario (materia prima)*/
 create table NuevoInventario(
 Codigo INT IDENTITY (1,1) NOT NULL PRIMARY KEY,
 Nombre_Mercancia Varchar (50),
@@ -114,17 +114,8 @@ Puesto varchar (50),
 )
 
 
-/*Tabla Detalles Factura*/
-Create table Detalles_Factura(
-NO_Factura int PRIMARY KEY,
-ID_Producto int,
-Nombre_Producto varchar (50),
-Cantidad int,
-Precio varchar (50),
-)
-
-/*Tabla factura (prueba)*/
-create table Factura (
+/*Tabla factura (descripcion)*/
+create table Detalles_Factura (
 No_Factura INT NOT NULL,
 Codigo INT, 
 Producto varchar (50), 
@@ -157,9 +148,7 @@ Total decimal (38),
 
 
 
-
-GO
-
+/*Consultas*/
 select * from InvPantalones
 go
 
@@ -179,6 +168,12 @@ go
 
 select * from NuevoInventario
 go
+
+select * from InvPantalones where Nombre_Producto = 'Pantalon Vaquero'
+
+
+
+/*Consultas para el software*/
 
 select Tipo_Producto from NuevoInventario
 
@@ -200,8 +195,13 @@ SELECT * from FacturaTittle where Id_Factura = '2'
 select Codigo, Producto, Size, Precio,Cantidad,SubTotal from Factura where No_Factura = 10;
 
 
+select * from InvPantalones where Nombre_Producto = @nombrexdd
 
 
+
+
+
+/*Procecimientos para el software*/
 CREATE PROCEDURE SP_EMPLEADOCOMBOBOX
 AS
 SELECT Nombre_Completo FROM Empleados
@@ -225,6 +225,8 @@ SELECT SUM(Stock * Precio) AS TotalMultiplicacion FROM InvPantalones;
 EXEC VALORDEINVENTARIOPANTS
 GO
 
+
+/*Drops*/
 
 drop table Factura
 GO

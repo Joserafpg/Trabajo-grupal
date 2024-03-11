@@ -17,6 +17,9 @@ namespace Trabajo_grupal
 {
     public partial class Facturacion : Form
     {
+
+
+        public static string nombreComputadora = Environment.MachineName;
         public Facturacion()
         {
             InitializeComponent();
@@ -163,14 +166,14 @@ namespace Trabajo_grupal
             btnefectivo.Visible = false;
         }
 
-        SqlConnection conn = new SqlConnection("Data source = DESKTOP-NDDA7LS; Initial Catalog = Proyecto_Grupal; Integrated Security = True");
+        SqlConnection conn = new SqlConnection($"Data Source={nombreComputadora}; Initial Catalog=Proyecto_Grupal; Integrated Security=True");
        
         private Pantalones ObtenerProducto(Int64 idProducto)
         {
             Pantalones producto = null;
 
             // Cadena de conexión a la base de datos
-            string connectionString = "Data source = DESKTOP-NDDA7LS; Initial Catalog=Proyecto_Grupal; Integrated Security=True";
+            string connectionString = $"Data Source={nombreComputadora}; Initial Catalog=Proyecto_Grupal; Integrated Security=True";
 
             // Consulta SQL para obtener el producto según su ID
             string query = "SELECT Codigo, Nombre_Producto, Size, Precio FROM InvPantalones WHERE Codigo = @Id";
@@ -439,7 +442,6 @@ namespace Trabajo_grupal
             button1.PerformClick();
             button1.Visible = false;
             button4.Visible = true;
-            txtidfactura.Visible = false;
         }
 
         private void btndeshacer_Click(object sender, EventArgs e)

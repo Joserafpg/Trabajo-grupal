@@ -10,7 +10,8 @@ namespace Trabajo_grupal
 {
     public class Conexion
     {
-        private static SqlConnection Conn = new SqlConnection("Data source = DESKTOP-NDDA7LS; Initial Catalog=Proyecto_Grupal; Integrated Security=True");
+        public static string nombreComputadora = Environment.MachineName;
+        private static SqlConnection Conn = new SqlConnection($"Data Source={nombreComputadora}; Initial Catalog=Proyecto_Grupal; Integrated Security=True");
 
         public static SqlConnection ObtenerConexion()
         {

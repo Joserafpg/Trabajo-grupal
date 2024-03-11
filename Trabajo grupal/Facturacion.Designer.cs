@@ -73,6 +73,8 @@
             this.cempleado = new System.Windows.Forms.ComboBox();
             this.ccliente = new System.Windows.Forms.ComboBox();
             this.txtidfactura = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.PPago.SuspendLayout();
             this.pcredito.SuspendLayout();
@@ -90,6 +92,8 @@
             this.panel5.Controls.Add(this.cempleado);
             this.panel5.Controls.Add(this.ccliente);
             this.panel5.Controls.Add(this.txtidfactura);
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.label10);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
@@ -121,7 +125,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(781, 263);
+            this.button4.Location = new System.Drawing.Point(781, 302);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(175, 50);
             this.button4.TabIndex = 27;
@@ -280,6 +284,7 @@
             this.btnefectivo.TabIndex = 23;
             this.btnefectivo.Text = "Efectivo";
             this.btnefectivo.UseVisualStyleBackColor = false;
+            this.btnefectivo.Visible = false;
             this.btnefectivo.Click += new System.EventHandler(this.btnefectivo_Click);
             // 
             // btncredito
@@ -295,6 +300,7 @@
             this.btncredito.TabIndex = 22;
             this.btncredito.Text = "Credito";
             this.btncredito.UseVisualStyleBackColor = false;
+            this.btncredito.Visible = false;
             this.btncredito.Click += new System.EventHandler(this.btncredito_Click);
             // 
             // button1
@@ -556,7 +562,7 @@
             this.cempleado.FormattingEnabled = true;
             this.cempleado.Items.AddRange(new object[] {
             "Jose Rafael Payero"});
-            this.cempleado.Location = new System.Drawing.Point(818, 234);
+            this.cempleado.Location = new System.Drawing.Point(881, 235);
             this.cempleado.Name = "cempleado";
             this.cempleado.Size = new System.Drawing.Size(121, 21);
             this.cempleado.TabIndex = 35;
@@ -566,7 +572,7 @@
             this.ccliente.FormattingEnabled = true;
             this.ccliente.Items.AddRange(new object[] {
             "Luis Rafael Payero Garcia"});
-            this.ccliente.Location = new System.Drawing.Point(818, 274);
+            this.ccliente.Location = new System.Drawing.Point(881, 275);
             this.ccliente.Name = "ccliente";
             this.ccliente.Size = new System.Drawing.Size(121, 21);
             this.ccliente.TabIndex = 36;
@@ -578,6 +584,28 @@
             this.txtidfactura.Size = new System.Drawing.Size(100, 20);
             this.txtidfactura.TabIndex = 37;
             this.txtidfactura.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(758, 235);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(103, 22);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Empleado";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(758, 271);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(74, 22);
+            this.label10.TabIndex = 38;
+            this.label10.Text = "Cliente";
             // 
             // Facturacion
             // 
@@ -648,5 +676,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precios;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
